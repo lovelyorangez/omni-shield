@@ -12,3 +12,8 @@ research/datasets/
 *.enc
 *.wtns
 *.r1cs
+phase1_edge_engine/zk/redaction
+phase1_edge_engine/zk/out.wtns
+phase1_edge_engine/zk/witness
+phase1_edge_engine/zk/*.zkey
+phase1_edge_engine/zk/*.r1cs
