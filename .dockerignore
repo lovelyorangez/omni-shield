@@ -1,0 +1,11 @@
+omni-shield-app/node_modules/
+phase1_edge_engine/venv/
+phase1_edge_engine/redacted_output/
+phase1_edge_engine/downloads/
+phase1_edge_engine/__pycache__/
+research/
+ganache-db/
+*.pyc
+*.pyo
+.git/
+.env

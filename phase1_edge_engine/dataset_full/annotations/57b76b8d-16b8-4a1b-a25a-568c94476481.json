@@ -1,0 +1,138 @@
+{
+  "image_id": "57b76b8d-16b8-4a1b-a25a-568c94476481",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_57b76b8d-16b8-4a1b-a25a-568c94476481.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "DAY",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 216,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 252
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Abdul",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 220,
+        "ymax": 143,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 264,
+        "norm_xmax": 257
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "06.07.1989",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "DAY  9961201AB983",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 351,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 410
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Studio 7\nFraser Inlet, Lake Jonathanview",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 383,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 447
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "HG9W 0FG",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 251,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 293
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Abdul DAY",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

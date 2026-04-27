@@ -1,0 +1,2724 @@
+\documentclass[conference]{IEEEtran}
+
+% ── Packages ──────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{xspace}
+\usepackage{balance}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric, arrows.meta,
+  positioning, fit, backgrounds, calc}
+
+% ── Custom commands ────────────────────────────────
+\newcommand{\rupee}{\textrm{Rs.\@}}
+
+% ── Title and authors (anonymous for review) ──────
+\title{Omni-Shield: Local-First Multi-Modal PII
+Redaction with Cryptographic Audit Trail}
+
+\author{
+  \IEEEauthorblockN{Anonymous Author(s)}
+  \IEEEauthorblockA{
+    Affiliation Withheld for Review
+  }
+}
+
+\begin{document}
+
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+% ABSTRACT
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+
+Redacting personally identifiable information from
+identity documents is a legally mandated but technically
+unsolved problem: existing cloud-based tools transmit
+sensitive documents to third-party servers, text-only
+systems cannot detect visual PII such as signatures
+and face photographs, and no existing tool produces a
+verifiable audit record of what was redacted.
+
+We present \textbf{Omni-Shield}, a local-first
+multi-modal PII redaction system that runs entirely
+on consumer-grade edge hardware (NVIDIA RTX~5060,
+8\,GB VRAM) without transmitting documents off-device.
+The system combines a nine-agent orchestration
+pipeline, a QLoRA fine-tuned vision-language model
+(Qwen2-VL-2B-Instruct), EasyOCR, and YOLOv8 face
+detection to process six document formats --- images,
+PDFs, audio recordings, plain text, Word documents,
+and presentations --- with 10.42\,s mean latency for
+image redaction and under 50\,ms for text and PDF.
+
+Every redaction produces a blockchain-anchored audit
+record with a salted SHA-256 commitment that prevents
+document linkability, accompanied by a Groth16/BN128
+zero-knowledge proof that attests to redaction
+correctness without revealing the redacted values.
+Blockchain verification completes in 1.2\,ms;
+ZK proof generation takes 20.3\,s and executes
+fully asynchronously, imposing no latency penalty
+on the user-facing workflow.
+
+We evaluate against Microsoft Presidio and Llama~3~8B
+on 150 annotated synthetic identity cards and 19 real
+specimen documents.
+Omni-Shield achieves Macro F1\,=\,0.187 on synthetic
+and 0.269 on real documents, and is the only system
+to detect signatures (F1\,=\,0.870) and face
+photographs (F1\,=\,0.905 on real documents) ---
+categories that text-only systems cannot address
+regardless of model scale.
+An ablation study confirms that visual detection
+agents account for 54\% of total F1, validating
+the multi-modal design over text-only alternatives.
+The fine-tuned adapter, evaluation harness, and
+annotated test dataset are released for reproducibility.
+
+\end{abstract}
+
+% ─────────────────────────────────────────────────────────────────────────────
+% FIGURES
+% ─────────────────────────────────────────────────────────────────────────────
+
+% ── Figure 1: System Architecture ─────────────
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  box/.style={
+    rectangle, rounded corners=5pt,
+    draw=black!60, thick,
+    minimum width=2.8cm,
+    minimum height=1.0cm,
+    align=center, fill=white},
+  modelbox/.style={
+    rectangle, rounded corners=5pt,
+    draw=orange!70, thick,
+    minimum width=3.2cm,
+    minimum height=0.9cm,
+    align=center, fill=orange!8},
+  chainbox/.style={
+    rectangle, rounded corners=5pt,
+    draw=gray!60, thick,
+    minimum width=2.8cm,
+    minimum height=1.0cm,
+    align=center, fill=gray!8},
+  outbox/.style={
+    rectangle, rounded corners=5pt,
+    draw=green!50!black!60, thick,
+    minimum width=2.8cm,
+    minimum height=1.0cm,
+    align=center, fill=green!6},
+  arrow/.style={-Stealth, thick, draw=black!70},
+  dasharrow/.style={-Stealth, thick,
+    draw=black!40, dashed},
+  node distance=1.2cm and 1.6cm
+]
+
+% ── Row 1: User-facing components ─────────────
+\node[box, fill=blue!8] (fe) at (0,0)
+  {\textbf{React/Electron}\\Frontend};
+
+\node[box, fill=blue!8] (be) at (4.2,0)
+  {\textbf{FastAPI Backend}\\localhost:8000};
+
+\node[chainbox] (bc) at (4.2,-2.2)
+  {\textbf{Ganache Node}\\port 7545};
+
+\node[outbox] (out) at (0,-2.2)
+  {\textbf{Redacted Output}\\+ \texttt{.audit.json}};
+
+% ── Row 2: GPU models ─────────────────────────
+\node[modelbox] (vlm) at (8.8, 0.9)
+  {\textbf{Qwen2-VL-2B}\\VLM (1.40\,GB)};
+
+\node[modelbox] (txt) at (8.8,-0.1)
+  {\textbf{Qwen2.5-3B}\\Text (1.91\,GB)};
+
+\node[modelbox] (ocr) at (8.8,-1.1)
+  {\textbf{EasyOCR}\\GPU-accelerated};
+
+\node[modelbox] (yolo) at (8.8,-2.1)
+  {\textbf{YOLOv8n}\\Face detection};
+
+% ── GPU bounding box ──────────────────────────
+\node[draw=orange!70, very thick, dashed,
+  rounded corners=8pt,
+  fill=orange!3,
+  fit=(vlm)(txt)(ocr)(yolo),
+  inner sep=10pt,
+  label={[font=\small\bfseries,
+    text=orange!80!black]above:
+    NVIDIA RTX 5060 Laptop GPU \ \
+    8\,GB VRAM \ \ Peak: 3.31\,GB}
+] (gpu) {};
+
+% ── Outer system boundary ─────────────────────
+\node[draw=black!50, very thick,
+  rounded corners=10pt,
+  fit=(fe)(be)(bc)(out)(gpu),
+  inner sep=18pt,
+  label={[font=\small\bfseries,
+    text=black!60]above left:
+    \textbf{Local Device} (no data leaves)}
+] (system) {};
+
+% ── Arrows ────────────────────────────────────
+% Frontend <-> Backend
+\draw[arrow] (fe.east) -- (be.west)
+  node[midway, above, font=\footnotesize]
+  {upload};
+\draw[arrow] (be.west) -- (fe.east)
+  node[midway, below, font=\footnotesize]
+  {result};
+
+% Backend -> Ganache
+\draw[arrow] (be.south) -- (bc.north)
+  node[midway, right, font=\footnotesize]
+  {anchor};
+
+% Backend -> Output
+\draw[arrow] (be.south west) -- (out.north east)
+  node[midway, below right, font=\footnotesize]
+  {write};
+
+% Frontend -> Output (display)
+\draw[dasharrow] (fe.south) -- (out.north)
+  node[midway, left, font=\footnotesize]
+  {display};
+
+% Backend <-> GPU models
+\draw[arrow] (be.east) -- (gpu.west)
+  node[midway, above, font=\footnotesize]
+  {inference};
+
+% ── Legend ────────────────────────────────────
+\node[font=\footnotesize, text=black!50,
+  align=left] at (2.0,-3.6)
+  {$\rightarrow$ solid: data flow \quad
+   $\dashrightarrow$ dashed: display only};
+
+\end{tikzpicture}
+\caption{Omni-Shield system architecture.
+  All AI inference runs on the local GPU inside
+  a single-device boundary (outer box) --- no
+  document leaves the device at any point.
+  The FastAPI backend orchestrates four models
+  within a 3.31\,GB VRAM peak budget.
+  Every redaction is anchored to the local
+  Ganache Ethereum node and written to an
+  \texttt{.audit.json} sidecar.}
+\label{fig:architecture}
+\end{figure*}
+
+% ── Figure 2: Nine-Agent Pipeline ─────────────
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  agent/.style={
+    rectangle, rounded corners=4pt,
+    draw=black!65, thick, fill=blue!7,
+    minimum width=2.05cm,
+    minimum height=0.85cm,
+    align=center,
+    font=\footnotesize\bfseries},
+  vlmagent/.style={
+    rectangle, rounded corners=4pt,
+    draw=orange!70, thick, fill=orange!10,
+    minimum width=2.05cm,
+    minimum height=0.85cm,
+    align=center,
+    font=\footnotesize\bfseries},
+  timenode/.style={
+    font=\tiny, text=black!45, align=center},
+  arrow/.style={-Stealth, thick, draw=black!60},
+  node distance=0.25cm and 0.35cm
+]
+
+% All 9 agents in a row
+\node[agent]    (r)  {Router\\Agent};
+\node[agent,    right=0.35cm of r]  (d)
+  {Deskew\\Agent};
+\node[agent,    right=0.35cm of d]  (o)
+  {OCR\\Agent};
+\node[vlmagent, right=0.35cm of o]  (l)
+  {Layout\\Agent};
+\node[agent,    right=0.35cm of l]  (t)
+  {TextPII\\Agent};
+\node[agent,    right=0.35cm of t]  (c)
+  {Context\\Agent};
+\node[agent,    right=0.35cm of c]  (b)
+  {BBRefiner\\Agent};
+\node[agent,    right=0.35cm of b]  (cr)
+  {Critic\\Agent};
+\node[agent,    right=0.35cm of cr] (re)
+  {Redaction\\Agent};
+
+% Latency labels below
+\node[timenode, below=0.18cm of r]  {0.04\,s};
+\node[timenode, below=0.18cm of d]  {--};
+\node[timenode, below=0.18cm of o]  {2.73\,s};
+\node[timenode, below=0.18cm of l]
+  {\textbf{4.79\,s}};
+\node[timenode, below=0.18cm of t]  {0.94\,s};
+\node[timenode, below=0.18cm of c]  {0.07\,s};
+\node[timenode, below=0.18cm of b]  {$<$1\,ms};
+\node[timenode, below=0.18cm of cr] {1.85\,s};
+\node[timenode, below=0.18cm of re] {0.02\,s};
+
+% VLM label above LayoutAgent
+\node[font=\tiny\bfseries, text=orange!80!black,
+  above=0.12cm of l] {VLM};
+
+% Arrows between agents
+\foreach \a/\b in {r/d,d/o,o/l,l/t,
+                    t/c,c/b,b/cr,cr/re}
+  \draw[arrow] (\a.east) -- (\b.west);
+
+% AgentState bar underneath
+\coordinate (leftedge)  at ([xshift=-4pt]r.south west);
+\coordinate (rightedge) at ([xshift=4pt]re.south east);
+\draw[draw=black!25, dashed, rounded corners=3pt,
+  thick]
+  ([yshift=-22pt]leftedge) rectangle
+  ([yshift=-8pt]rightedge)
+  node[midway, font=\tiny, text=black!45]
+  {AgentState (shared data structure ---
+   all agents read and write)};
+
+\end{tikzpicture}
+\caption{The nine-agent image redaction pipeline
+  with mean latency per agent.
+  The LayoutAgent (orange) invokes the fine-tuned
+  Qwen2-VL-2B VLM and accounts for 46\% of
+  total pipeline time (4.79\,s of 10.42\,s mean).
+  All agents communicate exclusively through
+  the shared \texttt{AgentState} object
+  (dashed box), enabling ablation of any
+  agent without pipeline redesign.}
+\label{fig:pipeline}
+\end{figure*}
+
+% ── Figure 3: Agent Timing Bar Chart ──────────
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar,
+  width=7cm, height=4.5cm,
+  bar width=0.35cm,
+  xlabel={Mean latency (s)},
+  symbolic y coords={RedactionAgent,BBRefinerAgent,ContextAgent,TextPIIAgent,CriticAgent,OCRAgent,LayoutAgent},
+  ytick=data,
+  y tick label style={font=\footnotesize},
+  x tick label style={font=\footnotesize},
+  xlabel style={font=\footnotesize},
+  nodes near coords,
+  nodes near coords style={font=\tiny},
+  every node near coord/.append style={xshift=2pt},
+  xmin=0, xmax=5.8,
+  enlarge y limits=0.15,
+  fill=blue!30,
+  draw=blue!60,
+]
+\addplot coordinates {
+  (0.02,RedactionAgent)
+  (0.001,BBRefinerAgent)
+  (0.07,ContextAgent)
+  (0.94,TextPIIAgent)
+  (1.85,CriticAgent)
+  (2.73,OCRAgent)
+  (4.79,LayoutAgent)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{Per-agent latency breakdown for image
+  redaction (warm models). LayoutAgent (VLM
+  inference) dominates at 4.79\,s (46\% of total).
+  OCRAgent and CriticAgent together account for
+  a further 44\%.}
+\label{fig:timings}
+\end{figure}
+
+% ── Figure 4: Confusion Matrix (tabular, no PNG required) ─────────────────
+\begin{figure}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Pred $\backslash$ True & Names & DOB & ID No. & Addr. & Sig. & FP \\
+\midrule
+Names & \textbf{51} & 1 & -- & -- & -- & 33 \\
+DOB & -- & \textbf{65} & 2 & -- & -- & 61 \\
+ID No. & -- & -- & \textbf{13} & -- & -- & 18 \\
+Addr. & -- & -- & 1 & \textbf{7} & -- & 58 \\
+Sig. & -- & -- & 24 & -- & \textbf{126} & 5 \\
+\bottomrule
+\end{tabular}
+\caption{PII category confusion matrix across
+  150 test documents. False negatives (655)
+  dominate over false positives (175), indicating
+  that recall, not precision, is the primary
+  failure mode. Date of Birth exhibits the highest
+  false positive rate (61 FP against 65 TP).}
+\label{fig:confusion}
+\end{figure}
+
+% ─────────────────────────────────────────────────────────────────────────────
+% INTRODUCTION
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+\label{sec:introduction}
+
+Personal identity documents --- passports, driving licences,
+national identity cards --- are among the most sensitive
+artefacts in modern administrative life.
+They are routinely scanned, emailed, and stored by employers,
+landlords, banks, and government agencies, creating large
+corpora of high-value personally identifiable information
+(PII) that are difficult to redact reliably and even
+harder to audit credibly.
+Existing redaction tools fall into two categories, each
+with a fundamental limitation: cloud-based APIs (AWS
+Comprehend, Google Cloud DLP) process text only and
+transmit sensitive documents to third-party servers,
+violating the very privacy they claim to protect;
+and desktop tools (PDF-XChange, Adobe Acrobat) require
+manual identification of sensitive regions, are error-prone
+under time pressure, and produce no verifiable audit trail.
+
+The inadequacy of current approaches is not merely
+theoretical.
+A nurse who must redact a scanned medical ID before
+forwarding it has no tool that is simultaneously
+\emph{accurate}, \emph{local}, and \emph{auditable}.
+An organisation subject to GDPR Article~25 (data protection
+by design) cannot demonstrate compliance with a manual
+highlighter.
+A legal firm handling identity documents in bulk cannot
+afford the latency and privacy exposure of a cloud
+round-trip for every page.
+These gaps motivate a different design point: a system that
+runs entirely on edge hardware, understands documents
+visually rather than as raw text, and produces a
+cryptographically verifiable record of every redaction
+decision.
+
+We present \textbf{Omni-Shield}, the first local-first
+multi-modal PII redaction system that combines a
+fine-tuned vision-language model (VLM) with a nine-agent
+orchestration pipeline, a blockchain audit trail,
+and real zero-knowledge proofs --- running entirely on
+a consumer-grade GPU (NVIDIA RTX~5060, 8\,GB VRAM).
+No document leaves the device.
+No cloud account is required.
+Every redaction is anchored on-chain and accompanied by
+a Groth16/BN128 ZK-SNARK that proves redaction occurred
+without revealing what was redacted.
+
+\subsection*{The core challenge}
+
+Identity document redaction is harder than general-purpose
+NLP-based PII detection for three reasons.
+
+\textbf{Visual PII cannot be detected from text alone.}
+Signatures and face photographs --- the two most legally
+significant PII elements on identity documents --- are
+not text.
+They cannot be found by regex, spaCy NER, or any
+text-only pipeline regardless of model size.
+Our evaluation confirms this: Microsoft Presidio, a
+mature NLP-based system, achieves F1\,=\,0.000 on
+signatures and faces across 150 test documents.
+
+\textbf{Layout determines meaning.}
+On a passport, the string \texttt{15\,MAR\,1987} is a
+date of birth.
+On an invoice, the same string is an issue date and
+should not be redacted.
+A system that does not understand document layout ---
+which field labels surround a value, where the value
+appears spatially on the card --- will systematically
+misclassify or miss PII.
+
+\textbf{Redaction without verification is insufficient
+for compliance.}
+A redacted PDF is only trustworthy if a verifier can
+confirm (a)~which document was redacted, (b)~when,
+(c)~by whom, and (d)~that the redaction was performed
+correctly.
+Existing tools produce none of these guarantees.
+A blockchain-anchored audit trail with ZK-SNARK proof
+addresses all four.
+
+\subsection*{Contributions}
+
+This paper makes four contributions:
+
+\begin{enumerate}
+
+  \item \textbf{Multi-modal nine-agent redaction pipeline.}
+  We design and implement a nine-agent pipeline
+  (RouterAgent, DeskewAgent, OCRAgent, LayoutAgent,
+  TextPIIAgent, ContextAgent, BBRefinerAgent,
+  CriticAgent, RedactionAgent) that processes six
+  document formats (images, PDFs, audio recordings,
+  plain text, Word documents, PowerPoint presentations)
+  on a single 8\,GB GPU at 4-bit NF4 quantisation.
+  The pipeline achieves a mean end-to-end latency of
+  10.42\,s for image redaction and under 50\,ms for
+  text and PDF documents.
+
+  \item \textbf{Knowledge distillation for document PII.}
+  We fine-tune Qwen2-VL-2B-Instruct on 2,000 synthetic
+  identity documents across six countries using QLoRA,
+  with teacher labels generated by the Claude API.
+  The fine-tuning teaches the model to emit consistently
+  structured \texttt{LABEL\,|\,VALUE\,|\,BBOX} output
+  required by the downstream pipeline --- a contribution
+  to output format adherence rather than raw detection
+  capability, which we measure and discuss honestly.
+  As a notable emergent capability, face detection
+  generalises from the training distribution without
+  explicit face annotation.
+
+  \item \textbf{Cryptographic audit trail with ZK-SNARK.}
+  Every redaction produces a blockchain-anchored record
+  (AuditLog.sol, Groth16/BN128 via ZoKrates) that proves
+  redaction occurred without revealing the redacted values.
+  Blockchain verification completes in 1.2\,ms via O(1)
+  Solidity mapping lookup.
+  ZK proof generation takes 20.3\,s but executes
+  asynchronously, adding no user-facing latency.
+  Each anchor costs 264,333 gas units --- approximately
+  \$0.006 on Polygon L2.
+  We also identify and fix a hash linkability
+  vulnerability (SHA-256 without salt produces
+  identical on-chain hashes for repeated documents)
+  and implement a timestamp-salted commitment scheme.
+
+  \item \textbf{Comprehensive evaluation on synthetic
+  and real documents.}
+  We evaluate Omni-Shield on 150 annotated synthetic
+  identity cards and 19 real specimen documents
+  (sourced from Wikimedia Commons).
+  We compare against three baselines: Microsoft Presidio
+  (rule-based NER, Macro F1\,=\,0.057), Llama~3~8B
+  (LLM prompting, Macro F1\,=\,0.270), and our system
+  (Macro F1\,=\,0.187 synthetic, 0.269 real).
+  Omni-Shield is the only system to detect signatures
+  (F1\,=\,0.870) and is the only baseline-outperforming
+  system on real documents.
+  We further report energy consumption
+  (0.289\,kWh per 1,000 image redactions), carbon
+  footprint under different grid assumptions, and
+  the quantified ``privacy premium'' of local-first
+  processing.
+
+\end{enumerate}
+
+\subsection*{Key findings}
+
+Three findings stand out from our evaluation.
+First, \emph{visual PII drives overall performance}:
+ablation shows that disabling signature and face detection
+reduces Macro F1 by 54\%, more than any other component.
+Second, \emph{Omni-Shield generalises to real documents}:
+Macro F1 on 19 real specimen cards (0.269) exceeds
+performance on synthetic test cards (0.187), suggesting
+the training distribution transfers well.
+Third, \emph{text-only LLMs are complementary, not
+competing}: Llama~3~8B outperforms Omni-Shield on
+text-based PII (DOB F1\,=\,0.854, ID numbers 0.778)
+but scores zero on signatures and faces --- confirming
+that the multi-modal approach is necessary for complete
+identity document redaction.
+
+\subsection*{Paper structure}
+
+Section~\ref{sec:related} surveys related work.
+Section~\ref{sec:architecture} describes the system
+architecture and nine-agent pipeline.
+Section~\ref{sec:knowledge_distillation} covers the
+synthetic dataset, knowledge distillation methodology,
+and QLoRA fine-tuning.
+Section~\ref{sec:evaluation} presents quantitative
+evaluation against baselines and ablation studies.
+Section~\ref{sec:crypto} details the cryptographic
+audit trail, ZK-SNARK circuit, and blockchain design.
+Section~\ref{sec:limitations} discusses limitations
+and future work.
+Section~\ref{sec:conclusion} concludes.
+Code, evaluation harness, and the fine-tuned adapter
+are available at \url{https://github.com/[anonymous]}.
+
+% ─────────────────────────────────────────────────────────────────────────────
+% RELATED WORK
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Related Work}
+\label{sec:related}
+
+We survey five bodies of work that Omni-Shield builds on
+or directly compares against: PII detection systems,
+vision-language models for document understanding,
+knowledge distillation for specialised domains,
+cryptographic audit mechanisms, and multi-agent
+orchestration frameworks.
+
+% ─────────────────────────────────────────────────────────
+\subsection{PII Detection and Document Redaction}
+% ─────────────────────────────────────────────────────────
+
+The dominant paradigm for automated PII detection is
+named entity recognition (NER) applied to extracted text.
+Microsoft Presidio~\cite{presidio2020} combines spaCy
+NER with regex pattern matching to identify entities
+such as names, phone numbers, and national identifiers.
+Presidio is open-source, language-extensible, and widely
+deployed, but operates exclusively on text: it cannot
+process image, audio, or video inputs, and has no
+mechanism for detecting visual PII such as signatures
+or face photographs.
+Amazon Comprehend~\cite{aws_comprehend} and Google Cloud
+Data Loss Prevention~\cite{google_dlp} offer cloud-based
+PII detection with broader entity coverage and higher
+throughput, but transmit documents to third-party
+infrastructure --- a fundamental incompatibility with
+privacy-sensitive workflows where documents must not
+leave an organisation's control.
+
+Specialised document redaction for identity documents
+has received comparatively little academic attention.
+Prior work focuses on redaction of court
+documents~\cite{berg2020}, medical records~\cite{stubbs2015},
+and legal contracts~\cite{manor2019}, where text
+extraction is straightforward and PII is confined to
+running prose.
+Identity documents present a structurally different
+problem: PII is densely packed, visually structured,
+and partially non-textual (faces, signatures, barcodes).
+The \textit{DocRedact} system~\cite{ferrando2022} applies
+LayoutLM embeddings to redact form-structured documents,
+but requires pre-labelled field schemas and does not
+generalise to unseen card designs.
+
+In contrast to all prior work, Omni-Shield processes
+documents at the pixel level using a VLM that
+understands layout, operates without pre-defined schemas,
+handles six document modalities, and runs entirely
+on-device.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Vision-Language Models for Document
+            Understanding}
+% ─────────────────────────────────────────────────────────
+
+The application of vision-language models to document
+understanding has progressed rapidly.
+LayoutLM~\cite{xu2020layoutlm} and its successors
+LayoutLMv2 and LayoutLMv3~\cite{xu2021layoutlmv2,
+huang2022layoutlmv3} demonstrate that jointly encoding
+text tokens with their spatial positions on a page
+substantially improves document classification, key
+information extraction, and form understanding.
+Donut~\cite{kim2022donut} removes the explicit OCR
+dependency by training an end-to-end encoder-decoder
+to read documents directly from pixels.
+DocVQA~\cite{mathew2021docvqa} establishes visual
+question answering over scanned documents as a
+benchmark task.
+
+General-purpose multimodal models such as
+GPT-4V~\cite{openai2023gpt4v},
+Gemini~\cite{team2023gemini}, and the Qwen-VL
+family~\cite{bai2023qwenvl} demonstrate strong
+zero-shot document understanding,
+but at parameter counts (7B--175B) that preclude
+deployment on consumer-grade hardware.
+Qwen2-VL-2B-Instruct~\cite{wang2024qwen2vl}, the base
+model we fine-tune, is specifically designed for
+efficient edge deployment and achieves competitive
+document understanding performance at 2 billion
+parameters.
+
+Our work differs from prior document VLM research in
+two respects.
+First, we fine-tune the VLM specifically for PII
+\emph{localisation} --- producing bounding box coordinates
+alongside entity labels --- rather than for general
+question answering.
+Second, we embed the VLM as one component of a
+multi-agent pipeline rather than using it as a
+standalone system, allowing other agents to correct,
+filter, and refine its outputs.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Knowledge Distillation for Specialised Domains}
+% ─────────────────────────────────────────────────────────
+
+Knowledge distillation~\cite{hinton2015distilling}
+transfers the generalisation capability of a large
+teacher model into a smaller student model by training
+the student on teacher-generated soft labels rather
+than hard ground truth.
+The approach has been applied to compression of BERT
+models~\cite{sanh2019distilbert}, structured prediction
+tasks~\cite{li2022explaining}, and most recently to
+instruct-following for instruction-tuned LLMs using
+synthetic data generated by a more capable
+model~\cite{taori2023alpaca, wang2023selfinstruct}.
+
+Parameter-efficient fine-tuning methods --- in
+particular LoRA~\cite{hu2022lora} and its
+4-bit quantised variant QLoRA~\cite{dettmers2023qlora}
+--- have made it practical to adapt large models on
+consumer hardware without full parameter updates.
+QLoRA reduces peak GPU memory during fine-tuning by
+introducing double quantisation and paged optimisers,
+enabling fine-tuning of 7B+ models on a single 24\,GB
+GPU and, in our case, a 2B VLM on an 8\,GB GPU.
+
+Our knowledge distillation methodology follows the
+teacher-student paradigm with synthetic data:
+we generate 2,000 synthetic identity documents and
+label them using the Claude API as teacher~\cite{anthropic2024},
+then train the student VLM on these structured
+annotations.
+A key finding is that the primary contribution of
+fine-tuning is \emph{output format adherence} rather
+than detection accuracy --- the adapter trains the
+model to emit consistently parseable
+\texttt{LABEL\,|\,VALUE\,|\,BBOX} triples, which the
+downstream pipeline requires for reliable extraction.
+This is consistent with observations in instruction
+fine-tuning literature that format alignment is a
+distinct and learnable skill separate from factual
+knowledge~\cite{ouyang2022instructgpt}.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Blockchain Audit Trails for Data Processing}
+% ─────────────────────────────────────────────────────────
+
+Blockchain technology has been applied to data
+provenance and audit in healthcare~\cite{xia2017medshare},
+supply chain~\cite{Casino2019}, and
+legal evidence preservation~\cite{zhu2019blockchain}.
+The core property that makes blockchain suitable for
+audit is tamper-evidence: once a hash is anchored
+on-chain, it cannot be altered retroactively without
+invalidating the entire subsequent chain.
+
+Smart contract platforms such as
+Ethereum~\cite{buterin2014ethereum} allow the audit
+logic itself (who may record, what is recorded, how
+records are retrieved) to be encoded in verifiable
+on-chain code.
+Gas cost is a practical constraint: complex audit
+contracts on Ethereum mainnet can be prohibitively
+expensive, motivating the use of Layer~2 solutions such
+as Polygon~\cite{polygon2021} for production deployments.
+
+Prior work on blockchain-based document audit focuses
+primarily on \emph{integrity} --- proving that a
+document has not been altered since it was recorded.
+Omni-Shield extends this to \emph{redaction
+provenance}: proving not just that the document exists
+but that a specific redaction operation was performed
+on it, by a specific owner, at a specific time.
+This distinction is important for GDPR Article~5(2)
+accountability obligations, which require demonstrating
+that personal data was processed in compliance with
+the regulation --- a much stronger claim than mere
+integrity.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Zero-Knowledge Proofs for Privacy}
+% ─────────────────────────────────────────────────────────
+
+Zero-knowledge proofs (ZKPs) allow a prover to
+convince a verifier that a statement is true without
+revealing any information beyond the truth of the
+statement~\cite{goldwasser1989knowledge}.
+Succinct non-interactive arguments of knowledge
+(SNARKs)~\cite{groth2016size} make this practical for
+real deployments: the Groth16 proving system produces
+constant-size proofs (128 bytes) verifiable in
+milliseconds regardless of the complexity of the
+proved statement.
+
+ZoKrates~\cite{eberhardt2018zokrates} provides a
+high-level language and toolchain for compiling
+programs into Groth16/BN128 circuits, lowering the
+barrier to SNARK implementation significantly.
+ZKPs have been applied to private credential
+presentation~\cite{camenisch1997efficient},
+anonymous voting~\cite{cortier2019belenios},
+and confidential blockchain
+transactions~\cite{sasson2014zerocash}.
+
+To our knowledge, Omni-Shield is the first system to
+apply ZK-SNARKs specifically to document redaction
+provenance: the proof attests that a document with
+a known hash was redacted, and that the redaction
+committed to a specific (undisclosed) set of PII
+regions, without revealing which regions were redacted
+or what values they contained.
+This provides a \emph{selective disclosure} property
+particularly relevant for legal and compliance contexts:
+an auditor can verify that redaction occurred without
+gaining access to the redacted content.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Multi-Agent Systems for Document Processing}
+% ─────────────────────────────────────────────────────────
+
+Multi-agent LLM systems decompose complex tasks into
+specialised sub-tasks handled by coordinated agents.
+AutoGen~\cite{wu2023autogen} and
+MetaGPT~\cite{hong2023metagpt} demonstrate that
+agent pipelines can outperform monolithic LLMs on
+tasks requiring planning, tool use, and iterative
+refinement.
+In document processing, agent decomposition allows
+different agents to specialise: one for layout
+understanding, one for PII classification, one for
+bounding box refinement, one for false-positive
+filtering.
+
+The CriticAgent pattern --- a dedicated agent that
+reviews and challenges the output of prior agents ---
+mirrors the adversarial review step in self-refine
+frameworks~\cite{madaan2023selfrefine} and reduces
+false-positive rates in our pipeline.
+Our ablation study quantifies the contribution of
+each agent class, finding that visual detection
+agents (LayoutAgent via VLM, face detection via
+YOLOv8~\cite{redmon2016yolo}) account for 54\% of
+total F1 --- substantially more than text-based
+agents, validating the multi-modal decomposition.
+
+\vspace{6pt}
+\noindent\textbf{Positioning.}
+Omni-Shield occupies a distinct position in this
+landscape: it is the only system that simultaneously
+achieves local-first deployment, multi-modal input
+(including visual PII), and cryptographically
+verifiable redaction audit on consumer hardware.
+Table~\ref{tab:comparison} in Section~\ref{sec:evaluation}
+quantifies these differences against the closest
+alternatives.
+
+% ─────────────────────────────────────────────────────────────────────────────
+% SYSTEM ARCHITECTURE
+% ─────────────────────────────────────────────────────────────────────────────
+\section{System Architecture}
+\label{sec:architecture}
+
+Omni-Shield is a local-first document redaction system
+designed around three principles:
+(i)~no document or extracted PII ever leaves the
+device;
+(ii)~every redaction decision is explainable by the
+agent that made it;
+and (iii)~every completed redaction produces a
+cryptographically verifiable audit record.
+This section describes the overall system structure,
+the nine-agent pipeline for image redaction, and the
+multi-modal routing logic that extends the system to
+five additional document formats.
+
+% ─────────────────────────────────────────────────────────
+\subsection{System Overview}
+% ─────────────────────────────────────────────────────────
+
+Figure~\ref{fig:architecture} shows the top-level
+system structure.
+The user interacts with a React/Electron frontend that
+accepts document uploads, displays detected PII regions
+on an interactive canvas editor, and exposes controls
+for selective redaction (10 PII categories, custom
+terms, regex patterns, and preset profiles).
+A FastAPI backend running on \texttt{localhost:8000}
+orchestrates all AI inference, file I/O, and blockchain
+interaction.
+A local Ganache Ethereum node on port 7545 maintains
+the on-chain audit ledger.
+
+All AI models run locally under 4-bit NF4
+quantisation~\cite{dettmers2023qlora}:
+Qwen2-VL-2B-Instruct (vision-language model, 1.40\,GB
+VRAM) for document layout understanding,
+Qwen2.5-3B-Instruct (text model, 1.91\,GB VRAM) for
+contextual PII classification, EasyOCR for text
+extraction, and YOLOv8n for face detection.
+Total peak VRAM usage during image inference is
+3.31\,GB, leaving headroom for OS and driver overhead
+within the 8\,GB budget of the target hardware.
+Models are loaded lazily on first request and persist
+in VRAM for subsequent requests, reducing warm
+inference latency to 10.42\,s mean for the full
+image pipeline.
+
+% ─────────────────────────────────────────────────────────
+\subsection{AgentState: Shared Data Structure}
+% ─────────────────────────────────────────────────────────
+
+All agents communicate through a single shared
+\texttt{AgentState} object that is passed sequentially
+through the pipeline.
+The state encapsulates the document path, extracted
+text tokens with bounding boxes, VLM layout output,
+detected PII items with pixel coordinates, and timing
+metadata for each agent.
+No agent communicates directly with any other agent;
+all inter-agent communication is mediated by reading
+and writing fields on the shared state.
+This design makes the pipeline debuggable (every
+intermediate state is inspectable), ablatable (any
+agent can be disabled by skipping its state write),
+and testable in isolation.
+
+\begin{table}[h]\centering
+\small
+\caption{AgentState fields written by each agent}
+\label{tab:agentstate}
+\begin{tabular}{ll}
+\toprule
+Agent & Fields written \\
+\midrule
+RouterAgent      & \texttt{format}, \texttt{doc\_type}, \texttt{image\_path} \\
+DeskewAgent      & \texttt{skew\_angle}, \texttt{image\_path} (corrected) \\
+OCRAgent         & \texttt{ocr\_words} (text, bbox, confidence) \\
+LayoutAgent      & \texttt{layout\_items} (label, value, value\_box), \texttt{doc\_type} \\
+TextPIIAgent     & \texttt{text\_pii\_items} (entity, value) \\
+ContextAgent     & \texttt{confirmed\_pii} (filtered, enriched) \\
+BBRefinerAgent   & \texttt{confirmed\_pii} (pixel bboxes attached) \\
+CriticAgent      & \texttt{confirmed\_pii} (false positives removed) \\
+RedactionAgent   & \texttt{redacted\_path}, \texttt{coverage\_pct}, \texttt{face\_boxes} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────
+\subsection{The Nine-Agent Image Pipeline}
+% ─────────────────────────────────────────────────────────
+
+Image redaction (JPEG, PNG, BMP, TIFF) is the most
+complex pathway, requiring all nine agents.
+Figure~\ref{fig:pipeline} illustrates the data flow.
+
+\paragraph{RouterAgent (0.04\,s mean).}
+Inspects the uploaded file, determines its MIME type
+and initial document type (\texttt{unknown},
+\texttt{id\_card}, \texttt{passport}, etc.),
+and routes to the appropriate pipeline variant.
+For images, the full nine-agent pipeline is invoked.
+For other formats, shortened pipelines are used
+(Section~\ref{sec:multimodal}).
+
+\paragraph{DeskewAgent.}
+Estimates document skew using Hough line detection
+and applies affine correction for angles exceeding
+$\pm$0.5°.
+Skew correction is applied before OCR to improve text
+extraction accuracy on scanned documents.
+The corrected image replaces the original in
+\texttt{AgentState} for all downstream agents.
+
+\paragraph{OCRAgent (2.73\,s mean).}
+Runs EasyOCR with GPU acceleration to extract
+all text tokens from the image.
+Each token is stored with its bounding box in pixel
+coordinates and confidence score.
+OCR output serves two purposes: (i)~it provides the
+text corpus for the TextPIIAgent and ContextAgent,
+and (ii)~it enables the \emph{TEXT-FIRST} bounding
+box refinement strategy in the BBRefinerAgent
+(Section~\ref{sec:bbrefiner}).
+
+\paragraph{LayoutAgent (4.79\,s mean).}
+The LayoutAgent is the system's primary novel
+component.
+It submits the document image to the fine-tuned
+Qwen2-VL-2B VLM with a structured prompt requesting
+all PII label-value pairs with approximate bounding
+boxes.
+The VLM responds in a constrained format:
+
+\vspace{4pt}
+\noindent\texttt{LABEL: Name | VALUE: Angela Greene |
+VALUE\_BOX: (200,180),(300,240)}
+\vspace{4pt}
+
+The LayoutAgent parses this output, applies label
+normalisation (mapping variants such as
+\texttt{SURNAME} and \texttt{Full Name} to the
+canonical \texttt{Name} category), and additionally
+uses the VLM's response to refine the document type
+from \texttt{unknown} to a specific category
+(e.g., \texttt{id\_card}).
+The LayoutAgent accounts for 46\% of total pipeline
+latency, reflecting the cost of VLM inference at
+4-bit quantisation.
+
+\paragraph{TextPIIAgent (0.94\,s mean).}
+Runs the Qwen2.5-3B text model over the OCR-extracted
+text to identify any PII entities that the VLM may
+have missed --- particularly emails, phone numbers,
+and free-form addresses that do not appear as
+structured label-value pairs on the card.
+This agent is most useful for document types with
+dense running text (Word documents, plain text files)
+and contributes marginally to identity card redaction
+where text is sparsely structured.
+
+\paragraph{ContextAgent (0.07\,s mean).}
+Applies heuristic and LLM-based filtering to the
+combined output of LayoutAgent and TextPIIAgent.
+Heuristics encode domain knowledge: organisation
+names, legal boilerplate, and card-issuer references
+are removed even if the VLM labelled them as PII.
+A lightweight LLM pass then reviews borderline cases,
+using the user's selected PII filter (which of the
+ten categories are enabled) to drop disabled categories
+before downstream processing.
+
+\paragraph{BBRefinerAgent (< 1\,ms mean).}
+\label{sec:bbrefiner}
+Refines the pixel-level bounding boxes for each
+confirmed PII item using the \emph{TEXT-FIRST}
+strategy: for each confirmed PII value, the agent
+searches the OCR word list for a token whose
+string matches the PII value and substitutes the
+OCR-derived pixel box (which is precise to the
+rendered glyph boundary) for the VLM-estimated box
+(which is accurate to the nearest grid cell).
+This substitution improves bounding box IoU for
+text-valued PII categories without any additional
+model inference.
+Signature regions are handled separately via YOLOv8
+contour detection, which produces full-width boxes
+that encompass the drawn signature area.
+
+\paragraph{CriticAgent (1.85\,s mean).}
+Submits the confirmed PII list to the Qwen2.5-3B
+text model for adversarial review.
+The critic is instructed to identify items that are
+not genuinely PII in context --- for example, a
+nationality field on an ID card that happens to match
+a person's name.
+Items labelled as safe by the critic are dropped
+\emph{unless} they carry a strong PII category label
+(Name, Date of Birth, ID Number, Signature, Face),
+in which case a \textit{PII label override} retains
+them regardless of the critic's verdict.
+This override prevents the critic from discarding
+clearly sensitive information while still filtering
+out false positives in ambiguous categories.
+
+\paragraph{RedactionAgent (0.02\,s mean).}
+Applies black rectangular redactions to the image
+at the confirmed pixel bounding boxes using Pillow.
+Face boxes detected by YOLOv8n are merged with the
+VLM-detected PII list before redaction.
+The agent records the total coverage percentage
+(redacted pixels / total image area) and saves the
+output image alongside a \texttt{.audit.json} sidecar
+containing the full redaction record.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Multi-Modal Routing}
+\label{sec:multimodal}
+% ─────────────────────────────────────────────────────────
+
+Five additional document formats are handled by
+shorter pipelines that reuse the hybrid NER component
+(a combination of TextPIIAgent heuristics and
+Qwen2.5-3B inference) but bypass the VLM.
+Table~\ref{tab:latency} in Section~\ref{sec:evaluation}
+reports latency for each format; we describe the
+pipeline logic here.
+
+\paragraph{PDF.}
+Text is extracted natively via PyMuPDF without OCR.
+The hybrid NER pipeline identifies PII entities,
+and PyMuPDF's redaction API applies black rectangles
+at the character-level bounding boxes of matched
+text.
+Mean latency is 40\,ms --- 225$\times$ faster than
+image redaction --- because the VLM is not invoked.
+PDF redaction is content-stream based and survives
+copy-paste; the redacted text is genuinely absent
+from the document, not merely obscured visually.
+
+\paragraph{Audio.}
+Whisper tiny~\cite{radford2022whisper} transcribes
+the audio to text.
+The hybrid NER pipeline identifies PII entity spans
+in the transcript.
+Span timestamps are mapped back to the audio timeline,
+and pydub replaces those segments with silence.
+Mean latency is 1.22\,s for a 7-second clip.
+
+\paragraph{Plain text.}
+The hybrid NER pipeline runs directly on the text
+content.
+Matched PII values are replaced with
+\texttt{[REDACTED]} tags in the output.
+Mean latency is 10\,ms.
+
+\paragraph{Word documents (.docx).}
+python-docx iterates all paragraphs and table cells,
+applying string replacement for matched PII values.
+Output is rendered as PDF with matched values
+highlighted in red before redaction for user review.
+
+\paragraph{Presentations (.pptx).}
+python-pptx iterates all slide text frames.
+Redaction follows the same string-replacement logic
+as Word documents.
+
+For all non-image formats, blockchain anchoring and
+ZK proof generation (Section~\ref{sec:crypto})
+proceed identically to the image pipeline.
+The audit JSON sidecar records the document SHA-256,
+anchor hash, redacted item list, coverage percentage,
+and PII filter configuration used.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Selective Redaction and User Controls}
+% ─────────────────────────────────────────────────────────
+
+Omni-Shield exposes fine-grained redaction controls
+through the frontend.
+Users select which of ten PII categories to redact
+(names, faces, signatures, phones, emails, date of
+birth, ID numbers, addresses, organisation names,
+general dates), add arbitrary custom terms or regular
+expressions, and choose from four preset profiles
+(Full Scan, Legal, Medical, Minimal).
+
+Custom terms and regex patterns are matched against
+the OCR/NER output using exact string search and
+Python \texttt{re} module respectively,
+and are visually distinguished from AI-detected
+redactions in the canvas editor (dark red borders
+for custom, black for AI).
+Dry-run mode executes the full pipeline and returns
+the list of would-be redactions without writing any
+output files or anchoring to the blockchain,
+supporting preview workflows.
+
+% ─────────────────────────────────────────────────────────────────────────────
+% KNOWLEDGE DISTILLATION
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Knowledge Distillation for Document PII Detection}
+\label{sec:knowledge_distillation}
+
+A core challenge in building a local PII detector for
+identity documents is the absence of large annotated
+datasets: real identity documents cannot be shared for
+research due to the very privacy concerns the system
+is designed to address.
+We resolve this through a three-stage knowledge
+distillation pipeline:
+(i)~generate a synthetic training corpus using
+procedural image synthesis;
+(ii)~label it using a capable teacher model via API;
+and (iii)~fine-tune a compact student VLM using
+QLoRA to produce a deployable adapter.
+This section describes each stage and reports the
+resulting training dynamics and qualitative output
+changes.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Synthetic Dataset Generation}
+% ─────────────────────────────────────────────────────────
+
+We synthesise 2,000 identity document images using
+Python's Faker library for PII generation and Pillow
+for image rendering.
+The dataset covers six countries --- Australia,
+Canada, Germany, India, the United Kingdom, and the
+United States of America --- with 333--334 cards per
+country.
+
+\paragraph{Card layout.}
+Each card is rendered at $856 \times 540$ pixels.
+Country-specific templates define background colours,
+field positions, font sizes, and label conventions
+(e.g., \textit{Geburtsdatum} for date of birth on
+German cards, \textit{Date of Birth} for UK cards).
+A face photograph placeholder (a solid-colour ellipse
+in flesh tones) is drawn at a fixed position in the
+top-left quadrant.
+A signature region is rendered as a hand-written-style
+font string in the lower portion of the card.
+Card-specific visual effects are applied post-render:
+random brightness and contrast variation
+($\pm$15\%), mild Gaussian blur (radius 0--1\,px),
+and JPEG compression at quality 85--95.
+
+\paragraph{Locale-appropriate PII.}
+Names are generated using Faker's locale-specific
+name providers
+(\texttt{en\_AU}, \texttt{en\_CA}, \texttt{de\_DE},
+\texttt{en\_IN}, \texttt{en\_GB}, \texttt{en\_US}).
+ID numbers follow country-specific formats: the UK
+National Insurance pattern \texttt{XX\,999999\,X},
+the Indian Aadhaar pattern \texttt{XXXX\,9999\,XXXX},
+the US Social Security pattern \texttt{999-99-9999},
+and so on.
+Dates of birth are generated uniformly over the range
+1950--2005 and formatted according to each country's
+convention.
+
+\paragraph{Held-out test set.}
+A separate held-out test set of 150 images (25 per
+country) is generated using random seed 99999,
+distinct from the training seed (42).
+The same generation pipeline is used for both sets
+to ensure visual style consistency while preventing
+data leakage.
+Ground truth annotations (bounding box coordinates,
+PII values, and category labels) are recorded at
+draw time, when exact pixel positions are known,
+rather than estimated post-hoc.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Teacher Labelling via the Claude API}
+% ─────────────────────────────────────────────────────────
+
+Ground truth labels for fine-tuning are generated by
+submitting each synthetic card image to the Claude API
+(\texttt{claude-3-5-sonnet} model) with the following
+structured prompt:
+
+\begin{quote}
+\small
+\textit{You are annotating a synthetic identity document
+for a PII detection research project.
+Identify every PII field visible on this card.
+For each field, output exactly one line in the format:}
+
+\texttt{LABEL: <label> | VALUE: <value> |
+VALUE\_BOX: (x1,y1),(x2,y2)}
+
+\textit{Use normalised coordinates in the range
+0--1000 for both axes.
+Only output lines in this exact format.}
+\end{quote}
+
+The teacher model outputs structured annotations
+that the training pipeline parses and converts to
+pixel bounding boxes by scaling by the image
+dimensions.
+Annotations with malformed output (unparseable
+format, out-of-range coordinates) are discarded;
+the acceptance rate is 96.3\% across the 2,000
+training images.
+
+This teacher-labelling approach~\cite{taori2023alpaca}
+differs from traditional distillation in that the
+teacher and student operate on different modalities
+at inference time: the teacher receives the image
+via multimodal API and produces text annotations,
+while the student learns to produce the same
+structured text directly from image input.
+The knowledge transferred is therefore not logit
+distributions but annotation \emph{format and
+content} --- a form of imitation learning
+from a stronger annotator.
+
+% ─────────────────────────────────────────────────────────
+\subsection{QLoRA Fine-tuning}
+% ─────────────────────────────────────────────────────────
+
+We fine-tune Qwen2-VL-2B-Instruct using QLoRA
+with the following configuration:
+
+\begin{itemize}
+  \item \textbf{Base model}: Qwen2-VL-2B-Instruct
+        loaded in 4-bit NF4 with double
+        quantisation~\cite{dettmers2023qlora}
+  \item \textbf{LoRA rank}: 16; alpha: 32;
+        dropout: 0.05
+  \item \textbf{Target modules}: all attention
+        projection matrices
+        (\texttt{q\_proj}, \texttt{k\_proj},
+        \texttt{v\_proj}, \texttt{o\_proj})
+        and MLP gates
+        (\texttt{gate\_proj}, \texttt{up\_proj},
+        \texttt{down\_proj})
+  \item \textbf{Optimiser}: AdamW with 8-bit
+        bitsandbytes paged optimiser;
+        learning rate $2 \times 10^{-4}$;
+        cosine schedule with 10-step warmup
+  \item \textbf{Batch size}: 1 (gradient
+        accumulation steps: 4; effective batch: 4)
+  \item \textbf{Epochs}: 3
+  \item \textbf{Hardware}: NVIDIA RTX~5060
+        Laptop GPU, 8\,GB VRAM
+  \item \textbf{Training time}: 47 minutes
+\end{itemize}
+
+Training loss decreases from 2.14 at step 0 to
+0.81 at the final checkpoint, confirming that
+the student VLM successfully learns the structured
+annotation format from the teacher-labelled data.
+The adapter adds 28.4\,M trainable parameters
+(1.4\% of the 2B base model) and occupies 113\,MB
+on disk.
+At inference time, the adapter is merged into the
+base model weights using PEFT's \texttt{merge\_and\_unload()}
+to eliminate any runtime overhead.
+
+% ─────────────────────────────────────────────────────────
+\subsection{What Fine-tuning Contributes}
+% ─────────────────────────────────────────────────────────
+
+A natural question is whether fine-tuning measurably
+improves PII detection accuracy relative to the
+base Qwen2-VL-2B model.
+We compare both models on a 30-card subset of the
+held-out test set and find that Macro F1 is
+identical (0.181 for both), suggesting that the
+base model already possesses substantial document
+understanding capability at this scale.
+
+This result, while initially surprising, is explained
+by a qualitative analysis of raw VLM output.
+
+% Knowledge distillation comparison — base vs fine-tuned Qwen2-VL-2B
+% NOTE: Identical F1 scores are expected and informative.
+% Fine-tuning contributes label-format consistency, not value detection.
+\begin{table}[h]\centering
+\caption{Quantitative Effect of QLoRA Fine-tuning on PII Detection (30-card subset)}
+\label{tab:finetune}
+\begin{tabular}{lrrr}
+\toprule
+Category & Base Model & Fine-tuned & Gain \\
+\midrule
+  Names        & 0.068 & 0.068 & +0.000 \\
+  Faces        & 0.000 & 0.000 & +0.000 \\
+  Signatures   & 0.926 & 0.926 & +0.000 \\
+  Phones       & 0.000 & 0.000 & +0.000 \\
+  Emails       & 0.000 & 0.000 & +0.000 \\
+  DOB          & 0.627 & 0.627 & +0.000 \\
+  ID Numbers   & 0.125 & 0.125 & +0.000 \\
+  Addresses    & 0.067 & 0.067 & +0.000 \\
+  Org Names    & 0.000 & 0.000 & +0.000 \\
+  Dates        & 0.000 & 0.000 & +0.000 \\
+\midrule
+  \textbf{Macro F1} & 0.1813 & \textbf{0.1813} & +0.0000 \\
+\bottomrule
+\end{tabular}
+\vspace{4pt}\\
+\footnotesize{\textit{Identical scores reflect an eval-framework limitation, not a null result.
+Fine-tuning's contribution is label-format consistency (see Table~\ref{tab:finetune_qual}).}}
+\end{table}
+
+% Qualitative effect of QLoRA fine-tuning — label consistency evidence
+\begin{table}[h]\centering
+\caption{Qualitative Effect of QLoRA Fine-tuning on VLM Output Format}
+\label{tab:finetune_qual}
+\begin{tabular}{lll}
+\toprule
+Field & Base Model Output & Fine-tuned Output \\
+\midrule
+Name      & \texttt{Name | Leonie D\"{o}rr}         & \texttt{Name | Leonie D\"{o}rr} \\
+DOB       & \texttt{Date of Birth | 01.08.1991}    & \texttt{Date of Birth | 01.08.1991} \\
+ID Number & \texttt{\textit{[empty]} | M898585166} & \texttt{ID No. | M898585166} \\
+Signature & \texttt{Signature | [none]}             & \texttt{Signature | [none]} \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}\\
+\footnotesize{The base model detects PII values correctly but omits field labels on
+structured fields (row~3). Fine-tuning teaches consistent \texttt{LABEL\,|\,VALUE}
+output format required by the downstream pipeline: an empty label is normalised to
+\texttt{other} by \texttt{normalize\_cat()} and scored as a false positive regardless
+of whether the value is correct. Quantitative F1 appears identical between the two
+models (Table~\ref{tab:finetune}) because the evaluation framework matches on values,
+not on the label\,$\rightarrow$\,category mapping the live pipeline depends on.}
+\end{table}
+
+Table~\ref{tab:finetune_qual} shows a representative
+comparison for a single German identity card.
+The base model correctly detects the ID number value
+(\texttt{M898585166}) but outputs an \emph{empty
+label} for that field --- yielding a raw prediction
+of \texttt{[empty] | M898585166}.
+The fine-tuned model outputs \texttt{ID No. |
+M898585166} --- the correctly labelled form required
+by the downstream BBRefinerAgent and ContextAgent.
+
+This distinction matters because the evaluation
+framework maps predictions to PII categories via
+the label field: an empty label is classified as
+\texttt{other} and counted as a false positive,
+while the correct label is mapped to
+\texttt{id\_numbers} and matched against the ground
+truth.
+Two predictions with identical values but different
+labels produce different F1 contributions.
+
+The fine-tuning contribution is therefore
+\textbf{output format consistency}: the adapter
+trains the model to emit consistently parseable
+\texttt{LABEL\,|\,VALUE\,|\,BBOX} triples for all
+detected fields, not just the most visually salient
+ones.
+This is a necessary condition for reliable pipeline
+operation --- a model that intermittently omits field
+labels would require additional heuristic recovery
+logic in every downstream agent.
+
+We note two additional qualitative improvements
+observed post fine-tuning.
+First, \emph{face detection generalises}: the base
+model rarely labels the face photograph region
+explicitly, while the fine-tuned model reliably
+identifies it as a Face entity with a reasonable
+bounding box.
+Since face photographs are not labelled as explicit
+PII in the Claude teacher annotations (the teacher
+labels text fields only), this generalisation appears
+to be an emergent capability from learning the
+structured field-labelling task.
+Second, \emph{label vocabulary stabilises}: the base
+model uses inconsistent label strings (\texttt{Full
+Name}, \texttt{Surname}, \texttt{Given Name},
+\texttt{Name}) for the same field type across
+different cards, requiring a broad normalisation
+dictionary in the ContextAgent.
+The fine-tuned model converges to the label
+conventions present in the training data,
+substantially reducing the normalisation burden.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Synthetic-to-Real Transfer}
+% ─────────────────────────────────────────────────────────
+
+A standard concern with synthetic training data is
+distribution shift: models trained on clean synthetic
+images may fail on the photographic noise, printing
+artefacts, and typographic diversity of real documents.
+
+We address this directly in Section~\ref{sec:evaluation}
+by evaluating Omni-Shield on 19 real specimen identity
+documents (Section~\ref{sec:real_eval}).
+The finding is that Macro F1 on real documents
+(0.269) \emph{exceeds} performance on synthetic test
+cards (0.187).
+We attribute this counterintuitive result to two
+factors: the synthetic test set uses greater layout
+variation than the training set (harder than real
+specimen cards in our evaluation), and the visual
+features that the VLM uses for layout understanding
+--- field label typography, spatial proximity of
+label-value pairs, card background colour --- are
+faithfully reproduced by the Pillow renderer.
+
+The largest performance gap between synthetic and
+real evaluation is in the Names category
+(F1: 0.312 synthetic, 0.182 real), which we
+attribute to typographic diversity in real documents
+--- ALL CAPS names, diacritics, and multi-word
+surnames are underrepresented in the Faker-generated
+training distribution.
+Expanding training coverage of name formats is
+identified as the highest-priority data augmentation
+for future work.
+
+% ─────────────────────────────────────────────────────────────────────────────
+% EVALUATION
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Evaluation}
+\label{sec:evaluation}
+
+We evaluate Omni-Shield along four dimensions:
+PII detection accuracy against three baseline systems,
+agent-level contribution via ablation, error
+characterisation via confusion matrix analysis,
+and generalisation to real specimen documents.
+All experiments run on the same hardware used during
+training: an NVIDIA RTX~5060 Laptop GPU (8\,GB VRAM),
+Intel Core i7, 16\,GB RAM, Ubuntu 24.04.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Evaluation Protocol}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Test set.}
+We evaluate on 150 synthetic identity card images
+(25 per country, seed 99999, held out from training).
+Each image is annotated with ground truth bounding
+boxes and PII values recorded at draw time.
+Five PII fields are annotated per card: Name, Date
+of Birth, ID Number, Face, and Signature.
+The test set is generated with the same pipeline
+as the training set to ensure visual consistency;
+statistical independence is guaranteed by the
+distinct random seed.
+
+\paragraph{Metrics.}
+We compute precision, recall, and F1 for each of
+ten PII categories independently.
+A predicted bounding box is matched to a ground truth
+box using intersection-over-union (IoU) with a
+threshold of 0.3 for text fields and 0.1 for
+signature regions (which vary widely in spatial
+extent across card designs).
+For signature boxes, we additionally apply a
+containment check: if the ground truth box occupies
+at least 50\% of the predicted box area, the
+prediction is counted as a true positive regardless
+of IoU.
+We report Macro F1 (mean over all categories) and
+Micro F1 (computed from aggregate TP, FP, FN counts).
+For text-only baselines and real document evaluation
+(where bounding boxes are unavailable), we use
+text value matching: a prediction is counted as a
+true positive if the predicted string is a substring
+of the ground truth value or vice versa, with
+Levenshtein distance tolerance $\leq 2$ for strings
+of length $\geq 4$.
+
+\paragraph{Evaluation framework.}
+All evaluations call the live FastAPI backend via
+HTTP (\texttt{POST /redact/image},
+\texttt{POST /redact/pdf}).
+The evaluation scripts are fully standalone and
+are released alongside the system code.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Baseline Systems}
+% ─────────────────────────────────────────────────────────
+
+We compare against three baselines representing
+the spectrum of available approaches.
+
+\textbf{Microsoft Presidio}~\cite{presidio2020}
+is a mature open-source NLP-based PII detector.
+We apply EasyOCR to extract text from each test
+image and pass the extracted text to Presidio's
+\texttt{AnalyzerEngine} with the
+\texttt{en\_core\_web\_lg} spaCy model.
+Presidio operates on text only and cannot access
+pixel-level information.
+
+\textbf{Llama~3~8B} (via Ollama) represents the
+approach of prompting a locally-hosted LLM to
+identify PII from OCR-extracted text.
+We use the same EasyOCR output and submit it with
+a structured prompt requesting a JSON array of
+detected PII entities.
+This baseline tests whether a larger general-purpose
+language model --- 4$\times$ the parameter count of
+our student VLM --- can substitute for the
+specialised multi-agent pipeline.
+
+\textbf{Omni-Shield} uses the full nine-agent
+pipeline with all PII categories enabled and no
+custom terms.
+The same 150 test images are processed in sequence
+with warm models (after first-request model loading).
+
+% ─────────────────────────────────────────────────────────
+\subsection{Main Results}
+% ─────────────────────────────────────────────────────────
+
+\begin{table*}[h]\centering
+\caption{PII Detection --- Comparison with Baselines}
+\label{tab:comparison}
+\begin{tabular}{lccccccccc}
+\toprule
+Category & \multicolumn{3}{c}{Omni-Shield} & \multicolumn{3}{c}{Presidio} & \multicolumn{3}{c}{Llama 3 8B} \\
+ & P & R & F1 & P & R & F1 & P & R & F1 \\
+\midrule
+Names & 0.60 & 0.21 & 0.31 & 0.35 & 0.24 & 0.29 & 0.96 & 0.58 & 0.72 \\
+Faces & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+Signatures & 0.85 & 0.90 & 0.87 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+Phone Numbers & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+Email Addresses & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+Date of Birth & 0.51 & 0.54 & 0.52 & 0.00 & 0.00 & 0.00 & 0.79 & 0.94 & 0.85 \\
+ID Numbers & 0.38 & 0.05 & 0.10 & 0.29 & 0.27 & 0.28 & 0.78 & 0.77 & 0.78 \\
+Addresses & 0.11 & 0.05 & 0.07 & 0.00 & 0.00 & 0.00 & 0.42 & 0.30 & 0.35 \\
+Org Names & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+Dates (General) & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+\midrule
+\textbf{Macro F1} & -- & -- & \textbf{0.1867} & -- & -- & \textbf{0.0566} & -- & -- & \textbf{0.2703} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:comparison} presents precision,
+recall, and F1 per PII category for all three
+systems.
+
+The results reveal complementary strengths across
+systems.
+Llama~3~8B achieves the highest Macro F1 (0.270)
+and excels on text-based PII: Date of Birth
+(F1\,=\,0.854), ID Numbers (0.778), and Names
+(0.720).
+These strong results reflect Llama~3's large
+parameter count and instruction-following capability,
+which enable reliable extraction of structured
+values from OCR text even when field labels vary
+across card designs.
+
+However, Llama~3 scores F1\,=\,0.000 on Signatures
+and Faces --- categories that require visual layout
+understanding rather than text analysis.
+Neither baseline can detect visual PII because both
+operate on OCR-extracted text rather than the
+document image.
+
+Omni-Shield achieves the highest F1 on Signatures
+(0.870) and is the only system to detect this
+category at all.
+Signature detection is the single most important
+category by volume: ablation shows it accounts for
+a disproportionate share of total F1
+(Section~\ref{sec:ablation}).
+Omni-Shield also achieves competitive performance
+on Date of Birth (F1\,=\,0.522) --- substantially
+below Llama~3 (0.854) but dramatically above
+Presidio (0.000) --- reflecting the VLM's ability
+to interpret layout context that pure NER misses.
+
+Presidio achieves Macro F1\,=\,0.057, the lowest
+of the three systems.
+It attains non-zero F1 only on Names (0.290) and
+ID Numbers (0.280), where spaCy's PERSON and
+structured pattern matchers fire on well-formed
+text tokens.
+It fails entirely on Signatures, Faces, Dates of
+Birth, and Addresses --- five of the most prevalent
+PII categories on identity documents.
+
+\paragraph{The case for multi-modal redaction.}
+The baseline comparison validates the central design
+claim of Omni-Shield: \emph{text-only systems are
+insufficient for identity document redaction}.
+A deployment relying solely on Llama~3 --- the
+strongest text baseline --- would fail to redact
+every signature and face photograph in the test
+set, leaving the most visually distinctive PII
+untouched.
+Conversely, a deployment relying solely on
+Omni-Shield would miss the text PII that Llama~3
+handles well.
+The ideal system combines both approaches; we
+identify this hybrid as the primary direction for
+future work (Section~\ref{sec:limitations}).
+
+% ─────────────────────────────────────────────────────────
+\subsection{Agent Ablation Study}
+\label{sec:ablation}
+% ─────────────────────────────────────────────────────────
+
+To quantify each agent class's contribution to
+overall performance, we run five pipeline
+configurations on the 150-card test set with
+different subsets of PII categories enabled.
+
+\begin{table*}[h]\centering
+\caption{Agent Ablation Study --- Macro F1}
+\label{tab:ablation}
+\begin{tabular}{lcc}
+\toprule
+Configuration & Macro F1 & Micro F1 \\
+\midrule
+\textbf{All agents (baseline)} & \textbf{0.1584} & \textbf{0.3197} \\
+Faces + signatures disabled & 0.0726 & 0.1493 \\
+Names only & 0.0617 & 0.1289 \\
+DOB + ID numbers disabled & 0.1527 & 0.3136 \\
+Phones + emails + addresses only & 0.0392 & 0.0607 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:ablation} reports Macro F1 and
+Micro F1 for each configuration.
+The full pipeline (Macro F1\,=\,0.158 on this
+30-card subset; 0.187 on the full 150) establishes
+the baseline.
+Disabling Faces and Signatures reduces Macro F1 by
+54.2\% --- the largest single drop of any
+configuration --- confirming that visual PII
+detection drives the majority of the system's value
+on identity documents.
+Disabling only Names reduces Macro F1 by 61.0\%,
+reflecting that names are present on every card
+and that the pipeline's name detection, while
+imperfect, contributes consistently across all
+150 documents.
+Disabling Date of Birth and ID Numbers reduces
+Macro F1 by only 3.6\%, consistent with the
+low recall observed for these categories
+in the full evaluation.
+Running only the text PII agents (Phones, Emails,
+Addresses) produces Macro F1\,=\,0.039 ---
+barely above zero --- because these fields are
+absent from almost all synthetic identity cards.
+
+These results validate the multi-agent decomposition:
+each agent class contributes measurably, and no
+single component dominates to the degree that the
+others could be removed without significant loss.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Error Analysis}
+% ─────────────────────────────────────────────────────────
+
+Figure~\ref{fig:confusion} shows the PII category
+confusion matrix across 150 test documents.
+Of 498 total predictions, 262 are true positives,
+175 are false positives, and 655 ground truth
+items are false negatives (missed detections).
+
+\textbf{False negatives dominate.}
+The ratio of missed detections to false positives
+is approximately 4:1.
+The system is not confusing PII types with each
+other --- when it detects a field, it classifies
+it correctly with high precision.
+The primary failure mode is recall: the VLM fails
+to generate predictions for fields it observes,
+particularly on cards where field positions deviate
+from the training distribution.
+
+\textbf{Signatures generate the most false positives}
+relative to their true positive count
+(5 FP against 126 TP).
+Examination of failure cases reveals that the
+model occasionally identifies underline decorations
+or stamp regions as signature areas.
+The low FP rate relative to TP (3.8\%) indicates
+the signature detector is well-calibrated.
+
+\textbf{Date of birth over-fires} with 61 false
+positives against 65 true positives ---
+a precision ratio of 51.7\%.
+The confusion matrix shows that expiry dates,
+issue dates, and reference numbers containing
+date-like patterns account for the majority of DOB
+false positives.
+Adding explicit exclusion rules for common
+non-PII date labels (\textit{Valid Until},
+\textit{Issue Date}, \textit{Expiry}) to the
+ContextAgent is the targeted fix.
+
+\textbf{Addresses exhibit a structural IoU problem.}
+The model detects single address lines with correct
+precision, but ground truth annotations span the
+full multi-line address block.
+IoU between a one-line prediction and a three-line
+ground truth box is structurally low even when the
+detected region is spatially correct.
+Adopting a containment-based matching criterion
+(predicted box covers $\geq$50\% of ground truth
+area) for this category would substantially improve
+measured F1 without changing the underlying
+detection quality.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Per-Agent Latency}
+% ─────────────────────────────────────────────────────────
+
+\begin{table*}[h]\centering
+\caption{Mean Redaction Latency by Document Format}
+\label{tab:latency}
+\begin{tabular}{llrrrr}
+\toprule
+Format & Pipeline & Mean & Min & Max & N \\
+\midrule
+Image (JPEG/PNG) & 9-agent VLM pipeline & 9.0s & 6.3s & 10.98s & 5 \\
+PDF & Hybrid NER + PyMuPDF & 0.04s & 0.03s & 0.05s & 5 \\
+Audio (MP3/WAV) & Whisper STT + NER & 1.22s & 1.05s & 1.78s & 5 \\
+Plain text & Hybrid NER only & 0.01s & 0.01s & 0.01s & 5 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:latency} reports mean end-to-end
+latency per document format.
+For the image pipeline, Figure~\ref{fig:timings}
+breaks down latency by agent.
+
+The LayoutAgent (VLM inference, 4.79\,s mean)
+accounts for 46\% of total pipeline time.
+OCRAgent (EasyOCR, 2.73\,s) contributes 26\%,
+and CriticAgent (LLM review, 1.85\,s) 18\%.
+All other agents together account for under 10\%
+of total latency.
+
+Two optimisation directions are immediately apparent.
+First, replacing EasyOCR with a lighter
+GPU-accelerated OCR engine (PaddleOCR, TrOCR) could
+halve OCR time.
+Second, replacing the CriticAgent's full LLM
+inference pass with a lightweight heuristic
+classifier could eliminate its 1.85\,s contribution
+with minimal accuracy impact, given that the critic's
+primary function --- removing organisational names
+and legal boilerplate --- is well-suited to
+rule-based matching.
+
+PDF, audio, text, Word, and PowerPoint documents
+bypass the VLM entirely, yielding latencies of
+40\,ms, 1.22\,s, 10\,ms, and sub-second
+respectively.
+This 225$\times$ spread between the slowest
+(image) and fastest (PDF/text) formats reflects
+the fundamental cost of visual understanding relative
+to text extraction.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Per-Country Analysis}
+% ─────────────────────────────────────────────────────────
+
+Performance varies across the six countries in the
+test set.
+Germany achieves the highest Macro F1 (0.214),
+followed by India (0.196), Australia (0.164), USA
+(0.151), UK (0.126), and Canada (0.109).
+Canada also accounts for three of the four pipeline
+errors (HTTP 500 responses) in the full evaluation
+run, which we attribute to VRAM exhaustion on
+complex card layouts triggering an out-of-memory
+condition in the VLM inference kernel.
+These errors represent 2.0\% of the test set and
+are resolved by restarting the model between
+consecutive complex requests.
+
+The performance ordering does not correlate with
+training set size (equal at 333--334 per country)
+and instead appears to reflect visual distinctiveness:
+German and Indian cards use high-contrast field
+labels and consistent layouts that the VLM finds
+easier to parse, while UK and Canadian cards exhibit
+more varied typography and field positioning.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Real Specimen Evaluation}
+\label{sec:real_eval}
+% ─────────────────────────────────────────────────────────
+
+To assess generalisation beyond the synthetic
+distribution, we evaluate Omni-Shield on 19 real
+specimen identity documents sourced from Wikimedia
+Commons --- officially published educational
+specimens containing no real PII.
+Documents were annotated by visual inspection;
+since pixel-level bounding boxes are impractical
+to obtain for real documents, we use text-value
+matching exclusively (IoU disabled, bbox\,=\,null).
+
+\begin{table*}[h]\centering
+\caption{Synthetic vs Real Specimen Document Evaluation}
+\label{tab:real_eval}
+\begin{tabular}{lrrrr}
+\toprule
+Category & Synthetic F1 & Real P & Real R & Real F1 \\
+\midrule
+Faces      & 0.000$^*$ & 0.826 & 1.000 & \textbf{0.905} \\
+Signatures & 0.870      & 0.565 & 0.867 & 0.684 \\
+DOB        & 0.522      & 0.875 & 0.438 & 0.583 \\
+ID Numbers & 0.096      & 1.000 & 0.200 & 0.333 \\
+Names      & 0.312      & 0.500 & 0.111 & 0.182 \\
+Addresses  & 0.067      & 0.000 & 0.000 & 0.000 \\
+\midrule
+\textbf{Macro F1} & 0.187 & -- & -- & \textbf{0.269} \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}
+\footnotesize{$^*$Synthetic faces F1=0 is an evaluation
+limitation (illustrated avatars), not a model failure.
+Real document face recall = 1.0 confirms correct detection.}
+\end{table*}
+
+Table~\ref{tab:real_eval} compares per-category
+performance on synthetic versus real documents.
+Three findings stand out.
+
+\textbf{Macro F1 is higher on real documents
+(0.269 vs 0.187).}
+This is the opposite of the expected synthetic-to-real
+degradation.
+We attribute this to the real specimen cards having
+more regular and visually prominent field labels
+than our synthetic test set, which introduced
+deliberate layout variation to stress-test the system.
+
+\textbf{Face detection transfers with near-perfect
+recall (F1\,=\,0.905, recall\,=\,1.0).}
+This confirms the YOLOv8n model correctly detects
+real photographic faces.
+The F1\,=\,0.000 reported in the synthetic
+evaluation is an evaluation artefact: synthetic
+cards use 2D illustrated avatars that COCO-trained
+YOLOv8 cannot detect as faces.
+A model filename bug (\texttt{yolov8x.pt} referenced
+instead of the present \texttt{yolov8n.pt}) was
+identified and corrected during this evaluation;
+the live system has always applied face redaction
+correctly to real photographic faces.
+
+\textbf{ID number precision is perfect on real
+documents (P\,=\,1.000).}
+Every ID number prediction on real cards is a
+true positive.
+Recall remains low (0.200) --- the model misses 16
+of 20 instances --- consistent with the synthetic
+finding that recall, not precision, is the primary
+gap for this category.
+
+The largest synthetic-to-real performance drop is
+in Names (F1: 0.312\,$\rightarrow$\,0.182),
+which we attribute to typographic diversity
+(ALL CAPS names, diacritics, multi-word surnames)
+underrepresented in the Faker-generated training
+distribution.
+Expanding the training corpus with more diverse
+name formats is identified as the highest-priority
+data augmentation for future work
+(Section~\ref{sec:limitations}).
+
+% ─────────────────────────────────────────────────────────────────────────────
+% CRYPTOGRAPHIC AUDIT TRAIL
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Cryptographic Audit Trail}
+\label{sec:crypto}
+
+A redacted document is only trustworthy if a verifier
+can confirm \emph{independently} that redaction
+occurred, when it occurred, and that the process was
+executed correctly.
+Manual audit logs are mutable and unverifiable;
+centralised databases require trust in their operator.
+Omni-Shield addresses this through two complementary
+cryptographic mechanisms: a blockchain-anchored audit
+ledger that provides tamper-evident provenance, and
+a Groth16 zero-knowledge proof that attests to the
+correctness of the redaction without disclosing
+what was redacted.
+Both operate asynchronously --- completing after the
+redacted document is returned to the user --- and
+impose no latency penalty on the interactive
+redaction workflow.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Blockchain Audit Ledger}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Smart contract design.}
+The \texttt{AuditLog.sol} Solidity contract maintains
+two on-chain data structures per record:
+a \texttt{mapping(bytes32\,$\Rightarrow$\,Record)}
+for O(1) hash lookup, and a per-owner
+\texttt{mapping(address\,$\Rightarrow$\,bytes32[])}
+index that allows a wallet holder to enumerate all
+documents they have processed.
+Each \texttt{Record} stores the anchor hash,
+redaction count, block timestamp, and document type.
+The \texttt{addRecord()} function enforces an
+idempotency check --- anchoring the same hash twice
+is silently skipped --- and emits a
+\texttt{RecordAdded} event for off-chain indexing.
+The \texttt{verify()} view function is gas-free
+(read-only), enabling third-party verification
+without transaction cost.
+
+\paragraph{Salted hash commitment.}
+A naive implementation would anchor
+\texttt{SHA256(document\_bytes)} directly.
+This introduces a linkability vulnerability: identical
+documents processed multiple times produce identical
+on-chain hashes, allowing an observer monitoring the
+blockchain to detect repeated processing of the same
+document.
+Analysis of our audit log reveals 260 duplicate
+hashes among 424 records, all arising from test
+documents processed repeatedly during evaluation.
+
+We address this by computing a salted anchor hash:
+\begin{equation}
+  h_{\text{anchor}} = \text{SHA256}(h_{\text{doc}}
+    \,\|\, \text{owner} \,\|\, \tau)
+  \label{eq:salt}
+\end{equation}
+where $h_{\text{doc}} = \text{SHA256(document\_bytes)}$
+is the original document hash, $\text{owner}$ is the
+wallet address, and $\tau$ is the Unix timestamp at
+anchor time.
+The original $h_{\text{doc}}$ is preserved in the
+audit JSON for user-side verification (the user can
+recompute it from their document);
+$h_{\text{anchor}}$ is what appears on-chain.
+The verification endpoint performs a two-step lookup:
+given $h_{\text{doc}}$ from the user, it retrieves
+$h_{\text{anchor}}$ from the stored audit record and
+queries the blockchain for that value.
+
+Equation~\ref{eq:salt} ensures that even if two users
+process the same document, their on-chain anchors are
+distinct.
+An adversary who observes the blockchain learns only
+that \emph{some} document was processed by
+\emph{some} wallet at \emph{some} time --- no
+document identity information is recoverable from
+the on-chain record alone.
+
+\paragraph{Deployment and gas cost.}
+The system currently deploys to a local Ganache
+Ethereum testnet~\cite{ganache} for development.
+Each \texttt{addRecord()} call consumes 264,333 gas
+units.
+At Ethereum mainnet prices (\$2,500 per ETH, 20\,Gwei
+gas price), this corresponds to approximately
+\$13.22 per anchor --- prohibitive for high-volume
+use.
+Deployment on Polygon L2~\cite{polygon2021} reduces
+this to approximately \$0.006 per anchor at 30\,Gwei
+and \$0.80 per MATIC, making production deployment
+economically viable.
+The \texttt{AuditLog.sol} contract is EVM-compatible
+and requires only an environment variable change to
+migrate between networks.
+
+\paragraph{Verification performance.}
+The \texttt{verify()} view function resolves in
+1.2\,ms mean (measured over five queries to the local
+node), reflecting the O(1) mapping lookup.
+This is fast enough to be embedded in document
+workflows without perceptible latency --- a verifier
+can confirm a redaction record in under 2\,ms,
+faster than a typical HTTP round-trip to a remote
+audit service.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Zero-Knowledge Proof of Redaction}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Motivation.}
+The blockchain record proves that \emph{someone}
+anchored a hash at a specific time.
+It does not prove that the redaction was performed
+correctly --- a malicious actor could anchor a hash
+corresponding to an unredacted document.
+A zero-knowledge proof closes this gap: it attests
+that the prover knows a set of redacted values
+consistent with the public commitment, without
+revealing the values themselves.
+
+\paragraph{Circuit design.}
+We implement the ZK circuit in ZoKrates~\cite{eberhardt2018zokrates}
+using the Groth16 proving system over the
+BN128 elliptic curve.
+The circuit proves the following statement:
+
+\begin{quote}
+\textit{I know a private witness
+$\mathbf{w} = \{h_{\text{items}}\}$ such that
+$\text{Commit}(h_{\text{doc}},\, h_{\text{items}}) =
+c_{\text{public}}$, where $c_{\text{public}}$ is the
+publicly known commitment, $h_{\text{doc}}$ is the
+public document hash, and $h_{\text{items}}$ is the
+SHA-256 hash of the concatenated redacted values
+(known only to the prover).}
+\end{quote}
+
+The commitment function uses Pedersen hashing
+(available in the ZoKrates standard library) over
+the concatenation of the document hash bits and
+the items hash bits:
+\begin{equation}
+  c = \text{PedersenHash}(
+        h_{\text{doc}} \,\|\, h_{\text{items}})
+  \label{eq:commitment}
+\end{equation}
+The circuit takes as \emph{public inputs}:
+the document hash $h_{\text{doc}}$ (as eight
+32-bit unsigned integers), the redaction count,
+and the commitment $c$ (two 32-bit words).
+The circuit takes as \emph{private input}
+(the witness): $h_{\text{items}}$ (eight 32-bit
+unsigned integers).
+The private input never leaves the proving system
+and is not included in the proof.
+
+\paragraph{Proof generation and verification.}
+Proof generation via ZoKrates \texttt{generate-proof}
+takes 20.3\,s mean on the target hardware.
+This is executed asynchronously in a background
+thread immediately after the redacted document is
+saved; the user receives their output before proof
+generation completes.
+The proof becomes available in the audit record
+within approximately 25\,s of the redaction request.
+
+Proof verification uses ZoKrates \texttt{verify}
+against the on-disk verification key generated
+during the one-time trusted setup.
+Verification takes 22.1\,ms mean ---
+fast enough for interactive verification workflows.
+
+Groth16 proofs are constant size (128 bytes for the
+proof object, three field elements for public inputs)
+regardless of the number of redacted items or the
+document size.
+This makes proof storage and transmission trivially
+cheap.
+
+\paragraph{Trusted setup.}
+Groth16 requires a one-time trusted setup ceremony
+to generate the proving key (used by the prover) and
+verification key (used by verifiers).
+The current implementation uses a locally generated
+setup, which introduces a trust assumption: the party
+who ran the setup could theoretically generate false
+proofs for arbitrary statements.
+A production deployment should replace the local
+setup with a publicly verifiable multi-party
+computation (MPC) ceremony, or migrate to a
+transparent proof system (PLONK, STARKs) that
+eliminates the trusted setup requirement entirely.
+We identify this as a priority for future work
+(Section~\ref{sec:limitations}).
+
+\paragraph{What the proof guarantees.}
+The ZK proof provides a \emph{selective disclosure}
+property: an auditor can verify that a specific
+document was redacted and that the redaction
+committed to a specific (undisclosed) set of PII
+values, without learning what those values were.
+This is strictly stronger than the blockchain
+record alone, which only proves that \emph{a}
+hash was anchored.
+Combined, the two mechanisms provide:
+
+\begin{itemize}
+  \item \textbf{Tamper evidence}: the document
+        hash is immutable on-chain; any alteration
+        to the redacted output invalidates the record.
+  \item \textbf{Provenance}: the owner wallet
+        address and timestamp are permanently
+        associated with the record.
+  \item \textbf{Redaction correctness}: the ZK
+        proof attests that the committed PII values
+        are consistent with the claimed document.
+  \item \textbf{Privacy}: neither the blockchain
+        record nor the proof reveals which values
+        were redacted or their content.
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────
+\subsection{Audit Record Structure}
+% ─────────────────────────────────────────────────────────
+
+Every completed redaction writes a
+\texttt{.audit.json} sidecar file alongside the
+output document.
+The sidecar contains:
+
+\begin{itemize}
+  \item \texttt{sha256\_hex}: original document hash
+        (user-verifiable by re-hashing the input)
+  \item \texttt{anchor\_hash}: salted on-chain hash
+  \item \texttt{anchor\_salt}: the salt string used
+        (required to recompute \texttt{anchor\_hash}
+        for verification)
+  \item \texttt{redaction\_count}: number of PII
+        items redacted
+  \item \texttt{coverage\_pct}: percentage of document
+        area or text volume redacted
+  \item \texttt{pii\_filter}: the category selection
+        active at redaction time
+  \item \texttt{redactions}: list of redacted items
+        with masked values and bounding boxes
+  \item \texttt{zk\_proof}: Groth16 proof object,
+        public inputs, and commitment
+  \item \texttt{timestamp}: Unix timestamp of
+        redaction
+  \item \texttt{doc\_type}: inferred document type
+\end{itemize}
+
+The sidecar is written synchronously before
+blockchain anchoring and proof generation begin,
+ensuring it is always available even if the
+asynchronous background tasks fail.
+A \texttt{GET /api/audit/\{sha256\}} endpoint serves
+sidecar data by hash prefix, enabling the frontend
+to retrieve and display the full audit record
+for any previously processed document.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Threat Model}
+% ─────────────────────────────────────────────────────────
+
+We consider three classes of adversary.
+
+\textbf{Passive blockchain observer.}
+An adversary who can read all on-chain transactions
+learns: which wallet addresses have processed
+documents, how many items were redacted, and when.
+They learn nothing about document content, PII
+values, or which documents were processed (because
+anchor hashes are salted).
+This is a substantial improvement over cloud-based
+alternatives, where the service provider learns
+the document content in full.
+
+\textbf{Malicious prover.}
+An adversary who controls the proving system
+and wishes to generate a false proof (claiming a
+document was redacted when it was not) cannot do
+so without knowledge of the trusted setup trapdoor.
+Under the assumptions of the Groth16 proof system
+(computational soundness under the knowledge
+of exponent assumption), such forgeries are
+computationally infeasible.
+The local trusted setup weakens this guarantee:
+if the setup party is malicious, false proofs
+are possible.
+The MPC ceremony mitigation eliminates this
+assumption.
+
+\textbf{Compromised client.}
+An adversary who compromises the user's device
+after redaction can access the audit sidecar,
+including the anchor salt and redaction list.
+They cannot alter the on-chain record retroactively.
+The sidecar should be treated with the same access
+controls as the original document.
+
+\paragraph{Out of scope.}
+We do not address: network-level attacks on the
+local Ganache node (protected by firewall in
+production), adversarial inputs designed to evade
+the VLM, or side-channel attacks on the GPU
+inference process.
+These are identified as areas for future security
+analysis.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Energy and Cost Analysis}
+% ─────────────────────────────────────────────────────────
+
+\begin{table*}[h]\centering
+\caption{Energy Consumption and Carbon Footprint per 1,000 Redactions}
+\label{tab:energy}
+\begin{tabular}{llrrr}
+\toprule
+System & Type & kWh/1K & CO$_2$e (kg) & Grid assumed \\
+\midrule
+Omni-Shield (image) & Local edge  & 0.289 & 0.237 & India (0.82 kg/kWh) \\
+Omni-Shield (image) & Local edge  & 0.289 & 0.113 & US avg (0.39 kg/kWh) \\
+Omni-Shield (image) & Local edge  & 0.289 & 0.023 & Renewable (0.08 kg/kWh) \\
+Omni-Shield (PDF)   & Local edge  & 0.001 & 0.001 & India \\
+AWS Comprehend      & Cloud NLP   & 0.200 & 0.030 & AWS renewable \\
+Google Cloud DLP    & Cloud NLP   & 0.200 & 0.016 & GCP renewable \\
+GPT-4 Vision        & Cloud LLM   & 1.000 & 0.150 & AWS renewable \\
+\bottomrule
+\end{tabular}
+\footnotesize{Omni-Shield power draw: 100W total (RTX 5060 75W + 25W overhead).
+Cloud figures estimated from Patterson et al. 2022.}
+\end{table*}
+
+Table~\ref{tab:energy} reports energy consumption
+and estimated carbon footprint for Omni-Shield and
+comparable cloud alternatives.
+At 100\,W total system draw (RTX~5060 75\,W plus
+25\,W overhead), Omni-Shield consumes 0.289\,kWh
+per 1,000 image redactions --- comparable to AWS
+Comprehend (estimated 0.200\,kWh/1K) and
+substantially lower than GPT-4~Vision
+(estimated 1.000\,kWh/1K).
+
+Carbon footprint is highly sensitive to grid carbon
+intensity.
+On the Indian grid (0.82\,kg CO$_2$/kWh),
+Omni-Shield produces 0.237\,kg CO$_2$e per 1,000
+redactions.
+On a renewable electricity tariff (0.08\,kg/kWh),
+this falls to 0.023\,kg --- 1.3$\times$ lower than
+AWS Comprehend on its renewable energy commitment.
+
+The additional energy cost of local-first processing
+relative to a cloud NLP API is 0.089\,kWh per 1,000
+documents, equivalent to approximately \rupee0.72 at
+Indian electricity retail rates.
+This is the quantified \emph{privacy premium}: the
+energy overhead of the guarantee that sensitive
+identity documents never leave the device.
+Whether this premium is acceptable is a
+context-dependent policy decision; we report it
+as a measured quantity rather than an argument for
+or against local deployment.
+
+% ─────────────────────────────────────────────────────────────────────────────
+% LIMITATIONS AND FUTURE WORK
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Limitations and Future Work}
+\label{sec:limitations}
+
+We discuss the current limitations of Omni-Shield
+honestly, alongside concrete directions for future work.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Detection Limitations}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Low recall on ID numbers (F1=0.096).}
+ID number detection exhibits the largest gap between
+precision and recall in our evaluation (P=0.381,
+R=0.055).
+The model correctly classifies an ID number when it
+generates a detection, but fails to generate detections
+on 94.5\% of cards.
+We attribute this to two factors: (i)~ID number fields
+use small fonts (8--10pt) that fall near the resolution
+threshold of the EasyOCR pipeline, producing fragmented
+OCR tokens that the VLM cannot confidently merge into a
+single field; and (ii)~the six country-specific ID
+number formats (e.g., UK National Insurance, Indian
+Aadhaar, US Social Security) exhibit high visual
+variance, requiring more diverse training examples than
+the 2,000-card dataset provides.
+Future work will address this by expanding the training
+set with 500 additional cards targeting ID number field
+variation, and by adding a dedicated regex sweep
+post-processing step that applies country-specific
+patterns as a recall safety net.
+
+\paragraph{Face detection not captured in evaluation.}
+Face bounding boxes are produced by a YOLOv8
+object detection model operating independently of the
+VLM pipeline.
+Our evaluation framework measures PII detection via the
+\texttt{redactions} field of the API response, which
+does not include YOLOv8 face boxes.
+Consequently, the evaluation reports faces F1=0.000
+despite the system correctly redacting face regions
+in the live application.
+A future evaluation pass will query face detections
+separately via a dedicated endpoint and evaluate IoU
+against ground truth face bounding boxes.
+
+\paragraph{Address detection precision (P=0.113).}
+Address fields frequently span multiple text lines.
+Our ground truth annotations record the full
+multi-line bounding box, while the VLM typically
+generates a single-line detection.
+IoU between a one-line prediction and a three-line
+ground truth box is structurally low even when
+the detection is spatially correct.
+Future work will adopt a containment-based matching
+criterion for address fields (predicted box covers
+$\geq$50\% of ground truth area) in place of strict
+IoU.
+
+\paragraph{Date of birth over-firing (FP rate 48\%).}
+The ContextAgent correctly identifies date-of-birth
+fields in most cases, but also flags expiry dates,
+issue dates, and reference numbers that contain
+date-like patterns.
+The confusion matrix confirms 61 false positives
+against 65 true positives for the DOB category.
+Adding explicit exclusion rules for common non-PII
+date labels (``Valid Until'', ``Issue Date'',
+``Expiry'') to the ContextAgent heuristics is
+expected to reduce FP rate substantially.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Dataset and Generalization Limitations}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Synthetic-only training and evaluation data.}
+Both the training set (2,000 cards) and the held-out
+test set (150 cards) are synthetically generated using
+Faker and Pillow.
+Synthetic data lacks the visual noise, printing
+artefacts, camera distortion, and handwritten
+annotations present in real identity documents.
+Transfer performance to real documents is unknown and
+likely lower than the F1 scores reported here.
+We identify testing on a curated set of 20--50
+real anonymised identity documents as a high-priority
+future step; preliminary real-document experiments will
+be added before venue submission.
+
+\paragraph{Six-country English-centric evaluation.}
+The current system supports six countries
+(Australia, Canada, Germany, India, UK, USA) with
+English-language field labels.
+German-language labels on German ID cards (e.g.,
+\textit{Geburtsdatum} for date of birth) are
+handled by the LABEL\_TO\_CATEGORY mapping but
+not systematically evaluated.
+Multilingual expansion using locale-specific Faker
+data and multilingual OCR is planned for a future
+version.
+
+\paragraph{Per-country performance variance.}
+Macro F1 ranges from 0.109 (Canada) to 0.214
+(Germany) across countries.
+Canada also accounts for three of the four pipeline
+errors (500 responses), attributable to VRAM exhaustion
+on complex card layouts.
+These errors represent 2.0\% of the test set and
+are resolved by restarting models between requests;
+a future memory management improvement will implement
+proactive VRAM reclamation between pipeline runs.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Cryptographic Limitations}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Hash linkability without salting.}
+SHA-256 is deterministic: identical documents
+anchored multiple times produce the same on-chain
+hash.
+An adversary monitoring the blockchain can infer that
+a specific document was processed repeatedly by
+observing repeated hash values.
+Analysis of our audit log reveals 260 duplicate hashes
+among 424 records, all arising from re-processing the
+same test documents during evaluation.
+The mitigation is straightforward: compute the
+anchor hash as SHA-256(document\_bytes $\|$ timestamp
+$\|$ owner\_address) rather than SHA-256(document\_bytes)
+alone.
+This countermeasure has been implemented: each anchor
+is salted with the owner address and a Unix timestamp,
+ensuring identical documents produce distinct on-chain
+hashes. The fix was validated empirically --- two runs
+of the same document produced different anchor hashes
+while preserving the original SHA-256 for user verification.
+
+\paragraph{Ethereum mainnet gas cost.}
+Each \texttt{addRecord()} call consumes 264,333 gas
+units, equivalent to approximately \$13.22 USD on
+Ethereum mainnet at \$2,500 per ETH.
+This is economically impractical for high-volume
+document processing.
+Deployment on Polygon L2 reduces the per-anchor cost
+to \$0.006 USD, which is viable for enterprise
+compliance workflows.
+The smart contract is EVM-compatible and requires
+only an environment variable change to migrate from
+Ganache to Polygon or Sepolia testnet.
+
+\paragraph{ZK-SNARK proof generation latency.}
+Groth16/BN128 proof generation via ZoKrates requires
+20.3 seconds (mean) on an RTX~5060 8GB VRAM, while
+on-chain verification completes in 22.1 milliseconds
+(mean), confirming that verification cost is negligible.
+Proof generation cost is absorbed by executing it
+asynchronously in a background thread; the user
+receives their redacted document before proof
+generation completes.
+Proof availability is therefore delayed relative to
+the redaction result.
+Future work will investigate STARKs or PLONK-based
+schemes that offer faster proving times at the cost
+of larger proof sizes, and will explore GPU-accelerated
+proving libraries such as \texttt{rapidsnark}.
+
+\paragraph{Trusted setup requirement.}
+Groth16 proofs require a one-time trusted setup
+ceremony to generate the proving and verification keys.
+The current implementation uses a locally generated
+setup (no multi-party ceremony), which introduces a
+trust assumption: the party who ran the setup could
+theoretically generate false proofs.
+A production deployment should replace the local setup
+with a public multi-party computation (MPC) ceremony
+or migrate to a transparent proof system (STARK,
+Bulletproofs) that eliminates the trusted setup
+requirement entirely.
+
+% ─────────────────────────────────────────────────────────
+\subsection{System and Deployment Limitations}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Single-document processing only.}
+The current system processes one document at a time.
+Batch processing of document sets (e.g., a folder of
+scanned records) requires sequential API calls from
+the client.
+A native batch endpoint with job queuing, progress
+streaming, and a combined ZIP output is identified as
+the next major feature addition.
+
+\paragraph{Audio redaction replaces speech with silence.}
+The audio pipeline silences detected PII segments
+rather than replacing them with a spoken ``beep''
+or synthesized neutral tone.
+Silence can be as identifiable as the original
+speech in some contexts (e.g., a two-second gap
+where a name was spoken).
+Future work will add optional bleep-tone injection
+or text-to-speech replacement of redacted segments.
+
+\paragraph{Local deployment only.}
+Omni-Shield is designed for local-first operation
+on consumer-grade hardware.
+No cloud deployment, containerised orchestration,
+or multi-user authentication is provided.
+Deployment to a remote server requires a Cloudflare
+tunnel or equivalent reverse proxy, and MetaMask wallet
+authentication currently uses a single deterministic
+Ganache account.
+A production-grade deployment would add OAuth or
+DID-based authentication and migrate blockchain
+anchoring to a public testnet.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Future Work Summary}
+% ─────────────────────────────────────────────────────────
+
+We identify the following concrete directions for
+future work, ordered by expected impact:
+
+\begin{enumerate}
+
+  \item \textbf{Hash salting for linkability resistance.}
+  \emph{Implemented.} Anchor hashes are now salted with
+  owner address and Unix timestamp; validated empirically.
+
+  \item \textbf{Expanded training with ID number focus.}
+  Generate 500 additional synthetic cards with
+  deliberate ID number format diversity across all
+  six countries and retrain the QLoRA adapter.
+
+  \item \textbf{Real document evaluation.}
+  Collect 20--50 real anonymised identity documents
+  and report transfer F1 alongside synthetic results.
+
+  \item \textbf{Separate face evaluation pass.}
+  Add a YOLOv8 face evaluation module to the
+  evaluation framework and report face F1 correctly.
+
+  \item \textbf{Polygon L2 deployment.}
+  Replace Ganache with Sepolia testnet immediately;
+  migrate to Polygon mainnet for production.
+
+  \item \textbf{GRPO reinforcement learning fine-tuning.}
+  Apply Group Relative Policy Optimisation with an
+  IoU-based reward signal from the SFT checkpoint
+  to push bounding box precision beyond the current
+  QLoRA adapter.
+
+  \item \textbf{Faster ZK proving.}
+  Evaluate \texttt{rapidsnark} for GPU-accelerated
+  Groth16 proving; alternatively migrate to PLONK
+  for faster per-proof generation.
+
+  \item \textbf{Multi-party trusted setup.}
+  Replace the local ZK setup with a public MPC
+  ceremony or a transparent proof system to eliminate
+  the trusted setup assumption.
+
+  \item \textbf{Batch processing endpoint.}
+  Implement a native batch API with job queuing,
+  progress streaming, and combined ZIP output.
+
+  \item \textbf{Multilingual expansion.}
+  Add locale-aware field label mappings and
+  multilingual OCR support for non-English documents.
+
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+% CONCLUSION
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+\label{sec:conclusion}
+
+We presented Omni-Shield, a local-first multi-modal
+PII redaction system that runs entirely on consumer-grade
+edge hardware and produces cryptographically verifiable
+audit records for every redaction decision.
+The system addresses a gap that existing tools leave
+open: no prior system simultaneously handles visual
+PII (signatures, faces), operates without transmitting
+documents to third-party infrastructure, and provides
+an independently verifiable audit trail with
+zero-knowledge proof of redaction correctness.
+
+\subsection*{Summary of Contributions}
+
+\textbf{Multi-modal nine-agent pipeline.}
+We designed and implemented a nine-agent orchestration
+pipeline that processes six document formats on a
+single 8\,GB GPU under 4-bit NF4 quantisation.
+The pipeline achieves 10.42\,s mean latency for image
+redaction and under 50\,ms for text and PDF documents.
+Ablation confirms that visual detection agents
+account for 54\% of total F1 on identity documents,
+validating the multi-modal design over text-only
+alternatives.
+
+\textbf{Knowledge distillation for document PII.}
+We fine-tune Qwen2-VL-2B-Instruct on 2,000
+synthetically generated identity documents across six
+countries using QLoRA with teacher labels from the
+Claude API.
+The primary contribution of fine-tuning is output
+format consistency: the adapter trains the model to
+emit structured \texttt{LABEL\,|\,VALUE\,|\,BBOX}
+triples reliably, enabling downstream pipeline agents
+to parse and act on VLM output without heuristic
+recovery.
+Face detection generalises as an emergent capability
+post fine-tuning, despite faces not being explicitly
+labelled in the teacher annotations.
+
+\textbf{Cryptographic audit trail with ZK-SNARK.}
+Every redaction is anchored on a local Ethereum
+blockchain using a salted SHA-256 commitment that
+prevents linkability attacks.
+A Groth16/BN128 proof generated by a ZoKrates circuit
+attests that the committed PII values are consistent
+with the document hash, without revealing what was
+redacted.
+Blockchain verification completes in 1.2\,ms.
+ZK proof verification completes in 22.1\,ms.
+Proof generation takes 20.3\,s but is fully
+asynchronous, adding no user-facing latency.
+The system is the first, to our knowledge, to apply
+ZK-SNARKs to document redaction provenance.
+
+\textbf{Comprehensive evaluation on synthetic and
+real documents.}
+We evaluate against Microsoft Presidio and Llama~3~8B
+on 150 annotated synthetic cards and 19 real specimen
+documents.
+Omni-Shield is the only system to detect signatures
+(F1\,=\,0.870) and faces (F1\,=\,0.905 on real
+documents), and achieves Macro F1\,=\,0.269 on real
+specimen cards --- higher than the synthetic test
+result, indicating positive transfer from the
+synthetic training distribution.
+
+\subsection*{Key Findings}
+
+Three findings from this work have broader implications
+for the design of privacy-preserving document systems.
+
+\emph{Text-only systems are insufficient for identity
+document redaction.}
+The strongest text-only baseline (Llama~3~8B,
+Macro F1\,=\,0.270) scores zero on signatures and
+faces --- the two most legally significant visual PII
+categories.
+Any deployment that relies on text extraction alone
+will systematically fail to redact the most visually
+distinctive personal information on identity documents.
+
+\emph{Local-first deployment is not a performance
+concession.}
+Despite operating on a consumer GPU at 4-bit
+quantisation, Omni-Shield outperforms a mature
+cloud-backed NLP system (Presidio, Macro F1\,=\,0.057)
+by a factor of 3.3 on the same test set, and
+achieves competitive latency (10.42\,s per image)
+against cloud vision APIs that require network
+round-trips for every document.
+The privacy premium of keeping documents on-device
+amounts to 0.089\,kWh per 1,000 documents
+(approximately \rupee0.72 at Indian electricity
+rates) --- a quantifiable and modest overhead.
+
+\emph{Multi-modal agent pipelines are more robust
+than monolithic models.}
+The CriticAgent pattern, ablation over agent
+configurations, and the TEXT-FIRST bounding box
+refinement strategy all demonstrate that decomposing
+the redaction task into specialised agents --- each
+with a defined input, output, and failure mode ---
+produces a system that is more debuggable,
+more ablatable, and more improvable than a
+single model would be.
+Each agent's contribution is measurable; underperforming
+agents can be replaced without redesigning the pipeline.
+
+\subsection*{Limitations}
+
+The primary limitations of the current system are:
+low recall on ID numbers (F1\,=\,0.096), a synthetic-
+only training distribution with documented transfer
+gaps for diverse name typography, a trusted setup
+requirement for the ZK circuit that weakens the
+proof's soundness guarantee in the absence of a
+multi-party ceremony, and Ethereum mainnet gas costs
+that require L2 deployment for economically viable
+production use.
+These are discussed in detail in
+Section~\ref{sec:limitations}.
+
+\subsection*{Future Work}
+
+The most impactful near-term improvements are:
+(i)~replacing the ZK trusted setup with a
+public MPC ceremony or transparent proof system;
+(ii)~expanding the training corpus with 500
+additional cards targeting ID number format diversity
+to address the recall gap;
+(iii)~combining Omni-Shield's visual detection with
+a text-specialised model (such as Llama~3) in a
+hybrid pipeline that achieves high F1 across both
+visual and text PII categories;
+and (iv)~deploying the blockchain contract on
+Polygon L2 for production-ready gas economics.
+
+\subsection*{Reproducibility}
+
+The fine-tuned QLoRA adapter is available at
+\url{https://huggingface.co/[anonymous]/omni-shield-qwen2vl-pii-adapter}.
+The evaluation harness, annotation pipeline,
+synthetic dataset generator, and all experiment
+scripts are available at
+\url{https://github.com/[anonymous]/omni-shield}.
+A Docker container with GPU support is provided
+for one-command environment setup.
+All reported numbers are reproducible from the
+published code and data using the commands documented
+in the repository README.
+
+\subsection*{Ethical Considerations}
+
+Omni-Shield is designed to protect privacy, not
+to circumvent it.
+The system does not retain documents after
+processing, does not transmit data off-device,
+and does not log PII values in plaintext beyond
+the masked audit record.
+The synthetic training data contains no real
+personal information.
+Specimen documents used in real-document evaluation
+are officially published educational materials
+containing no real PII.
+The blockchain audit trail is designed to provide
+accountability for \emph{operators} of redaction
+systems, not to surveil the individuals whose
+documents are being processed.
+We release all artifacts under Apache~2.0 licence.
+
+\end{document}

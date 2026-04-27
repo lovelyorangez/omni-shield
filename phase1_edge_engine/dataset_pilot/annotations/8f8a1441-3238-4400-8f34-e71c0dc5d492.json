@@ -1,0 +1,138 @@
+{
+  "image_id": "8f8a1441-3238-4400-8f34-e71c0dc5d492",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_pilot/images/usa_dl_8f8a1441-3238-4400-8f34-e71c0dc5d492.png",
+  "image_width": 892,
+  "image_height": 600,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 150,
+        "norm_xmin": 22,
+        "norm_ymax": 483,
+        "norm_xmax": 201
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "PA38346578",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 732,
+        "ymax": 115,
+        "norm_ymin": 170,
+        "norm_xmin": 679,
+        "norm_ymax": 191,
+        "norm_xmax": 820
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "10/11/2003",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 226,
+        "norm_xmin": 679,
+        "norm_ymax": 246,
+        "norm_xmax": 784
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Smith, Mario",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 310,
+        "ymax": 115,
+        "norm_ymin": 168,
+        "norm_xmin": 218,
+        "norm_ymax": 191,
+        "norm_xmax": 347
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "03911 CABRERA TRACE APT. 278",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 392,
+        "ymax": 150,
+        "norm_ymin": 235,
+        "norm_xmin": 218,
+        "norm_ymax": 250,
+        "norm_xmax": 439
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WEST ALLISON, PA 55962",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 349,
+        "ymax": 166,
+        "norm_ymin": 260,
+        "norm_xmin": 218,
+        "norm_ymax": 276,
+        "norm_xmax": 391
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "15098393010310518347",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 836,
+        "norm_xmin": 22,
+        "norm_ymax": 876,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Mario Smith",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 508,
+        "norm_xmin": 22,
+        "norm_ymax": 575,
+        "norm_xmax": 201
+      },
+      "field_type": "signature"
+    }
+  ]
+}

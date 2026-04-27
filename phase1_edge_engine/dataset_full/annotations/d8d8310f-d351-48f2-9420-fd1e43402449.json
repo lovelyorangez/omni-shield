@@ -1,0 +1,138 @@
+{
+  "image_id": "d8d8310f-d351-48f2-9420-fd1e43402449",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_d8d8310f-d351-48f2-9420-fd1e43402449.png",
+  "image_width": 886,
+  "image_height": 590,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 152,
+        "norm_xmin": 22,
+        "norm_ymax": 491,
+        "norm_xmax": 203
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI40165820",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 683,
+        "norm_ymax": 194,
+        "norm_xmax": 820
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "08/11/1956",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 230,
+        "norm_xmin": 683,
+        "norm_ymax": 250,
+        "norm_xmax": 790
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Carney, Ryan",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 313,
+        "ymax": 116,
+        "norm_ymin": 171,
+        "norm_xmin": 220,
+        "norm_ymax": 196,
+        "norm_xmax": 353
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "1154 GRIFFIN STRAVENUE SUITE 275",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 418,
+        "ymax": 150,
+        "norm_ymin": 238,
+        "norm_xmin": 220,
+        "norm_ymax": 254,
+        "norm_xmax": 471
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WILLIAMSSTAD, RI 57509",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 347,
+        "ymax": 166,
+        "norm_ymin": 264,
+        "norm_xmin": 220,
+        "norm_ymax": 281,
+        "norm_xmax": 391
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "70213556909275571928",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 850,
+        "norm_xmin": 22,
+        "norm_ymax": 891,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Ryan Carney",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 516,
+        "norm_xmin": 22,
+        "norm_ymax": 584,
+        "norm_xmax": 203
+      },
+      "field_type": "signature"
+    }
+  ]
+}

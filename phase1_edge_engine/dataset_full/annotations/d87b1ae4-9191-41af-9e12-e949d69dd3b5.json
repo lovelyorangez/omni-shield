@@ -1,0 +1,138 @@
+{
+  "image_id": "d87b1ae4-9191-41af-9e12-e949d69dd3b5",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_d87b1ae4-9191-41af-9e12-e949d69dd3b5.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 166,
+        "norm_xmin": 23,
+        "norm_ymax": 537,
+        "norm_xmax": 210
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NY56776657",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 734,
+        "ymax": 115,
+        "norm_ymin": 188,
+        "norm_xmin": 707,
+        "norm_ymax": 212,
+        "norm_xmax": 857
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "07/09/1964",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 251,
+        "norm_xmin": 707,
+        "norm_ymax": 274,
+        "norm_xmax": 817
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Foster, Michelle",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 337,
+        "ymax": 115,
+        "norm_ymin": 187,
+        "norm_xmin": 227,
+        "norm_ymax": 212,
+        "norm_xmax": 393
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "254 DENNIS CORNER SUITE 785",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 388,
+        "ymax": 150,
+        "norm_ymin": 261,
+        "norm_xmin": 227,
+        "norm_ymax": 277,
+        "norm_xmax": 453
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NEW BLAKE, NY 81913",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 332,
+        "ymax": 166,
+        "norm_ymin": 288,
+        "norm_xmin": 227,
+        "norm_ymax": 307,
+        "norm_xmax": 387
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "27341514888143111508",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 929,
+        "norm_xmin": 23,
+        "norm_ymax": 974,
+        "norm_xmax": 163
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Michelle Foster",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 564,
+        "norm_xmin": 23,
+        "norm_ymax": 638,
+        "norm_xmax": 210
+      },
+      "field_type": "signature"
+    }
+  ]
+}

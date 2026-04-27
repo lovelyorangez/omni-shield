@@ -1,0 +1,138 @@
+{
+  "image_id": "99ce17a4-c057-4481-af7e-c05159eb1eb3",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_99ce17a4-c057-4481-af7e-c05159eb1eb3.png",
+  "image_width": 894,
+  "image_height": 602,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 149,
+        "norm_xmin": 22,
+        "norm_ymax": 481,
+        "norm_xmax": 201
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI05616484",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 169,
+        "norm_xmin": 677,
+        "norm_ymax": 191,
+        "norm_xmax": 813
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "09/07/1958",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 225,
+        "norm_xmin": 677,
+        "norm_ymax": 245,
+        "norm_xmax": 782
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Walker, Christopher",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 373,
+        "ymax": 116,
+        "norm_ymin": 167,
+        "norm_xmin": 218,
+        "norm_ymax": 192,
+        "norm_xmax": 417
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "5439 BARAJAS VIEW APT. 157",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 372,
+        "ymax": 152,
+        "norm_ymin": 234,
+        "norm_xmin": 218,
+        "norm_ymax": 252,
+        "norm_xmax": 416
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "LAKE CHRISTINA, RI 32459",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 356,
+        "ymax": 166,
+        "norm_ymin": 259,
+        "norm_xmin": 218,
+        "norm_ymax": 275,
+        "norm_xmax": 398
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "58877043581128801336",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 833,
+        "norm_xmin": 22,
+        "norm_ymax": 873,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Christopher Walker",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 506,
+        "norm_xmin": 22,
+        "norm_ymax": 573,
+        "norm_xmax": 201
+      },
+      "field_type": "signature"
+    }
+  ]
+}

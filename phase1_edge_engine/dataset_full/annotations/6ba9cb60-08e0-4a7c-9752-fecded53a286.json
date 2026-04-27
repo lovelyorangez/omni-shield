@@ -1,0 +1,138 @@
+{
+  "image_id": "6ba9cb60-08e0-4a7c-9752-fecded53a286",
+  "country": "Australia",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/australia_dl_6ba9cb60-08e0-4a7c-9752-fecded53a286.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "SURNAME",
+      "value": "HUFFMAN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 276,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 322
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "GIVEN NAME(S)",
+      "value": "Jose",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 126,
+        "xmax": 210,
+        "ymax": 139,
+        "norm_ymin": 233,
+        "norm_xmin": 210,
+        "norm_ymax": 257,
+        "norm_xmax": 245
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "DATE OF BIRTH",
+      "value": "28/06/1978",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 160,
+        "xmax": 255,
+        "ymax": 171,
+        "norm_ymin": 296,
+        "norm_xmin": 210,
+        "norm_ymax": 316,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "LICENCE NO.",
+      "value": "WD9696915",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 194,
+        "xmax": 268,
+        "ymax": 203,
+        "norm_ymin": 359,
+        "norm_xmin": 210,
+        "norm_ymax": 375,
+        "norm_xmax": 313
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADDRESS",
+      "value": "4 Emily Glade",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 256,
+        "xmax": 270,
+        "ymax": 270,
+        "norm_ymin": 474,
+        "norm_xmin": 210,
+        "norm_ymax": 500,
+        "norm_xmax": 315
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "SUBURB / STATE / POSTCODE",
+      "value": "SOUTH KEVINBURGH ACT 2972",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 286,
+        "xmax": 383,
+        "ymax": 295,
+        "norm_ymin": 529,
+        "norm_xmin": 210,
+        "norm_ymax": 546,
+        "norm_xmax": 447
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Jose HUFFMAN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 310,
+        "xmax": 390,
+        "ymax": 355,
+        "norm_ymin": 574,
+        "norm_xmin": 210,
+        "norm_ymax": 657,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+# Use NVIDIA CUDA 12.4 base
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    python3-dev \
+    ffmpeg \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    portaudio19-dev \
+    pkg-config \
+    libavformat-dev \
+    libavcodec-dev \
+    libavdevice-dev \
+    libavutil-dev \
+    libswscale-dev \
+    libswresample-dev \
+    libavfilter-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Upgrade pip and build tools
+RUN pip3 install --upgrade pip setuptools wheel
+
+COPY requirements.txt .
+
+# Strip out conflicting packages and outdated versions
+RUN sed -i '/torch/d' requirements.txt && \
+    sed -i '/torchvision/d' requirements.txt && \
+    sed -i '/torchaudio/d' requirements.txt && \
+    sed -i '/triton/d' requirements.txt && \
+    sed -i '/bitsandbytes/d' requirements.txt && \
+    sed -i '/ultralytics/d' requirements.txt && \
+    sed -i '/transformers/d' requirements.txt && \
+    sed -i '/peft/d' requirements.txt && \
+    sed -i '/accelerate/d' requirements.txt && \
+    sed -i '/tokenizers/d' requirements.txt
+
+# 1. Install PyTorch Nightly FIRST to get sm_120 (RTX 5060) kernel support
+RUN pip3 install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu124
+RUN pip3 install --pre torchvision --no-deps --index-url https://download.pytorch.org/whl/nightly/cu124
+
+# 2. Install the rest of the old requirements FIRST
+RUN pip3 install -r requirements.txt
+
+# 3. FORCE UPGRADE the latest AI libraries LAST (overwrites any downgrades caused by requirements.txt)
+RUN pip3 install --upgrade transformers bitsandbytes ultralytics peft accelerate tokenizers huggingface-hub
+
+# Copy all source files and models
+COPY phase1_edge_engine/ ./
+
+EXPOSE 8000
+
+CMD ["python3", "backend_server.py"]

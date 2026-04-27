@@ -1,0 +1,138 @@
+{
+  "image_id": "30099b0f-44bb-4a6c-9419-0579dfec557f",
+  "country": "Australia",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/australia_dl_30099b0f-44bb-4a6c-9419-0579dfec557f.png",
+  "image_width": 878,
+  "image_height": 574,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "SURNAME",
+      "value": "SMITH",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 241,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 281
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "GIVEN NAME(S)",
+      "value": "Joseph",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 126,
+        "xmax": 227,
+        "ymax": 140,
+        "norm_ymin": 233,
+        "norm_xmin": 210,
+        "norm_ymax": 259,
+        "norm_xmax": 265
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "DATE OF BIRTH",
+      "value": "26/12/1990",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 160,
+        "xmax": 255,
+        "ymax": 171,
+        "norm_ymin": 296,
+        "norm_xmin": 210,
+        "norm_ymax": 316,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "LICENCE NO.",
+      "value": "VJ9727875",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 194,
+        "xmax": 258,
+        "ymax": 206,
+        "norm_ymin": 359,
+        "norm_xmin": 210,
+        "norm_ymax": 381,
+        "norm_xmax": 301
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADDRESS",
+      "value": "5/396 Melissa Mall",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 256,
+        "xmax": 300,
+        "ymax": 269,
+        "norm_ymin": 474,
+        "norm_xmin": 210,
+        "norm_ymax": 498,
+        "norm_xmax": 350
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "SUBURB / STATE / POSTCODE",
+      "value": "LAKE JULIEFURT ACT 2982",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 286,
+        "xmax": 350,
+        "ymax": 298,
+        "norm_ymin": 529,
+        "norm_xmin": 210,
+        "norm_ymax": 551,
+        "norm_xmax": 408
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Joseph SMITH",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 310,
+        "xmax": 390,
+        "ymax": 355,
+        "norm_ymin": 574,
+        "norm_xmin": 210,
+        "norm_ymax": 657,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

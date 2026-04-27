@@ -1,0 +1,138 @@
+{
+  "image_id": "12702125-6998-4365-8216-94735952224c",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_12702125-6998-4365-8216-94735952224c.png",
+  "image_width": 880,
+  "image_height": 578,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 155,
+        "norm_xmin": 22,
+        "norm_ymax": 501,
+        "norm_xmax": 204
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "CT18367365",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 732,
+        "ymax": 115,
+        "norm_ymin": 176,
+        "norm_xmin": 688,
+        "norm_ymax": 198,
+        "norm_xmax": 831
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/15/1990",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 235,
+        "norm_xmin": 688,
+        "norm_ymax": 256,
+        "norm_xmax": 795
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Rodriguez, Ronald",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 360,
+        "ymax": 116,
+        "norm_ymin": 174,
+        "norm_xmin": 221,
+        "norm_ymax": 200,
+        "norm_xmax": 409
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "15921 JOSHUA ROADS SUITE 698",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 396,
+        "ymax": 152,
+        "norm_ymin": 243,
+        "norm_xmin": 221,
+        "norm_ymax": 262,
+        "norm_xmax": 450
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SHAWNCHESTER, CT 92484",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 361,
+        "ymax": 166,
+        "norm_ymin": 269,
+        "norm_xmin": 221,
+        "norm_ymax": 287,
+        "norm_xmax": 410
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "15654527111161528098",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 868,
+        "norm_xmin": 22,
+        "norm_ymax": 910,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Ronald Rodriguez",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 527,
+        "norm_xmin": 22,
+        "norm_ymax": 596,
+        "norm_xmax": 204
+      },
+      "field_type": "signature"
+    }
+  ]
+}

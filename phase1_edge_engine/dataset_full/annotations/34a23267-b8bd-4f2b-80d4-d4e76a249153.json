@@ -1,0 +1,138 @@
+{
+  "image_id": "34a23267-b8bd-4f2b-80d4-d4e76a249153",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_34a23267-b8bd-4f2b-80d4-d4e76a249153.png",
+  "image_width": 890,
+  "image_height": 596,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 151,
+        "norm_xmin": 22,
+        "norm_ymax": 486,
+        "norm_xmax": 202
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MS78480184",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 737,
+        "ymax": 115,
+        "norm_ymin": 171,
+        "norm_xmin": 680,
+        "norm_ymax": 192,
+        "norm_xmax": 828
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "04/21/1992",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 228,
+        "norm_xmin": 680,
+        "norm_ymax": 248,
+        "norm_xmax": 786
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Ryan, Julie",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 290,
+        "ymax": 116,
+        "norm_ymin": 169,
+        "norm_xmin": 219,
+        "norm_ymax": 194,
+        "norm_xmax": 325
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "653 WILLIAM COURSE APT. 122",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 382,
+        "ymax": 150,
+        "norm_ymin": 236,
+        "norm_xmin": 219,
+        "norm_ymax": 251,
+        "norm_xmax": 429
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "CARLSONFURT, MS 78605",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 351,
+        "ymax": 166,
+        "norm_ymin": 261,
+        "norm_xmin": 219,
+        "norm_ymax": 278,
+        "norm_xmax": 394
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "46270482814893252880",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 842,
+        "norm_xmin": 22,
+        "norm_ymax": 882,
+        "norm_xmax": 157
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Julie Ryan",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 511,
+        "norm_xmin": 22,
+        "norm_ymax": 578,
+        "norm_xmax": 202
+      },
+      "field_type": "signature"
+    }
+  ]
+}

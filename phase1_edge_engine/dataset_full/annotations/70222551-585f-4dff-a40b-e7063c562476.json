@@ -1,0 +1,138 @@
+{
+  "image_id": "70222551-585f-4dff-a40b-e7063c562476",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_70222551-585f-4dff-a40b-e7063c562476.png",
+  "image_width": 866,
+  "image_height": 554,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 162,
+        "norm_xmin": 23,
+        "norm_ymax": 523,
+        "norm_xmax": 207
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NH87500369",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 736,
+        "ymax": 115,
+        "norm_ymin": 184,
+        "norm_xmin": 699,
+        "norm_ymax": 207,
+        "norm_xmax": 849
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/11/1965",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 245,
+        "norm_xmin": 699,
+        "norm_ymax": 267,
+        "norm_xmax": 808
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Watson, Melanie",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 345,
+        "ymax": 115,
+        "norm_ymin": 182,
+        "norm_xmin": 225,
+        "norm_ymax": 207,
+        "norm_xmax": 398
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "2846 KAREN CROSSROAD APT. 867",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 406,
+        "ymax": 150,
+        "norm_ymin": 254,
+        "norm_xmin": 225,
+        "norm_ymax": 270,
+        "norm_xmax": 468
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NEW MICHAELBURGH, NH 16277",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 392,
+        "ymax": 166,
+        "norm_ymin": 281,
+        "norm_xmin": 225,
+        "norm_ymax": 299,
+        "norm_xmax": 452
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "42843479552763655647",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 906,
+        "norm_xmin": 23,
+        "norm_ymax": 949,
+        "norm_xmax": 161
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Melanie Watson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 550,
+        "norm_xmin": 23,
+        "norm_ymax": 622,
+        "norm_xmax": 207
+      },
+      "field_type": "signature"
+    }
+  ]
+}

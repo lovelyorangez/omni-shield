@@ -1,0 +1,138 @@
+{
+  "image_id": "0a24a56f-cc54-43b2-a9af-9eac2a08c014",
+  "country": "Australia",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/australia_dl_0a24a56f-cc54-43b2-a9af-9eac2a08c014.png",
+  "image_width": 892,
+  "image_height": 598,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "SURNAME",
+      "value": "FLOYD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 242,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 282
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "GIVEN NAME(S)",
+      "value": "Andrew",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 126,
+        "xmax": 233,
+        "ymax": 137,
+        "norm_ymin": 233,
+        "norm_xmin": 210,
+        "norm_ymax": 253,
+        "norm_xmax": 272
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "DATE OF BIRTH",
+      "value": "04/05/2003",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 160,
+        "xmax": 255,
+        "ymax": 171,
+        "norm_ymin": 296,
+        "norm_xmin": 210,
+        "norm_ymax": 316,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "LICENCE NO.",
+      "value": "NZ5999966",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 194,
+        "xmax": 264,
+        "ymax": 203,
+        "norm_ymin": 359,
+        "norm_xmin": 210,
+        "norm_ymax": 375,
+        "norm_xmax": 308
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADDRESS",
+      "value": "6 Thomas Ground",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 256,
+        "xmax": 296,
+        "ymax": 267,
+        "norm_ymin": 474,
+        "norm_xmin": 210,
+        "norm_ymax": 494,
+        "norm_xmax": 345
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "SUBURB / STATE / POSTCODE",
+      "value": "FOWLERPORT TAS 2421",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 286,
+        "xmax": 335,
+        "ymax": 295,
+        "norm_ymin": 529,
+        "norm_xmin": 210,
+        "norm_ymax": 546,
+        "norm_xmax": 391
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Andrew FLOYD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 310,
+        "xmax": 390,
+        "ymax": 355,
+        "norm_ymin": 574,
+        "norm_xmin": 210,
+        "norm_ymax": 657,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

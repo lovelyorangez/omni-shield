@@ -1,0 +1,138 @@
+{
+  "image_id": "8ec7b477-60cf-4702-9a0a-91df29ca256d",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_8ec7b477-60cf-4702-9a0a-91df29ca256d.png",
+  "image_width": 892,
+  "image_height": 598,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 150,
+        "norm_xmin": 22,
+        "norm_ymax": 484,
+        "norm_xmax": 201
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI84902770",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 170,
+        "norm_xmin": 679,
+        "norm_ymax": 192,
+        "norm_xmax": 815
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/02/1995",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 227,
+        "norm_xmin": 679,
+        "norm_ymax": 247,
+        "norm_xmax": 784
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Fields, Paul",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 299,
+        "ymax": 115,
+        "norm_ymin": 168,
+        "norm_xmin": 218,
+        "norm_ymax": 192,
+        "norm_xmax": 335
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "9611 WALKER COMMON",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 340,
+        "ymax": 150,
+        "norm_ymin": 235,
+        "norm_xmin": 218,
+        "norm_ymax": 250,
+        "norm_xmax": 381
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "LAKE PATRICKFURT, RI 86507",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 371,
+        "ymax": 166,
+        "norm_ymin": 260,
+        "norm_xmin": 218,
+        "norm_ymax": 277,
+        "norm_xmax": 415
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "84309883920530214656",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 839,
+        "norm_xmin": 22,
+        "norm_ymax": 879,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Paul Fields",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 510,
+        "norm_xmin": 22,
+        "norm_ymax": 576,
+        "norm_xmax": 201
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "image_id": "b7c341b2-3c53-457d-8f9b-6656bac51ddc",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_b7c341b2-3c53-457d-8f9b-6656bac51ddc.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "METCALFE",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 274,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 320
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Julia",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 210,
+        "ymax": 146,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 270,
+        "norm_xmax": 245
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "29.01.1981",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "METCA9797050JU997",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 360,
+        "ymax": 266,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 492,
+        "norm_xmax": 420
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Flat 51a\nBall Ferry, South Harry",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 328,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "HU01 7HD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 248,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 289
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Julia METCALFE",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

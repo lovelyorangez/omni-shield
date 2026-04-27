@@ -1,0 +1,138 @@
+{
+  "image_id": "13707de7-0781-43fd-8cbf-d4d526902bc3",
+  "country": "Australia",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/australia_dl_13707de7-0781-43fd-8cbf-d4d526902bc3.png",
+  "image_width": 898,
+  "image_height": 608,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "SURNAME",
+      "value": "MEJIA",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 235,
+        "ymax": 107,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 198,
+        "norm_xmax": 274
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "GIVEN NAME(S)",
+      "value": "Donna",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 126,
+        "xmax": 226,
+        "ymax": 136,
+        "norm_ymin": 233,
+        "norm_xmin": 210,
+        "norm_ymax": 251,
+        "norm_xmax": 264
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "DATE OF BIRTH",
+      "value": "24/04/2007",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 160,
+        "xmax": 255,
+        "ymax": 171,
+        "norm_ymin": 296,
+        "norm_xmin": 210,
+        "norm_ymax": 316,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "LICENCE NO.",
+      "value": "WN1647525",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 194,
+        "xmax": 269,
+        "ymax": 203,
+        "norm_ymin": 359,
+        "norm_xmin": 210,
+        "norm_ymax": 375,
+        "norm_xmax": 314
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADDRESS",
+      "value": "Flat 92 3 Steven Footway",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 256,
+        "xmax": 345,
+        "ymax": 270,
+        "norm_ymin": 474,
+        "norm_xmin": 210,
+        "norm_ymax": 500,
+        "norm_xmax": 403
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "SUBURB / STATE / POSTCODE",
+      "value": "LAKE MEGAN WA 2230",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 286,
+        "xmax": 328,
+        "ymax": 295,
+        "norm_ymin": 529,
+        "norm_xmin": 210,
+        "norm_ymax": 546,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Donna MEJIA",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 310,
+        "xmax": 390,
+        "ymax": 355,
+        "norm_ymin": 574,
+        "norm_xmin": 210,
+        "norm_ymax": 657,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

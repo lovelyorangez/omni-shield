@@ -1,52 +1,25 @@
-import { useState } from 'react';
-import './App.css';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar.jsx';
+import LandingPage from './pages/LandingPage.jsx';
+import AppPage from './pages/AppPage.jsx';
+import DashboardPage from './pages/DashboardPage.jsx';
+import VerifyPage from './pages/VerifyPage.jsx';
+import SystemStatsPanel from './components/SystemStatsPanel.jsx';
 
-function App() {
-  const [isStreaming, setIsStreaming] = useState(false);
-  const [status, setStatus] = useState("System Ready");
-
-  const toggleCamera = async () => {
-    if (!isStreaming) {
-      setIsStreaming(true);
-      setStatus("Secure Stream Active - Redacting...");
-    } else {
-      setIsStreaming(false);
-      setStatus("Stream Stopped");
-    }
-  };
+export default function App() {
+  const location = useLocation();
+  const showNav = location.pathname !== '/';
 
   return (
-    <div className="container">
-      <header className="header">
-        <h1>OMNI-SHIELD</h1>
-        <span className="status-badge">{status}</span>
-      </header>
-
-      <main className="main-content">
-        <div className="video-wrapper">
-          {isStreaming ? (
-            <img 
-              src="http://localhost:8000/video_feed" 
-              alt="Secure Redaction Stream" 
-              className="live-feed"
-            />
-          ) : (
-            <div className="placeholder">
-              <div className="lock-icon">🔒</div>
-              <h2>Edge Engine Offline</h2>
-              <p>Click Start to initialize local redaction</p>
-            </div>
-          )}
-        </div>
-
-        <div className="control-panel">
-          <button onClick={toggleCamera} className={isStreaming ? "btn stop" : "btn start"}>
-            {isStreaming ? "TERMINATE STREAM" : "INITIALIZE SECURE CAM"}
-          </button>
-        </div>
-      </main>
-    </div>
+    <>
+      <SystemStatsPanel />
+      {showNav && <Navbar />}
+      <Routes>
+        <Route path="/"          element={<LandingPage />} />
+        <Route path="/app"       element={<AppPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/verify"    element={<VerifyPage />} />
+      </Routes>
+    </>
   );
 }
-
-export default App;

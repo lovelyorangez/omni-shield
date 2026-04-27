@@ -1,0 +1,138 @@
+{
+  "image_id": "126b5082-8000-4d35-b962-10d112803307",
+  "country": "Canada",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/canada_dl_126b5082-8000-4d35-b962-10d112803307.png",
+  "image_width": 894,
+  "image_height": 600,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "NOM / SURNAME",
+      "value": "BAKER",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 240,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 280
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PR\u00c9NOM / GIVEN NAME",
+      "value": "Stephen",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 124,
+        "xmax": 238,
+        "ymax": 138,
+        "norm_ymin": 229,
+        "norm_xmin": 210,
+        "norm_ymax": 255,
+        "norm_xmax": 278
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "NAISSANCE / DATE OF BIRTH",
+      "value": "1999/08/04",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 156,
+        "xmax": 255,
+        "ymax": 167,
+        "norm_ymin": 288,
+        "norm_xmin": 210,
+        "norm_ymax": 309,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PERMIS / LICENCE NO.",
+      "value": "L5969-69155-79249",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 212,
+        "xmax": 326,
+        "ymax": 221,
+        "norm_ymin": 392,
+        "norm_xmin": 210,
+        "norm_ymax": 409,
+        "norm_xmax": 380
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADRESSE / ADDRESS",
+      "value": "251 Kevin Falls",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 242,
+        "xmax": 277,
+        "ymax": 253,
+        "norm_ymin": 448,
+        "norm_xmin": 210,
+        "norm_ymax": 468,
+        "norm_xmax": 323
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "VILLE / CITY, PROVINCE, CODE POSTAL",
+      "value": "HEATHERHAVEN, BC  S7G3R8",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 270,
+        "xmax": 372,
+        "ymax": 280,
+        "norm_ymin": 500,
+        "norm_xmin": 210,
+        "norm_ymax": 518,
+        "norm_xmax": 434
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Stephen BAKER",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 295,
+        "xmax": 390,
+        "ymax": 340,
+        "norm_ymin": 546,
+        "norm_xmin": 210,
+        "norm_ymax": 629,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

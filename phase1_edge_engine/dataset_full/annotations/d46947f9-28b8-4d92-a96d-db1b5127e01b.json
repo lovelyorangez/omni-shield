@@ -1,0 +1,138 @@
+{
+  "image_id": "d46947f9-28b8-4d92-a96d-db1b5127e01b",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_d46947f9-28b8-4d92-a96d-db1b5127e01b.png",
+  "image_width": 870,
+  "image_height": 562,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 160,
+        "norm_xmin": 22,
+        "norm_ymax": 516,
+        "norm_xmax": 206
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NC39019817",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 735,
+        "ymax": 115,
+        "norm_ymin": 181,
+        "norm_xmin": 696,
+        "norm_ymax": 204,
+        "norm_xmax": 844
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/11/1969",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 241,
+        "norm_xmin": 696,
+        "norm_ymax": 263,
+        "norm_xmax": 804
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Richardson, Kevin",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 358,
+        "ymax": 115,
+        "norm_ymin": 179,
+        "norm_xmin": 224,
+        "norm_ymax": 204,
+        "norm_xmax": 411
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "8147 DAVID WALL",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 304,
+        "ymax": 150,
+        "norm_ymin": 250,
+        "norm_xmin": 224,
+        "norm_ymax": 266,
+        "norm_xmax": 349
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "MARKCHESTER, NC 28005",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 352,
+        "ymax": 166,
+        "norm_ymin": 277,
+        "norm_xmin": 224,
+        "norm_ymax": 295,
+        "norm_xmax": 404
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "46954899529978772934",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 893,
+        "norm_xmin": 22,
+        "norm_ymax": 935,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Kevin Richardson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 542,
+        "norm_xmin": 22,
+        "norm_ymax": 613,
+        "norm_xmax": 206
+      },
+      "field_type": "signature"
+    }
+  ]
+}

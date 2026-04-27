@@ -1,0 +1,813 @@
+{
+  "total_cards": 100,
+  "countries": [
+    "USA",
+    "India",
+    "UK",
+    "Germany",
+    "Australia",
+    "Canada"
+  ],
+  "cards": [
+    {
+      "image_id": "81415831-5cb9-4177-a865-b4711a74eb16",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_81415831-5cb9-4177-a865-b4711a74eb16.png",
+      "annotation_path": "dataset_pilot/annotations/81415831-5cb9-4177-a865-b4711a74eb16.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "fb56311d-c97d-478b-bf29-c994f96340df",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_fb56311d-c97d-478b-bf29-c994f96340df.png",
+      "annotation_path": "dataset_pilot/annotations/fb56311d-c97d-478b-bf29-c994f96340df.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "add305dd-d14e-4cf4-9418-ff9e2ad3b77e",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_add305dd-d14e-4cf4-9418-ff9e2ad3b77e.png",
+      "annotation_path": "dataset_pilot/annotations/add305dd-d14e-4cf4-9418-ff9e2ad3b77e.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "8f8a1441-3238-4400-8f34-e71c0dc5d492",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_8f8a1441-3238-4400-8f34-e71c0dc5d492.png",
+      "annotation_path": "dataset_pilot/annotations/8f8a1441-3238-4400-8f34-e71c0dc5d492.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "45d026e8-da90-4b0a-9d22-33945e6b9924",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_45d026e8-da90-4b0a-9d22-33945e6b9924.png",
+      "annotation_path": "dataset_pilot/annotations/45d026e8-da90-4b0a-9d22-33945e6b9924.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "707f882e-a283-428d-9306-5cf6786e1d58",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_707f882e-a283-428d-9306-5cf6786e1d58.png",
+      "annotation_path": "dataset_pilot/annotations/707f882e-a283-428d-9306-5cf6786e1d58.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "c19bc0ba-d283-4412-9e94-6eb40894c64d",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_c19bc0ba-d283-4412-9e94-6eb40894c64d.png",
+      "annotation_path": "dataset_pilot/annotations/c19bc0ba-d283-4412-9e94-6eb40894c64d.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "5b7ea22e-1891-4160-93bb-cda0811baa16",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_5b7ea22e-1891-4160-93bb-cda0811baa16.png",
+      "annotation_path": "dataset_pilot/annotations/5b7ea22e-1891-4160-93bb-cda0811baa16.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "83a0717c-f30b-4cec-8f3a-7ce51dce1d5b",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_83a0717c-f30b-4cec-8f3a-7ce51dce1d5b.png",
+      "annotation_path": "dataset_pilot/annotations/83a0717c-f30b-4cec-8f3a-7ce51dce1d5b.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "049855a9-f092-4cc0-9663-11bc93557d38",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_049855a9-f092-4cc0-9663-11bc93557d38.png",
+      "annotation_path": "dataset_pilot/annotations/049855a9-f092-4cc0-9663-11bc93557d38.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "9c138b0c-e3bd-480e-8226-8cb6c01998f9",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_9c138b0c-e3bd-480e-8226-8cb6c01998f9.png",
+      "annotation_path": "dataset_pilot/annotations/9c138b0c-e3bd-480e-8226-8cb6c01998f9.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "06663b77-8c63-4108-956b-cc61186edb04",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_06663b77-8c63-4108-956b-cc61186edb04.png",
+      "annotation_path": "dataset_pilot/annotations/06663b77-8c63-4108-956b-cc61186edb04.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "da421c6a-ff90-42ee-b5ae-f9a047df9e33",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_da421c6a-ff90-42ee-b5ae-f9a047df9e33.png",
+      "annotation_path": "dataset_pilot/annotations/da421c6a-ff90-42ee-b5ae-f9a047df9e33.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "c613d53b-4b68-4f28-9375-3a13ecfbbc16",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_c613d53b-4b68-4f28-9375-3a13ecfbbc16.png",
+      "annotation_path": "dataset_pilot/annotations/c613d53b-4b68-4f28-9375-3a13ecfbbc16.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "9aed0627-0aab-490d-9c78-e95b77588728",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_9aed0627-0aab-490d-9c78-e95b77588728.png",
+      "annotation_path": "dataset_pilot/annotations/9aed0627-0aab-490d-9c78-e95b77588728.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "82bbc3ad-aca8-466c-a7c0-2f4637afccc6",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_82bbc3ad-aca8-466c-a7c0-2f4637afccc6.png",
+      "annotation_path": "dataset_pilot/annotations/82bbc3ad-aca8-466c-a7c0-2f4637afccc6.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "21bb70b8-5aef-4966-9038-5e1062af708b",
+      "country": "USA",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/usa_dl_21bb70b8-5aef-4966-9038-5e1062af708b.png",
+      "annotation_path": "dataset_pilot/annotations/21bb70b8-5aef-4966-9038-5e1062af708b.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "1acca2eb-9ffa-4114-8b26-f0aaaf7ccc3f",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_1acca2eb-9ffa-4114-8b26-f0aaaf7ccc3f.png",
+      "annotation_path": "dataset_pilot/annotations/1acca2eb-9ffa-4114-8b26-f0aaaf7ccc3f.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "f6d0e942-d386-42f5-bef6-b1252a05cad4",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_f6d0e942-d386-42f5-bef6-b1252a05cad4.png",
+      "annotation_path": "dataset_pilot/annotations/f6d0e942-d386-42f5-bef6-b1252a05cad4.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "417d5d3e-3964-4cdc-bdf0-cda4d616c36d",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_417d5d3e-3964-4cdc-bdf0-cda4d616c36d.png",
+      "annotation_path": "dataset_pilot/annotations/417d5d3e-3964-4cdc-bdf0-cda4d616c36d.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "ca79bd9b-3c44-4f3f-8391-c820a55aa8e6",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_ca79bd9b-3c44-4f3f-8391-c820a55aa8e6.png",
+      "annotation_path": "dataset_pilot/annotations/ca79bd9b-3c44-4f3f-8391-c820a55aa8e6.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "fd80eb86-555e-4116-b091-6541423dc0a9",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_fd80eb86-555e-4116-b091-6541423dc0a9.png",
+      "annotation_path": "dataset_pilot/annotations/fd80eb86-555e-4116-b091-6541423dc0a9.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "4bc3adf2-3806-4477-bd2d-a399cbc5dc1f",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_4bc3adf2-3806-4477-bd2d-a399cbc5dc1f.png",
+      "annotation_path": "dataset_pilot/annotations/4bc3adf2-3806-4477-bd2d-a399cbc5dc1f.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "278581c3-9ced-4704-8c0e-109712a13943",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_278581c3-9ced-4704-8c0e-109712a13943.png",
+      "annotation_path": "dataset_pilot/annotations/278581c3-9ced-4704-8c0e-109712a13943.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "c50804b3-a0f1-408d-a5b7-be554bb93d54",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_c50804b3-a0f1-408d-a5b7-be554bb93d54.png",
+      "annotation_path": "dataset_pilot/annotations/c50804b3-a0f1-408d-a5b7-be554bb93d54.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "84d4236e-b6c7-45f0-8b2e-12c81926ab91",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_84d4236e-b6c7-45f0-8b2e-12c81926ab91.png",
+      "annotation_path": "dataset_pilot/annotations/84d4236e-b6c7-45f0-8b2e-12c81926ab91.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "0fcbb810-62d6-45b5-b8bf-b46d5915d0b3",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_0fcbb810-62d6-45b5-b8bf-b46d5915d0b3.png",
+      "annotation_path": "dataset_pilot/annotations/0fcbb810-62d6-45b5-b8bf-b46d5915d0b3.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "6293d9d2-14a6-4866-8b63-cffc05140cc2",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_6293d9d2-14a6-4866-8b63-cffc05140cc2.png",
+      "annotation_path": "dataset_pilot/annotations/6293d9d2-14a6-4866-8b63-cffc05140cc2.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "9bcaeebd-80bb-45f5-998c-b95186197f79",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_9bcaeebd-80bb-45f5-998c-b95186197f79.png",
+      "annotation_path": "dataset_pilot/annotations/9bcaeebd-80bb-45f5-998c-b95186197f79.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "68734c26-6ed3-4cc4-af82-17fd65a6130a",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_68734c26-6ed3-4cc4-af82-17fd65a6130a.png",
+      "annotation_path": "dataset_pilot/annotations/68734c26-6ed3-4cc4-af82-17fd65a6130a.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "b4ccf581-f3ca-4ccb-8c32-29c040c22635",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_b4ccf581-f3ca-4ccb-8c32-29c040c22635.png",
+      "annotation_path": "dataset_pilot/annotations/b4ccf581-f3ca-4ccb-8c32-29c040c22635.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "47d01afb-a410-488f-a8ee-8eedc103d0d2",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_47d01afb-a410-488f-a8ee-8eedc103d0d2.png",
+      "annotation_path": "dataset_pilot/annotations/47d01afb-a410-488f-a8ee-8eedc103d0d2.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "5fea6815-41bf-4a4c-86ab-0228be80807e",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_5fea6815-41bf-4a4c-86ab-0228be80807e.png",
+      "annotation_path": "dataset_pilot/annotations/5fea6815-41bf-4a4c-86ab-0228be80807e.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "35f2369e-25a6-4bc0-b5f0-d0361f81ba24",
+      "country": "India",
+      "card_type": "Aadhaar Card",
+      "image_path": "dataset_pilot/images/india_aadhaar_35f2369e-25a6-4bc0-b5f0-d0361f81ba24.png",
+      "annotation_path": "dataset_pilot/annotations/35f2369e-25a6-4bc0-b5f0-d0361f81ba24.json",
+      "pii_count": 6
+    },
+    {
+      "image_id": "a02b0f07-4568-4535-92cf-0b3caa1e85e3",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_a02b0f07-4568-4535-92cf-0b3caa1e85e3.png",
+      "annotation_path": "dataset_pilot/annotations/a02b0f07-4568-4535-92cf-0b3caa1e85e3.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "700b5b63-a529-45c0-8985-6e49ce70b504",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_700b5b63-a529-45c0-8985-6e49ce70b504.png",
+      "annotation_path": "dataset_pilot/annotations/700b5b63-a529-45c0-8985-6e49ce70b504.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "d3390374-0a80-4b8f-ac1f-37dd357c944a",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_d3390374-0a80-4b8f-ac1f-37dd357c944a.png",
+      "annotation_path": "dataset_pilot/annotations/d3390374-0a80-4b8f-ac1f-37dd357c944a.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "2cbb2c1e-ba05-4feb-9795-cffc5c3e9f66",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_2cbb2c1e-ba05-4feb-9795-cffc5c3e9f66.png",
+      "annotation_path": "dataset_pilot/annotations/2cbb2c1e-ba05-4feb-9795-cffc5c3e9f66.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "843e5674-24bc-48aa-aaa8-6311f041b833",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_843e5674-24bc-48aa-aaa8-6311f041b833.png",
+      "annotation_path": "dataset_pilot/annotations/843e5674-24bc-48aa-aaa8-6311f041b833.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "878f2009-169f-4c4d-bea0-16ec09f68fca",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_878f2009-169f-4c4d-bea0-16ec09f68fca.png",
+      "annotation_path": "dataset_pilot/annotations/878f2009-169f-4c4d-bea0-16ec09f68fca.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "deb57c1b-e1f3-41d4-8b19-8be275e642ec",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_deb57c1b-e1f3-41d4-8b19-8be275e642ec.png",
+      "annotation_path": "dataset_pilot/annotations/deb57c1b-e1f3-41d4-8b19-8be275e642ec.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "eea97ccc-0385-427a-9f2e-fd4c2232a614",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_eea97ccc-0385-427a-9f2e-fd4c2232a614.png",
+      "annotation_path": "dataset_pilot/annotations/eea97ccc-0385-427a-9f2e-fd4c2232a614.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "2193c194-66b4-42e3-a966-b42bd23c6bab",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_2193c194-66b4-42e3-a966-b42bd23c6bab.png",
+      "annotation_path": "dataset_pilot/annotations/2193c194-66b4-42e3-a966-b42bd23c6bab.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "666be13c-9d8f-4c92-9636-065c96c94f5e",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_666be13c-9d8f-4c92-9636-065c96c94f5e.png",
+      "annotation_path": "dataset_pilot/annotations/666be13c-9d8f-4c92-9636-065c96c94f5e.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "2956dbba-b2c2-468e-a646-69b70dd6bbef",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_2956dbba-b2c2-468e-a646-69b70dd6bbef.png",
+      "annotation_path": "dataset_pilot/annotations/2956dbba-b2c2-468e-a646-69b70dd6bbef.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "0a2d99d1-6e49-410f-be6f-15b449c95e1c",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_0a2d99d1-6e49-410f-be6f-15b449c95e1c.png",
+      "annotation_path": "dataset_pilot/annotations/0a2d99d1-6e49-410f-be6f-15b449c95e1c.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "65ab9b97-1c19-46f1-93a3-efec46c2cd62",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_65ab9b97-1c19-46f1-93a3-efec46c2cd62.png",
+      "annotation_path": "dataset_pilot/annotations/65ab9b97-1c19-46f1-93a3-efec46c2cd62.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "900bb9b1-960c-404d-bf2f-79ef3dc2cbc5",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_900bb9b1-960c-404d-bf2f-79ef3dc2cbc5.png",
+      "annotation_path": "dataset_pilot/annotations/900bb9b1-960c-404d-bf2f-79ef3dc2cbc5.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "65e0446e-f4a7-4427-a180-abba269619e4",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_65e0446e-f4a7-4427-a180-abba269619e4.png",
+      "annotation_path": "dataset_pilot/annotations/65e0446e-f4a7-4427-a180-abba269619e4.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "c3067f00-4e3d-46df-820f-d33ade1a4524",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_c3067f00-4e3d-46df-820f-d33ade1a4524.png",
+      "annotation_path": "dataset_pilot/annotations/c3067f00-4e3d-46df-820f-d33ade1a4524.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "8b008c66-8be8-4799-bf52-3f742c9a0cc6",
+      "country": "UK",
+      "card_type": "Driving Licence",
+      "image_path": "dataset_pilot/images/uk_dl_8b008c66-8be8-4799-bf52-3f742c9a0cc6.png",
+      "annotation_path": "dataset_pilot/annotations/8b008c66-8be8-4799-bf52-3f742c9a0cc6.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "800aff8d-92fc-46f0-8f33-e9215db0f6d3",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_800aff8d-92fc-46f0-8f33-e9215db0f6d3.png",
+      "annotation_path": "dataset_pilot/annotations/800aff8d-92fc-46f0-8f33-e9215db0f6d3.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "0005a83f-82c0-41be-8290-0ef669876e93",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_0005a83f-82c0-41be-8290-0ef669876e93.png",
+      "annotation_path": "dataset_pilot/annotations/0005a83f-82c0-41be-8290-0ef669876e93.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "42adcab4-a378-4da6-9c43-2d92a8eb081b",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_42adcab4-a378-4da6-9c43-2d92a8eb081b.png",
+      "annotation_path": "dataset_pilot/annotations/42adcab4-a378-4da6-9c43-2d92a8eb081b.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "db2bc8cc-e2cd-43be-bc9c-ebe7471e8b67",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_db2bc8cc-e2cd-43be-bc9c-ebe7471e8b67.png",
+      "annotation_path": "dataset_pilot/annotations/db2bc8cc-e2cd-43be-bc9c-ebe7471e8b67.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "b28c7fa1-baeb-46bd-b043-f25a5d3c6fb2",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_b28c7fa1-baeb-46bd-b043-f25a5d3c6fb2.png",
+      "annotation_path": "dataset_pilot/annotations/b28c7fa1-baeb-46bd-b043-f25a5d3c6fb2.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "2adeb6ed-24bf-4232-ad6a-ed1f22cb2cd1",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_2adeb6ed-24bf-4232-ad6a-ed1f22cb2cd1.png",
+      "annotation_path": "dataset_pilot/annotations/2adeb6ed-24bf-4232-ad6a-ed1f22cb2cd1.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "a2d668ee-5868-4b53-9db1-0994b071eece",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_a2d668ee-5868-4b53-9db1-0994b071eece.png",
+      "annotation_path": "dataset_pilot/annotations/a2d668ee-5868-4b53-9db1-0994b071eece.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "293c8786-5356-48ab-95b8-a5020b1a3c4e",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_293c8786-5356-48ab-95b8-a5020b1a3c4e.png",
+      "annotation_path": "dataset_pilot/annotations/293c8786-5356-48ab-95b8-a5020b1a3c4e.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "4e879c08-f8b7-44ce-8892-d00da4c57652",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_4e879c08-f8b7-44ce-8892-d00da4c57652.png",
+      "annotation_path": "dataset_pilot/annotations/4e879c08-f8b7-44ce-8892-d00da4c57652.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "b3036b21-2242-4c83-934d-f78b8c58790c",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_b3036b21-2242-4c83-934d-f78b8c58790c.png",
+      "annotation_path": "dataset_pilot/annotations/b3036b21-2242-4c83-934d-f78b8c58790c.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "b2c5a93c-65f1-4fd9-aa11-2c37b1cb6184",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_b2c5a93c-65f1-4fd9-aa11-2c37b1cb6184.png",
+      "annotation_path": "dataset_pilot/annotations/b2c5a93c-65f1-4fd9-aa11-2c37b1cb6184.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "746d74ff-6edb-4cda-8f99-a22ba8e31d79",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_746d74ff-6edb-4cda-8f99-a22ba8e31d79.png",
+      "annotation_path": "dataset_pilot/annotations/746d74ff-6edb-4cda-8f99-a22ba8e31d79.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "69923f2f-6ac6-4cbc-a12c-a3ce16894b78",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_69923f2f-6ac6-4cbc-a12c-a3ce16894b78.png",
+      "annotation_path": "dataset_pilot/annotations/69923f2f-6ac6-4cbc-a12c-a3ce16894b78.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "90b90373-dca9-4e7d-b59f-68207c50e7ef",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_90b90373-dca9-4e7d-b59f-68207c50e7ef.png",
+      "annotation_path": "dataset_pilot/annotations/90b90373-dca9-4e7d-b59f-68207c50e7ef.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "fd5f5945-93dc-4a3e-97d3-33c1c0d15eac",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_fd5f5945-93dc-4a3e-97d3-33c1c0d15eac.png",
+      "annotation_path": "dataset_pilot/annotations/fd5f5945-93dc-4a3e-97d3-33c1c0d15eac.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "1a9f6017-d502-4cb6-9934-7585b3a321a6",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_1a9f6017-d502-4cb6-9934-7585b3a321a6.png",
+      "annotation_path": "dataset_pilot/annotations/1a9f6017-d502-4cb6-9934-7585b3a321a6.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "4b27a1f6-b704-4aad-9196-f390cea102ea",
+      "country": "Germany",
+      "card_type": "Personalausweis",
+      "image_path": "dataset_pilot/images/germany_id_4b27a1f6-b704-4aad-9196-f390cea102ea.png",
+      "annotation_path": "dataset_pilot/annotations/4b27a1f6-b704-4aad-9196-f390cea102ea.json",
+      "pii_count": 7
+    },
+    {
+      "image_id": "b45938f6-a24e-4566-a8c4-19fce75a58f5",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_b45938f6-a24e-4566-a8c4-19fce75a58f5.png",
+      "annotation_path": "dataset_pilot/annotations/b45938f6-a24e-4566-a8c4-19fce75a58f5.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "41b163cc-a592-42cf-bcfa-e4989f7c3a29",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_41b163cc-a592-42cf-bcfa-e4989f7c3a29.png",
+      "annotation_path": "dataset_pilot/annotations/41b163cc-a592-42cf-bcfa-e4989f7c3a29.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "4e136086-01b9-4463-93fc-a129870ece48",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_4e136086-01b9-4463-93fc-a129870ece48.png",
+      "annotation_path": "dataset_pilot/annotations/4e136086-01b9-4463-93fc-a129870ece48.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "de2de334-21fc-481f-b137-94ea141d4159",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_de2de334-21fc-481f-b137-94ea141d4159.png",
+      "annotation_path": "dataset_pilot/annotations/de2de334-21fc-481f-b137-94ea141d4159.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "e8a01e05-9f4f-447f-97b1-8d553ebe22ad",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_e8a01e05-9f4f-447f-97b1-8d553ebe22ad.png",
+      "annotation_path": "dataset_pilot/annotations/e8a01e05-9f4f-447f-97b1-8d553ebe22ad.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "193ef71a-3fcb-4b7f-a7eb-47803d710ddc",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_193ef71a-3fcb-4b7f-a7eb-47803d710ddc.png",
+      "annotation_path": "dataset_pilot/annotations/193ef71a-3fcb-4b7f-a7eb-47803d710ddc.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "01551eb3-92b7-4cb4-91c4-d88789b329d6",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_01551eb3-92b7-4cb4-91c4-d88789b329d6.png",
+      "annotation_path": "dataset_pilot/annotations/01551eb3-92b7-4cb4-91c4-d88789b329d6.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "530c87dc-e78c-4d38-8e17-09df820be374",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_530c87dc-e78c-4d38-8e17-09df820be374.png",
+      "annotation_path": "dataset_pilot/annotations/530c87dc-e78c-4d38-8e17-09df820be374.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "0f7452cf-6591-48c9-8e9f-adeee7fe8327",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_0f7452cf-6591-48c9-8e9f-adeee7fe8327.png",
+      "annotation_path": "dataset_pilot/annotations/0f7452cf-6591-48c9-8e9f-adeee7fe8327.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "6b2624e0-eaaa-4dfe-8f93-ff277e5e88fc",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_6b2624e0-eaaa-4dfe-8f93-ff277e5e88fc.png",
+      "annotation_path": "dataset_pilot/annotations/6b2624e0-eaaa-4dfe-8f93-ff277e5e88fc.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "6518ba81-b101-44be-bbd5-9c0761d1645d",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_6518ba81-b101-44be-bbd5-9c0761d1645d.png",
+      "annotation_path": "dataset_pilot/annotations/6518ba81-b101-44be-bbd5-9c0761d1645d.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "577e58cb-1c6c-48ab-8439-a7a22797e34b",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_577e58cb-1c6c-48ab-8439-a7a22797e34b.png",
+      "annotation_path": "dataset_pilot/annotations/577e58cb-1c6c-48ab-8439-a7a22797e34b.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "d2713c2a-dc15-4caf-8f0b-0f222e012521",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_d2713c2a-dc15-4caf-8f0b-0f222e012521.png",
+      "annotation_path": "dataset_pilot/annotations/d2713c2a-dc15-4caf-8f0b-0f222e012521.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "d56e71f4-c751-4038-9ef7-d27819b7243d",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_d56e71f4-c751-4038-9ef7-d27819b7243d.png",
+      "annotation_path": "dataset_pilot/annotations/d56e71f4-c751-4038-9ef7-d27819b7243d.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "92122229-7b73-4758-8725-3a1612745103",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_92122229-7b73-4758-8725-3a1612745103.png",
+      "annotation_path": "dataset_pilot/annotations/92122229-7b73-4758-8725-3a1612745103.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "3160ff75-9769-4306-96fc-3b00425dd220",
+      "country": "Australia",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/australia_dl_3160ff75-9769-4306-96fc-3b00425dd220.png",
+      "annotation_path": "dataset_pilot/annotations/3160ff75-9769-4306-96fc-3b00425dd220.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "b6a56b0b-913c-4122-86c0-80682faec35a",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_b6a56b0b-913c-4122-86c0-80682faec35a.png",
+      "annotation_path": "dataset_pilot/annotations/b6a56b0b-913c-4122-86c0-80682faec35a.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "a23132a3-5e35-427d-84d5-df8665cadcb6",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_a23132a3-5e35-427d-84d5-df8665cadcb6.png",
+      "annotation_path": "dataset_pilot/annotations/a23132a3-5e35-427d-84d5-df8665cadcb6.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "ae38d747-c44c-424e-a711-ad177fb81473",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_ae38d747-c44c-424e-a711-ad177fb81473.png",
+      "annotation_path": "dataset_pilot/annotations/ae38d747-c44c-424e-a711-ad177fb81473.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "ffda41a3-e1db-4277-8a8c-3256836a020c",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_ffda41a3-e1db-4277-8a8c-3256836a020c.png",
+      "annotation_path": "dataset_pilot/annotations/ffda41a3-e1db-4277-8a8c-3256836a020c.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "2c5baf83-a21d-4063-8c30-de119564b4c5",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_2c5baf83-a21d-4063-8c30-de119564b4c5.png",
+      "annotation_path": "dataset_pilot/annotations/2c5baf83-a21d-4063-8c30-de119564b4c5.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "aff1e3d0-f841-46d2-8386-785d1f9e96ac",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_aff1e3d0-f841-46d2-8386-785d1f9e96ac.png",
+      "annotation_path": "dataset_pilot/annotations/aff1e3d0-f841-46d2-8386-785d1f9e96ac.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "27d41158-c8ac-4d4f-9ed0-0c996c3096fa",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_27d41158-c8ac-4d4f-9ed0-0c996c3096fa.png",
+      "annotation_path": "dataset_pilot/annotations/27d41158-c8ac-4d4f-9ed0-0c996c3096fa.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "95da30a7-3547-4e39-9cf1-f18346d3234a",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_95da30a7-3547-4e39-9cf1-f18346d3234a.png",
+      "annotation_path": "dataset_pilot/annotations/95da30a7-3547-4e39-9cf1-f18346d3234a.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "80b34f6e-3a2e-4ad2-8ef7-d0bc6c7625a3",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_80b34f6e-3a2e-4ad2-8ef7-d0bc6c7625a3.png",
+      "annotation_path": "dataset_pilot/annotations/80b34f6e-3a2e-4ad2-8ef7-d0bc6c7625a3.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "2ef28a39-9352-4958-8cf2-6d79b7587381",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_2ef28a39-9352-4958-8cf2-6d79b7587381.png",
+      "annotation_path": "dataset_pilot/annotations/2ef28a39-9352-4958-8cf2-6d79b7587381.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "6e423543-ad6e-4ba7-8432-c91d97920aa9",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_6e423543-ad6e-4ba7-8432-c91d97920aa9.png",
+      "annotation_path": "dataset_pilot/annotations/6e423543-ad6e-4ba7-8432-c91d97920aa9.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "7b93eb4d-10bd-4ddd-a173-91ccd973e242",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_7b93eb4d-10bd-4ddd-a173-91ccd973e242.png",
+      "annotation_path": "dataset_pilot/annotations/7b93eb4d-10bd-4ddd-a173-91ccd973e242.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "461afa1b-dcb8-45ad-ad04-16e96a8ce458",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_461afa1b-dcb8-45ad-ad04-16e96a8ce458.png",
+      "annotation_path": "dataset_pilot/annotations/461afa1b-dcb8-45ad-ad04-16e96a8ce458.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "b09a09a7-ddbc-444d-9dce-1554be0289ad",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_b09a09a7-ddbc-444d-9dce-1554be0289ad.png",
+      "annotation_path": "dataset_pilot/annotations/b09a09a7-ddbc-444d-9dce-1554be0289ad.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "5257014d-1488-470c-a893-e511fa4d71c1",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_5257014d-1488-470c-a893-e511fa4d71c1.png",
+      "annotation_path": "dataset_pilot/annotations/5257014d-1488-470c-a893-e511fa4d71c1.json",
+      "pii_count": 8
+    },
+    {
+      "image_id": "e3e51794-068d-47c6-8495-27efb15a302c",
+      "country": "Canada",
+      "card_type": "Driver's Licence",
+      "image_path": "dataset_pilot/images/canada_dl_e3e51794-068d-47c6-8495-27efb15a302c.png",
+      "annotation_path": "dataset_pilot/annotations/e3e51794-068d-47c6-8495-27efb15a302c.json",
+      "pii_count": 8
+    }
+  ]
+}

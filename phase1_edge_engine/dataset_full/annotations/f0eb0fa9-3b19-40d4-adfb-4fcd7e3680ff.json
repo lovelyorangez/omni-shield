@@ -1,0 +1,138 @@
+{
+  "image_id": "f0eb0fa9-3b19-40d4-adfb-4fcd7e3680ff",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_f0eb0fa9-3b19-40d4-adfb-4fcd7e3680ff.png",
+  "image_width": 892,
+  "image_height": 600,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 150,
+        "norm_xmin": 22,
+        "norm_ymax": 483,
+        "norm_xmax": 201
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "HI65902771",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 728,
+        "ymax": 115,
+        "norm_ymin": 170,
+        "norm_xmin": 679,
+        "norm_ymax": 191,
+        "norm_xmax": 816
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11/01/1998",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 226,
+        "norm_xmin": 679,
+        "norm_ymax": 246,
+        "norm_xmax": 784
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Cruz, Joseph",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 307,
+        "ymax": 116,
+        "norm_ymin": 168,
+        "norm_xmin": 218,
+        "norm_ymax": 193,
+        "norm_xmax": 344
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "212 TINA VISTA APT. 169",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 343,
+        "ymax": 150,
+        "norm_ymin": 235,
+        "norm_xmin": 218,
+        "norm_ymax": 250,
+        "norm_xmax": 384
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "PHAMMOUTH, HI 80628",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 337,
+        "ymax": 166,
+        "norm_ymin": 260,
+        "norm_xmin": 218,
+        "norm_ymax": 276,
+        "norm_xmax": 377
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "14508993588916375628",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 836,
+        "norm_xmin": 22,
+        "norm_ymax": 876,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Joseph Cruz",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 508,
+        "norm_xmin": 22,
+        "norm_ymax": 575,
+        "norm_xmax": 201
+      },
+      "field_type": "signature"
+    }
+  ]
+}

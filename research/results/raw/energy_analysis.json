@@ -1,0 +1,40 @@
+{
+  "hardware": {
+    "gpu": "NVIDIA RTX 5060 Laptop GPU",
+    "gpu_tdp_w": 75,
+    "system_overhead_w": 25,
+    "total_system_w": 100
+  },
+  "energy_per_redaction_kwh": {
+    "image": 0.000289,
+    "pdf":   0.0000011,
+    "audio": 0.0000339,
+    "text":  0.00000028
+  },
+  "energy_per_1000_kwh": {
+    "image": 0.2894,
+    "pdf":   0.0011,
+    "audio": 0.0339,
+    "text":  0.0003
+  },
+  "cloud_comparison_per_1000_kwh": {
+    "omni_shield_image":  0.2894,
+    "aws_comprehend":     0.2000,
+    "google_cloud_dlp":   0.2000,
+    "gpt4_vision":        1.0000
+  },
+  "carbon_per_1000_kg_co2e": {
+    "omni_india_grid":      0.2373,
+    "omni_us_grid":         0.1129,
+    "omni_renewable":       0.0232,
+    "aws_renewable":        0.0300,
+    "gcp_renewable":        0.0160,
+    "gpt4_aws_renewable":   0.1500
+  },
+  "key_ratios": {
+    "omni_vs_aws_energy":   "1.4x more than AWS Comprehend",
+    "gpt4_vs_omni_energy":  "3.5x more than Omni-Shield",
+    "privacy_premium_wh":   0.2892,
+    "privacy_premium_inr_per_1000": 0.72
+  }
+}

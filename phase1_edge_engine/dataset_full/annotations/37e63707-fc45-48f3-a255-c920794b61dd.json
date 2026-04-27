@@ -1,0 +1,138 @@
+{
+  "image_id": "37e63707-fc45-48f3-a255-c920794b61dd",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_37e63707-fc45-48f3-a255-c920794b61dd.png",
+  "image_width": 888,
+  "image_height": 590,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 152,
+        "norm_xmin": 22,
+        "norm_ymax": 491,
+        "norm_xmax": 202
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "UT35030587",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 733,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 682,
+        "norm_ymax": 194,
+        "norm_xmax": 825
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/25/1983",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 230,
+        "norm_xmin": 682,
+        "norm_ymax": 250,
+        "norm_xmax": 788
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Dudley, Timothy",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 342,
+        "ymax": 116,
+        "norm_ymin": 171,
+        "norm_xmin": 219,
+        "norm_ymax": 196,
+        "norm_xmax": 385
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "36687 PATEL VIEW APT. 619",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 363,
+        "ymax": 150,
+        "norm_ymin": 238,
+        "norm_xmin": 219,
+        "norm_ymax": 254,
+        "norm_xmax": 408
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "ROSEBURY, UT 11937",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 326,
+        "ymax": 166,
+        "norm_ymin": 264,
+        "norm_xmin": 219,
+        "norm_ymax": 281,
+        "norm_xmax": 367
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "05524728633302126065",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 850,
+        "norm_xmin": 22,
+        "norm_ymax": 891,
+        "norm_xmax": 157
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Timothy Dudley",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 516,
+        "norm_xmin": 22,
+        "norm_ymax": 584,
+        "norm_xmax": 202
+      },
+      "field_type": "signature"
+    }
+  ]
+}

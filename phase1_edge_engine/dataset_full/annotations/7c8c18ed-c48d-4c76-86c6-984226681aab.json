@@ -1,0 +1,138 @@
+{
+  "image_id": "7c8c18ed-c48d-4c76-86c6-984226681aab",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_7c8c18ed-c48d-4c76-86c6-984226681aab.png",
+  "image_width": 882,
+  "image_height": 582,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "DAWSON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 261,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 304
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Peter",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 217,
+        "ymax": 142,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 262,
+        "norm_xmax": 253
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "17.12.1991",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "DAWSO9819600PE913",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 369,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "908 Francesca Squares, Rickyberg",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 403,
+        "ymax": 301,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 557,
+        "norm_xmax": 470
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "S3H 0GS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 237,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 276
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Peter DAWSON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

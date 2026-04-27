@@ -1,0 +1,138 @@
+{
+  "image_id": "bc3a26e3-77ea-4f26-8bae-17bf508d3f62",
+  "country": "Australia",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/australia_dl_bc3a26e3-77ea-4f26-8bae-17bf508d3f62.png",
+  "image_width": 864,
+  "image_height": 552,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "SURNAME",
+      "value": "BROWN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 253,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 295
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "GIVEN NAME(S)",
+      "value": "Cory",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 126,
+        "xmax": 212,
+        "ymax": 139,
+        "norm_ymin": 233,
+        "norm_xmin": 210,
+        "norm_ymax": 257,
+        "norm_xmax": 247
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "DATE OF BIRTH",
+      "value": "17/07/1949",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 160,
+        "xmax": 255,
+        "ymax": 171,
+        "norm_ymin": 296,
+        "norm_xmin": 210,
+        "norm_ymax": 316,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "LICENCE NO.",
+      "value": "NG2695249",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 194,
+        "xmax": 265,
+        "ymax": 203,
+        "norm_ymin": 359,
+        "norm_xmin": 210,
+        "norm_ymax": 375,
+        "norm_xmax": 309
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADDRESS",
+      "value": "8 Sparks Deviation",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 256,
+        "xmax": 303,
+        "ymax": 270,
+        "norm_ymin": 474,
+        "norm_xmin": 210,
+        "norm_ymax": 500,
+        "norm_xmax": 353
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "SUBURB / STATE / POSTCODE",
+      "value": "EBONYFORT VIC 3485",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 286,
+        "xmax": 322,
+        "ymax": 295,
+        "norm_ymin": 529,
+        "norm_xmin": 210,
+        "norm_ymax": 546,
+        "norm_xmax": 376
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Cory BROWN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 310,
+        "xmax": 390,
+        "ymax": 355,
+        "norm_ymin": 574,
+        "norm_xmin": 210,
+        "norm_ymax": 657,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

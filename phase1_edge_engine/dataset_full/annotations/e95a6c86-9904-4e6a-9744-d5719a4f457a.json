@@ -1,0 +1,138 @@
+{
+  "image_id": "e95a6c86-9904-4e6a-9744-d5719a4f457a",
+  "country": "Canada",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/canada_dl_e95a6c86-9904-4e6a-9744-d5719a4f457a.png",
+  "image_width": 890,
+  "image_height": 596,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "NOM / SURNAME",
+      "value": "UNDERWOOD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 301,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 351
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PR\u00c9NOM / GIVEN NAME",
+      "value": "Jonathan",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 124,
+        "xmax": 243,
+        "ymax": 138,
+        "norm_ymin": 229,
+        "norm_xmin": 210,
+        "norm_ymax": 255,
+        "norm_xmax": 283
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "NAISSANCE / DATE OF BIRTH",
+      "value": "2006/02/18",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 156,
+        "xmax": 255,
+        "ymax": 167,
+        "norm_ymin": 288,
+        "norm_xmin": 210,
+        "norm_ymax": 309,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PERMIS / LICENCE NO.",
+      "value": "Q7725-22872-80801",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 212,
+        "xmax": 328,
+        "ymax": 223,
+        "norm_ymin": 392,
+        "norm_xmin": 210,
+        "norm_ymax": 412,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADRESSE / ADDRESS",
+      "value": "62312 Jeffery Motorway",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 242,
+        "xmax": 336,
+        "ymax": 256,
+        "norm_ymin": 448,
+        "norm_xmin": 210,
+        "norm_ymax": 474,
+        "norm_xmax": 392
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "VILLE / CITY, PROVINCE, CODE POSTAL",
+      "value": "BRUCEFORT, BC  A9A7Y1",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 270,
+        "xmax": 343,
+        "ymax": 280,
+        "norm_ymin": 500,
+        "norm_xmin": 210,
+        "norm_ymax": 518,
+        "norm_xmax": 400
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Jonathan UNDERWOOD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 295,
+        "xmax": 390,
+        "ymax": 340,
+        "norm_ymin": 546,
+        "norm_xmin": 210,
+        "norm_ymax": 629,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

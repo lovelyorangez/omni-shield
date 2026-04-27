@@ -1,0 +1,138 @@
+{
+  "image_id": "e3bd13ea-5c46-4203-939b-e175cee81858",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_e3bd13ea-5c46-4203-939b-e175cee81858.png",
+  "image_width": 886,
+  "image_height": 588,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 153,
+        "norm_xmin": 22,
+        "norm_ymax": 493,
+        "norm_xmax": 203
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MH90877661",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 739,
+        "ymax": 115,
+        "norm_ymin": 173,
+        "norm_xmin": 683,
+        "norm_ymax": 195,
+        "norm_xmax": 834
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "01/23/1973",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 231,
+        "norm_xmin": 683,
+        "norm_ymax": 251,
+        "norm_xmax": 790
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Rodriguez, Christina",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 379,
+        "ymax": 116,
+        "norm_ymin": 171,
+        "norm_xmin": 220,
+        "norm_ymax": 197,
+        "norm_xmax": 427
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "01194 SMITH PARKS APT. 006",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 373,
+        "ymax": 150,
+        "norm_ymin": 239,
+        "norm_xmin": 220,
+        "norm_ymax": 255,
+        "norm_xmax": 420
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "EDWARDMOUTH, MH 51793",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 363,
+        "ymax": 166,
+        "norm_ymin": 265,
+        "norm_xmin": 220,
+        "norm_ymax": 282,
+        "norm_xmax": 409
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "71985546015851743280",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 853,
+        "norm_xmin": 22,
+        "norm_ymax": 894,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Christina Rodriguez",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 518,
+        "norm_xmin": 22,
+        "norm_ymax": 586,
+        "norm_xmax": 203
+      },
+      "field_type": "signature"
+    }
+  ]
+}

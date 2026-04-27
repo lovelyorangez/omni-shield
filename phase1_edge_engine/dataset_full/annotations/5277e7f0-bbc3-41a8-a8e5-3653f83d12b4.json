@@ -1,0 +1,138 @@
+{
+  "image_id": "5277e7f0-bbc3-41a8-a8e5-3653f83d12b4",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_5277e7f0-bbc3-41a8-a8e5-3653f83d12b4.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 166,
+        "norm_xmin": 23,
+        "norm_ymax": 537,
+        "norm_xmax": 210
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "IN26192372",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 728,
+        "ymax": 115,
+        "norm_ymin": 188,
+        "norm_xmin": 707,
+        "norm_ymax": 212,
+        "norm_xmax": 850
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/05/1971",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 251,
+        "norm_xmin": 707,
+        "norm_ymax": 274,
+        "norm_xmax": 817
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Brown, Susan",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 319,
+        "ymax": 115,
+        "norm_ymin": 187,
+        "norm_xmin": 227,
+        "norm_ymax": 212,
+        "norm_xmax": 372
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "2362 MYERS FIELDS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 316,
+        "ymax": 150,
+        "norm_ymin": 261,
+        "norm_xmin": 227,
+        "norm_ymax": 277,
+        "norm_xmax": 369
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "PORT MICHAEL, IN 36705",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 346,
+        "ymax": 166,
+        "norm_ymin": 288,
+        "norm_xmin": 227,
+        "norm_ymax": 307,
+        "norm_xmax": 404
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "01848197374189721540",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 929,
+        "norm_xmin": 23,
+        "norm_ymax": 974,
+        "norm_xmax": 163
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Susan Brown",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 564,
+        "norm_xmin": 23,
+        "norm_ymax": 638,
+        "norm_xmax": 210
+      },
+      "field_type": "signature"
+    }
+  ]
+}

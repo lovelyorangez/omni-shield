@@ -1,0 +1,14 @@
+phase1_edge_engine/venv/
+phase1_edge_engine/__pycache__/
+phase1_edge_engine/redacted_output/
+phase1_edge_engine/downloads/
+phase1_edge_engine/fine_tuned_vlm/
+omni-shield-app/node_modules/
+omni-shield-backup/
+ganache-db/
+research/datasets/
+*.pyc
+*.bin
+*.enc
+*.wtns
+*.r1cs

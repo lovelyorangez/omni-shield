@@ -1,0 +1,138 @@
+{
+  "image_id": "8a67d1da-87a2-4069-8de9-b3f5cc07f892",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_8a67d1da-87a2-4069-8de9-b3f5cc07f892.png",
+  "image_width": 898,
+  "image_height": 610,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 147,
+        "norm_xmin": 22,
+        "norm_ymax": 475,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "SC79545381",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 732,
+        "ymax": 115,
+        "norm_ymin": 167,
+        "norm_xmin": 674,
+        "norm_ymax": 188,
+        "norm_xmax": 815
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11/17/1983",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 222,
+        "norm_xmin": 674,
+        "norm_ymax": 242,
+        "norm_xmax": 779
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Jones, John",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 296,
+        "ymax": 116,
+        "norm_ymin": 165,
+        "norm_xmin": 217,
+        "norm_ymax": 190,
+        "norm_xmax": 329
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "702 THOMAS SPRING APT. 160",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 378,
+        "ymax": 150,
+        "norm_ymin": 231,
+        "norm_xmin": 217,
+        "norm_ymax": 245,
+        "norm_xmax": 420
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SOUTH PHILIPSHIRE, SC 90957",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 380,
+        "ymax": 166,
+        "norm_ymin": 255,
+        "norm_xmin": 217,
+        "norm_ymax": 272,
+        "norm_xmax": 423
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "79217174773329456255",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 822,
+        "norm_xmin": 22,
+        "norm_ymax": 862,
+        "norm_xmax": 155
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "John Jones",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 500,
+        "norm_xmin": 22,
+        "norm_ymax": 565,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

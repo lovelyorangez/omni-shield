@@ -1,0 +1,122 @@
+{
+  "image_id": "53cae667-a570-404e-b682-3541d5ad431f",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_53cae667-a570-404e-b682-3541d5ad431f.png",
+  "image_width": 872,
+  "image_height": 564,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "GEHRINGER",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 281,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 328
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Hermann-Josef",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 280,
+        "ymax": 137,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 253,
+        "norm_xmax": 327
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "05.02.1950",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "R259136517",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 266,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 310
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "H\u00e4ringstr. 460, Dachau",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 325,
+        "ymax": 309,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 572,
+        "norm_xmax": 379
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Hermann-Josef GEHRINGER",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "image_id": "d0f5b788-13ec-4a5e-9820-6e479b6e332d",
+  "country": "Canada",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/canada_dl_d0f5b788-13ec-4a5e-9820-6e479b6e332d.png",
+  "image_width": 894,
+  "image_height": 600,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "NOM / SURNAME",
+      "value": "JONES",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 236,
+        "ymax": 107,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 198,
+        "norm_xmax": 275
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PR\u00c9NOM / GIVEN NAME",
+      "value": "Candace",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 124,
+        "xmax": 241,
+        "ymax": 135,
+        "norm_ymin": 229,
+        "norm_xmin": 210,
+        "norm_ymax": 250,
+        "norm_xmax": 281
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "NAISSANCE / DATE OF BIRTH",
+      "value": "1969/01/26",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 156,
+        "xmax": 255,
+        "ymax": 167,
+        "norm_ymin": 288,
+        "norm_xmin": 210,
+        "norm_ymax": 309,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PERMIS / LICENCE NO.",
+      "value": "G0388-62912-79908",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 212,
+        "xmax": 328,
+        "ymax": 221,
+        "norm_ymin": 392,
+        "norm_xmin": 210,
+        "norm_ymax": 409,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADRESSE / ADDRESS",
+      "value": "72980 Boyd Land",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 242,
+        "xmax": 294,
+        "ymax": 256,
+        "norm_ymin": 448,
+        "norm_xmin": 210,
+        "norm_ymax": 474,
+        "norm_xmax": 343
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "VILLE / CITY, PROVINCE, CODE POSTAL",
+      "value": "LAKE ALYSSABURY, NB  R7P3E5",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 270,
+        "xmax": 385,
+        "ymax": 280,
+        "norm_ymin": 500,
+        "norm_xmin": 210,
+        "norm_ymax": 518,
+        "norm_xmax": 449
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Candace JONES",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 295,
+        "xmax": 390,
+        "ymax": 340,
+        "norm_ymin": 546,
+        "norm_xmin": 210,
+        "norm_ymax": 629,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "image_id": "4ddb737b-a2f6-4847-9d76-8872b59f8f50",
+  "country": "Canada",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/canada_dl_4ddb737b-a2f6-4847-9d76-8872b59f8f50.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "NOM / SURNAME",
+      "value": "HORTON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 257,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 300
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PR\u00c9NOM / GIVEN NAME",
+      "value": "Justin",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 124,
+        "xmax": 220,
+        "ymax": 138,
+        "norm_ymin": 229,
+        "norm_xmin": 210,
+        "norm_ymax": 255,
+        "norm_xmax": 257
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "NAISSANCE / DATE OF BIRTH",
+      "value": "1991/04/07",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 156,
+        "xmax": 255,
+        "ymax": 167,
+        "norm_ymin": 288,
+        "norm_xmin": 210,
+        "norm_ymax": 309,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PERMIS / LICENCE NO.",
+      "value": "G7234-30980-50097",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 212,
+        "xmax": 328,
+        "ymax": 221,
+        "norm_ymin": 392,
+        "norm_xmin": 210,
+        "norm_ymax": 409,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADRESSE / ADDRESS",
+      "value": "81219 Emma Freeway",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 242,
+        "xmax": 325,
+        "ymax": 254,
+        "norm_ymin": 448,
+        "norm_xmin": 210,
+        "norm_ymax": 470,
+        "norm_xmax": 379
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "VILLE / CITY, PROVINCE, CODE POSTAL",
+      "value": "WILSONSHIRE, SK  B9C 6S5",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 270,
+        "xmax": 360,
+        "ymax": 280,
+        "norm_ymin": 500,
+        "norm_xmin": 210,
+        "norm_ymax": 518,
+        "norm_xmax": 420
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Justin HORTON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 295,
+        "xmax": 390,
+        "ymax": 340,
+        "norm_ymin": 546,
+        "norm_xmin": 210,
+        "norm_ymax": 629,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

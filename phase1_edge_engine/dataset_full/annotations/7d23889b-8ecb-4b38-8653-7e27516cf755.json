@@ -1,0 +1,138 @@
+{
+  "image_id": "7d23889b-8ecb-4b38-8653-7e27516cf755",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_7d23889b-8ecb-4b38-8653-7e27516cf755.png",
+  "image_width": 886,
+  "image_height": 586,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 153,
+        "norm_xmin": 22,
+        "norm_ymax": 494,
+        "norm_xmax": 203
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "SD80037003",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 734,
+        "ymax": 115,
+        "norm_ymin": 174,
+        "norm_xmin": 683,
+        "norm_ymax": 196,
+        "norm_xmax": 828
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/30/1994",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 232,
+        "norm_xmin": 683,
+        "norm_ymax": 252,
+        "norm_xmax": 790
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Butler, Bryan",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 313,
+        "ymax": 116,
+        "norm_ymin": 172,
+        "norm_xmin": 220,
+        "norm_ymax": 197,
+        "norm_xmax": 353
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "137 DARIUS WAYS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 305,
+        "ymax": 150,
+        "norm_ymin": 240,
+        "norm_xmin": 220,
+        "norm_ymax": 255,
+        "norm_xmax": 344
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "JEREMYTON, SD 90091",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 333,
+        "ymax": 167,
+        "norm_ymin": 266,
+        "norm_xmin": 220,
+        "norm_ymax": 284,
+        "norm_xmax": 375
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "28556608470681039033",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 856,
+        "norm_xmin": 22,
+        "norm_ymax": 897,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Bryan Butler",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 520,
+        "norm_xmin": 22,
+        "norm_ymax": 588,
+        "norm_xmax": 203
+      },
+      "field_type": "signature"
+    }
+  ]
+}

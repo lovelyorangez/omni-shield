@@ -1,0 +1,17 @@
+{
+  "n_docs": 150,
+  "mean_latency_s": 9.65,
+  "errors": 4,
+  "macro_f1": 0.1867,
+  "micro_f1": 0.3714,
+  "per_category": {
+    "names":      {"precision": 0.600, "recall": 0.211, "f1": 0.312},
+    "faces":      {"precision": 0.000, "recall": 0.000, "f1": 0.000},
+    "signatures": {"precision": 0.845, "recall": 0.897, "f1": 0.870},
+    "phones":     {"precision": 0.000, "recall": 0.000, "f1": 0.000},
+    "dob":        {"precision": 0.508, "recall": 0.537, "f1": 0.522},
+    "id_numbers": {"precision": 0.381, "recall": 0.055, "f1": 0.096},
+    "addresses":  {"precision": 0.113, "recall": 0.048, "f1": 0.067},
+    "org_names":  {"precision": 0.000, "recall": 0.000, "f1": 0.000}
+  }
+}

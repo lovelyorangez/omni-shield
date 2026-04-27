@@ -1,0 +1,138 @@
+{
+  "image_id": "1c836072-7bb5-440b-95a4-ab12326ffa2b",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_1c836072-7bb5-440b-95a4-ab12326ffa2b.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "THOMPSON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 284,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 331
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Mohammed",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 263,
+        "ymax": 143,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 264,
+        "norm_xmax": 307
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "06.01.1948",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "THOMP9386613MO931",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 374,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 436
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Flat 20z\nBrown Forest, Atkinsfort",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 336,
+        "ymax": 316,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 585,
+        "norm_xmax": 392
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "DT14 0DH",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 247,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 288
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Mohammed THOMPSON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

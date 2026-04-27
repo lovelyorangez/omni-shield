@@ -1,0 +1,138 @@
+{
+  "image_id": "6cd7656e-0236-4f6e-9dfa-d6fe1efeacad",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_6cd7656e-0236-4f6e-9dfa-d6fe1efeacad.png",
+  "image_width": 896,
+  "image_height": 606,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 148,
+        "norm_xmin": 22,
+        "norm_ymax": 478,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "DE59551842",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 733,
+        "ymax": 115,
+        "norm_ymin": 168,
+        "norm_xmin": 676,
+        "norm_ymax": 189,
+        "norm_xmax": 818
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "04/01/1960",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 224,
+        "norm_xmin": 676,
+        "norm_ymax": 244,
+        "norm_xmax": 781
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Williams, George",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 349,
+        "ymax": 116,
+        "norm_ymin": 166,
+        "norm_xmin": 217,
+        "norm_ymax": 191,
+        "norm_xmax": 389
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "242 MARKS CENTER",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 316,
+        "ymax": 150,
+        "norm_ymin": 232,
+        "norm_xmin": 217,
+        "norm_ymax": 247,
+        "norm_xmax": 352
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "PORT JASON, DE 00684",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 334,
+        "ymax": 167,
+        "norm_ymin": 257,
+        "norm_xmin": 217,
+        "norm_ymax": 275,
+        "norm_xmax": 372
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "50053424089164983735",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 828,
+        "norm_xmin": 22,
+        "norm_ymax": 867,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "George Williams",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 503,
+        "norm_xmin": 22,
+        "norm_ymax": 569,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

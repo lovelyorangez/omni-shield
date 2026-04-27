@@ -1,0 +1,138 @@
+{
+  "image_id": "3dc190fe-5448-4cf7-9773-1595cd255112",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_3dc190fe-5448-4cf7-9773-1595cd255112.png",
+  "image_width": 898,
+  "image_height": 608,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 148,
+        "norm_xmin": 22,
+        "norm_ymax": 476,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "WI65676618",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 733,
+        "ymax": 115,
+        "norm_ymin": 167,
+        "norm_xmin": 674,
+        "norm_ymax": 189,
+        "norm_xmax": 816
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/21/1958",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 223,
+        "norm_xmin": 674,
+        "norm_ymax": 243,
+        "norm_xmax": 779
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Smith, Jonathan",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 340,
+        "ymax": 116,
+        "norm_ymin": 166,
+        "norm_xmin": 217,
+        "norm_ymax": 190,
+        "norm_xmax": 378
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "65180 VALERIE MOUNTAINS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 363,
+        "ymax": 150,
+        "norm_ymin": 231,
+        "norm_xmin": 217,
+        "norm_ymax": 246,
+        "norm_xmax": 404
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WEST ROBERTBERG, WI 84586",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 380,
+        "ymax": 166,
+        "norm_ymin": 256,
+        "norm_xmin": 217,
+        "norm_ymax": 273,
+        "norm_xmax": 423
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "12868230047868633752",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 825,
+        "norm_xmin": 22,
+        "norm_ymax": 865,
+        "norm_xmax": 155
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Jonathan Smith",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 501,
+        "norm_xmin": 22,
+        "norm_ymax": 567,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

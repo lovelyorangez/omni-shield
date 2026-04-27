@@ -1,0 +1,138 @@
+{
+  "image_id": "693415f3-9173-4a1d-9b9d-d658c289413e",
+  "country": "Australia",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/australia_dl_693415f3-9173-4a1d-9b9d-d658c289413e.png",
+  "image_width": 884,
+  "image_height": 584,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "SURNAME",
+      "value": "WILSON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 257,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 300
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "GIVEN NAME(S)",
+      "value": "Sandy",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 126,
+        "xmax": 224,
+        "ymax": 140,
+        "norm_ymin": 233,
+        "norm_xmin": 210,
+        "norm_ymax": 259,
+        "norm_xmax": 261
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "DATE OF BIRTH",
+      "value": "26/10/1983",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 160,
+        "xmax": 255,
+        "ymax": 171,
+        "norm_ymin": 296,
+        "norm_xmin": 210,
+        "norm_ymax": 316,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "LICENCE NO.",
+      "value": "WH2102027",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 194,
+        "xmax": 269,
+        "ymax": 203,
+        "norm_ymin": 359,
+        "norm_xmin": 210,
+        "norm_ymax": 375,
+        "norm_xmax": 314
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADDRESS",
+      "value": "Suite 524 1 Matthew Motorway",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 256,
+        "xmax": 383,
+        "ymax": 270,
+        "norm_ymin": 474,
+        "norm_xmin": 210,
+        "norm_ymax": 500,
+        "norm_xmax": 447
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "SUBURB / STATE / POSTCODE",
+      "value": "ALEXANDRIAVIEW VIC 5177",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 286,
+        "xmax": 360,
+        "ymax": 295,
+        "norm_ymin": 529,
+        "norm_xmin": 210,
+        "norm_ymax": 546,
+        "norm_xmax": 420
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Sandy WILSON",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 310,
+        "xmax": 390,
+        "ymax": 355,
+        "norm_ymin": 574,
+        "norm_xmin": 210,
+        "norm_ymax": 657,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

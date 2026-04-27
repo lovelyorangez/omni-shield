@@ -1,0 +1,138 @@
+{
+  "image_id": "de88a4c3-ff4d-48a9-ab2a-6812aa820922",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_de88a4c3-ff4d-48a9-ab2a-6812aa820922.png",
+  "image_width": 868,
+  "image_height": 560,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "ROBERTS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 263,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 307
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Gerard",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 228,
+        "ymax": 143,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 264,
+        "norm_xmax": 266
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "24.07.1955",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "ROBER9123478GE951",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 364,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 425
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Flat 0\nDawson Groves, Andreafort",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 359,
+        "ymax": 316,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 585,
+        "norm_xmax": 419
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "DD87 3GR",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 248,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 289
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Gerard ROBERTS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

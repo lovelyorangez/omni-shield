@@ -1,0 +1,138 @@
+{
+  "image_id": "cc48ef1c-e15d-4f9f-ac5f-276fe2557976",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_cc48ef1c-e15d-4f9f-ac5f-276fe2557976.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 166,
+        "norm_xmin": 23,
+        "norm_ymax": 537,
+        "norm_xmax": 210
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MP02611398",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 737,
+        "ymax": 115,
+        "norm_ymin": 188,
+        "norm_xmin": 707,
+        "norm_ymax": 212,
+        "norm_xmax": 860
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "01/20/1948",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 251,
+        "norm_xmin": 707,
+        "norm_ymax": 274,
+        "norm_xmax": 817
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Martin, Christy",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 331,
+        "ymax": 116,
+        "norm_ymin": 187,
+        "norm_xmin": 227,
+        "norm_ymax": 214,
+        "norm_xmax": 386
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "019 LINDSEY PASS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 306,
+        "ymax": 150,
+        "norm_ymin": 261,
+        "norm_xmin": 227,
+        "norm_ymax": 277,
+        "norm_xmax": 357
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SHELBYFURT, MP 76874",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 339,
+        "ymax": 166,
+        "norm_ymin": 288,
+        "norm_xmin": 227,
+        "norm_ymax": 307,
+        "norm_xmax": 396
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "68180978875439435353",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 929,
+        "norm_xmin": 23,
+        "norm_ymax": 974,
+        "norm_xmax": 163
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Christy Martin",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 564,
+        "norm_xmin": 23,
+        "norm_ymax": 638,
+        "norm_xmax": 210
+      },
+      "field_type": "signature"
+    }
+  ]
+}

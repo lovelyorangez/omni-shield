@@ -1,0 +1,138 @@
+{
+  "image_id": "1a8c7701-ce00-4588-b9f4-44b53d80a55b",
+  "country": "Canada",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/canada_dl_1a8c7701-ce00-4588-b9f4-44b53d80a55b.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "NOM / SURNAME",
+      "value": "LEE",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 92,
+        "xmax": 212,
+        "ymax": 104,
+        "norm_ymin": 170,
+        "norm_xmin": 210,
+        "norm_ymax": 192,
+        "norm_xmax": 247
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PR\u00c9NOM / GIVEN NAME",
+      "value": "Angela",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 124,
+        "xmax": 228,
+        "ymax": 138,
+        "norm_ymin": 229,
+        "norm_xmin": 210,
+        "norm_ymax": 255,
+        "norm_xmax": 266
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "NAISSANCE / DATE OF BIRTH",
+      "value": "1987/02/18",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 156,
+        "xmax": 255,
+        "ymax": 167,
+        "norm_ymin": 288,
+        "norm_xmin": 210,
+        "norm_ymax": 309,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "PERMIS / LICENCE NO.",
+      "value": "D2994-68044-36995",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 212,
+        "xmax": 328,
+        "ymax": 221,
+        "norm_ymin": 392,
+        "norm_xmin": 210,
+        "norm_ymax": 409,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "ADRESSE / ADDRESS",
+      "value": "3872 Justin Shore Suite 134",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 242,
+        "xmax": 361,
+        "ymax": 256,
+        "norm_ymin": 448,
+        "norm_xmin": 210,
+        "norm_ymax": 474,
+        "norm_xmax": 421
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "VILLE / CITY, PROVINCE, CODE POSTAL",
+      "value": "PORT JAMES, MB  B2K 8V7",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 270,
+        "xmax": 350,
+        "ymax": 282,
+        "norm_ymin": 500,
+        "norm_xmin": 210,
+        "norm_ymax": 522,
+        "norm_xmax": 408
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Angela LEE",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 295,
+        "xmax": 390,
+        "ymax": 340,
+        "norm_ymin": 546,
+        "norm_xmin": 210,
+        "norm_ymax": 629,
+        "norm_xmax": 455
+      },
+      "field_type": "signature"
+    }
+  ]
+}

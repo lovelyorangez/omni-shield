@@ -1,0 +1,138 @@
+{
+  "image_id": "dc8b9aa5-ef87-4fa1-b4bd-c222ab63d705",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_dc8b9aa5-ef87-4fa1-b4bd-c222ab63d705.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "NICHOLLS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 270,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 315
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Zoe",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 207,
+        "ymax": 142,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 262,
+        "norm_xmax": 241
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "16.07.1952",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "NICHO9184094ZO935",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 362,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 422
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "4 Kent Trail, New Yvonnehaven",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 381,
+        "ymax": 299,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 553,
+        "norm_xmax": 445
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "SG14 2LE",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 243,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 283
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Zoe NICHOLLS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

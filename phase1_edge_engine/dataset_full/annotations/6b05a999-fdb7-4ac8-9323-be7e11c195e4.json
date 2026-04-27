@@ -1,0 +1,138 @@
+{
+  "image_id": "6b05a999-fdb7-4ac8-9323-be7e11c195e4",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_6b05a999-fdb7-4ac8-9323-be7e11c195e4.png",
+  "image_width": 896,
+  "image_height": 606,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 148,
+        "norm_xmin": 22,
+        "norm_ymax": 478,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MA14975019",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 738,
+        "ymax": 115,
+        "norm_ymin": 168,
+        "norm_xmin": 676,
+        "norm_ymax": 189,
+        "norm_xmax": 823
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "10/20/1981",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 224,
+        "norm_xmin": 676,
+        "norm_ymax": 244,
+        "norm_xmax": 781
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Buchanan, Rebecca",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 371,
+        "ymax": 115,
+        "norm_ymin": 166,
+        "norm_xmin": 217,
+        "norm_ymax": 189,
+        "norm_xmax": 414
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "98940 MARTINEZ SKYWAY APT. 787",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 406,
+        "ymax": 150,
+        "norm_ymin": 232,
+        "norm_xmin": 217,
+        "norm_ymax": 247,
+        "norm_xmax": 453
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NORTH BRIANVILLE, MA 78402",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 379,
+        "ymax": 166,
+        "norm_ymin": 257,
+        "norm_xmin": 217,
+        "norm_ymax": 273,
+        "norm_xmax": 422
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "03828723244079311029",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 828,
+        "norm_xmin": 22,
+        "norm_ymax": 867,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Rebecca Buchanan",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 503,
+        "norm_xmin": 22,
+        "norm_ymax": 569,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

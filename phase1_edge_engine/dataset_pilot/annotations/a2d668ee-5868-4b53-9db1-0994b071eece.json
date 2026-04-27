@@ -1,0 +1,122 @@
+{
+  "image_id": "a2d668ee-5868-4b53-9db1-0994b071eece",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_pilot/images/germany_id_a2d668ee-5868-4b53-9db1-0994b071eece.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "B\u00c4HR",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 225,
+        "ymax": 106,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 196,
+        "norm_xmax": 262
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Engin",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 214,
+        "ymax": 137,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 253,
+        "norm_xmax": 250
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11.10.2003",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "J911718227",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 262,
+        "ymax": 279,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 516,
+        "norm_xmax": 306
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "R\u00e4delallee 4-9, Warendorf",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 344,
+        "ymax": 307,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 568,
+        "norm_xmax": 401
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Engin B\u00c4HR",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

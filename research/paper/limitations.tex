@@ -1,0 +1,271 @@
+\section{Limitations and Future Work}
+\label{sec:limitations}
+ 
+We discuss the current limitations of Omni-Shield
+honestly, alongside concrete directions for future work.
+ 
+% ─────────────────────────────────────────────────────────
+\subsection{Detection Limitations}
+% ─────────────────────────────────────────────────────────
+ 
+\paragraph{Low recall on ID numbers (F1=0.096).}
+ID number detection exhibits the largest gap between
+precision and recall in our evaluation (P=0.381,
+R=0.055).
+The model correctly classifies an ID number when it
+generates a detection, but fails to generate detections
+on 94.5\% of cards.
+We attribute this to two factors: (i)~ID number fields
+use small fonts (8--10pt) that fall near the resolution
+threshold of the EasyOCR pipeline, producing fragmented
+OCR tokens that the VLM cannot confidently merge into a
+single field; and (ii)~the six country-specific ID
+number formats (e.g., UK National Insurance, Indian
+Aadhaar, US Social Security) exhibit high visual
+variance, requiring more diverse training examples than
+the 2,000-card dataset provides.
+Future work will address this by expanding the training
+set with 500 additional cards targeting ID number field
+variation, and by adding a dedicated regex sweep
+post-processing step that applies country-specific
+patterns as a recall safety net.
+ 
+\paragraph{Face detection not captured in evaluation.}
+Face bounding boxes are produced by a YOLOv8
+object detection model operating independently of the
+VLM pipeline.
+Our evaluation framework measures PII detection via the
+\texttt{redactions} field of the API response, which
+does not include YOLOv8 face boxes.
+Consequently, the evaluation reports faces F1=0.000
+despite the system correctly redacting face regions
+in the live application.
+A future evaluation pass will query face detections
+separately via a dedicated endpoint and evaluate IoU
+against ground truth face bounding boxes.
+ 
+\paragraph{Address detection precision (P=0.113).}
+Address fields frequently span multiple text lines.
+Our ground truth annotations record the full
+multi-line bounding box, while the VLM typically
+generates a single-line detection.
+IoU between a one-line prediction and a three-line
+ground truth box is structurally low even when
+the detection is spatially correct.
+Future work will adopt a containment-based matching
+criterion for address fields (predicted box covers
+$\geq$50\% of ground truth area) in place of strict
+IoU.
+ 
+\paragraph{Date of birth over-firing (FP rate 48\%).}
+The ContextAgent correctly identifies date-of-birth
+fields in most cases, but also flags expiry dates,
+issue dates, and reference numbers that contain
+date-like patterns.
+The confusion matrix confirms 61 false positives
+against 65 true positives for the DOB category.
+Adding explicit exclusion rules for common non-PII
+date labels (``Valid Until'', ``Issue Date'',
+``Expiry'') to the ContextAgent heuristics is
+expected to reduce FP rate substantially.
+ 
+% ─────────────────────────────────────────────────────────
+\subsection{Dataset and Generalization Limitations}
+% ─────────────────────────────────────────────────────────
+ 
+\paragraph{Synthetic-only training and evaluation data.}
+Both the training set (2,000 cards) and the held-out
+test set (150 cards) are synthetically generated using
+Faker and Pillow.
+Synthetic data lacks the visual noise, printing
+artefacts, camera distortion, and handwritten
+annotations present in real identity documents.
+Transfer performance to real documents is unknown and
+likely lower than the F1 scores reported here.
+We identify testing on a curated set of 20--50
+real anonymised identity documents as a high-priority
+future step; preliminary real-document experiments will
+be added before venue submission.
+ 
+\paragraph{Six-country English-centric evaluation.}
+The current system supports six countries
+(Australia, Canada, Germany, India, UK, USA) with
+English-language field labels.
+German-language labels on German ID cards (e.g.,
+\textit{Geburtsdatum} for date of birth) are
+handled by the LABEL\_TO\_CATEGORY mapping but
+not systematically evaluated.
+Multilingual expansion using locale-specific Faker
+data and multilingual OCR is planned for a future
+version.
+ 
+\paragraph{Per-country performance variance.}
+Macro F1 ranges from 0.109 (Canada) to 0.214
+(Germany) across countries.
+Canada also accounts for three of the four pipeline
+errors (500 responses), attributable to VRAM exhaustion
+on complex card layouts.
+These errors represent 2.0\% of the test set and
+are resolved by restarting models between requests;
+a future memory management improvement will implement
+proactive VRAM reclamation between pipeline runs.
+ 
+% ─────────────────────────────────────────────────────────
+\subsection{Cryptographic Limitations}
+% ─────────────────────────────────────────────────────────
+ 
+\paragraph{Hash linkability without salting.}
+SHA-256 is deterministic: identical documents
+anchored multiple times produce the same on-chain
+hash.
+An adversary monitoring the blockchain can infer that
+a specific document was processed repeatedly by
+observing repeated hash values.
+Analysis of our audit log reveals 260 duplicate hashes
+among 424 records, all arising from re-processing the
+same test documents during evaluation.
+The mitigation is straightforward: compute the
+anchor hash as SHA-256(document\_bytes $\|$ timestamp
+$\|$ owner\_address) rather than SHA-256(document\_bytes)
+alone.
+This countermeasure has been implemented: each anchor
+is salted with the owner address and a Unix timestamp,
+ensuring identical documents produce distinct on-chain
+hashes. The fix was validated empirically --- two runs
+of the same document produced different anchor hashes
+while preserving the original SHA-256 for user verification.
+ 
+\paragraph{Ethereum mainnet gas cost.}
+Each \texttt{addRecord()} call consumes 264,333 gas
+units, equivalent to approximately \$13.22 USD on
+Ethereum mainnet at \$2,500 per ETH.
+This is economically impractical for high-volume
+document processing.
+Deployment on Polygon L2 reduces the per-anchor cost
+to \$0.006 USD, which is viable for enterprise
+compliance workflows.
+The smart contract is EVM-compatible and requires
+only an environment variable change to migrate from
+Ganache to Polygon or Sepolia testnet.
+ 
+\paragraph{ZK-SNARK proof generation latency.}
+Groth16/BN128 proof generation via ZoKrates requires
+20.3 seconds (mean) on an RTX~5060 8GB VRAM, while
+on-chain verification completes in 22.1 milliseconds
+(mean), confirming that verification cost is negligible.
+Proof generation cost is absorbed by executing it
+asynchronously in a background thread; the user
+receives their redacted document before proof
+generation completes.
+Proof availability is therefore delayed relative to
+the redaction result.
+Future work will investigate STARKs or PLONK-based
+schemes that offer faster proving times at the cost
+of larger proof sizes, and will explore GPU-accelerated
+proving libraries such as \texttt{rapidsnark}.
+ 
+\paragraph{Trusted setup requirement.}
+Groth16 proofs require a one-time trusted setup
+ceremony to generate the proving and verification keys.
+The current implementation uses a locally generated
+setup (no multi-party ceremony), which introduces a
+trust assumption: the party who ran the setup could
+theoretically generate false proofs.
+A production deployment should replace the local setup
+with a public multi-party computation (MPC) ceremony
+or migrate to a transparent proof system (STARK,
+Bulletproofs) that eliminates the trusted setup
+requirement entirely.
+ 
+% ─────────────────────────────────────────────────────────
+\subsection{System and Deployment Limitations}
+% ─────────────────────────────────────────────────────────
+ 
+\paragraph{Single-document processing only.}
+The current system processes one document at a time.
+Batch processing of document sets (e.g., a folder of
+scanned records) requires sequential API calls from
+the client.
+A native batch endpoint with job queuing, progress
+streaming, and a combined ZIP output is identified as
+the next major feature addition.
+ 
+\paragraph{Audio redaction replaces speech with silence.}
+The audio pipeline silences detected PII segments
+rather than replacing them with a spoken ``beep''
+or synthesized neutral tone.
+Silence can be as identifiable as the original
+speech in some contexts (e.g., a two-second gap
+where a name was spoken).
+Future work will add optional bleep-tone injection
+or text-to-speech replacement of redacted segments.
+ 
+\paragraph{Local deployment only.}
+Omni-Shield is designed for local-first operation
+on consumer-grade hardware.
+No cloud deployment, containerised orchestration,
+or multi-user authentication is provided.
+Deployment to a remote server requires a Cloudflare
+tunnel or equivalent reverse proxy, and MetaMask wallet
+authentication currently uses a single deterministic
+Ganache account.
+A production-grade deployment would add OAuth or
+DID-based authentication and migrate blockchain
+anchoring to a public testnet.
+ 
+% ─────────────────────────────────────────────────────────
+\subsection{Future Work Summary}
+% ─────────────────────────────────────────────────────────
+ 
+We identify the following concrete directions for
+future work, ordered by expected impact:
+ 
+\begin{enumerate}
+ 
+  \item \textbf{Hash salting for linkability resistance.}
+  \emph{Implemented.} Anchor hashes are now salted with
+  owner address and Unix timestamp; validated empirically.
+ 
+  \item \textbf{Expanded training with ID number focus.}
+  Generate 500 additional synthetic cards with
+  deliberate ID number format diversity across all
+  six countries and retrain the QLoRA adapter.
+ 
+  \item \textbf{Real document evaluation.}
+  Collect 20--50 real anonymised identity documents
+  and report transfer F1 alongside synthetic results.
+ 
+  \item \textbf{Separate face evaluation pass.}
+  Add a YOLOv8 face evaluation module to the
+  evaluation framework and report face F1 correctly.
+ 
+  \item \textbf{Polygon L2 deployment.}
+  Replace Ganache with Sepolia testnet immediately;
+  migrate to Polygon mainnet for production.
+ 
+  \item \textbf{GRPO reinforcement learning fine-tuning.}
+  Apply Group Relative Policy Optimisation with an
+  IoU-based reward signal from the SFT checkpoint
+  to push bounding box precision beyond the current
+  QLoRA adapter.
+ 
+  \item \textbf{Faster ZK proving.}
+  Evaluate \texttt{rapidsnark} for GPU-accelerated
+  Groth16 proving; alternatively migrate to PLONK
+  for faster per-proof generation.
+ 
+  \item \textbf{Multi-party trusted setup.}
+  Replace the local ZK setup with a public MPC
+  ceremony or a transparent proof system to eliminate
+  the trusted setup assumption.
+ 
+  \item \textbf{Batch processing endpoint.}
+  Implement a native batch API with job queuing,
+  progress streaming, and combined ZIP output.
+ 
+  \item \textbf{Multilingual expansion.}
+  Add locale-aware field label mappings and
+  multilingual OCR support for non-English documents.
+ 
+\end{enumerate}
+ 

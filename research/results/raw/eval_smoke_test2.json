@@ -1,0 +1,710 @@
+{
+  "n_docs": 5,
+  "mean_latency_s": 17.34,
+  "overall_metrics": {
+    "names": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333,
+      "tp": 2,
+      "fp": 0,
+      "fn": 8
+    },
+    "faces": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5
+    },
+    "signatures": {
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "tp": 4,
+      "fp": 1,
+      "fn": 1
+    },
+    "phones": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "emails": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "dob": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714,
+      "tp": 2,
+      "fp": 0,
+      "fn": 3
+    },
+    "id_numbers": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5
+    },
+    "addresses": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333,
+      "tp": 1,
+      "fp": 0,
+      "fn": 4
+    },
+    "org_names": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "dates": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "macro_f1": 0.2038,
+    "micro_f1": 0.4
+  },
+  "per_doc": [
+    {
+      "doc_id": "test_australia_0001",
+      "latency_s": 7.12,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.76,
+        "LayoutAgent": 0.92,
+        "TextPIIAgent": 0.3,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.02
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.1,
+        "micro_f1": 0.25
+      },
+      "pred_count": 1,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            2,
+            378,
+            854,
+            540
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "test_australia_0002",
+      "latency_s": 11.37,
+      "agent_timings": {
+        "RouterAgent": 0.16,
+        "OCRAgent": 3.42,
+        "LayoutAgent": 0.97,
+        "TextPIIAgent": 0.29,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.04
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.0,
+        "micro_f1": 0.0
+      },
+      "pred_count": 1,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            499,
+            650,
+            610
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "test_australia_0003",
+      "latency_s": 28.75,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 3.33,
+        "LayoutAgent": 5.63,
+        "TextPIIAgent": 1.39,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 1.43,
+        "RedactionAgent": 0.02
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.4444
+      },
+      "pred_count": 2,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "",
+          "value": "30/07/1964",
+          "pixel_box": [
+            179,
+            161,
+            257,
+            177
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            2,
+            378,
+            854,
+            538
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "test_australia_0004",
+      "latency_s": 22.26,
+      "agent_timings": {
+        "RouterAgent": 0.0,
+        "OCRAgent": 2.53,
+        "LayoutAgent": 6.09,
+        "TextPIIAgent": 0.29,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.01
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.1,
+        "micro_f1": 0.25
+      },
+      "pred_count": 1,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            3,
+            378,
+            853,
+            538
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "test_australia_0005",
+      "latency_s": 17.18,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.51,
+        "LayoutAgent": 5.9,
+        "TextPIIAgent": 0.27,
+        "ContextAgent": 0.12,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 3.08,
+        "RedactionAgent": 0.02
+      },
+      "metrics": {
+        "names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "faces": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.4,
+        "micro_f1": 0.8333
+      },
+      "pred_count": 5,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "SURNAME",
+          "value": "Leonard",
+          "pixel_box": [
+            177,
+            91,
+            273,
+            111
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "GIVEN NAME(S)",
+          "value": "Faith",
+          "pixel_box": [
+            179,
+            127,
+            217,
+            143
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "DATE OF BIRTH",
+          "value": "03/09/1969",
+          "pixel_box": [
+            179,
+            161,
+            257,
+            177
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "ADDRESS",
+          "value": "951 Kelley Green",
+          "pixel_box": [
+            178,
+            252,
+            294,
+            276
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            3,
+            378,
+            853,
+            538
+          ],
+          "source": "ai"
+        }
+      ]
+    }
+  ]
+}

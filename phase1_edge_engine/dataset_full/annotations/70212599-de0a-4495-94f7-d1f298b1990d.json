@@ -1,0 +1,122 @@
+{
+  "image_id": "70212599-de0a-4495-94f7-d1f298b1990d",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_70212599-de0a-4495-94f7-d1f298b1990d.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "DOWERG",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 256,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 299
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Reni",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 205,
+        "ymax": 134,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 248,
+        "norm_xmax": 239
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "26.02.1971",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "S508993588",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 266,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 310
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Speerweg 3756, Angerm\u00fcnde",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 369,
+        "ymax": 309,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 572,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Reni DOWERG",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

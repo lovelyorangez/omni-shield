@@ -1,0 +1,138 @@
+{
+  "image_id": "93530b35-6393-499b-b0e7-1743d1faf30b",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_93530b35-6393-499b-b0e7-1743d1faf30b.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "WYATT",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 241,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 281
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Eleanor",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 233,
+        "ymax": 143,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 264,
+        "norm_xmax": 272
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "21.08.1946",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "WYATT9312073EL956",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 361,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 421
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Studio 5\nHarrison Bypass, Claytonview",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 373,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 435
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "BT2 4RD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 237,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 276
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Eleanor WYATT",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

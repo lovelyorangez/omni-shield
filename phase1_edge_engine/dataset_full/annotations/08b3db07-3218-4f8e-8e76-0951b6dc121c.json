@@ -1,0 +1,122 @@
+{
+  "image_id": "08b3db07-3218-4f8e-8e76-0951b6dc121c",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_08b3db07-3218-4f8e-8e76-0951b6dc121c.png",
+  "image_width": 882,
+  "image_height": 584,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "SONTAG",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 249,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Kordula",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 228,
+        "ymax": 134,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 248,
+        "norm_xmax": 266
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "08.12.2001",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "K447174654",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 267,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 311
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Wulfgasse 7-6, Grevesm\u00fchlen",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 370,
+        "ymax": 309,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 572,
+        "norm_xmax": 432
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Kordula SONTAG",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

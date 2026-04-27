@@ -1,0 +1,122 @@
+{
+  "image_id": "b3036b21-2242-4c83-934d-f78b8c58790c",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_pilot/images/germany_id_b3036b21-2242-4c83-934d-f78b8c58790c.png",
+  "image_width": 886,
+  "image_height": 588,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "KUSCH",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 237,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 276
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Jadwiga",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 230,
+        "ymax": 137,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 253,
+        "norm_xmax": 268
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "14.08.1966",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "C872624731",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 266,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 310
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Gaby-Reuter-Gasse 33, Neuss",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 369,
+        "ymax": 309,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 572,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Jadwiga KUSCH",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

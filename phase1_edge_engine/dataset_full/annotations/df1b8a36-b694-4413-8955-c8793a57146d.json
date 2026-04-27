@@ -1,0 +1,138 @@
+{
+  "image_id": "df1b8a36-b694-4413-8955-c8793a57146d",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_df1b8a36-b694-4413-8955-c8793a57146d.png",
+  "image_width": 900,
+  "image_height": 610,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 147,
+        "norm_xmin": 22,
+        "norm_ymax": 475,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "CT68646225",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 732,
+        "ymax": 115,
+        "norm_ymin": 167,
+        "norm_xmin": 673,
+        "norm_ymax": 188,
+        "norm_xmax": 813
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "08/23/1964",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 222,
+        "norm_xmin": 673,
+        "norm_ymax": 242,
+        "norm_xmax": 777
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Reyes, Dominique",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 358,
+        "ymax": 116,
+        "norm_ymin": 165,
+        "norm_xmin": 216,
+        "norm_ymax": 190,
+        "norm_xmax": 397
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "119 OLSEN GROVE APT. 640",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 364,
+        "ymax": 150,
+        "norm_ymin": 231,
+        "norm_xmin": 216,
+        "norm_ymax": 245,
+        "norm_xmax": 404
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "PORT TRAVIS, CT 09655",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 338,
+        "ymax": 166,
+        "norm_ymin": 255,
+        "norm_xmin": 216,
+        "norm_ymax": 272,
+        "norm_xmax": 375
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "72817932302346791214",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 822,
+        "norm_xmin": 22,
+        "norm_ymax": 862,
+        "norm_xmax": 155
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Dominique Reyes",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 500,
+        "norm_xmin": 22,
+        "norm_ymax": 565,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

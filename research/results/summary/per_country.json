@@ -1,0 +1,8 @@
+{
+  "australia": {"mean_f1": 0.164, "min": 0.0, "max": 0.4, "n": 24, "errors": 1},
+  "canada":    {"mean_f1": 0.109, "min": 0.091, "max": 0.3, "n": 22, "errors": 3},
+  "germany":   {"mean_f1": 0.214, "min": 0.0, "max": 0.367, "n": 25, "errors": 0},
+  "india":     {"mean_f1": 0.196, "min": 0.067, "max": 0.367, "n": 25, "errors": 0},
+  "uk":        {"mean_f1": 0.126, "min": 0.0, "max": 0.267, "n": 25, "errors": 0},
+  "usa":       {"mean_f1": 0.151, "min": 0.0, "max": 0.3, "n": 25, "errors": 0}
+}

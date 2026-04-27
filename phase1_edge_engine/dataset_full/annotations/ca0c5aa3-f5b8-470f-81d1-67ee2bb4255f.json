@@ -1,0 +1,138 @@
+{
+  "image_id": "ca0c5aa3-f5b8-470f-81d1-67ee2bb4255f",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_ca0c5aa3-f5b8-470f-81d1-67ee2bb4255f.png",
+  "image_width": 880,
+  "image_height": 578,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 155,
+        "norm_xmin": 22,
+        "norm_ymax": 501,
+        "norm_xmax": 204
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MS83982622",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 737,
+        "ymax": 115,
+        "norm_ymin": 176,
+        "norm_xmin": 688,
+        "norm_ymax": 198,
+        "norm_xmax": 837
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "01/18/1957",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 235,
+        "norm_xmin": 688,
+        "norm_ymax": 256,
+        "norm_xmax": 795
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Anderson, Joseph",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 353,
+        "ymax": 116,
+        "norm_ymin": 174,
+        "norm_xmin": 221,
+        "norm_ymax": 200,
+        "norm_xmax": 401
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "886 ANTHONY KNOLL APT. 995",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 380,
+        "ymax": 150,
+        "norm_ymin": 243,
+        "norm_xmin": 221,
+        "norm_ymax": 259,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SMITHCHESTER, MS 11602",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 356,
+        "ymax": 166,
+        "norm_ymin": 269,
+        "norm_xmin": 221,
+        "norm_ymax": 287,
+        "norm_xmax": 404
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "21264647154379937124",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 868,
+        "norm_xmin": 22,
+        "norm_ymax": 910,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Joseph Anderson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 527,
+        "norm_xmin": 22,
+        "norm_ymax": 596,
+        "norm_xmax": 204
+      },
+      "field_type": "signature"
+    }
+  ]
+}

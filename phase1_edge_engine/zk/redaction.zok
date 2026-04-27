@@ -1,0 +1,36 @@
+// OMNI-SHIELD — ZK Redaction Proof Circuit
+// Proves: "I know the set of redacted items whose SHA-256 hash, combined with
+// the original document SHA-256, produces this public commitment."
+// Public inputs:  doc_hash (u32[8])      — SHA-256 of original document
+//                 redaction_count (u32)  — number of items redacted (> 0)
+// Private inputs: items_hash (u32[8])   — SHA-256 of sorted, pipe-joined redacted values
+// Output:         commitment (u32[8])   — SHA-256(doc_hash || bound_items), standard padded
+//
+// The commitment matches Python: hashlib.sha256(doc_bytes + bound_bytes).digest()
+// where bound = items_hash with items_hash[0] ^= redaction_count
+
+import "hashes/sha256/512bitPadded" as sha256_padded;
+
+def main(u32[8] doc_hash, u32 redaction_count, private u32[8] items_hash) -> u32[8] {
+    // Bind the redaction count into the private witness so the count cannot be
+    // changed without invalidating the proof.
+    u32[8] bound_items = [
+        items_hash[0] ^ redaction_count,
+        items_hash[1],
+        items_hash[2],
+        items_hash[3],
+        items_hash[4],
+        items_hash[5],
+        items_hash[6],
+        items_hash[7]
+    ];
+
+    // Commitment = SHA-256(doc_hash || bound_items), with proper padding
+    // Matches: hashlib.sha256(struct.pack('>8I', *doc_hash) + struct.pack('>8I', *bound_items))
+    u32[8] commitment = sha256_padded(doc_hash, bound_items);
+
+    // Enforce that at least one item was actually redacted
+    assert(redaction_count > 0);
+
+    return commitment;
+}

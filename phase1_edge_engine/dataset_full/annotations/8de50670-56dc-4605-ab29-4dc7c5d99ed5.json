@@ -1,0 +1,138 @@
+{
+  "image_id": "8de50670-56dc-4605-ab29-4dc7c5d99ed5",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_8de50670-56dc-4605-ab29-4dc7c5d99ed5.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 166,
+        "norm_xmin": 23,
+        "norm_ymax": 537,
+        "norm_xmax": 210
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI17911006",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 188,
+        "norm_xmin": 707,
+        "norm_ymax": 212,
+        "norm_xmax": 849
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "05/03/1951",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 251,
+        "norm_xmin": 707,
+        "norm_ymax": 274,
+        "norm_xmax": 817
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Garrett, Lance",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 325,
+        "ymax": 115,
+        "norm_ymin": 187,
+        "norm_xmin": 227,
+        "norm_ymax": 212,
+        "norm_xmax": 379
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "0954 DANIEL GARDEN SUITE 058",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 394,
+        "ymax": 150,
+        "norm_ymin": 261,
+        "norm_xmin": 227,
+        "norm_ymax": 277,
+        "norm_xmax": 460
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NORTH KIMBERLY, RI 57979",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 361,
+        "ymax": 166,
+        "norm_ymin": 288,
+        "norm_xmin": 227,
+        "norm_ymax": 307,
+        "norm_xmax": 421
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "12070496110804661963",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 929,
+        "norm_xmin": 23,
+        "norm_ymax": 974,
+        "norm_xmax": 163
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Lance Garrett",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 564,
+        "norm_xmin": 23,
+        "norm_ymax": 638,
+        "norm_xmax": 210
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "image_id": "2d3c5dab-cd61-44ca-b3e3-be74367261a6",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_2d3c5dab-cd61-44ca-b3e3-be74367261a6.png",
+  "image_width": 894,
+  "image_height": 602,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "HILL",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 220,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 257
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Owen",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 220,
+        "ymax": 142,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 262,
+        "norm_xmax": 257
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "31.01.1962",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "HILL 9341016OW966",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 356,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 415
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Flat 0\nJake Parks, Port Hazel",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 321,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 375
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "RM59 8BJ",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 242,
+        "ymax": 327,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 605,
+        "norm_xmax": 282
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Owen HILL",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

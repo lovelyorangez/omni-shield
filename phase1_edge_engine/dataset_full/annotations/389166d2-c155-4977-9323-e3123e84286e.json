@@ -1,0 +1,122 @@
+{
+  "image_id": "389166d2-c155-4977-9323-e3123e84286e",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_389166d2-c155-4977-9323-e3123e84286e.png",
+  "image_width": 884,
+  "image_height": 586,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "HENTSCHEL",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 281,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 328
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Hanne",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 220,
+        "ymax": 133,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 246,
+        "norm_xmax": 257
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "16.10.1992",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "I519108839",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 261,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 304
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Matthias-P\u00f6litz-Stra\u00dfe 83, Oranienburg",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 428,
+        "ymax": 309,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 572,
+        "norm_xmax": 500
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Hanne HENTSCHEL",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

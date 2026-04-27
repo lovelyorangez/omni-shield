@@ -1,0 +1,138 @@
+{
+  "image_id": "17cd7f7c-ccfb-42e1-a661-c1c8208dfe68",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_17cd7f7c-ccfb-42e1-a661-c1c8208dfe68.png",
+  "image_width": 874,
+  "image_height": 568,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 158,
+        "norm_xmin": 22,
+        "norm_ymax": 510,
+        "norm_xmax": 205
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NE34146511",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 734,
+        "ymax": 115,
+        "norm_ymin": 179,
+        "norm_xmin": 693,
+        "norm_ymax": 202,
+        "norm_xmax": 839
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "03/15/1953",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 239,
+        "norm_xmin": 693,
+        "norm_ymax": 260,
+        "norm_xmax": 800
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Moore, William",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 330,
+        "ymax": 115,
+        "norm_ymin": 177,
+        "norm_xmin": 223,
+        "norm_ymax": 202,
+        "norm_xmax": 377
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "405 ERIKA MANOR SUITE 275",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 372,
+        "ymax": 150,
+        "norm_ymin": 248,
+        "norm_xmin": 223,
+        "norm_ymax": 264,
+        "norm_xmax": 425
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SHAWVIEW, NE 68736",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 328,
+        "ymax": 166,
+        "norm_ymin": 274,
+        "norm_xmin": 223,
+        "norm_ymax": 292,
+        "norm_xmax": 375
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "12901487068277881609",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 883,
+        "norm_xmin": 22,
+        "norm_ymax": 926,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "William Moore",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 536,
+        "norm_xmin": 22,
+        "norm_ymax": 607,
+        "norm_xmax": 205
+      },
+      "field_type": "signature"
+    }
+  ]
+}

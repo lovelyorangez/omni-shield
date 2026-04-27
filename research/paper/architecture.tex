@@ -1,0 +1,297 @@
+\section{System Architecture}
+\label{sec:architecture}
+
+Omni-Shield is a local-first document redaction system
+designed around three principles:
+(i)~no document or extracted PII ever leaves the
+device;
+(ii)~every redaction decision is explainable by the
+agent that made it;
+and (iii)~every completed redaction produces a
+cryptographically verifiable audit record.
+This section describes the overall system structure,
+the nine-agent pipeline for image redaction, and the
+multi-modal routing logic that extends the system to
+five additional document formats.
+
+% ─────────────────────────────────────────────────────────
+\subsection{System Overview}
+% ─────────────────────────────────────────────────────────
+
+Figure~\ref{fig:architecture} shows the top-level
+system structure.
+The user interacts with a React/Electron frontend that
+accepts document uploads, displays detected PII regions
+on an interactive canvas editor, and exposes controls
+for selective redaction (10 PII categories, custom
+terms, regex patterns, and preset profiles).
+A FastAPI backend running on \texttt{localhost:8000}
+orchestrates all AI inference, file I/O, and blockchain
+interaction.
+A local Ganache Ethereum node on port 7545 maintains
+the on-chain audit ledger.
+
+All AI models run locally under 4-bit NF4
+quantisation~\cite{dettmers2023qlora}:
+Qwen2-VL-2B-Instruct (vision-language model, 1.40\,GB
+VRAM) for document layout understanding,
+Qwen2.5-3B-Instruct (text model, 1.91\,GB VRAM) for
+contextual PII classification, EasyOCR for text
+extraction, and YOLOv8n for face detection.
+Total peak VRAM usage during image inference is
+3.31\,GB, leaving headroom for OS and driver overhead
+within the 8\,GB budget of the target hardware.
+Models are loaded lazily on first request and persist
+in VRAM for subsequent requests, reducing warm
+inference latency to 10.42\,s mean for the full
+image pipeline.
+
+% ─────────────────────────────────────────────────────────
+\subsection{AgentState: Shared Data Structure}
+% ─────────────────────────────────────────────────────────
+
+All agents communicate through a single shared
+\texttt{AgentState} object that is passed sequentially
+through the pipeline.
+The state encapsulates the document path, extracted
+text tokens with bounding boxes, VLM layout output,
+detected PII items with pixel coordinates, and timing
+metadata for each agent.
+No agent communicates directly with any other agent;
+all inter-agent communication is mediated by reading
+and writing fields on the shared state.
+This design makes the pipeline debuggable (every
+intermediate state is inspectable), ablatable (any
+agent can be disabled by skipping its state write),
+and testable in isolation.
+
+\begin{table}[h]\centering
+\small
+\caption{AgentState fields written by each agent}
+\label{tab:agentstate}
+\begin{tabular}{ll}
+\toprule
+Agent & Fields written \\
+\midrule
+RouterAgent      & \texttt{format}, \texttt{doc\_type}, \texttt{image\_path} \\
+DeskewAgent      & \texttt{skew\_angle}, \texttt{image\_path} (corrected) \\
+OCRAgent         & \texttt{ocr\_words} (text, bbox, confidence) \\
+LayoutAgent      & \texttt{layout\_items} (label, value, value\_box), \texttt{doc\_type} \\
+TextPIIAgent     & \texttt{text\_pii\_items} (entity, value) \\
+ContextAgent     & \texttt{confirmed\_pii} (filtered, enriched) \\
+BBRefinerAgent   & \texttt{confirmed\_pii} (pixel bboxes attached) \\
+CriticAgent      & \texttt{confirmed\_pii} (false positives removed) \\
+RedactionAgent   & \texttt{redacted\_path}, \texttt{coverage\_pct}, \texttt{face\_boxes} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────
+\subsection{The Nine-Agent Image Pipeline}
+% ─────────────────────────────────────────────────────────
+
+Image redaction (JPEG, PNG, BMP, TIFF) is the most
+complex pathway, requiring all nine agents.
+Figure~\ref{fig:pipeline} illustrates the data flow.
+
+\paragraph{RouterAgent (0.04\,s mean).}
+Inspects the uploaded file, determines its MIME type
+and initial document type (\texttt{unknown},
+\texttt{id\_card}, \texttt{passport}, etc.),
+and routes to the appropriate pipeline variant.
+For images, the full nine-agent pipeline is invoked.
+For other formats, shortened pipelines are used
+(Section~\ref{sec:multimodal}).
+
+\paragraph{DeskewAgent.}
+Estimates document skew using Hough line detection
+and applies affine correction for angles exceeding
+$\pm$0.5°.
+Skew correction is applied before OCR to improve text
+extraction accuracy on scanned documents.
+The corrected image replaces the original in
+\texttt{AgentState} for all downstream agents.
+
+\paragraph{OCRAgent (2.73\,s mean).}
+Runs EasyOCR with GPU acceleration to extract
+all text tokens from the image.
+Each token is stored with its bounding box in pixel
+coordinates and confidence score.
+OCR output serves two purposes: (i)~it provides the
+text corpus for the TextPIIAgent and ContextAgent,
+and (ii)~it enables the \emph{TEXT-FIRST} bounding
+box refinement strategy in the BBRefinerAgent
+(Section~\ref{sec:bbrefiner}).
+
+\paragraph{LayoutAgent (4.79\,s mean).}
+The LayoutAgent is the system's primary novel
+component.
+It submits the document image to the fine-tuned
+Qwen2-VL-2B VLM with a structured prompt requesting
+all PII label-value pairs with approximate bounding
+boxes.
+The VLM responds in a constrained format:
+
+\vspace{4pt}
+\noindent\texttt{LABEL: Name | VALUE: Angela Greene |
+VALUE\_BOX: (200,180),(300,240)}
+\vspace{4pt}
+
+The LayoutAgent parses this output, applies label
+normalisation (mapping variants such as
+\texttt{SURNAME} and \texttt{Full Name} to the
+canonical \texttt{Name} category), and additionally
+uses the VLM's response to refine the document type
+from \texttt{unknown} to a specific category
+(e.g., \texttt{id\_card}).
+The LayoutAgent accounts for 46\% of total pipeline
+latency, reflecting the cost of VLM inference at
+4-bit quantisation.
+
+\paragraph{TextPIIAgent (0.94\,s mean).}
+Runs the Qwen2.5-3B text model over the OCR-extracted
+text to identify any PII entities that the VLM may
+have missed --- particularly emails, phone numbers,
+and free-form addresses that do not appear as
+structured label-value pairs on the card.
+This agent is most useful for document types with
+dense running text (Word documents, plain text files)
+and contributes marginally to identity card redaction
+where text is sparsely structured.
+
+\paragraph{ContextAgent (0.07\,s mean).}
+Applies heuristic and LLM-based filtering to the
+combined output of LayoutAgent and TextPIIAgent.
+Heuristics encode domain knowledge: organisation
+names, legal boilerplate, and card-issuer references
+are removed even if the VLM labelled them as PII.
+A lightweight LLM pass then reviews borderline cases,
+using the user's selected PII filter (which of the
+ten categories are enabled) to drop disabled categories
+before downstream processing.
+
+\paragraph{BBRefinerAgent (< 1\,ms mean).}
+\label{sec:bbrefiner}
+Refines the pixel-level bounding boxes for each
+confirmed PII item using the \emph{TEXT-FIRST}
+strategy: for each confirmed PII value, the agent
+searches the OCR word list for a token whose
+string matches the PII value and substitutes the
+OCR-derived pixel box (which is precise to the
+rendered glyph boundary) for the VLM-estimated box
+(which is accurate to the nearest grid cell).
+This substitution improves bounding box IoU for
+text-valued PII categories without any additional
+model inference.
+Signature regions are handled separately via YOLOv8
+contour detection, which produces full-width boxes
+that encompass the drawn signature area.
+
+\paragraph{CriticAgent (1.85\,s mean).}
+Submits the confirmed PII list to the Qwen2.5-3B
+text model for adversarial review.
+The critic is instructed to identify items that are
+not genuinely PII in context --- for example, a
+nationality field on an ID card that happens to match
+a person's name.
+Items labelled as safe by the critic are dropped
+\emph{unless} they carry a strong PII category label
+(Name, Date of Birth, ID Number, Signature, Face),
+in which case a \textit{PII label override} retains
+them regardless of the critic's verdict.
+This override prevents the critic from discarding
+clearly sensitive information while still filtering
+out false positives in ambiguous categories.
+
+\paragraph{RedactionAgent (0.02\,s mean).}
+Applies black rectangular redactions to the image
+at the confirmed pixel bounding boxes using Pillow.
+Face boxes detected by YOLOv8n are merged with the
+VLM-detected PII list before redaction.
+The agent records the total coverage percentage
+(redacted pixels / total image area) and saves the
+output image alongside a \texttt{.audit.json} sidecar
+containing the full redaction record.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Multi-Modal Routing}
+\label{sec:multimodal}
+% ─────────────────────────────────────────────────────────
+
+Five additional document formats are handled by
+shorter pipelines that reuse the hybrid NER component
+(a combination of TextPIIAgent heuristics and
+Qwen2.5-3B inference) but bypass the VLM.
+Table~\ref{tab:latency} in Section~\ref{sec:evaluation}
+reports latency for each format; we describe the
+pipeline logic here.
+
+\paragraph{PDF.}
+Text is extracted natively via PyMuPDF without OCR.
+The hybrid NER pipeline identifies PII entities,
+and PyMuPDF's redaction API applies black rectangles
+at the character-level bounding boxes of matched
+text.
+Mean latency is 40\,ms --- 225$\times$ faster than
+image redaction --- because the VLM is not invoked.
+PDF redaction is content-stream based and survives
+copy-paste; the redacted text is genuinely absent
+from the document, not merely obscured visually.
+
+\paragraph{Audio.}
+Whisper tiny~\cite{radford2022whisper} transcribes
+the audio to text.
+The hybrid NER pipeline identifies PII entity spans
+in the transcript.
+Span timestamps are mapped back to the audio timeline,
+and pydub replaces those segments with silence.
+Mean latency is 1.22\,s for a 7-second clip.
+
+\paragraph{Plain text.}
+The hybrid NER pipeline runs directly on the text
+content.
+Matched PII values are replaced with
+\texttt{[REDACTED]} tags in the output.
+Mean latency is 10\,ms.
+
+\paragraph{Word documents (.docx).}
+python-docx iterates all paragraphs and table cells,
+applying string replacement for matched PII values.
+Output is rendered as PDF with matched values
+highlighted in red before redaction for user review.
+
+\paragraph{Presentations (.pptx).}
+python-pptx iterates all slide text frames.
+Redaction follows the same string-replacement logic
+as Word documents.
+
+For all non-image formats, blockchain anchoring and
+ZK proof generation (Section~\ref{sec:crypto})
+proceed identically to the image pipeline.
+The audit JSON sidecar records the document SHA-256,
+anchor hash, redacted item list, coverage percentage,
+and PII filter configuration used.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Selective Redaction and User Controls}
+% ─────────────────────────────────────────────────────────
+
+Omni-Shield exposes fine-grained redaction controls
+through the frontend.
+Users select which of ten PII categories to redact
+(names, faces, signatures, phones, emails, date of
+birth, ID numbers, addresses, organisation names,
+general dates), add arbitrary custom terms or regular
+expressions, and choose from four preset profiles
+(Full Scan, Legal, Medical, Minimal).
+
+Custom terms and regex patterns are matched against
+the OCR/NER output using exact string search and
+Python \texttt{re} module respectively,
+and are visually distinguished from AI-detected
+redactions in the canvas editor (dark red borders
+for custom, black for AI).
+Dry-run mode executes the full pipeline and returns
+the list of would-be redactions without writing any
+output files or anchoring to the blockchain,
+supporting preview workflows.

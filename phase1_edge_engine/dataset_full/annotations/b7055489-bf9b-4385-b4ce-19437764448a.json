@@ -1,0 +1,138 @@
+{
+  "image_id": "b7055489-bf9b-4385-b4ce-19437764448a",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_b7055489-bf9b-4385-b4ce-19437764448a.png",
+  "image_width": 870,
+  "image_height": 562,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 160,
+        "norm_xmin": 22,
+        "norm_ymax": 516,
+        "norm_xmax": 206
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI86613315",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 181,
+        "norm_xmin": 696,
+        "norm_ymax": 204,
+        "norm_xmax": 835
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "03/22/1949",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 241,
+        "norm_xmin": 696,
+        "norm_ymax": 263,
+        "norm_xmax": 804
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Frazier, Lori",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 301,
+        "ymax": 115,
+        "norm_ymin": 179,
+        "norm_xmin": 224,
+        "norm_ymax": 204,
+        "norm_xmax": 345
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "220 HUNT VIA",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 280,
+        "ymax": 150,
+        "norm_ymin": 250,
+        "norm_xmin": 224,
+        "norm_ymax": 266,
+        "norm_xmax": 321
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "MARCUSBOROUGH, RI 27648",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 370,
+        "ymax": 166,
+        "norm_ymin": 277,
+        "norm_xmin": 224,
+        "norm_ymax": 295,
+        "norm_xmax": 425
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "50637314950136497189",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 893,
+        "norm_xmin": 22,
+        "norm_ymax": 935,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Lori Frazier",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 542,
+        "norm_xmin": 22,
+        "norm_ymax": 613,
+        "norm_xmax": 206
+      },
+      "field_type": "signature"
+    }
+  ]
+}

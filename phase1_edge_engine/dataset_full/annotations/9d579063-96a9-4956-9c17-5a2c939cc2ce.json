@@ -1,0 +1,122 @@
+{
+  "image_id": "9d579063-96a9-4956-9c17-5a2c939cc2ce",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_9d579063-96a9-4956-9c17-5a2c939cc2ce.png",
+  "image_width": 896,
+  "image_height": 604,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "ANDERS",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 249,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Kreszenz",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 238,
+        "ymax": 133,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 246,
+        "norm_xmax": 278
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11.05.1972",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "K085368663",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 267,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 311
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Hartmannring 46, G\u00fcstrow",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 349,
+        "ymax": 308,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 570,
+        "norm_xmax": 407
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Kreszenz ANDERS",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

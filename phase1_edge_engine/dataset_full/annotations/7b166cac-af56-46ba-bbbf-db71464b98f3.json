@@ -1,0 +1,138 @@
+{
+  "image_id": "7b166cac-af56-46ba-bbbf-db71464b98f3",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_7b166cac-af56-46ba-bbbf-db71464b98f3.png",
+  "image_width": 872,
+  "image_height": 564,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 159,
+        "norm_xmin": 22,
+        "norm_ymax": 514,
+        "norm_xmax": 206
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NV85289226",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 735,
+        "ymax": 115,
+        "norm_ymin": 180,
+        "norm_xmin": 694,
+        "norm_ymax": 203,
+        "norm_xmax": 842
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/30/1979",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 241,
+        "norm_xmin": 694,
+        "norm_ymax": 262,
+        "norm_xmax": 802
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Lara, Miguel",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 307,
+        "ymax": 116,
+        "norm_ymin": 179,
+        "norm_xmin": 223,
+        "norm_ymax": 205,
+        "norm_xmax": 352
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "46786 MORROW CLIFFS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 338,
+        "ymax": 150,
+        "norm_ymin": 250,
+        "norm_xmin": 223,
+        "norm_ymax": 265,
+        "norm_xmax": 387
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WEST DAWN, NV 61558",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 337,
+        "ymax": 166,
+        "norm_ymin": 276,
+        "norm_xmin": 223,
+        "norm_ymax": 294,
+        "norm_xmax": 386
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "18242253584143842498",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 890,
+        "norm_xmin": 22,
+        "norm_ymax": 932,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Miguel Lara",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 540,
+        "norm_xmin": 22,
+        "norm_ymax": 611,
+        "norm_xmax": 206
+      },
+      "field_type": "signature"
+    }
+  ]
+}

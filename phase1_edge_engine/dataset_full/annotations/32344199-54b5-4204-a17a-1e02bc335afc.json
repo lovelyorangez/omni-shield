@@ -1,0 +1,138 @@
+{
+  "image_id": "32344199-54b5-4204-a17a-1e02bc335afc",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_32344199-54b5-4204-a17a-1e02bc335afc.png",
+  "image_width": 866,
+  "image_height": 556,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 161,
+        "norm_xmin": 23,
+        "norm_ymax": 521,
+        "norm_xmax": 207
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MA80061675",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 738,
+        "ymax": 115,
+        "norm_ymin": 183,
+        "norm_xmin": 699,
+        "norm_ymax": 206,
+        "norm_xmax": 852
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "07/04/1984",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 244,
+        "norm_xmin": 699,
+        "norm_ymax": 266,
+        "norm_xmax": 808
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Turner, Mark",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 309,
+        "ymax": 115,
+        "norm_ymin": 181,
+        "norm_xmin": 225,
+        "norm_ymax": 206,
+        "norm_xmax": 356
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "877 KELLY PARKS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 299,
+        "ymax": 150,
+        "norm_ymin": 253,
+        "norm_xmin": 225,
+        "norm_ymax": 269,
+        "norm_xmax": 345
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WAGNERSIDE, MA 71349",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 345,
+        "ymax": 166,
+        "norm_ymin": 280,
+        "norm_xmin": 225,
+        "norm_ymax": 298,
+        "norm_xmax": 398
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "00284276246719788977",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 902,
+        "norm_xmin": 23,
+        "norm_ymax": 946,
+        "norm_xmax": 161
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Mark Turner",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 548,
+        "norm_xmin": 23,
+        "norm_ymax": 620,
+        "norm_xmax": 207
+      },
+      "field_type": "signature"
+    }
+  ]
+}

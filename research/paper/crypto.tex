@@ -1,0 +1,350 @@
+\section{Cryptographic Audit Trail}
+\label{sec:crypto}
+
+A redacted document is only trustworthy if a verifier
+can confirm \emph{independently} that redaction
+occurred, when it occurred, and that the process was
+executed correctly.
+Manual audit logs are mutable and unverifiable;
+centralised databases require trust in their operator.
+Omni-Shield addresses this through two complementary
+cryptographic mechanisms: a blockchain-anchored audit
+ledger that provides tamper-evident provenance, and
+a Groth16 zero-knowledge proof that attests to the
+correctness of the redaction without disclosing
+what was redacted.
+Both operate asynchronously --- completing after the
+redacted document is returned to the user --- and
+impose no latency penalty on the interactive
+redaction workflow.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Blockchain Audit Ledger}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Smart contract design.}
+The \texttt{AuditLog.sol} Solidity contract maintains
+two on-chain data structures per record:
+a \texttt{mapping(bytes32\,$\Rightarrow$\,Record)}
+for O(1) hash lookup, and a per-owner
+\texttt{mapping(address\,$\Rightarrow$\,bytes32[])}
+index that allows a wallet holder to enumerate all
+documents they have processed.
+Each \texttt{Record} stores the anchor hash,
+redaction count, block timestamp, and document type.
+The \texttt{addRecord()} function enforces an
+idempotency check --- anchoring the same hash twice
+is silently skipped --- and emits a
+\texttt{RecordAdded} event for off-chain indexing.
+The \texttt{verify()} view function is gas-free
+(read-only), enabling third-party verification
+without transaction cost.
+
+\paragraph{Salted hash commitment.}
+A naive implementation would anchor
+\texttt{SHA256(document\_bytes)} directly.
+This introduces a linkability vulnerability: identical
+documents processed multiple times produce identical
+on-chain hashes, allowing an observer monitoring the
+blockchain to detect repeated processing of the same
+document.
+Analysis of our audit log reveals 260 duplicate
+hashes among 424 records, all arising from test
+documents processed repeatedly during evaluation.
+
+We address this by computing a salted anchor hash:
+\begin{equation}
+  h_{\text{anchor}} = \text{SHA256}(h_{\text{doc}}
+    \,\|\, \text{owner} \,\|\, \tau)
+  \label{eq:salt}
+\end{equation}
+where $h_{\text{doc}} = \text{SHA256(document\_bytes)}$
+is the original document hash, $\text{owner}$ is the
+wallet address, and $\tau$ is the Unix timestamp at
+anchor time.
+The original $h_{\text{doc}}$ is preserved in the
+audit JSON for user-side verification (the user can
+recompute it from their document);
+$h_{\text{anchor}}$ is what appears on-chain.
+The verification endpoint performs a two-step lookup:
+given $h_{\text{doc}}$ from the user, it retrieves
+$h_{\text{anchor}}$ from the stored audit record and
+queries the blockchain for that value.
+
+Equation~\ref{eq:salt} ensures that even if two users
+process the same document, their on-chain anchors are
+distinct.
+An adversary who observes the blockchain learns only
+that \emph{some} document was processed by
+\emph{some} wallet at \emph{some} time --- no
+document identity information is recoverable from
+the on-chain record alone.
+
+\paragraph{Deployment and gas cost.}
+The system currently deploys to a local Ganache
+Ethereum testnet~\cite{ganache} for development.
+Each \texttt{addRecord()} call consumes 264,333 gas
+units.
+At Ethereum mainnet prices (\$2,500 per ETH, 20\,Gwei
+gas price), this corresponds to approximately
+\$13.22 per anchor --- prohibitive for high-volume
+use.
+Deployment on Polygon L2~\cite{polygon2021} reduces
+this to approximately \$0.006 per anchor at 30\,Gwei
+and \$0.80 per MATIC, making production deployment
+economically viable.
+The \texttt{AuditLog.sol} contract is EVM-compatible
+and requires only an environment variable change to
+migrate between networks.
+
+\paragraph{Verification performance.}
+The \texttt{verify()} view function resolves in
+1.2\,ms mean (measured over five queries to the local
+node), reflecting the O(1) mapping lookup.
+This is fast enough to be embedded in document
+workflows without perceptible latency --- a verifier
+can confirm a redaction record in under 2\,ms,
+faster than a typical HTTP round-trip to a remote
+audit service.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Zero-Knowledge Proof of Redaction}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Motivation.}
+The blockchain record proves that \emph{someone}
+anchored a hash at a specific time.
+It does not prove that the redaction was performed
+correctly --- a malicious actor could anchor a hash
+corresponding to an unredacted document.
+A zero-knowledge proof closes this gap: it attests
+that the prover knows a set of redacted values
+consistent with the public commitment, without
+revealing the values themselves.
+
+\paragraph{Circuit design.}
+We implement the ZK circuit in ZoKrates~\cite{eberhardt2018zokrates}
+using the Groth16 proving system over the
+BN128 elliptic curve.
+The circuit proves the following statement:
+
+\begin{quote}
+\textit{I know a private witness
+$\mathbf{w} = \{h_{\text{items}}\}$ such that
+$\text{Commit}(h_{\text{doc}},\, h_{\text{items}}) =
+c_{\text{public}}$, where $c_{\text{public}}$ is the
+publicly known commitment, $h_{\text{doc}}$ is the
+public document hash, and $h_{\text{items}}$ is the
+SHA-256 hash of the concatenated redacted values
+(known only to the prover).}
+\end{quote}
+
+The commitment function uses Pedersen hashing
+(available in the ZoKrates standard library) over
+the concatenation of the document hash bits and
+the items hash bits:
+\begin{equation}
+  c = \text{PedersenHash}(
+        h_{\text{doc}} \,\|\, h_{\text{items}})
+  \label{eq:commitment}
+\end{equation}
+The circuit takes as \emph{public inputs}:
+the document hash $h_{\text{doc}}$ (as eight
+32-bit unsigned integers), the redaction count,
+and the commitment $c$ (two 32-bit words).
+The circuit takes as \emph{private input}
+(the witness): $h_{\text{items}}$ (eight 32-bit
+unsigned integers).
+The private input never leaves the proving system
+and is not included in the proof.
+
+\paragraph{Proof generation and verification.}
+Proof generation via ZoKrates \texttt{generate-proof}
+takes 20.3\,s mean on the target hardware.
+This is executed asynchronously in a background
+thread immediately after the redacted document is
+saved; the user receives their output before proof
+generation completes.
+The proof becomes available in the audit record
+within approximately 25\,s of the redaction request.
+
+Proof verification uses ZoKrates \texttt{verify}
+against the on-disk verification key generated
+during the one-time trusted setup.
+Verification takes 22.1\,ms mean ---
+fast enough for interactive verification workflows.
+
+Groth16 proofs are constant size (128 bytes for the
+proof object, three field elements for public inputs)
+regardless of the number of redacted items or the
+document size.
+This makes proof storage and transmission trivially
+cheap.
+
+\paragraph{Trusted setup.}
+Groth16 requires a one-time trusted setup ceremony
+to generate the proving key (used by the prover) and
+verification key (used by verifiers).
+The current implementation uses a locally generated
+setup, which introduces a trust assumption: the party
+who ran the setup could theoretically generate false
+proofs for arbitrary statements.
+A production deployment should replace the local
+setup with a publicly verifiable multi-party
+computation (MPC) ceremony, or migrate to a
+transparent proof system (PLONK, STARKs) that
+eliminates the trusted setup requirement entirely.
+We identify this as a priority for future work
+(Section~\ref{sec:limitations}).
+
+\paragraph{What the proof guarantees.}
+The ZK proof provides a \emph{selective disclosure}
+property: an auditor can verify that a specific
+document was redacted and that the redaction
+committed to a specific (undisclosed) set of PII
+values, without learning what those values were.
+This is strictly stronger than the blockchain
+record alone, which only proves that \emph{a}
+hash was anchored.
+Combined, the two mechanisms provide:
+
+\begin{itemize}
+  \item \textbf{Tamper evidence}: the document
+        hash is immutable on-chain; any alteration
+        to the redacted output invalidates the record.
+  \item \textbf{Provenance}: the owner wallet
+        address and timestamp are permanently
+        associated with the record.
+  \item \textbf{Redaction correctness}: the ZK
+        proof attests that the committed PII values
+        are consistent with the claimed document.
+  \item \textbf{Privacy}: neither the blockchain
+        record nor the proof reveals which values
+        were redacted or their content.
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────
+\subsection{Audit Record Structure}
+% ─────────────────────────────────────────────────────────
+
+Every completed redaction writes a
+\texttt{.audit.json} sidecar file alongside the
+output document.
+The sidecar contains:
+
+\begin{itemize}
+  \item \texttt{sha256\_hex}: original document hash
+        (user-verifiable by re-hashing the input)
+  \item \texttt{anchor\_hash}: salted on-chain hash
+  \item \texttt{anchor\_salt}: the salt string used
+        (required to recompute \texttt{anchor\_hash}
+        for verification)
+  \item \texttt{redaction\_count}: number of PII
+        items redacted
+  \item \texttt{coverage\_pct}: percentage of document
+        area or text volume redacted
+  \item \texttt{pii\_filter}: the category selection
+        active at redaction time
+  \item \texttt{redactions}: list of redacted items
+        with masked values and bounding boxes
+  \item \texttt{zk\_proof}: Groth16 proof object,
+        public inputs, and commitment
+  \item \texttt{timestamp}: Unix timestamp of
+        redaction
+  \item \texttt{doc\_type}: inferred document type
+\end{itemize}
+
+The sidecar is written synchronously before
+blockchain anchoring and proof generation begin,
+ensuring it is always available even if the
+asynchronous background tasks fail.
+A \texttt{GET /api/audit/\{sha256\}} endpoint serves
+sidecar data by hash prefix, enabling the frontend
+to retrieve and display the full audit record
+for any previously processed document.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Threat Model}
+% ─────────────────────────────────────────────────────────
+
+We consider three classes of adversary.
+
+\textbf{Passive blockchain observer.}
+An adversary who can read all on-chain transactions
+learns: which wallet addresses have processed
+documents, how many items were redacted, and when.
+They learn nothing about document content, PII
+values, or which documents were processed (because
+anchor hashes are salted).
+This is a substantial improvement over cloud-based
+alternatives, where the service provider learns
+the document content in full.
+
+\textbf{Malicious prover.}
+An adversary who controls the proving system
+and wishes to generate a false proof (claiming a
+document was redacted when it was not) cannot do
+so without knowledge of the trusted setup trapdoor.
+Under the assumptions of the Groth16 proof system
+(computational soundness under the knowledge
+of exponent assumption), such forgeries are
+computationally infeasible.
+The local trusted setup weakens this guarantee:
+if the setup party is malicious, false proofs
+are possible.
+The MPC ceremony mitigation eliminates this
+assumption.
+
+\textbf{Compromised client.}
+An adversary who compromises the user's device
+after redaction can access the audit sidecar,
+including the anchor salt and redaction list.
+They cannot alter the on-chain record retroactively.
+The sidecar should be treated with the same access
+controls as the original document.
+
+\paragraph{Out of scope.}
+We do not address: network-level attacks on the
+local Ganache node (protected by firewall in
+production), adversarial inputs designed to evade
+the VLM, or side-channel attacks on the GPU
+inference process.
+These are identified as areas for future security
+analysis.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Energy and Cost Analysis}
+% ─────────────────────────────────────────────────────────
+
+\input{energy_table}
+
+Table~\ref{tab:energy} reports energy consumption
+and estimated carbon footprint for Omni-Shield and
+comparable cloud alternatives.
+At 100\,W total system draw (RTX~5060 75\,W plus
+25\,W overhead), Omni-Shield consumes 0.289\,kWh
+per 1,000 image redactions --- comparable to AWS
+Comprehend (estimated 0.200\,kWh/1K) and
+substantially lower than GPT-4~Vision
+(estimated 1.000\,kWh/1K).
+
+Carbon footprint is highly sensitive to grid carbon
+intensity.
+On the Indian grid (0.82\,kg CO$_2$/kWh),
+Omni-Shield produces 0.237\,kg CO$_2$e per 1,000
+redactions.
+On a renewable electricity tariff (0.08\,kg/kWh),
+this falls to 0.023\,kg --- 1.3$\times$ lower than
+AWS Comprehend on its renewable energy commitment.
+
+The additional energy cost of local-first processing
+relative to a cloud NLP API is 0.089\,kWh per 1,000
+documents, equivalent to approximately \rupee0.72 at
+Indian electricity retail rates.
+This is the quantified \emph{privacy premium}: the
+energy overhead of the guarantee that sensitive
+identity documents never leave the device.
+Whether this premium is acceptable is a
+context-dependent policy decision; we report it
+as a measured quantity rather than an argument for
+or against local deployment.

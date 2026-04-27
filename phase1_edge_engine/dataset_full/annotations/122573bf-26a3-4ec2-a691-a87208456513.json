@@ -1,0 +1,138 @@
+{
+  "image_id": "122573bf-26a3-4ec2-a691-a87208456513",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_122573bf-26a3-4ec2-a691-a87208456513.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 166,
+        "norm_xmin": 23,
+        "norm_ymax": 537,
+        "norm_xmax": 210
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "WV06527403",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 740,
+        "ymax": 115,
+        "norm_ymin": 188,
+        "norm_xmin": 707,
+        "norm_ymax": 212,
+        "norm_xmax": 864
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/07/1994",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 251,
+        "norm_xmin": 707,
+        "norm_ymax": 274,
+        "norm_xmax": 817
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Valdez, Tina",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 305,
+        "ymax": 115,
+        "norm_ymin": 187,
+        "norm_xmin": 227,
+        "norm_ymax": 212,
+        "norm_xmax": 356
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "47452 COOK KNOLL SUITE 746",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 381,
+        "ymax": 150,
+        "norm_ymin": 261,
+        "norm_xmin": 227,
+        "norm_ymax": 277,
+        "norm_xmax": 445
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "FARMERTOWN, WV 53464",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 350,
+        "ymax": 166,
+        "norm_ymin": 288,
+        "norm_xmin": 227,
+        "norm_ymax": 307,
+        "norm_xmax": 408
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "45056658833987411325",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 929,
+        "norm_xmin": 23,
+        "norm_ymax": 974,
+        "norm_xmax": 163
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Tina Valdez",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 564,
+        "norm_xmin": 23,
+        "norm_ymax": 638,
+        "norm_xmax": 210
+      },
+      "field_type": "signature"
+    }
+  ]
+}

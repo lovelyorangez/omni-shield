@@ -1,0 +1,52 @@
+\documentclass[conference]{IEEEtran}
+
+% ── Packages ──────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{xspace}
+\usepackage{balance}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric, arrows.meta,
+  positioning, fit, backgrounds, calc}
+
+% ── Custom commands ────────────────────────────────
+\newcommand{\rupee}{\textrm{Rs.\@}}
+
+% ── Title and authors (anonymous for review) ──────
+\title{Omni-Shield: Local-First Multi-Modal PII
+Redaction with Cryptographic Audit Trail}
+
+\author{
+  \IEEEauthorblockN{Anonymous Author(s)}
+  \IEEEauthorblockA{
+    Affiliation Withheld for Review
+  }
+}
+
+\begin{document}
+
+\maketitle
+
+\input{abstract}
+\input{figures}
+\input{introduction}
+\input{related_work}
+\input{architecture}
+\input{knowledge_distillation}
+\input{evaluation}
+\input{crypto}
+\input{limitations}
+\input{conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

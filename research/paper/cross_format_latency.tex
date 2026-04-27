@@ -1,0 +1,14 @@
+\begin{table*}[h]\centering
+\caption{Mean Redaction Latency by Document Format}
+\label{tab:latency}
+\begin{tabular}{llrrrr}
+\toprule
+Format & Pipeline & Mean & Min & Max & N \\
+\midrule
+Image (JPEG/PNG) & 9-agent VLM pipeline & 9.0s & 6.3s & 10.98s & 5 \\
+PDF & Hybrid NER + PyMuPDF & 0.04s & 0.03s & 0.05s & 5 \\
+Audio (MP3/WAV) & Whisper STT + NER & 1.22s & 1.05s & 1.78s & 5 \\
+Plain text & Hybrid NER only & 0.01s & 0.01s & 0.01s & 5 \\
+\bottomrule
+\end{tabular}
+\end{table*}

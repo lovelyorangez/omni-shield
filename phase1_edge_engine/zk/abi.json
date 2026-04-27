@@ -1,0 +1,34 @@
+{
+  "inputs": [
+    {
+      "name": "doc_hash",
+      "public": true,
+      "type": "array",
+      "components": {
+        "size": 8,
+        "type": "u32"
+      }
+    },
+    {
+      "name": "redaction_count",
+      "public": true,
+      "type": "u32"
+    },
+    {
+      "name": "items_hash",
+      "public": false,
+      "type": "array",
+      "components": {
+        "size": 8,
+        "type": "u32"
+      }
+    }
+  ],
+  "output": {
+    "type": "array",
+    "components": {
+      "size": 8,
+      "type": "u32"
+    }
+  }
+}

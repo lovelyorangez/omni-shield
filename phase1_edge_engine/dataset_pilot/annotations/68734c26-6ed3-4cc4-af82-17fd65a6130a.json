@@ -1,0 +1,106 @@
+{
+  "image_id": "68734c26-6ed3-4cc4-af82-17fd65a6130a",
+  "country": "India",
+  "card_type": "Aadhaar Card",
+  "image_path": "dataset_pilot/images/india_aadhaar_68734c26-6ed3-4cc4-af82-17fd65a6130a.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 85,
+        "xmax": 160,
+        "ymax": 265,
+        "norm_ymin": 157,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Full Name",
+      "value": "Dipta Khare",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 103,
+        "xmax": 296,
+        "ymax": 121,
+        "norm_ymin": 190,
+        "norm_xmin": 204,
+        "norm_ymax": 224,
+        "norm_xmax": 345
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "23/12/1961",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 143,
+        "xmax": 261,
+        "ymax": 155,
+        "norm_ymin": 264,
+        "norm_xmin": 204,
+        "norm_ymax": 287,
+        "norm_xmax": 304
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "42/51, Pingle Ganj, Sangli-Miraj & Kupwad, Manipur",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 213,
+        "xmax": 430,
+        "ymax": 245,
+        "norm_ymin": 394,
+        "norm_xmin": 204,
+        "norm_ymax": 453,
+        "norm_xmax": 502
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Aadhaar Number",
+      "value": "2475 1079 9118",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 446,
+        "xmax": 273,
+        "ymax": 466,
+        "norm_ymin": 825,
+        "norm_xmin": 23,
+        "norm_ymax": 862,
+        "norm_xmax": 318
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Dipta Khare",
+      "is_pii": true,
+      "box": {
+        "xmin": 656,
+        "ymin": 430,
+        "xmax": 836,
+        "ymax": 480,
+        "norm_ymin": 796,
+        "norm_xmin": 766,
+        "norm_ymax": 888,
+        "norm_xmax": 976
+      },
+      "field_type": "signature"
+    }
+  ]
+}

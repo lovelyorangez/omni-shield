@@ -1,0 +1,18 @@
+[
+  {
+    "image_id": "d57b0d63-41d8-4fe9-a745-96c6178bb9dc",
+    "country": "Germany",
+    "card_type": "Personalausweis",
+    "image_path": "dataset_full/images/germany_id_d57b0d63-41d8-4fe9-a745-96c6178bb9dc.png",
+    "annotation_path": "dataset_full/annotations/d57b0d63-41d8-4fe9-a745-96c6178bb9dc.json",
+    "pii_count": 7
+  },
+  {
+    "image_id": "bf6413dc-4092-4fa0-a640-fcb0777be5e5",
+    "country": "Germany",
+    "card_type": "Personalausweis",
+    "image_path": "dataset_full/images/germany_id_bf6413dc-4092-4fa0-a640-fcb0777be5e5.png",
+    "annotation_path": "dataset_full/annotations/bf6413dc-4092-4fa0-a640-fcb0777be5e5.json",
+    "pii_count": 7
+  }
+]

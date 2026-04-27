@@ -1,0 +1,138 @@
+{
+  "image_id": "5847dd60-19b4-4062-b336-67e4e6eae611",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_5847dd60-19b4-4062-b336-67e4e6eae611.png",
+  "image_width": 878,
+  "image_height": 574,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 156,
+        "norm_xmin": 22,
+        "norm_ymax": 505,
+        "norm_xmax": 205
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NC27279559",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 735,
+        "ymax": 115,
+        "norm_ymin": 177,
+        "norm_xmin": 690,
+        "norm_ymax": 200,
+        "norm_xmax": 837
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11/07/2007",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 236,
+        "norm_xmin": 690,
+        "norm_ymax": 257,
+        "norm_xmax": 797
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Carroll, Eric",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 301,
+        "ymax": 115,
+        "norm_ymin": 175,
+        "norm_xmin": 222,
+        "norm_ymax": 200,
+        "norm_xmax": 342
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "4358 DAVIS TRAIL APT. 437",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 358,
+        "ymax": 150,
+        "norm_ymin": 245,
+        "norm_xmin": 222,
+        "norm_ymax": 261,
+        "norm_xmax": 407
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "ANTHONYVILLE, NC 86789",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 354,
+        "ymax": 166,
+        "norm_ymin": 271,
+        "norm_xmin": 222,
+        "norm_ymax": 289,
+        "norm_xmax": 403
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "05150267551254278207",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 874,
+        "norm_xmin": 22,
+        "norm_ymax": 916,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Eric Carroll",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 531,
+        "norm_xmin": 22,
+        "norm_ymax": 601,
+        "norm_xmax": 205
+      },
+      "field_type": "signature"
+    }
+  ]
+}

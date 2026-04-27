@@ -1,0 +1,138 @@
+{
+  "image_id": "72613a19-67b3-47c3-9565-23c1248327c5",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_72613a19-67b3-47c3-9565-23c1248327c5.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "GIBBS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 235,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 274
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Richard",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 233,
+        "ymax": 143,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 264,
+        "norm_xmax": 272
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "01.01.1957",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "GIBBS9170580RI925",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 353,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 412
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Studio 2\nCallum Plain, Summersfort",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 354,
+        "ymax": 316,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 585,
+        "norm_xmax": 413
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "LS16 2HN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 244,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 285
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Richard GIBBS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

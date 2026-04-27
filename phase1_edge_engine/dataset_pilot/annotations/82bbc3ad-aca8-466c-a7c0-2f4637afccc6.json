@@ -1,0 +1,138 @@
+{
+  "image_id": "82bbc3ad-aca8-466c-a7c0-2f4637afccc6",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_pilot/images/usa_dl_82bbc3ad-aca8-466c-a7c0-2f4637afccc6.png",
+  "image_width": 880,
+  "image_height": 580,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 155,
+        "norm_xmin": 22,
+        "norm_ymax": 500,
+        "norm_xmax": 204
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "KS11671902",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 733,
+        "ymax": 115,
+        "norm_ymin": 175,
+        "norm_xmin": 688,
+        "norm_ymax": 198,
+        "norm_xmax": 832
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "03/07/1989",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 234,
+        "norm_xmin": 688,
+        "norm_ymax": 255,
+        "norm_xmax": 795
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Tran, Terri",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 287,
+        "ymax": 115,
+        "norm_ymin": 174,
+        "norm_xmin": 221,
+        "norm_ymax": 198,
+        "norm_xmax": 326
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "710 HARRISON MILL",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 317,
+        "ymax": 150,
+        "norm_ymin": 243,
+        "norm_xmin": 221,
+        "norm_ymax": 258,
+        "norm_xmax": 360
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "JACKTON, KS 63117",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 314,
+        "ymax": 167,
+        "norm_ymin": 268,
+        "norm_xmin": 221,
+        "norm_ymax": 287,
+        "norm_xmax": 356
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "41318699938677496499",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 865,
+        "norm_xmin": 22,
+        "norm_ymax": 906,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Terri Tran",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 525,
+        "norm_xmin": 22,
+        "norm_ymax": 594,
+        "norm_xmax": 204
+      },
+      "field_type": "signature"
+    }
+  ]
+}

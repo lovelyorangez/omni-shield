@@ -1,0 +1,138 @@
+{
+  "image_id": "43090779-5783-4da6-9981-f1025259cb68",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_43090779-5783-4da6-9981-f1025259cb68.png",
+  "image_width": 884,
+  "image_height": 584,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 154,
+        "norm_xmin": 22,
+        "norm_ymax": 496,
+        "norm_xmax": 203
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "GU71266110",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 736,
+        "ymax": 115,
+        "norm_ymin": 174,
+        "norm_xmin": 685,
+        "norm_ymax": 196,
+        "norm_xmax": 832
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11/03/1978",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 232,
+        "norm_xmin": 685,
+        "norm_ymax": 253,
+        "norm_xmax": 791
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Burton, Patricia",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 337,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 220,
+        "norm_ymax": 196,
+        "norm_xmax": 381
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "4492 STONE GATEWAY",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 332,
+        "ymax": 150,
+        "norm_ymin": 241,
+        "norm_xmin": 220,
+        "norm_ymax": 256,
+        "norm_xmax": 375
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WEST ZACHARYBOROUGH, GU 47853",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 420,
+        "ymax": 166,
+        "norm_ymin": 267,
+        "norm_xmin": 220,
+        "norm_ymax": 284,
+        "norm_xmax": 475
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "37158698864976776228",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 859,
+        "norm_xmin": 22,
+        "norm_ymax": 900,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Patricia Burton",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 522,
+        "norm_xmin": 22,
+        "norm_ymax": 590,
+        "norm_xmax": 203
+      },
+      "field_type": "signature"
+    }
+  ]
+}

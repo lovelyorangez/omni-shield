@@ -1,0 +1,106 @@
+{
+  "image_id": "f951880b-7d04-43c8-8a81-9abe70da08e1",
+  "country": "India",
+  "card_type": "Aadhaar Card",
+  "image_path": "dataset_full/images/india_aadhaar_f951880b-7d04-43c8-8a81-9abe70da08e1.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 85,
+        "xmax": 160,
+        "ymax": 265,
+        "norm_ymin": 157,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Full Name",
+      "value": "Gopal Bose",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 103,
+        "xmax": 289,
+        "ymax": 121,
+        "norm_ymin": 190,
+        "norm_xmin": 204,
+        "norm_ymax": 224,
+        "norm_xmax": 337
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "22/11/1986",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 143,
+        "xmax": 261,
+        "ymax": 155,
+        "norm_ymin": 264,
+        "norm_xmin": 204,
+        "norm_ymax": 287,
+        "norm_xmax": 304
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "H.No. 616, Murty Chowk, Mango, Manipur",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 213,
+        "xmax": 405,
+        "ymax": 229,
+        "norm_ymin": 394,
+        "norm_xmin": 204,
+        "norm_ymax": 424,
+        "norm_xmax": 473
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Aadhaar Number",
+      "value": "8773 4778 4858",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 446,
+        "xmax": 273,
+        "ymax": 466,
+        "norm_ymin": 825,
+        "norm_xmin": 23,
+        "norm_ymax": 862,
+        "norm_xmax": 318
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Gopal Bose",
+      "is_pii": true,
+      "box": {
+        "xmin": 656,
+        "ymin": 430,
+        "xmax": 836,
+        "ymax": 480,
+        "norm_ymin": 796,
+        "norm_xmin": 766,
+        "norm_ymax": 888,
+        "norm_xmax": 976
+      },
+      "field_type": "signature"
+    }
+  ]
+}

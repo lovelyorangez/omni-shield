@@ -1,0 +1,138 @@
+{
+  "image_id": "5398d412-298c-46a5-9288-028c9ad20b4b",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_5398d412-298c-46a5-9288-028c9ad20b4b.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "PRATT",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 238,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 278
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Bryan",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 221,
+        "ymax": 145,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 268,
+        "norm_xmax": 258
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "05.01.1981",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "PRATT9685161BR922",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 361,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 421
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Flat 30q\nSmith Terrace, Lake Terencemouth",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 404,
+        "ymax": 316,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 585,
+        "norm_xmax": 471
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "HP4 4QJ",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 232,
+        "ymax": 327,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 605,
+        "norm_xmax": 271
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Bryan PRATT",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

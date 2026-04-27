@@ -1,0 +1,186 @@
+{
+  "failures": [
+    {
+      "doc_id": "test_australia_0002",
+      "macro_f1": 0.0,
+      "pred_count": 1,
+      "gt_count": 7,
+      "files": {
+        "original": "test_australia_0002.jpg",
+        "gt": "test_australia_0002_gt.jpg",
+        "pred": "test_australia_0002_pred.jpg",
+        "compare": "test_australia_0002_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_australia_0015",
+      "macro_f1": 0.0,
+      "pred_count": 4,
+      "gt_count": 7,
+      "files": {
+        "original": "test_australia_0015.jpg",
+        "gt": "test_australia_0015_gt.jpg",
+        "pred": "test_australia_0015_pred.jpg",
+        "compare": "test_australia_0015_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_australia_0017",
+      "macro_f1": 0.0,
+      "pred_count": 2,
+      "gt_count": 7,
+      "files": {
+        "original": "test_australia_0017.jpg",
+        "gt": "test_australia_0017_gt.jpg",
+        "pred": "test_australia_0017_pred.jpg",
+        "compare": "test_australia_0017_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_germany_0007",
+      "macro_f1": 0.0,
+      "pred_count": 4,
+      "gt_count": 7,
+      "files": {
+        "original": "test_germany_0007.jpg",
+        "gt": "test_germany_0007_gt.jpg",
+        "pred": "test_germany_0007_pred.jpg",
+        "compare": "test_germany_0007_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_germany_0018",
+      "macro_f1": 0.0,
+      "pred_count": 5,
+      "gt_count": 7,
+      "files": {
+        "original": "test_germany_0018.jpg",
+        "gt": "test_germany_0018_gt.jpg",
+        "pred": "test_germany_0018_pred.jpg",
+        "compare": "test_germany_0018_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_germany_0020",
+      "macro_f1": 0.0,
+      "pred_count": 3,
+      "gt_count": 7,
+      "files": {
+        "original": "test_germany_0020.jpg",
+        "gt": "test_germany_0020_gt.jpg",
+        "pred": "test_germany_0020_pred.jpg",
+        "compare": "test_germany_0020_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_uk_0002",
+      "macro_f1": 0.0,
+      "pred_count": 4,
+      "gt_count": 6,
+      "files": {
+        "original": "test_uk_0002.jpg",
+        "gt": "test_uk_0002_gt.jpg",
+        "pred": "test_uk_0002_pred.jpg",
+        "compare": "test_uk_0002_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_uk_0004",
+      "macro_f1": 0.0,
+      "pred_count": 4,
+      "gt_count": 6,
+      "files": {
+        "original": "test_uk_0004.jpg",
+        "gt": "test_uk_0004_gt.jpg",
+        "pred": "test_uk_0004_pred.jpg",
+        "compare": "test_uk_0004_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_uk_0017",
+      "macro_f1": 0.0,
+      "pred_count": 6,
+      "gt_count": 6,
+      "files": {
+        "original": "test_uk_0017.jpg",
+        "gt": "test_uk_0017_gt.jpg",
+        "pred": "test_uk_0017_pred.jpg",
+        "compare": "test_uk_0017_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_uk_0022",
+      "macro_f1": 0.0,
+      "pred_count": 5,
+      "gt_count": 6,
+      "files": {
+        "original": "test_uk_0022.jpg",
+        "gt": "test_uk_0022_gt.jpg",
+        "pred": "test_uk_0022_pred.jpg",
+        "compare": "test_uk_0022_compare.jpg"
+      }
+    }
+  ],
+  "successes": [
+    {
+      "doc_id": "test_usa_0025",
+      "macro_f1": 0.3,
+      "pred_count": 4,
+      "gt_count": 6,
+      "files": {
+        "original": "test_usa_0025.jpg",
+        "gt": "test_usa_0025_gt.jpg",
+        "pred": "test_usa_0025_pred.jpg",
+        "compare": "test_usa_0025_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_germany_0015",
+      "macro_f1": 0.3667,
+      "pred_count": 4,
+      "gt_count": 7,
+      "files": {
+        "original": "test_germany_0015.jpg",
+        "gt": "test_germany_0015_gt.jpg",
+        "pred": "test_germany_0015_pred.jpg",
+        "compare": "test_germany_0015_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_india_0006",
+      "macro_f1": 0.3667,
+      "pred_count": 5,
+      "gt_count": 6,
+      "files": {
+        "original": "test_india_0006.jpg",
+        "gt": "test_india_0006_gt.jpg",
+        "pred": "test_india_0006_pred.jpg",
+        "compare": "test_india_0006_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_india_0010",
+      "macro_f1": 0.3667,
+      "pred_count": 5,
+      "gt_count": 6,
+      "files": {
+        "original": "test_india_0010.jpg",
+        "gt": "test_india_0010_gt.jpg",
+        "pred": "test_india_0010_pred.jpg",
+        "compare": "test_india_0010_compare.jpg"
+      }
+    },
+    {
+      "doc_id": "test_australia_0005",
+      "macro_f1": 0.4,
+      "pred_count": 5,
+      "gt_count": 7,
+      "files": {
+        "original": "test_australia_0005.jpg",
+        "gt": "test_australia_0005_gt.jpg",
+        "pred": "test_australia_0005_pred.jpg",
+        "compare": "test_australia_0005_compare.jpg"
+      }
+    }
+  ]
+}

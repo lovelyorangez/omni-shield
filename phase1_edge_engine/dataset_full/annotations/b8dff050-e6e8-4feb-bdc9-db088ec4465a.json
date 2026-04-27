@@ -1,0 +1,138 @@
+{
+  "image_id": "b8dff050-e6e8-4feb-bdc9-db088ec4465a",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_b8dff050-e6e8-4feb-bdc9-db088ec4465a.png",
+  "image_width": 876,
+  "image_height": 572,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 157,
+        "norm_xmin": 22,
+        "norm_ymax": 506,
+        "norm_xmax": 205
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "CO19136193",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 735,
+        "ymax": 115,
+        "norm_ymin": 178,
+        "norm_xmin": 691,
+        "norm_ymax": 201,
+        "norm_xmax": 839
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "04/07/1991",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 237,
+        "norm_xmin": 691,
+        "norm_ymax": 258,
+        "norm_xmax": 799
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Horton, Justin",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 320,
+        "ymax": 116,
+        "norm_ymin": 176,
+        "norm_xmin": 222,
+        "norm_ymax": 202,
+        "norm_xmax": 365
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "34309 JULIE CENTERS APT. 978",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 382,
+        "ymax": 152,
+        "norm_ymin": 246,
+        "norm_xmin": 222,
+        "norm_ymax": 265,
+        "norm_xmax": 436
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NORTH SUSAN, CO 24857",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 350,
+        "ymax": 166,
+        "norm_ymin": 272,
+        "norm_xmin": 222,
+        "norm_ymax": 290,
+        "norm_xmax": 399
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "16998543534624751079",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 877,
+        "norm_xmin": 22,
+        "norm_ymax": 919,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Justin Horton",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 533,
+        "norm_xmin": 22,
+        "norm_ymax": 603,
+        "norm_xmax": 205
+      },
+      "field_type": "signature"
+    }
+  ]
+}

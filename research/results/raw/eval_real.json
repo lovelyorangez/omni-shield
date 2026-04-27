@@ -1,0 +1,3894 @@
+{
+  "evaluation_type": "real_specimen_text_only",
+  "note": "IoU=0 \u2014 bbox matching disabled, text value + Levenshtein(\u22642) only",
+  "dataset": "real_specimens",
+  "match_method": "text_value_only (iou_thresh=0.0)",
+  "levenshtein": true,
+  "n_docs": 20,
+  "mean_latency_s": 10.66,
+  "overall_metrics": {
+    "names": {
+      "precision": 0.5,
+      "recall": 0.1111,
+      "f1": 0.1818,
+      "tp": 3,
+      "fp": 3,
+      "fn": 24
+    },
+    "faces": {
+      "precision": 0.8261,
+      "recall": 1.0,
+      "f1": 0.9048,
+      "tp": 19,
+      "fp": 4,
+      "fn": 0
+    },
+    "signatures": {
+      "precision": 0.5652,
+      "recall": 0.8667,
+      "f1": 0.6842,
+      "tp": 13,
+      "fp": 10,
+      "fn": 2
+    },
+    "phones": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 4,
+      "fn": 0
+    },
+    "emails": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "dob": {
+      "precision": 0.875,
+      "recall": 0.4375,
+      "f1": 0.5833,
+      "tp": 7,
+      "fp": 1,
+      "fn": 9
+    },
+    "id_numbers": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333,
+      "tp": 4,
+      "fp": 0,
+      "fn": 16
+    },
+    "addresses": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 4
+    },
+    "org_names": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "dates": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "macro_f1": 0.2687,
+    "micro_f1": 0.538
+  },
+  "per_country": {
+    "fr": {
+      "names": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2667,
+      "micro_f1": 0.6
+    },
+    "it": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "faces": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.6667,
+        "recall": 0.6667,
+        "f1": 0.6667,
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.1524,
+      "micro_f1": 0.4545
+    },
+    "nl": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 2
+      },
+      "faces": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2333,
+      "micro_f1": 0.5455
+    },
+    "other": {
+      "names": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.3133,
+      "micro_f1": 0.6316
+    },
+    "gr": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "id_numbers": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2833,
+      "micro_f1": 0.5
+    },
+    "lu": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2,
+      "micro_f1": 0.5
+    },
+    "ch": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "id_numbers": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.3,
+      "micro_f1": 0.6667
+    },
+    "lv": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "faces": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "id_numbers": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2667,
+      "micro_f1": 0.6
+    },
+    "si": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2,
+      "micro_f1": 0.3636
+    },
+    "mt": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "id_numbers": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.3,
+      "micro_f1": 0.6
+    },
+    "is": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.1,
+      "micro_f1": 0.6667
+    },
+    "hr": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "faces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "signatures": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "id_numbers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.2,
+      "micro_f1": 0.4444
+    }
+  },
+  "per_doc": [
+    {
+      "doc_id": "real_fr_01",
+      "country": "fr",
+      "latency_s": 38.74,
+      "agent_timings": {
+        "RouterAgent": 0.02,
+        "OCRAgent": 2.09,
+        "LayoutAgent": 5.7,
+        "TextPIIAgent": 1.11,
+        "ContextAgent": 0.32,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 3.21,
+        "RedactionAgent": 0.92
+      },
+      "metrics": {
+        "names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2667,
+        "micro_f1": 0.6
+      },
+      "pred_count": 5,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Name",
+          "value": "Berthier",
+          "pixel_box": [
+            248,
+            90,
+            334,
+            114
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            23,
+            90,
+            202,
+            324
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            255,
+            640,
+            331
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            312,
+            638,
+            447
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "LongDigit",
+          "value": "880692310285",
+          "pixel_box": [
+            38,
+            62,
+            406,
+            86
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_fr_02",
+      "country": "fr",
+      "latency_s": 14.27,
+      "agent_timings": {
+        "RouterAgent": 0.02,
+        "OCRAgent": 3.29,
+        "LayoutAgent": 5.48,
+        "TextPIIAgent": 1.05,
+        "ContextAgent": 0.28,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 3.23,
+        "RedactionAgent": 0.06
+      },
+      "metrics": {
+        "names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2667,
+        "micro_f1": 0.6
+      },
+      "pred_count": 5,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Name",
+          "value": "Berthier",
+          "pixel_box": [
+            248,
+            90,
+            334,
+            114
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            23,
+            90,
+            202,
+            324
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            255,
+            640,
+            331
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            312,
+            638,
+            447
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "LongDigit",
+          "value": "880692310285",
+          "pixel_box": [
+            38,
+            62,
+            406,
+            86
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_it_01",
+      "country": "it",
+      "latency_s": 9.9,
+      "agent_timings": {
+        "RouterAgent": 0.03,
+        "OCRAgent": 3.23,
+        "LayoutAgent": 5.57,
+        "TextPIIAgent": 0.32,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.12
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.6667
+      },
+      "pred_count": 2,
+      "gt_count": 5,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            42,
+            136,
+            192,
+            353
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            1,
+            581,
+            638,
+            810
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_it_02",
+      "country": "it",
+      "latency_s": 4.18,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.38,
+        "LayoutAgent": 0.75,
+        "TextPIIAgent": 0.3,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.09
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "faces": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.0667,
+        "micro_f1": 0.2857
+      },
+      "pred_count": 2,
+      "gt_count": 5,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            23,
+            99,
+            172,
+            280
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            447,
+            80,
+            556,
+            209
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_nl_01",
+      "country": "nl",
+      "latency_s": 11.55,
+      "agent_timings": {
+        "RouterAgent": 0.02,
+        "OCRAgent": 4.79,
+        "LayoutAgent": 5.45,
+        "TextPIIAgent": 0.3,
+        "ContextAgent": 0.09,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.27
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        },
+        "faces": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2333,
+        "micro_f1": 0.5455
+      },
+      "pred_count": 6,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Name",
+          "value": "De Bruijn Willeke Liselotte",
+          "pixel_box": [
+            76,
+            69,
+            930,
+            460
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "10 MAA/MAR 1965",
+          "pixel_box": [
+            471,
+            360,
+            550,
+            442
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            112,
+            202,
+            500,
+            759
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            1078,
+            520,
+            1279,
+            780
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            760,
+            1572,
+            844
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            221,
+            841,
+            371,
+            913
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_nl_02",
+      "country": "nl",
+      "latency_s": 11.21,
+      "agent_timings": {
+        "RouterAgent": 0.02,
+        "OCRAgent": 4.37,
+        "LayoutAgent": 5.53,
+        "TextPIIAgent": 0.3,
+        "ContextAgent": 0.09,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.28
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        },
+        "faces": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2333,
+        "micro_f1": 0.5455
+      },
+      "pred_count": 6,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Name",
+          "value": "De Bruijn Willeke Liselotte",
+          "pixel_box": [
+            76,
+            69,
+            930,
+            460
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "10 MAA/MAR 1965",
+          "pixel_box": [
+            471,
+            360,
+            550,
+            442
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            112,
+            202,
+            500,
+            759
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            1078,
+            520,
+            1279,
+            780
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            760,
+            1572,
+            844
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            221,
+            841,
+            371,
+            913
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_01",
+      "country": "other",
+      "latency_s": 10.1,
+      "agent_timings": {
+        "RouterAgent": 0.02,
+        "OCRAgent": 3.2,
+        "LayoutAgent": 5.54,
+        "TextPIIAgent": 0.31,
+        "ContextAgent": 0.19,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.16
+      },
+      "metrics": {
+        "names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.3667,
+        "micro_f1": 0.7273
+      },
+      "pred_count": 5,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Name",
+          "value": "Vzorka",
+          "pixel_box": [
+            384,
+            314,
+            523,
+            358
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "11.11.1911",
+          "pixel_box": [
+            387,
+            457,
+            607,
+            497
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            17,
+            130,
+            356,
+            546
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            556,
+            1177,
+            645
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            396,
+            721,
+            573,
+            753
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_02",
+      "country": "other",
+      "latency_s": 9.04,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.38,
+        "LayoutAgent": 5.53,
+        "TextPIIAgent": 0.31,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.09
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.5
+      },
+      "pred_count": 2,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            330,
+            111,
+            477,
+            293
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            3,
+            447,
+            515,
+            636
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_03",
+      "country": "gr",
+      "latency_s": 11.59,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.02,
+        "LayoutAgent": 5.55,
+        "TextPIIAgent": 0.29,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 2.88,
+        "RedactionAgent": 0.12
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.3,
+        "micro_f1": 0.5
+      },
+      "pred_count": 7,
+      "gt_count": 5,
+      "predictions": [
+        {
+          "label": "ID No.",
+          "value": "000000001",
+          "pixel_box": [
+            149,
+            140,
+            187,
+            179
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "05.02.1990",
+          "pixel_box": [
+            200,
+            90,
+            240,
+            129
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Address",
+          "value": "4a. 23.03.2013",
+          "pixel_box": [
+            202,
+            202,
+            230,
+            230
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Address",
+          "value": "4a. 23.03.2028",
+          "pixel_box": [
+            202,
+            202,
+            378,
+            262
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            20,
+            144,
+            201,
+            364
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            399,
+            781,
+            503
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            288,
+            359,
+            503,
+            394
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_04",
+      "country": "gr",
+      "latency_s": 9.65,
+      "agent_timings": {
+        "RouterAgent": 0.16,
+        "OCRAgent": 2.93,
+        "LayoutAgent": 5.63,
+        "TextPIIAgent": 0.25,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.12
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.5
+      },
+      "pred_count": 2,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            6,
+            128,
+            427,
+            623
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            472,
+            506,
+            796,
+            558
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_05",
+      "country": "lu",
+      "latency_s": 3.72,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.03,
+        "LayoutAgent": 0.73,
+        "TextPIIAgent": 0.3,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.08
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.5
+      },
+      "pred_count": 2,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            49,
+            97,
+            233,
+            303
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            403,
+            263,
+            491,
+            303
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_06",
+      "country": "ch",
+      "latency_s": 8.83,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.37,
+        "LayoutAgent": 5.32,
+        "TextPIIAgent": 0.3,
+        "ContextAgent": 0.09,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.09
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.3,
+        "micro_f1": 0.6667
+      },
+      "pred_count": 4,
+      "gt_count": 5,
+      "predictions": [
+        {
+          "label": "Passport No.",
+          "value": "S2100023",
+          "pixel_box": [
+            28,
+            370,
+            360,
+            394
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "01.08.1971",
+          "pixel_box": [
+            60,
+            111,
+            72,
+            137
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            32,
+            130,
+            177,
+            286
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            3,
+            300,
+            598,
+            429
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_07",
+      "country": "lv",
+      "latency_s": 10.6,
+      "agent_timings": {
+        "RouterAgent": 0.17,
+        "OCRAgent": 3.97,
+        "LayoutAgent": 5.26,
+        "TextPIIAgent": 0.35,
+        "ContextAgent": 0.09,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.12
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2667,
+        "micro_f1": 0.6
+      },
+      "pred_count": 5,
+      "gt_count": 5,
+      "predictions": [
+        {
+          "label": "Passport No.",
+          "value": "LV9903176",
+          "pixel_box": [
+            516,
+            562,
+            632,
+            588
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "18.11.1964",
+          "pixel_box": [
+            174,
+            200,
+            218,
+            300
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            33,
+            607,
+            225,
+            832
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            486,
+            194,
+            639,
+            402
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            3,
+            700,
+            729,
+            1000
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_08",
+      "country": "si",
+      "latency_s": 10.58,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.01,
+        "LayoutAgent": 5.22,
+        "TextPIIAgent": 0.28,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 2.38,
+        "RedactionAgent": 0.08
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "passport": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "macro_f1": 0.1818,
+        "micro_f1": 0.3333
+      },
+      "pred_count": 5,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Passport",
+          "value": "P",
+          "pixel_box": [
+            73,
+            37,
+            131,
+            51
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "18.11.1978",
+          "pixel_box": [
+            191,
+            185,
+            281,
+            205
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            33,
+            113,
+            175,
+            293
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "LongDigit",
+          "value": "1811978505602",
+          "pixel_box": [
+            391,
+            185,
+            517,
+            205
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "LongDigit",
+          "value": "26121221811978505602",
+          "pixel_box": [
+            32,
+            371,
+            557,
+            395
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_09",
+      "country": "sk",
+      "error": "500 Server Error: Internal Server Error for url: http://localhost:8000/redact/image"
+    },
+    {
+      "doc_id": "real_xx_10",
+      "country": "mt",
+      "latency_s": 9.99,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.12,
+        "LayoutAgent": 5.34,
+        "TextPIIAgent": 0.27,
+        "ContextAgent": 0.09,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 1.42,
+        "RedactionAgent": 0.08
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "passport office": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "macro_f1": 0.2727,
+        "micro_f1": 0.5455
+      },
+      "pred_count": 5,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Passport No.",
+          "value": "0981489",
+          "pixel_box": [
+            437,
+            53,
+            515,
+            73
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Date of Birth",
+          "value": "11/11/1968",
+          "pixel_box": [
+            60,
+            153,
+            84,
+            193
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Passport Office",
+          "value": "MALTA",
+          "pixel_box": [
+            210,
+            20,
+            396,
+            44
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            24,
+            71,
+            204,
+            275
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            285,
+            600,
+            408
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_11",
+      "country": "is",
+      "latency_s": 10.51,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 1.64,
+        "LayoutAgent": 5.58,
+        "TextPIIAgent": 0.73,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 1.78,
+        "RedactionAgent": 0.06
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "macro_f1": 0.0909,
+        "micro_f1": 0.5
+      },
+      "pred_count": 3,
+      "gt_count": 1,
+      "predictions": [
+        {
+          "label": "Name",
+          "value": "Pur\u00ed\u00f0ur \u00d3sp",
+          "pixel_box": [
+            60,
+            95,
+            90,
+            142
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "",
+          "value": "1912",
+          "pixel_box": [
+            59,
+            417,
+            161,
+            431
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            71,
+            19,
+            278,
+            305
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_12",
+      "country": "lu",
+      "latency_s": 3.78,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.08,
+        "LayoutAgent": 0.72,
+        "TextPIIAgent": 0.29,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.08
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.5
+      },
+      "pred_count": 2,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            49,
+            97,
+            233,
+            303
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            403,
+            263,
+            491,
+            303
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_13",
+      "country": "it",
+      "latency_s": 5.06,
+      "agent_timings": {
+        "RouterAgent": 0.02,
+        "OCRAgent": 3.27,
+        "LayoutAgent": 0.75,
+        "TextPIIAgent": 0.29,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.12
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.1667,
+        "micro_f1": 0.4444
+      },
+      "pred_count": 3,
+      "gt_count": 6,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            59,
+            215,
+            291,
+            560
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            0,
+            485,
+            1014,
+            565
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            4,
+            450,
+            1011,
+            640
+          ],
+          "source": "ai"
+        }
+      ]
+    },
+    {
+      "doc_id": "real_xx_14",
+      "country": "hr",
+      "latency_s": 9.3,
+      "agent_timings": {
+        "RouterAgent": 0.01,
+        "OCRAgent": 2.67,
+        "LayoutAgent": 5.7,
+        "TextPIIAgent": 0.28,
+        "ContextAgent": 0.0,
+        "BBRefinerAgent": 0.0,
+        "CriticAgent": 0.0,
+        "RedactionAgent": 0.07
+      },
+      "metrics": {
+        "names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "faces": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "signatures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "phones": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "emails": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dob": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "id_numbers": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "addresses": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "org_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "dates": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "macro_f1": 0.2,
+        "micro_f1": 0.4444
+      },
+      "pred_count": 2,
+      "gt_count": 7,
+      "predictions": [
+        {
+          "label": "Face",
+          "value": "",
+          "pixel_box": [
+            330,
+            111,
+            477,
+            293
+          ],
+          "source": "ai"
+        },
+        {
+          "label": "Signature",
+          "value": "",
+          "pixel_box": [
+            3,
+            447,
+            515,
+            636
+          ],
+          "source": "ai"
+        }
+      ]
+    }
+  ]
+}

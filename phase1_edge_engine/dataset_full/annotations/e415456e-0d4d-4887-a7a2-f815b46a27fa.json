@@ -1,0 +1,138 @@
+{
+  "image_id": "e415456e-0d4d-4887-a7a2-f815b46a27fa",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_e415456e-0d4d-4887-a7a2-f815b46a27fa.png",
+  "image_width": 870,
+  "image_height": 560,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 160,
+        "norm_xmin": 22,
+        "norm_ymax": 517,
+        "norm_xmax": 206
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "CT04165915",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 732,
+        "ymax": 115,
+        "norm_ymin": 182,
+        "norm_xmin": 696,
+        "norm_ymax": 205,
+        "norm_xmax": 841
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "05/15/2001",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 242,
+        "norm_xmin": 696,
+        "norm_ymax": 264,
+        "norm_xmax": 804
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Nelson, William",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 335,
+        "ymax": 115,
+        "norm_ymin": 180,
+        "norm_xmin": 224,
+        "norm_ymax": 205,
+        "norm_xmax": 385
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "089 ROBERT CLUB",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 305,
+        "ymax": 150,
+        "norm_ymin": 251,
+        "norm_xmin": 224,
+        "norm_ymax": 267,
+        "norm_xmax": 350
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "PORT TYLER, CT 43578",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 333,
+        "ymax": 166,
+        "norm_ymin": 278,
+        "norm_xmin": 224,
+        "norm_ymax": 296,
+        "norm_xmax": 382
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "77490509759230450189",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 896,
+        "norm_xmin": 22,
+        "norm_ymax": 939,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "William Nelson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 544,
+        "norm_xmin": 22,
+        "norm_ymax": 616,
+        "norm_xmax": 206
+      },
+      "field_type": "signature"
+    }
+  ]
+}

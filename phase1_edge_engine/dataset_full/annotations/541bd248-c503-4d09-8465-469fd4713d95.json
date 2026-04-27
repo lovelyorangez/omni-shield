@@ -1,0 +1,138 @@
+{
+  "image_id": "541bd248-c503-4d09-8465-469fd4713d95",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_541bd248-c503-4d09-8465-469fd4713d95.png",
+  "image_width": 900,
+  "image_height": 610,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 147,
+        "norm_xmin": 22,
+        "norm_ymax": 475,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "ME63919195",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 736,
+        "ymax": 115,
+        "norm_ymin": 167,
+        "norm_xmin": 673,
+        "norm_ymax": 188,
+        "norm_xmax": 817
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "04/24/1981",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 222,
+        "norm_xmin": 673,
+        "norm_ymax": 242,
+        "norm_xmax": 777
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Myers, Nicholas",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 338,
+        "ymax": 116,
+        "norm_ymin": 165,
+        "norm_xmin": 216,
+        "norm_ymax": 190,
+        "norm_xmax": 375
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "35785 CHRISTINA LAKES SUITE 371",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 409,
+        "ymax": 150,
+        "norm_ymin": 231,
+        "norm_xmin": 216,
+        "norm_ymax": 245,
+        "norm_xmax": 454
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WEST JOSEPH, ME 75673",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 345,
+        "ymax": 167,
+        "norm_ymin": 255,
+        "norm_xmin": 216,
+        "norm_ymax": 273,
+        "norm_xmax": 383
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "87635148468536649878",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 822,
+        "norm_xmin": 22,
+        "norm_ymax": 862,
+        "norm_xmax": 155
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Nicholas Myers",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 500,
+        "norm_xmin": 22,
+        "norm_ymax": 565,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

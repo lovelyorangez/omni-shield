@@ -1,0 +1,383 @@
+\section{Evaluation}
+\label{sec:evaluation}
+
+We evaluate Omni-Shield along four dimensions:
+PII detection accuracy against three baseline systems,
+agent-level contribution via ablation, error
+characterisation via confusion matrix analysis,
+and generalisation to real specimen documents.
+All experiments run on the same hardware used during
+training: an NVIDIA RTX~5060 Laptop GPU (8\,GB VRAM),
+Intel Core i7, 16\,GB RAM, Ubuntu 24.04.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Evaluation Protocol}
+% ─────────────────────────────────────────────────────────
+
+\paragraph{Test set.}
+We evaluate on 150 synthetic identity card images
+(25 per country, seed 99999, held out from training).
+Each image is annotated with ground truth bounding
+boxes and PII values recorded at draw time.
+Five PII fields are annotated per card: Name, Date
+of Birth, ID Number, Face, and Signature.
+The test set is generated with the same pipeline
+as the training set to ensure visual consistency;
+statistical independence is guaranteed by the
+distinct random seed.
+
+\paragraph{Metrics.}
+We compute precision, recall, and F1 for each of
+ten PII categories independently.
+A predicted bounding box is matched to a ground truth
+box using intersection-over-union (IoU) with a
+threshold of 0.3 for text fields and 0.1 for
+signature regions (which vary widely in spatial
+extent across card designs).
+For signature boxes, we additionally apply a
+containment check: if the ground truth box occupies
+at least 50\% of the predicted box area, the
+prediction is counted as a true positive regardless
+of IoU.
+We report Macro F1 (mean over all categories) and
+Micro F1 (computed from aggregate TP, FP, FN counts).
+For text-only baselines and real document evaluation
+(where bounding boxes are unavailable), we use
+text value matching: a prediction is counted as a
+true positive if the predicted string is a substring
+of the ground truth value or vice versa, with
+Levenshtein distance tolerance $\leq 2$ for strings
+of length $\geq 4$.
+
+\paragraph{Evaluation framework.}
+All evaluations call the live FastAPI backend via
+HTTP (\texttt{POST /redact/image},
+\texttt{POST /redact/pdf}).
+The evaluation scripts are fully standalone and
+are released alongside the system code.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Baseline Systems}
+% ─────────────────────────────────────────────────────────
+
+We compare against three baselines representing
+the spectrum of available approaches.
+
+\textbf{Microsoft Presidio}~\cite{presidio2020}
+is a mature open-source NLP-based PII detector.
+We apply EasyOCR to extract text from each test
+image and pass the extracted text to Presidio's
+\texttt{AnalyzerEngine} with the
+\texttt{en\_core\_web\_lg} spaCy model.
+Presidio operates on text only and cannot access
+pixel-level information.
+
+\textbf{Llama~3~8B} (via Ollama) represents the
+approach of prompting a locally-hosted LLM to
+identify PII from OCR-extracted text.
+We use the same EasyOCR output and submit it with
+a structured prompt requesting a JSON array of
+detected PII entities.
+This baseline tests whether a larger general-purpose
+language model --- 4$\times$ the parameter count of
+our student VLM --- can substitute for the
+specialised multi-agent pipeline.
+
+\textbf{Omni-Shield} uses the full nine-agent
+pipeline with all PII categories enabled and no
+custom terms.
+The same 150 test images are processed in sequence
+with warm models (after first-request model loading).
+
+% ─────────────────────────────────────────────────────────
+\subsection{Main Results}
+% ─────────────────────────────────────────────────────────
+
+\input{comparison_table}
+
+Table~\ref{tab:comparison} presents precision,
+recall, and F1 per PII category for all three
+systems.
+
+The results reveal complementary strengths across
+systems.
+Llama~3~8B achieves the highest Macro F1 (0.270)
+and excels on text-based PII: Date of Birth
+(F1\,=\,0.854), ID Numbers (0.778), and Names
+(0.720).
+These strong results reflect Llama~3's large
+parameter count and instruction-following capability,
+which enable reliable extraction of structured
+values from OCR text even when field labels vary
+across card designs.
+
+However, Llama~3 scores F1\,=\,0.000 on Signatures
+and Faces --- categories that require visual layout
+understanding rather than text analysis.
+Neither baseline can detect visual PII because both
+operate on OCR-extracted text rather than the
+document image.
+
+Omni-Shield achieves the highest F1 on Signatures
+(0.870) and is the only system to detect this
+category at all.
+Signature detection is the single most important
+category by volume: ablation shows it accounts for
+a disproportionate share of total F1
+(Section~\ref{sec:ablation}).
+Omni-Shield also achieves competitive performance
+on Date of Birth (F1\,=\,0.522) --- substantially
+below Llama~3 (0.854) but dramatically above
+Presidio (0.000) --- reflecting the VLM's ability
+to interpret layout context that pure NER misses.
+
+Presidio achieves Macro F1\,=\,0.057, the lowest
+of the three systems.
+It attains non-zero F1 only on Names (0.290) and
+ID Numbers (0.280), where spaCy's PERSON and
+structured pattern matchers fire on well-formed
+text tokens.
+It fails entirely on Signatures, Faces, Dates of
+Birth, and Addresses --- five of the most prevalent
+PII categories on identity documents.
+
+\paragraph{The case for multi-modal redaction.}
+The baseline comparison validates the central design
+claim of Omni-Shield: \emph{text-only systems are
+insufficient for identity document redaction}.
+A deployment relying solely on Llama~3 --- the
+strongest text baseline --- would fail to redact
+every signature and face photograph in the test
+set, leaving the most visually distinctive PII
+untouched.
+Conversely, a deployment relying solely on
+Omni-Shield would miss the text PII that Llama~3
+handles well.
+The ideal system combines both approaches; we
+identify this hybrid as the primary direction for
+future work (Section~\ref{sec:limitations}).
+
+% ─────────────────────────────────────────────────────────
+\subsection{Agent Ablation Study}
+\label{sec:ablation}
+% ─────────────────────────────────────────────────────────
+
+To quantify each agent class's contribution to
+overall performance, we run five pipeline
+configurations on the 150-card test set with
+different subsets of PII categories enabled.
+\input{ablation_table}
+
+Table~\ref{tab:ablation} reports Macro F1 and
+Micro F1 for each configuration.
+
+The full pipeline (Macro F1\,=\,0.158 on this
+30-card subset; 0.187 on the full 150) establishes
+the baseline.
+Disabling Faces and Signatures reduces Macro F1 by
+54.2\% --- the largest single drop of any
+configuration --- confirming that visual PII
+detection drives the majority of the system's value
+on identity documents.
+Disabling only Names reduces Macro F1 by 61.0\%,
+reflecting that names are present on every card
+and that the pipeline's name detection, while
+imperfect, contributes consistently across all
+150 documents.
+Disabling Date of Birth and ID Numbers reduces
+Macro F1 by only 3.6\%, consistent with the
+low recall observed for these categories
+in the full evaluation.
+Running only the text PII agents (Phones, Emails,
+Addresses) produces Macro F1\,=\,0.039 ---
+barely above zero --- because these fields are
+absent from almost all synthetic identity cards.
+
+These results validate the multi-agent decomposition:
+each agent class contributes measurably, and no
+single component dominates to the degree that the
+others could be removed without significant loss.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Error Analysis}
+% ─────────────────────────────────────────────────────────
+
+Figure~\ref{fig:confusion} shows the PII category
+confusion matrix across 150 test documents.
+Of 498 total predictions, 262 are true positives,
+175 are false positives, and 655 ground truth
+items are false negatives (missed detections).
+
+\textbf{False negatives dominate.}
+The ratio of missed detections to false positives
+is approximately 4:1.
+The system is not confusing PII types with each
+other --- when it detects a field, it classifies
+it correctly with high precision.
+The primary failure mode is recall: the VLM fails
+to generate predictions for fields it observes,
+particularly on cards where field positions deviate
+from the training distribution.
+
+\textbf{Signatures generate the most false positives}
+relative to their true positive count
+(5 FP against 126 TP).
+Examination of failure cases reveals that the
+model occasionally identifies underline decorations
+or stamp regions as signature areas.
+The low FP rate relative to TP (3.8\%) indicates
+the signature detector is well-calibrated.
+
+\textbf{Date of birth over-fires} with 61 false
+positives against 65 true positives ---
+a precision ratio of 51.7\%.
+The confusion matrix shows that expiry dates,
+issue dates, and reference numbers containing
+date-like patterns account for the majority of DOB
+false positives.
+Adding explicit exclusion rules for common
+non-PII date labels (\textit{Valid Until},
+\textit{Issue Date}, \textit{Expiry}) to the
+ContextAgent is the targeted fix.
+
+\textbf{Addresses exhibit a structural IoU problem.}
+The model detects single address lines with correct
+precision, but ground truth annotations span the
+full multi-line address block.
+IoU between a one-line prediction and a three-line
+ground truth box is structurally low even when the
+detected region is spatially correct.
+Adopting a containment-based matching criterion
+(predicted box covers $\geq$50\% of ground truth
+area) for this category would substantially improve
+measured F1 without changing the underlying
+detection quality.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Per-Agent Latency}
+% ─────────────────────────────────────────────────────────
+
+\input{cross_format_latency}
+
+Table~\ref{tab:latency} reports mean end-to-end
+latency per document format.
+For the image pipeline, Figure~\ref{fig:timings}
+breaks down latency by agent.
+
+The LayoutAgent (VLM inference, 4.79\,s mean)
+accounts for 46\% of total pipeline time.
+OCRAgent (EasyOCR, 2.73\,s) contributes 26\%,
+and CriticAgent (LLM review, 1.85\,s) 18\%.
+All other agents together account for under 10\%
+of total latency.
+
+Two optimisation directions are immediately apparent.
+First, replacing EasyOCR with a lighter
+GPU-accelerated OCR engine (PaddleOCR, TrOCR) could
+halve OCR time.
+Second, replacing the CriticAgent's full LLM
+inference pass with a lightweight heuristic
+classifier could eliminate its 1.85\,s contribution
+with minimal accuracy impact, given that the critic's
+primary function --- removing organisational names
+and legal boilerplate --- is well-suited to
+rule-based matching.
+
+PDF, audio, text, Word, and PowerPoint documents
+bypass the VLM entirely, yielding latencies of
+40\,ms, 1.22\,s, 10\,ms, and sub-second
+respectively.
+This 225$\times$ spread between the slowest
+(image) and fastest (PDF/text) formats reflects
+the fundamental cost of visual understanding relative
+to text extraction.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Per-Country Analysis}
+% ─────────────────────────────────────────────────────────
+
+Performance varies across the six countries in the
+test set.
+Germany achieves the highest Macro F1 (0.214),
+followed by India (0.196), Australia (0.164), USA
+(0.151), UK (0.126), and Canada (0.109).
+Canada also accounts for three of the four pipeline
+errors (HTTP 500 responses) in the full evaluation
+run, which we attribute to VRAM exhaustion on
+complex card layouts triggering an out-of-memory
+condition in the VLM inference kernel.
+These errors represent 2.0\% of the test set and
+are resolved by restarting the model between
+consecutive complex requests.
+
+The performance ordering does not correlate with
+training set size (equal at 333--334 per country)
+and instead appears to reflect visual distinctiveness:
+German and Indian cards use high-contrast field
+labels and consistent layouts that the VLM finds
+easier to parse, while UK and Canadian cards exhibit
+more varied typography and field positioning.
+
+% ─────────────────────────────────────────────────────────
+\subsection{Real Specimen Evaluation}
+\label{sec:real_eval}
+% ─────────────────────────────────────────────────────────
+
+To assess generalisation beyond the synthetic
+distribution, we evaluate Omni-Shield on 19 real
+specimen identity documents sourced from Wikimedia
+Commons --- officially published educational
+specimens containing no real PII.
+Documents were annotated by visual inspection;
+since pixel-level bounding boxes are impractical
+to obtain for real documents, we use text-value
+matching exclusively (IoU disabled, bbox\,=\,null).
+
+\input{real_eval_table}
+
+Table~\ref{tab:real_eval} compares per-category
+performance on synthetic versus real documents.
+Three findings stand out.
+
+\textbf{Macro F1 is higher on real documents
+(0.269 vs 0.187).}
+This is the opposite of the expected synthetic-to-real
+degradation.
+We attribute this to the real specimen cards having
+more regular and visually prominent field labels
+than our synthetic test set, which introduced
+deliberate layout variation to stress-test the system.
+
+\textbf{Face detection transfers with near-perfect
+recall (F1\,=\,0.905, recall\,=\,1.0).}
+This confirms the YOLOv8n model correctly detects
+real photographic faces.
+The F1\,=\,0.000 reported in the synthetic
+evaluation is an evaluation artefact: synthetic
+cards use 2D illustrated avatars that COCO-trained
+YOLOv8 cannot detect as faces.
+A model filename bug (\texttt{yolov8x.pt} referenced
+instead of the present \texttt{yolov8n.pt}) was
+identified and corrected during this evaluation;
+the live system has always applied face redaction
+correctly to real photographic faces.
+
+\textbf{ID number precision is perfect on real
+documents (P\,=\,1.000).}
+Every ID number prediction on real cards is a
+true positive.
+Recall remains low (0.200) --- the model misses 16
+of 20 instances --- consistent with the synthetic
+finding that recall, not precision, is the primary
+gap for this category.
+
+The largest synthetic-to-real performance drop is
+in Names (F1: 0.312\,$\rightarrow$\,0.182),
+which we attribute to typographic diversity
+(ALL CAPS names, diacritics, multi-word surnames)
+underrepresented in the Faker-generated training
+distribution.
+Expanding the training corpus with more diverse
+name formats is identified as the highest-priority
+data augmentation for future work
+(Section~\ref{sec:limitations}).

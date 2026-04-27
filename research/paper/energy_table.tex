@@ -1,0 +1,19 @@
+\begin{table*}[h]\centering
+\caption{Energy Consumption and Carbon Footprint per 1,000 Redactions}
+\label{tab:energy}
+\begin{tabular}{llrrr}
+\toprule
+System & Type & kWh/1K & CO$_2$e (kg) & Grid assumed \\
+\midrule
+Omni-Shield (image) & Local edge  & 0.289 & 0.237 & India (0.82 kg/kWh) \\
+Omni-Shield (image) & Local edge  & 0.289 & 0.113 & US avg (0.39 kg/kWh) \\
+Omni-Shield (image) & Local edge  & 0.289 & 0.023 & Renewable (0.08 kg/kWh) \\
+Omni-Shield (PDF)   & Local edge  & 0.001 & 0.001 & India \\
+AWS Comprehend      & Cloud NLP   & 0.200 & 0.030 & AWS renewable \\
+Google Cloud DLP    & Cloud NLP   & 0.200 & 0.016 & GCP renewable \\
+GPT-4 Vision        & Cloud LLM   & 1.000 & 0.150 & AWS renewable \\
+\bottomrule
+\end{tabular}
+\footnotesize{Omni-Shield power draw: 100W total (RTX 5060 75W + 25W overhead).
+Cloud figures estimated from Patterson et al. 2022.}
+\end{table*}

@@ -1,0 +1,138 @@
+{
+  "image_id": "d365d48a-1227-4645-b13f-ea1576b1c862",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_d365d48a-1227-4645-b13f-ea1576b1c862.png",
+  "image_width": 862,
+  "image_height": 550,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 163,
+        "norm_xmin": 23,
+        "norm_ymax": 527,
+        "norm_xmax": 208
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "ME05807787",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 736,
+        "ymax": 115,
+        "norm_ymin": 185,
+        "norm_xmin": 703,
+        "norm_ymax": 209,
+        "norm_xmax": 853
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "10/19/1981",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 247,
+        "norm_xmin": 703,
+        "norm_ymax": 269,
+        "norm_xmax": 812
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Richardson, Timothy",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 382,
+        "ymax": 116,
+        "norm_ymin": 183,
+        "norm_xmin": 226,
+        "norm_ymax": 210,
+        "norm_xmax": 443
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "84781 JOHN ROADS",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 315,
+        "ymax": 152,
+        "norm_ymin": 256,
+        "norm_xmin": 226,
+        "norm_ymax": 276,
+        "norm_xmax": 365
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "LAKE CYNTHIASHIRE, ME 80853",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 386,
+        "ymax": 166,
+        "norm_ymin": 283,
+        "norm_xmin": 226,
+        "norm_ymax": 301,
+        "norm_xmax": 447
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "54420949407929049047",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 912,
+        "norm_xmin": 23,
+        "norm_ymax": 956,
+        "norm_xmax": 162
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Timothy Richardson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 554,
+        "norm_xmin": 23,
+        "norm_ymax": 627,
+        "norm_xmax": 208
+      },
+      "field_type": "signature"
+    }
+  ]
+}

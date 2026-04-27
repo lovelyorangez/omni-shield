@@ -1,0 +1,138 @@
+{
+  "image_id": "a0cad084-481b-4569-b2a1-2aded98d76d4",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_a0cad084-481b-4569-b2a1-2aded98d76d4.png",
+  "image_width": 884,
+  "image_height": 586,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 153,
+        "norm_xmin": 22,
+        "norm_ymax": 494,
+        "norm_xmax": 203
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "WV10941017",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 740,
+        "ymax": 115,
+        "norm_ymin": 174,
+        "norm_xmin": 685,
+        "norm_ymax": 196,
+        "norm_xmax": 837
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "03/05/1967",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 232,
+        "norm_xmin": 685,
+        "norm_ymax": 252,
+        "norm_xmax": 791
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Moses, Mario",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 315,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 220,
+        "norm_ymax": 196,
+        "norm_xmax": 356
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "00231 VICTOR SPRINGS SUITE 533",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 404,
+        "ymax": 150,
+        "norm_ymin": 240,
+        "norm_xmin": 220,
+        "norm_ymax": 255,
+        "norm_xmax": 457
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "EAST JESSICAFURT, WV 55558",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 376,
+        "ymax": 167,
+        "norm_ymin": 266,
+        "norm_xmin": 220,
+        "norm_ymax": 284,
+        "norm_xmax": 425
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "02517629833477433268",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 856,
+        "norm_xmin": 22,
+        "norm_ymax": 897,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Mario Moses",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 520,
+        "norm_xmin": 22,
+        "norm_ymax": 588,
+        "norm_xmax": 203
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "image_id": "7328c31f-c63d-4e66-876f-e616c7d1a65a",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_7328c31f-c63d-4e66-876f-e616c7d1a65a.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "JENKINS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 255,
+        "ymax": 117,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 216,
+        "norm_xmax": 297
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Anthony",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 239,
+        "ymax": 146,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 270,
+        "norm_xmax": 279
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "01.01.1956",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "JENKI9679240AN982",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 355,
+        "ymax": 266,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 492,
+        "norm_xmax": 414
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "6 Manning Stream, Jadehaven",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 376,
+        "ymax": 301,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 557,
+        "norm_xmax": 439
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "IG3X 7GT",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 241,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 281
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Anthony JENKINS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

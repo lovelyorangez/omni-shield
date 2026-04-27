@@ -1,0 +1,138 @@
+{
+  "image_id": "220205ba-9f26-4001-8efc-ee7898a445c3",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_220205ba-9f26-4001-8efc-ee7898a445c3.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "WARREN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 258,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 301
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "James",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 223,
+        "ymax": 145,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 268,
+        "norm_xmax": 260
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "04.12.1952",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "WARRE9371837JA964",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 362,
+        "ymax": 266,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 492,
+        "norm_xmax": 422
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Flat 08\nHoward Orchard, Duncanburgh",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 382,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 446
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "GU3N 3EJ",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 242,
+        "ymax": 327,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 605,
+        "norm_xmax": 282
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "James WARREN",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

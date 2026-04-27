@@ -1,0 +1,138 @@
+{
+  "image_id": "e1de5a22-abf3-4884-9782-79221226adc6",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_e1de5a22-abf3-4884-9782-79221226adc6.png",
+  "image_width": 880,
+  "image_height": 576,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 156,
+        "norm_xmin": 22,
+        "norm_ymax": 503,
+        "norm_xmax": 204
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "IA61847870",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 177,
+        "norm_xmin": 688,
+        "norm_ymax": 199,
+        "norm_xmax": 826
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "10/26/1969",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 236,
+        "norm_xmin": 688,
+        "norm_ymax": 256,
+        "norm_xmax": 795
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Evans, Donna",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 318,
+        "ymax": 115,
+        "norm_ymin": 175,
+        "norm_xmin": 221,
+        "norm_ymax": 199,
+        "norm_xmax": 361
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "571 MOSS DAM",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 288,
+        "ymax": 150,
+        "norm_ymin": 244,
+        "norm_xmin": 221,
+        "norm_ymax": 260,
+        "norm_xmax": 327
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "EAST ANTHONYSHIRE, IA 64625",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 386,
+        "ymax": 166,
+        "norm_ymin": 270,
+        "norm_xmin": 221,
+        "norm_ymax": 288,
+        "norm_xmax": 438
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "06138782931027079032",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 871,
+        "norm_xmin": 22,
+        "norm_ymax": 913,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Donna Evans",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 529,
+        "norm_xmin": 22,
+        "norm_ymax": 598,
+        "norm_xmax": 204
+      },
+      "field_type": "signature"
+    }
+  ]
+}

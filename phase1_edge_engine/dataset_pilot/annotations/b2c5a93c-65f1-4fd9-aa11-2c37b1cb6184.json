@@ -1,0 +1,122 @@
+{
+  "image_id": "b2c5a93c-65f1-4fd9-aa11-2c37b1cb6184",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_pilot/images/germany_id_b2c5a93c-65f1-4fd9-aa11-2c37b1cb6184.png",
+  "image_width": 872,
+  "image_height": 564,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "NERGER",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 248,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 289
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Heinrich",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 233,
+        "ymax": 134,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 248,
+        "norm_xmax": 272
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "19.09.1999",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "S647468723",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 266,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 310
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Clarissa-W\u00e4hner-Weg 5, Badibling",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 393,
+        "ymax": 309,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 572,
+        "norm_xmax": 459
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Heinrich NERGER",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

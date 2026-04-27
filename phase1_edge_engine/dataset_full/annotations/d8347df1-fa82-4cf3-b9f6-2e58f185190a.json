@@ -1,0 +1,138 @@
+{
+  "image_id": "d8347df1-fa82-4cf3-b9f6-2e58f185190a",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_d8347df1-fa82-4cf3-b9f6-2e58f185190a.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "TAYLOR",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 248,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 289
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Brett",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 215,
+        "ymax": 142,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 262,
+        "norm_xmax": 251
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "05.05.1964",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "TAYLO9393638BR954",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 359,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 419
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Studio 8\nHerbert Lake, Amyton",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 323,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 377
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "W7B 5HQ",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 242,
+        "ymax": 326,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 603,
+        "norm_xmax": 282
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Brett TAYLOR",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

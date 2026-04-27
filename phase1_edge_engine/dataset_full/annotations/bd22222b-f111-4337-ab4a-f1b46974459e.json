@@ -1,0 +1,138 @@
+{
+  "image_id": "bd22222b-f111-4337-ab4a-f1b46974459e",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_bd22222b-f111-4337-ab4a-f1b46974459e.png",
+  "image_width": 888,
+  "image_height": 590,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 152,
+        "norm_xmin": 22,
+        "norm_ymax": 491,
+        "norm_xmax": 202
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MS73607763",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 737,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 682,
+        "norm_ymax": 194,
+        "norm_xmax": 829
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "09/27/1959",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 230,
+        "norm_xmin": 682,
+        "norm_ymax": 250,
+        "norm_xmax": 788
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Stewart, Mark",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 323,
+        "ymax": 115,
+        "norm_ymin": 171,
+        "norm_xmin": 219,
+        "norm_ymax": 194,
+        "norm_xmax": 363
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "42643 KELSEY BURG",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 320,
+        "ymax": 150,
+        "norm_ymin": 238,
+        "norm_xmin": 219,
+        "norm_ymax": 254,
+        "norm_xmax": 360
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SOUTH DAVID, MS 03833",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 346,
+        "ymax": 166,
+        "norm_ymin": 264,
+        "norm_xmin": 219,
+        "norm_ymax": 281,
+        "norm_xmax": 389
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "11289812317955633185",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 850,
+        "norm_xmin": 22,
+        "norm_ymax": 891,
+        "norm_xmax": 157
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Mark Stewart",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 516,
+        "norm_xmin": 22,
+        "norm_ymax": 584,
+        "norm_xmax": 202
+      },
+      "field_type": "signature"
+    }
+  ]
+}

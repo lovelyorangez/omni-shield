@@ -1,0 +1,138 @@
+{
+  "image_id": "65c23c35-f6f3-4bc1-9b71-4ad7adf330d7",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_65c23c35-f6f3-4bc1-9b71-4ad7adf330d7.png",
+  "image_width": 880,
+  "image_height": 578,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 155,
+        "norm_xmin": 22,
+        "norm_ymax": 501,
+        "norm_xmax": 204
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "IN16704502",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 728,
+        "ymax": 115,
+        "norm_ymin": 176,
+        "norm_xmin": 688,
+        "norm_ymax": 198,
+        "norm_xmax": 827
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "01/11/1974",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 235,
+        "norm_xmin": 688,
+        "norm_ymax": 256,
+        "norm_xmax": 795
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Rodriguez, Jonathan",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 378,
+        "ymax": 116,
+        "norm_ymin": 174,
+        "norm_xmin": 221,
+        "norm_ymax": 200,
+        "norm_xmax": 429
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "6615 BAUTISTA VILLAGES",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 349,
+        "ymax": 150,
+        "norm_ymin": 243,
+        "norm_xmin": 221,
+        "norm_ymax": 259,
+        "norm_xmax": 396
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "SOUTH SONYAPORT, IN 92410",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 375,
+        "ymax": 166,
+        "norm_ymin": 269,
+        "norm_xmin": 221,
+        "norm_ymax": 287,
+        "norm_xmax": 426
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "02822700934596262282",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 868,
+        "norm_xmin": 22,
+        "norm_ymax": 910,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Jonathan Rodriguez",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 527,
+        "norm_xmin": 22,
+        "norm_ymax": 596,
+        "norm_xmax": 204
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+% Qualitative effect of QLoRA fine-tuning — label consistency evidence
+% Card: test_germany_0015.jpg
+\begin{table}[h]\centering
+\caption{Qualitative Effect of QLoRA Fine-tuning on VLM Output Format}
+\label{tab:finetune_qual}
+\begin{tabular}{lll}
+\toprule
+Field & Base Model Output & Fine-tuned Output \\
+\midrule
+Name      & \texttt{Name | Leonie D\"{o}rr}         & \texttt{Name | Leonie D\"{o}rr} \\
+DOB       & \texttt{Date of Birth | 01.08.1991}    & \texttt{Date of Birth | 01.08.1991} \\
+ID Number & \texttt{\textit{[empty]} | M898585166} & \texttt{ID No. | M898585166} \\
+Signature & \texttt{Signature | [none]}             & \texttt{Signature | [none]} \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}\\
+\footnotesize{The base model detects PII values correctly but omits field labels on
+structured fields (row~3). Fine-tuning teaches consistent \texttt{LABEL\,|\,VALUE}
+output format required by the downstream pipeline: an empty label is normalised to
+\texttt{other} by \texttt{normalize\_cat()} and scored as a false positive regardless
+of whether the value is correct. Quantitative F1 appears identical between the two
+models (Table~\ref{tab:finetune}) because the evaluation framework matches on values,
+not on the label\,$\rightarrow$\,category mapping the live pipeline depends on.}
+\end{table}

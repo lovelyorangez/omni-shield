@@ -1,0 +1,138 @@
+{
+  "image_id": "d07ab2af-2d48-40f3-ae86-56ed65f9abe6",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_d07ab2af-2d48-40f3-ae86-56ed65f9abe6.png",
+  "image_width": 862,
+  "image_height": 548,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 164,
+        "norm_xmin": 23,
+        "norm_ymax": 529,
+        "norm_xmax": 208
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "ID41497826",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 728,
+        "ymax": 115,
+        "norm_ymin": 186,
+        "norm_xmin": 703,
+        "norm_ymax": 209,
+        "norm_xmax": 844
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/27/1987",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 248,
+        "norm_xmin": 703,
+        "norm_ymax": 270,
+        "norm_xmax": 812
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Wright, Sarah",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 320,
+        "ymax": 116,
+        "norm_ymin": 184,
+        "norm_xmin": 226,
+        "norm_ymax": 211,
+        "norm_xmax": 371
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "6144 THOMPSON MEWS SUITE 923",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 405,
+        "ymax": 150,
+        "norm_ymin": 257,
+        "norm_xmin": 226,
+        "norm_ymax": 273,
+        "norm_xmax": 469
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "DEREKSIDE, ID 39961",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 326,
+        "ymax": 166,
+        "norm_ymin": 284,
+        "norm_xmin": 226,
+        "norm_ymax": 302,
+        "norm_xmax": 378
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "12875857567667080612",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 916,
+        "norm_xmin": 23,
+        "norm_ymax": 959,
+        "norm_xmax": 162
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Sarah Wright",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 556,
+        "norm_xmin": 23,
+        "norm_ymax": 629,
+        "norm_xmax": 208
+      },
+      "field_type": "signature"
+    }
+  ]
+}

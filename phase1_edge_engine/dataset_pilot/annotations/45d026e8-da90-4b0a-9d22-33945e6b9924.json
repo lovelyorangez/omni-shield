@@ -1,0 +1,138 @@
+{
+  "image_id": "45d026e8-da90-4b0a-9d22-33945e6b9924",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_pilot/images/usa_dl_45d026e8-da90-4b0a-9d22-33945e6b9924.png",
+  "image_width": 876,
+  "image_height": 572,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 157,
+        "norm_xmin": 22,
+        "norm_ymax": 506,
+        "norm_xmax": 205
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "IA38726247",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 178,
+        "norm_xmin": 691,
+        "norm_ymax": 201,
+        "norm_xmax": 829
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "10/31/2000",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 237,
+        "norm_xmin": 691,
+        "norm_ymax": 258,
+        "norm_xmax": 799
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Cummings, Amber",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 360,
+        "ymax": 116,
+        "norm_ymin": 176,
+        "norm_xmin": 222,
+        "norm_ymax": 202,
+        "norm_xmax": 410
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "76311 GOMEZ LOOP SUITE 010",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 384,
+        "ymax": 150,
+        "norm_ymin": 246,
+        "norm_xmin": 222,
+        "norm_ymax": 262,
+        "norm_xmax": 438
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "CHANDLERVILLE, IA 25613",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 355,
+        "ymax": 166,
+        "norm_ymin": 272,
+        "norm_xmin": 222,
+        "norm_ymax": 290,
+        "norm_xmax": 405
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "78108013267736026064",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 877,
+        "norm_xmin": 22,
+        "norm_ymax": 919,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Amber Cummings",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 533,
+        "norm_xmin": 22,
+        "norm_ymax": 603,
+        "norm_xmax": 205
+      },
+      "field_type": "signature"
+    }
+  ]
+}

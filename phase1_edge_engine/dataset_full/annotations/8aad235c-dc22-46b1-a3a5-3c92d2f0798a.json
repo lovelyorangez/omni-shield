@@ -1,0 +1,138 @@
+{
+  "image_id": "8aad235c-dc22-46b1-a3a5-3c92d2f0798a",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_8aad235c-dc22-46b1-a3a5-3c92d2f0798a.png",
+  "image_width": 878,
+  "image_height": 576,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 156,
+        "norm_xmin": 22,
+        "norm_ymax": 503,
+        "norm_xmax": 205
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MP56955798",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 737,
+        "ymax": 115,
+        "norm_ymin": 177,
+        "norm_xmin": 690,
+        "norm_ymax": 199,
+        "norm_xmax": 839
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/27/1989",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 236,
+        "norm_xmin": 690,
+        "norm_ymax": 256,
+        "norm_xmax": 797
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Hill, Daniel",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 294,
+        "ymax": 115,
+        "norm_ymin": 175,
+        "norm_xmin": 222,
+        "norm_ymax": 199,
+        "norm_xmax": 334
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "38046 THOMAS MANOR SUITE 043",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 404,
+        "ymax": 150,
+        "norm_ymin": 244,
+        "norm_xmin": 222,
+        "norm_ymax": 260,
+        "norm_xmax": 460
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NORTH MONICABURY, MP 68608",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 389,
+        "ymax": 166,
+        "norm_ymin": 270,
+        "norm_xmin": 222,
+        "norm_ymax": 288,
+        "norm_xmax": 443
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "49242437540254729284",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 871,
+        "norm_xmin": 22,
+        "norm_ymax": 913,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Daniel Hill",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 529,
+        "norm_xmin": 22,
+        "norm_ymax": 598,
+        "norm_xmax": 205
+      },
+      "field_type": "signature"
+    }
+  ]
+}

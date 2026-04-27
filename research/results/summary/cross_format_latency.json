@@ -1,0 +1,34 @@
+{
+  "image": {
+    "mean_s": 9.0,
+    "median_s": 10.02,
+    "min_s": 6.3,
+    "max_s": 10.98,
+    "n": 5,
+    "pipeline": "RouterAgent\u2192DeskewAgent\u2192OCRAgent\u2192LayoutAgent\u2192TextPIIAgent\u2192ContextAgent\u2192BBRefinerAgent\u2192CriticAgent\u2192RedactionAgent"
+  },
+  "pdf": {
+    "mean_s": 0.04,
+    "median_s": 0.03,
+    "min_s": 0.03,
+    "max_s": 0.05,
+    "n": 5,
+    "pipeline": "Hybrid NER \u2192 PyMuPDF redaction \u2192 Blockchain anchor"
+  },
+  "audio": {
+    "mean_s": 1.22,
+    "median_s": 1.11,
+    "min_s": 1.05,
+    "max_s": 1.78,
+    "n": 5,
+    "pipeline": "Whisper STT \u2192 Hybrid NER \u2192 pydub silence \u2192 Blockchain anchor"
+  },
+  "text": {
+    "mean_s": 0.01,
+    "median_s": 0.01,
+    "min_s": 0.01,
+    "max_s": 0.01,
+    "n": 5,
+    "pipeline": "Hybrid NER \u2192 string replace \u2192 Blockchain anchor"
+  }
+}

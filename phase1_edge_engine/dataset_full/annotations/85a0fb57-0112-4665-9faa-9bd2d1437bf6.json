@@ -1,0 +1,122 @@
+{
+  "image_id": "85a0fb57-0112-4665-9faa-9bd2d1437bf6",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_85a0fb57-0112-4665-9faa-9bd2d1437bf6.png",
+  "image_width": 898,
+  "image_height": 610,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "BUCHHOLZ",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 274,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 320
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Frauke",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 221,
+        "ymax": 134,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 248,
+        "norm_xmax": 258
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "10.09.1999",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "M679807935",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 269,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 314
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Vera-Bolander-Stra\u00dfe 25, Bad Kreuznach",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 440,
+        "ymax": 307,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 568,
+        "norm_xmax": 514
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Frauke BUCHHOLZ",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

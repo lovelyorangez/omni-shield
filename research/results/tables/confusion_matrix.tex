@@ -1,0 +1,17 @@
+\begin{table}[h]\centering
+\caption{PII Category Confusion Matrix (predicted $\times$ true)}
+\label{tab:confusion}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Pred $\backslash$ True & Names & DOB & ID No. & Addr. & Sig. & FP \\
+\midrule
+Names & \textbf{51} & 1 & -- & -- & -- & 33 \\
+DOB & -- & \textbf{65} & 2 & -- & -- & 61 \\
+ID No. & -- & -- & \textbf{13} & -- & -- & 18 \\
+Addr. & -- & -- & 1 & \textbf{7} & -- & 58 \\
+Sig. & -- & -- & 24 & -- & \textbf{126} & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}

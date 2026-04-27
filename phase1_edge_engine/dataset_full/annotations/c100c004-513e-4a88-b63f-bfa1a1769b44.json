@@ -1,0 +1,138 @@
+{
+  "image_id": "c100c004-513e-4a88-b63f-bfa1a1769b44",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_c100c004-513e-4a88-b63f-bfa1a1769b44.png",
+  "image_width": 898,
+  "image_height": 608,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 148,
+        "norm_xmin": 22,
+        "norm_ymax": 476,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "WV07464520",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 740,
+        "ymax": 115,
+        "norm_ymin": 167,
+        "norm_xmin": 674,
+        "norm_ymax": 189,
+        "norm_xmax": 824
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "04/02/1996",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 223,
+        "norm_xmin": 674,
+        "norm_ymax": 243,
+        "norm_xmax": 779
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Cook, Dawn",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 301,
+        "ymax": 115,
+        "norm_ymin": 166,
+        "norm_xmin": 217,
+        "norm_ymax": 189,
+        "norm_xmax": 335
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "82379 CHRISTOPHER LODGE",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 369,
+        "ymax": 150,
+        "norm_ymin": 231,
+        "norm_xmin": 217,
+        "norm_ymax": 246,
+        "norm_xmax": 410
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "MILLSSHIRE, WV 30966",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 336,
+        "ymax": 166,
+        "norm_ymin": 256,
+        "norm_xmin": 217,
+        "norm_ymax": 273,
+        "norm_xmax": 374
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "60438787535778811616",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 825,
+        "norm_xmin": 22,
+        "norm_ymax": 865,
+        "norm_xmax": 155
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Dawn Cook",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 501,
+        "norm_xmin": 22,
+        "norm_ymax": 567,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

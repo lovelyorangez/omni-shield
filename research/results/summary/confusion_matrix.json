@@ -1,0 +1,39 @@
+{
+  "signatures": {
+    "signatures": 126,
+    "unmatched": 5,
+    "id_numbers": 24
+  },
+  "fn": {
+    "faces": 146,
+    "names": 191,
+    "dob": 54,
+    "id_numbers": 105,
+    "addresses": 139,
+    "signatures": 20
+  },
+  "dob": {
+    "dob": 65,
+    "unmatched": 61,
+    "id_numbers": 2
+  },
+  "names": {
+    "names": 51,
+    "unmatched": 33,
+    "dob": 1
+  },
+  "addresses": {
+    "addresses": 7,
+    "unmatched": 58,
+    "id_numbers": 1
+  },
+  "id_numbers": {
+    "id_numbers": 13,
+    "unmatched": 18
+  },
+  "other": {
+    "dob": 1,
+    "id_numbers": 1,
+    "unmatched": 31
+  }
+}

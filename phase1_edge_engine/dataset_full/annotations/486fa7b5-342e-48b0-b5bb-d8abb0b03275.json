@@ -1,0 +1,122 @@
+{
+  "image_id": "486fa7b5-342e-48b0-b5bb-d8abb0b03275",
+  "country": "Germany",
+  "card_type": "Personalausweis",
+  "image_path": "dataset_full/images/germany_id_486fa7b5-342e-48b0-b5bb-d8abb0b03275.png",
+  "image_width": 896,
+  "image_height": 606,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 160,
+        "ymax": 260,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 481,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "BOLANDER",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 91,
+        "xmax": 273,
+        "ymax": 103,
+        "norm_ymin": 168,
+        "norm_xmin": 204,
+        "norm_ymax": 190,
+        "norm_xmax": 318
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Given Names",
+      "value": "Maritta",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 123,
+        "xmax": 225,
+        "ymax": 134,
+        "norm_ymin": 227,
+        "norm_xmin": 204,
+        "norm_ymax": 248,
+        "norm_xmax": 262
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "11.06.1994",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 155,
+        "xmax": 249,
+        "ymax": 164,
+        "norm_ymin": 287,
+        "norm_xmin": 204,
+        "norm_ymax": 303,
+        "norm_xmax": 290
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Number",
+      "value": "M651994101",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 267,
+        "xmax": 269,
+        "ymax": 276,
+        "norm_ymin": 494,
+        "norm_xmin": 204,
+        "norm_ymax": 511,
+        "norm_xmax": 314
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Ditmar-Kabus-Gasse 7, Eichst\u00e4tt",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 295,
+        "xmax": 386,
+        "ymax": 307,
+        "norm_ymin": 546,
+        "norm_xmin": 204,
+        "norm_ymax": 568,
+        "norm_xmax": 450
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Maritta BOLANDER",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 320,
+        "xmax": 375,
+        "ymax": 365,
+        "norm_ymin": 592,
+        "norm_xmin": 204,
+        "norm_ymax": 675,
+        "norm_xmax": 438
+      },
+      "field_type": "signature"
+    }
+  ]
+}

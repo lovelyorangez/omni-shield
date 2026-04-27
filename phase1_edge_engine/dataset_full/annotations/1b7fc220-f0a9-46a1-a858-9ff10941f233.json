@@ -1,0 +1,138 @@
+{
+  "image_id": "1b7fc220-f0a9-46a1-a858-9ff10941f233",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_1b7fc220-f0a9-46a1-a858-9ff10941f233.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "HARRIS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 248,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 289
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Zoe",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 207,
+        "ymax": 142,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 262,
+        "norm_xmax": 241
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "25.11.1954",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "HARRI9229604ZO943",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 361,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 421
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "701 Townsend Cape, Port Ashley",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 392,
+        "ymax": 301,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 557,
+        "norm_xmax": 457
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "LS94 5RU",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 243,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 283
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Zoe HARRIS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

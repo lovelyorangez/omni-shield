@@ -1,0 +1,138 @@
+{
+  "image_id": "e7994237-c50d-4ac9-8a0b-d8db1e12d811",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_e7994237-c50d-4ac9-8a0b-d8db1e12d811.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 166,
+        "norm_xmin": 23,
+        "norm_ymax": 537,
+        "norm_xmax": 210
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "HI77223306",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 728,
+        "ymax": 115,
+        "norm_ymin": 188,
+        "norm_xmin": 707,
+        "norm_ymax": 212,
+        "norm_xmax": 850
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "05/11/2007",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 251,
+        "norm_xmin": 707,
+        "norm_ymax": 274,
+        "norm_xmax": 817
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Johnson, David",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 331,
+        "ymax": 116,
+        "norm_ymin": 187,
+        "norm_xmin": 227,
+        "norm_ymax": 214,
+        "norm_xmax": 386
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "993 JERRY BURG SUITE 172",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 360,
+        "ymax": 152,
+        "norm_ymin": 261,
+        "norm_xmin": 227,
+        "norm_ymax": 281,
+        "norm_xmax": 420
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "JOSEPHSTAD, HI 51286",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 334,
+        "ymax": 167,
+        "norm_ymin": 288,
+        "norm_xmin": 227,
+        "norm_ymax": 309,
+        "norm_xmax": 390
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "46333127975736609656",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 929,
+        "norm_xmin": 23,
+        "norm_ymax": 974,
+        "norm_xmax": 163
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "David Johnson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 564,
+        "norm_xmin": 23,
+        "norm_ymax": 638,
+        "norm_xmax": 210
+      },
+      "field_type": "signature"
+    }
+  ]
+}

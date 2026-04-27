@@ -1,0 +1,138 @@
+{
+  "image_id": "fb56311d-c97d-478b-bf29-c994f96340df",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_pilot/images/usa_dl_fb56311d-c97d-478b-bf29-c994f96340df.png",
+  "image_width": 882,
+  "image_height": 582,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 154,
+        "norm_xmin": 22,
+        "norm_ymax": 498,
+        "norm_xmax": 204
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "IL41928327",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 724,
+        "ymax": 115,
+        "norm_ymin": 175,
+        "norm_xmin": 687,
+        "norm_ymax": 197,
+        "norm_xmax": 820
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/17/1948",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 233,
+        "norm_xmin": 687,
+        "norm_ymax": 254,
+        "norm_xmax": 793
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Bush, Barbara",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 323,
+        "ymax": 115,
+        "norm_ymin": 173,
+        "norm_xmin": 221,
+        "norm_ymax": 197,
+        "norm_xmax": 366
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "1316 CHAVEZ VILLAGE",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 332,
+        "ymax": 150,
+        "norm_ymin": 242,
+        "norm_xmin": 221,
+        "norm_ymax": 257,
+        "norm_xmax": 376
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "FRANCISCOSTAD, IL 88342",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 356,
+        "ymax": 166,
+        "norm_ymin": 268,
+        "norm_xmin": 221,
+        "norm_ymax": 285,
+        "norm_xmax": 403
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "83503056413953767242",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 862,
+        "norm_xmin": 22,
+        "norm_ymax": 903,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Barbara Bush",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 524,
+        "norm_xmin": 22,
+        "norm_ymax": 592,
+        "norm_xmax": 204
+      },
+      "field_type": "signature"
+    }
+  ]
+}

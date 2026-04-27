@@ -1,0 +1,138 @@
+{
+  "image_id": "684b7d33-d319-4d4c-85bf-43cb8927adb1",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_684b7d33-d319-4d4c-85bf-43cb8927adb1.png",
+  "image_width": 894,
+  "image_height": 604,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "CARTER",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 250,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 292
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Gregory",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 236,
+        "ymax": 145,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 268,
+        "norm_xmax": 275
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "20.01.1986",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "CARTE9461571GR973",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 362,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 422
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "3 Jenna Garden, North Declanton",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 395,
+        "ymax": 301,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 557,
+        "norm_xmax": 461
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "IP18 7XT",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 237,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 276
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Gregory CARTER",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

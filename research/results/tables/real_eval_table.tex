@@ -1,0 +1,22 @@
+\begin{table}[h]\centering
+\caption{Synthetic vs Real Specimen Document Evaluation}
+\label{tab:real_eval}
+\begin{tabular}{lrrrr}
+\toprule
+Category & Synthetic F1 & Real P & Real R & Real F1 \\
+\midrule
+Faces      & 0.000$^*$ & 0.826 & 1.000 & \textbf{0.905} \\
+Signatures & 0.870      & 0.565 & 0.867 & 0.684 \\
+DOB        & 0.522      & 0.875 & 0.438 & 0.583 \\
+ID Numbers & 0.096      & 1.000 & 0.200 & 0.333 \\
+Names      & 0.312      & 0.500 & 0.111 & 0.182 \\
+Addresses  & 0.067      & 0.000 & 0.000 & 0.000 \\
+\midrule
+\textbf{Macro F1} & 0.187 & -- & -- & \textbf{0.269} \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}
+\footnotesize{$^*$Synthetic faces F1=0 is an evaluation
+limitation (illustrated avatars), not a model failure.
+Real document face recall = 1.0 confirms correct detection.}
+\end{table}

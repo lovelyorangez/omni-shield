@@ -1,0 +1,14 @@
+\begin{table}[h]\centering
+\caption{Cryptographic Audit Trail Performance}
+\label{tab:crypto}
+\begin{tabular}{llr}
+\toprule
+Operation & Method & Latency \\
+\midrule
+Blockchain verify & O(1) mapping (Solidity) & 1.2ms \\
+ZK proof generate & Groth16/BN128 (ZoKrates) & 20.3s \\
+ZK proof verify & Groth16 verify() & 22.1ms \\
+Gas per anchor & addRecord() & 264,333 units \\
+\bottomrule
+\end{tabular}
+\end{table}

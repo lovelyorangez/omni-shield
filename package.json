@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "ganache": "^7.9.2"
+  }
+}

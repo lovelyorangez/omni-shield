@@ -1,0 +1,138 @@
+{
+  "image_id": "a53c93ca-16cf-4c32-adcb-e82481025d7a",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_a53c93ca-16cf-4c32-adcb-e82481025d7a.png",
+  "image_width": 872,
+  "image_height": 564,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 159,
+        "norm_xmin": 22,
+        "norm_ymax": 514,
+        "norm_xmax": 206
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MP95529638",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 737,
+        "ymax": 115,
+        "norm_ymin": 180,
+        "norm_xmin": 694,
+        "norm_ymax": 203,
+        "norm_xmax": 845
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "09/04/1994",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 241,
+        "norm_xmin": 694,
+        "norm_ymax": 262,
+        "norm_xmax": 802
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Newman, Rebecca",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 360,
+        "ymax": 115,
+        "norm_ymin": 179,
+        "norm_xmin": 223,
+        "norm_ymax": 203,
+        "norm_xmax": 412
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "53844 PARKER UNDERPASS SUITE 306",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 426,
+        "ymax": 150,
+        "norm_ymin": 250,
+        "norm_xmin": 223,
+        "norm_ymax": 265,
+        "norm_xmax": 488
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NORTH ANTHONYSTAD, MP 68522",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 399,
+        "ymax": 166,
+        "norm_ymin": 276,
+        "norm_xmin": 223,
+        "norm_ymax": 294,
+        "norm_xmax": 457
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "60962626582631281964",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 890,
+        "norm_xmin": 22,
+        "norm_ymax": 932,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Rebecca Newman",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 540,
+        "norm_xmin": 22,
+        "norm_ymax": 611,
+        "norm_xmax": 206
+      },
+      "field_type": "signature"
+    }
+  ]
+}

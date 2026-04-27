@@ -1,0 +1,3256 @@
+[
+    {
+        "timestamp": 1772536832.7747486,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking for innovation reflexion - Avril 2021 - Nathalie Sylla \n\n Challenge & selection \n\n The tool I use to help all stakeholders finding their way through the complexity of a project is the   mind map . \n\n What exactly is a mind map ? According to the definition of Buzan T. and Buzan B. ( 1999 , Dessine - moi   l'intelligence . Paris : Les \u00c9ditions d'Organisation . ) , the mind map ( or heuristic diagram ) is a graphic   representation technique that follows the natural functioning of ...",
+        "proposed": [
+            {
+                "entity": "Nathali",
+                "conf": 0.907516598701477
+            },
+            {
+                "entity": "Buzan",
+                "conf": 0.9426755905151367
+            },
+            {
+                "entity": "T",
+                "conf": 0.6057183742523193
+            },
+            {
+                "entity": "Buzan",
+                "conf": 0.9368081092834473
+            },
+            {
+                "entity": "B",
+                "conf": 0.8209766745567322
+            },
+            {
+                "entity": "Des",
+                "conf": 0.9553457498550415
+            },
+            {
+                "entity": "Paris",
+                "conf": 0.9911279678344727
+            },
+            {
+                "entity": "Les \u00c9ditions d ' Organisation",
+                "conf": 0.9986869692802429
+            },
+            {
+                "entity": "Nat",
+                "conf": 0.9716801643371582
+            },
+            {
+                "entity": "Nathali",
+                "conf": 0.9849855899810791
+            },
+            {
+                "entity": "Nat",
+                "conf": 0.8228588104248047
+            },
+            {
+                "entity": "S",
+                "conf": 0.586850643157959
+            },
+            {
+                "entity": "Nathali",
+                "conf": 0.8496704697608948
+            },
+            {
+                "entity": "Mind Map",
+                "conf": 0.8679748773574829
+            },
+            {
+                "entity": "Nat",
+                "conf": 0.8559215664863586
+            },
+            {
+                "entity": "S",
+                "conf": 0.720604419708252
+            }
+        ],
+        "final_redactions": [
+            "Nathalie Sylla",
+            "Buzan T.",
+            "Buzan B.",
+            "Paris",
+            "Nathali",
+            "Buzan",
+            "Les \u00c9ditions d ' Organisation",
+            "Nat",
+            "Nathalie",
+            "Sylla"
+        ]
+    },
+    {
+        "timestamp": 1772536832.933674,
+        "doc_id": "api_request",
+        "text_snippet": "Diego Estrada \n\n Design Thinking Assignment \n\n Visualization Tool \n\n Challenge & Selection \n\n The elderly were having a hard time adapting to the changes we brought in our bank . As   a result of a poorly implemented linear solution , a more customer centric approach was   needed . \n\n After learning about design thinking in this course , we decided to apply it to solve this   problem . The visualization tool allowed the team to create a dynamic presentation using   diagrams , figures and drawing...",
+        "proposed": [
+            {
+                "entity": "Diego Estrada",
+                "conf": 0.9924381971359253
+            },
+            {
+                "entity": "Diego E",
+                "conf": 0.9802392721176147
+            },
+            {
+                "entity": "Design Team",
+                "conf": 0.9892274737358093
+            },
+            {
+                "entity": "Estra",
+                "conf": 0.6577367186546326
+            }
+        ],
+        "final_redactions": [
+            "Diego Estrada",
+            "Diego E",
+            "Design Team",
+            "Diego",
+            "Estrada"
+        ]
+    },
+    {
+        "timestamp": 1772536833.3454106,
+        "doc_id": "api_request",
+        "text_snippet": "Reporting process \n\n by Gilberto Gamboa \n\n Challenge \n\n I received a promotion of being the Regional Controller , along with my actual position of \n\n Country CFO . The main responsibility of this new position was to weekly report the results \n\n for the week and estimate the final results of the month of 4 countries and consolidated \n\n those . \n\n When I was receiving the position , I went to visit my colleague , former Regional Controller , \n\n who was promoted to Country CEO and now had interest ...",
+        "proposed": [
+            {
+                "entity": "Gilberto Gamboa",
+                "conf": 0.9896301031112671
+            },
+            {
+                "entity": "Gilbert",
+                "conf": 0.9709863066673279
+            }
+        ],
+        "final_redactions": [
+            "Gilberto Gamboa \n\n Challenge",
+            "Regional Controller",
+            "Gilberto Gamboa",
+            "Gilbert",
+            "Gilberto",
+            "Gamboa",
+            "Challenge",
+            "Regional",
+            "Controller"
+        ]
+    },
+    {
+        "timestamp": 1772536833.6542346,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking for Innovation \n\n Sindy Samaca \n\n Gitam University \n\n December ,   2021 \n\n Challenge \n\n My challenge to solve is the problem of a company that is without \n\n sufficient capital to create and build its own industrial plant , and can not \n\n cope with the growing demand that they have had in the last two months . \n\n The company is in a dilemma , as it has two potential investors ; The first \n\n investor offers the amount of capital necessary for the creation of the \n\n plant , in retur...",
+        "proposed": [
+            {
+                "entity": "Sindy Samaca Gitam University",
+                "conf": 0.9915052652359009
+            },
+            {
+                "entity": "George",
+                "conf": 0.9989595413208008
+            },
+            {
+                "entity": "Geoff",
+                "conf": 0.9987603425979614
+            },
+            {
+                "entity": "Sin",
+                "conf": 0.9808457493782043
+            },
+            {
+                "entity": "Sam",
+                "conf": 0.5025437474250793
+            },
+            {
+                "entity": "Geoff",
+                "conf": 0.9984446167945862
+            }
+        ],
+        "final_redactions": [
+            "George and Geoff",
+            "Sindy Samaca Gitam University",
+            "George",
+            "Geoff",
+            "2021"
+        ]
+    },
+    {
+        "timestamp": 1772536834.0186036,
+        "doc_id": "api_request",
+        "text_snippet": "Assignment : \u00a0  Visualization \u00a0 Reflection \u00a0  Submitted \u00a0 by : \u00a0 Nadine Born \u00a0  Course : \u00a0  Design \u00a0 Thinking \u00a0 for \u00a0 Innovation \u00a0 \u00a0  Trail \u00a0 Challenge : \u00a0 To \u00a0 Build \u00a0 or \u00a0 Not \u00a0 to \u00a0 Build \u00a0 \u00a0  An \u00a0 environmental \u00a0 charity \u00a0 wanted \u00a0 to \u00a0 conduct \u00a0 a \u00a0 fundraising \u00a0 campaign \u00a0 to \u00a0 raise \u00a0 $ 4 \u00a0 million \u00a0 to \u00a0 build \u00a0 a \u00a0  public \u00a0 path \u00a0 in \u00a0 a \u00a0 busy \u00a0 tourist \u00a0 area \u00a0 of \u00a0 a \u00a0 small \u00a0 town \u00a0 in \u00a0 British \u00a0 Columbia , \u00a0 Canada . \u00a0 They \u00a0 had \u00a0 been \u00a0 gifted \u00a0 a \u00a0  large \u00a0 piece \u00a0 of \u00a0 land \u00a0...",
+        "proposed": [
+            {
+                "entity": "Na",
+                "conf": 0.9983212351799011
+            },
+            {
+                "entity": "Thinking",
+                "conf": 0.8124114274978638
+            },
+            {
+                "entity": "Innovation Trail",
+                "conf": 0.624730110168457
+            },
+            {
+                "entity": "British Columbia",
+                "conf": 0.9985381364822388
+            },
+            {
+                "entity": "Canada",
+                "conf": 0.999455988407135
+            },
+            {
+                "entity": "Design",
+                "conf": 0.8564254641532898
+            },
+            {
+                "entity": "for Growth",
+                "conf": 0.6180558204650879
+            },
+            {
+                "entity": "Na",
+                "conf": 0.968903660774231
+            }
+        ],
+        "final_redactions": [
+            "Columbia",
+            "Canada",
+            "British Columbia"
+        ]
+    },
+    {
+        "timestamp": 1772536834.1536005,
+        "doc_id": "api_request",
+        "text_snippet": "Cheese Startup - Learning Launch \u200bby Eladio Amaya \n\n Challenge \n\n We are a small company in Barcelona ( Spain ) that refines high - quality organic cheeses   from small producers in the Pyrenees . We also trade milk and yogurts from these   producers . We distribute our dairy products mainly to haute cuisine restaurants ( 60 % of   our turnover ) and to Delicatesens stores ( 35 % of our turnover ) , the remaining 5 % we   distribute to individuals , mainly family , friends and acquaintances .   ...",
+        "proposed": [
+            {
+                "entity": "Launch",
+                "conf": 0.6815860271453857
+            },
+            {
+                "entity": "Eladio",
+                "conf": 0.6970492005348206
+            },
+            {
+                "entity": "Amaya",
+                "conf": 0.840218186378479
+            },
+            {
+                "entity": "Challenge",
+                "conf": 0.671400785446167
+            },
+            {
+                "entity": "Barcelona",
+                "conf": 0.9993459582328796
+            },
+            {
+                "entity": "Spain",
+                "conf": 0.9997124075889587
+            },
+            {
+                "entity": "Pyrenees",
+                "conf": 0.9041616320610046
+            },
+            {
+                "entity": "Delicatesens",
+                "conf": 0.9917104244232178
+            },
+            {
+                "entity": "Launch",
+                "conf": 0.8385056853294373
+            },
+            {
+                "entity": "Delicatesen",
+                "conf": 0.9895801544189453
+            },
+            {
+                "entity": "El",
+                "conf": 0.9806305766105652
+            }
+        ],
+        "final_redactions": [
+            "Barcelona",
+            "Spain",
+            "Pyrenees"
+        ]
+    },
+    {
+        "timestamp": 1772536834.213922,
+        "doc_id": "api_request",
+        "text_snippet": "Silvia Villalobos \n\n Challenge : \n\n There is a company which provides financial advisory to customers either in person or virtual .   Lately organisation climate has been seen decayed as result of arguments , hassles and the   lack of fraternity and cooperation among the campaign workers . The aim is improving   climate organisation to transmit unity and trust to our customer . \n\n Selection : \n\n Storytelling is the first tool selected , because this tool allows to connect with the audience ,   t...",
+        "proposed": [
+            {
+                "entity": "Si",
+                "conf": 0.4077044129371643
+            },
+            {
+                "entity": "Villalobos",
+                "conf": 0.9000795483589172
+            },
+            {
+                "entity": "Si",
+                "conf": 0.988754153251648
+            }
+        ],
+        "final_redactions": [
+            "Silvia Villalobos \n\n Challenge",
+            "Storytelling",
+            "Villalobos",
+            "Silvia",
+            "Villalobo",
+            "Challenge"
+        ]
+    },
+    {
+        "timestamp": 1772536834.3653052,
+        "doc_id": "api_request",
+        "text_snippet": "Storytelling   The Path to Innovation \n\n Dr Sakir Ahmad \n\n Challenge & Selection \n\n Be it any organization , team or a government venture , I have often observed that they experience   failures because they could n\u2019t connect with their audience aptly . In such scenarios , storytelling   can turn the table significantly . I have used the tool \u2018 storytelling \u2019 in my organization to convey a   complicated message as simply as possible or to generate ideas from people around me . The idea   is to im...",
+        "proposed": [
+            {
+                "entity": "Sakir Ahmad",
+                "conf": 0.9546605348587036
+            },
+            {
+                "entity": "Sa",
+                "conf": 0.9801923632621765
+            }
+        ],
+        "final_redactions": [
+            "Sakir Ahmad",
+            "Sakir",
+            "Ahmad"
+        ]
+    },
+    {
+        "timestamp": 1772536834.5200963,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 Learning Launch \n\n Francisco Ferreira \n\n Challenge \n\n I take part of a social enterprenuership group in my university . We were in contact \n\n with Cap\u00e3o das Antas , a rural Community in the suburbs of S\u00e3o Carlos ( SP - Brazil ) . We had the   intention to criate , with the local producers , a project that wold improve the quality of life in   the neighborhood . For that , in the first two months we begin to listen each farmer of Cap\u00e3o   and try identify the principal issues of the p...",
+        "proposed": [
+            {
+                "entity": "Learning Launch",
+                "conf": 0.7483378648757935
+            },
+            {
+                "entity": "Francisco",
+                "conf": 0.9340437650680542
+            },
+            {
+                "entity": "Ferreira",
+                "conf": 0.7545191645622253
+            },
+            {
+                "entity": "Challenge",
+                "conf": 0.6751214265823364
+            },
+            {
+                "entity": "Cap\u00e3o das Antas",
+                "conf": 0.9981228709220886
+            },
+            {
+                "entity": "S\u00e3o Carlos",
+                "conf": 0.9985374808311462
+            },
+            {
+                "entity": "SP",
+                "conf": 0.9985217452049255
+            },
+            {
+                "entity": "Brazil",
+                "conf": 0.7880254983901978
+            },
+            {
+                "entity": "Cap\u00e3o",
+                "conf": 0.9971859455108643
+            },
+            {
+                "entity": "Learning Launch",
+                "conf": 0.8862167596817017
+            },
+            {
+                "entity": "Francisco Ferreira",
+                "conf": 0.7840019464492798
+            },
+            {
+                "entity": "Learning Launches",
+                "conf": 0.7389994263648987
+            }
+        ],
+        "final_redactions": [
+            "S\u00e3o Carlos",
+            "Cap\u00e3o das Antas",
+            "Cap\u00e3o"
+        ]
+    },
+    {
+        "timestamp": 1772536835.100834,
+        "doc_id": "api_request",
+        "text_snippet": "Gandhi Institute of Technology and Management    Higher School of Economics \n\n Essay \u2116 1 \n\n on Economics course \n\n Topic 7 \n\n \u201c Why are people sometimes altruistic ? \u201d \n\n Stefano Lovato \n\n MDI-191 student \n\n Sathyabama \n\n April , 2020 \n\n In many classical economic theories , it is common to determine a human , as a very egoistic   creature . Adam Smith \u2019s books ( but not all of them ) were wrote based on this idea also .   However , the conception of Homo economicus was introduced for the first ...",
+        "proposed": [
+            {
+                "entity": "Gandhi Institute of Technology and Management Higher School of Economics",
+                "conf": 0.912300705909729
+            },
+            {
+                "entity": "Stefano Lovato",
+                "conf": 0.984140157699585
+            },
+            {
+                "entity": "MDI",
+                "conf": 0.930734395980835
+            },
+            {
+                "entity": "Sathyabama",
+                "conf": 0.9582840204238892
+            },
+            {
+                "entity": "Adam Smith",
+                "conf": 0.998733401298523
+            },
+            {
+                "entity": "Homo",
+                "conf": 0.7730547785758972
+            },
+            {
+                "entity": "John Stuart Mill",
+                "conf": 0.9952896237373352
+            },
+            {
+                "entity": "Gerashchenko",
+                "conf": 0.9520330429077148
+            },
+            {
+                "entity": "Igor",
+                "conf": 0.9308964610099792
+            },
+            {
+                "entity": "A",
+                "conf": 0.9987888932228088
+            },
+            {
+                "entity": "Smith",
+                "conf": 0.9963571429252625
+            },
+            {
+                "entity": "Stefano Lo",
+                "conf": 0.7485164403915405
+            },
+            {
+                "entity": "Alexander Shmakov",
+                "conf": 0.9900261759757996
+            },
+            {
+                "entity": "A",
+                "conf": 0.8303418159484863
+            },
+            {
+                "entity": "B",
+                "conf": 0.8417271375656128
+            },
+            {
+                "entity": "A",
+                "conf": 0.8561643958091736
+            },
+            {
+                "entity": "B",
+                "conf": 0.6942785978317261
+            },
+            {
+                "entity": "B",
+                "conf": 0.6452194452285767
+            },
+            {
+                "entity": "A",
+                "conf": 0.5616973042488098
+            },
+            {
+                "entity": "A",
+                "conf": 0.597712516784668
+            },
+            {
+                "entity": "B",
+                "conf": 0.43377625942230225
+            },
+            {
+                "entity": "A",
+                "conf": 0.6338200569152832
+            },
+            {
+                "entity": "B",
+                "conf": 0.4855991005897522
+            },
+            {
+                "entity": "A",
+                "conf": 0.7860256433486938
+            },
+            {
+                "entity": "Ho",
+                "conf": 0.6535435914993286
+            },
+            {
+                "entity": "Di",
+                "conf": 0.9854750633239746
+            },
+            {
+                "entity": "Ultimatum",
+                "conf": 0.8649028539657593
+            },
+            {
+                "entity": "Di",
+                "conf": 0.9945955872535706
+            },
+            {
+                "entity": "Ernst Fehr",
+                "conf": 0.9991185665130615
+            },
+            {
+                "entity": "U",
+                "conf": 0.9990682005882263
+            },
+            {
+                "entity": "Kazantseva",
+                "conf": 0.924041211605072
+            },
+            {
+                "entity": "Gerashchenko",
+                "conf": 0.9768443703651428
+            },
+            {
+                "entity": "G",
+                "conf": 0.8157798647880554
+            },
+            {
+                "entity": "A",
+                "conf": 0.9728749990463257
+            },
+            {
+                "entity": "Smith",
+                "conf": 0.9316164255142212
+            },
+            {
+                "entity": "Economy",
+                "conf": 0.5353598594665527
+            },
+            {
+                "entity": "Kazan",
+                "conf": 0.6400361061096191
+            },
+            {
+                "entity": "Handbook of Giving, Altruism, and Re",
+                "conf": 0.7644850015640259
+            },
+            {
+                "entity": "S. Kolm",
+                "conf": 0.9419881105422974
+            },
+            {
+                "entity": "J. Ythier",
+                "conf": 0.9261293411254883
+            },
+            {
+                "entity": "Amsterdam",
+                "conf": 0.9920811653137207
+            },
+            {
+                "entity": "L",
+                "conf": 0.9915540814399719
+            },
+            {
+                "entity": "N",
+                "conf": 0.9879587888717651
+            },
+            {
+                "entity": "Y.",
+                "conf": 0.9536641836166382
+            },
+            {
+                "entity": "Elsevier",
+                "conf": 0.9896087050437927
+            },
+            {
+                "entity": "WorkingPapers",
+                "conf": 0.5385223031044006
+            },
+            {
+                "entity": "Fehr E",
+                "conf": 0.8950443863868713
+            },
+            {
+                "entity": "Schmidt",
+                "conf": 0.9948480129241943
+            },
+            {
+                "entity": "K",
+                "conf": 0.42090925574302673
+            },
+            {
+                "entity": "M",
+                "conf": 0.8568246364593506
+            },
+            {
+                "entity": "Handbook of",
+                "conf": 0.7942649722099304
+            },
+            {
+                "entity": "126",
+                "conf": 0.44258031249046326
+            }
+        ],
+        "final_redactions": [
+            "Sathyabama",
+            "Adam Smith \u2019s",
+            "John Stuart   Mill",
+            "A. Smith",
+            "Alexander Shmakov",
+            "Ernst Fehr",
+            "Gerashchenko I.G. A. Smith 's",
+            "Credo",
+            "Andreoni J. Philanthropy",
+            "J. Ythier",
+            "Amsterdam",
+            "N. Y. : Elsevier",
+            "Fehr E.",
+            "Schmidt K. M.",
+            "// Handbook",
+            "Stefano Lovato",
+            "MDI",
+            "Adam Smith",
+            "John Stuart Mill",
+            "Gerashchenko",
+            "Igor",
+            "Smith",
+            "Kazantseva",
+            "S. Kolm",
+            "Fehr E",
+            "Schmidt",
+            "Adam",
+            "John",
+            "Stuart",
+            "Mill",
+            "Alexander",
+            "Shmakov",
+            "Ernst",
+            "Fehr",
+            "Andreoni",
+            "Philanthropy",
+            "Ythier",
+            "Elsevier",
+            "Handbook",
+            "Stefano",
+            "Lovato",
+            "Kolm",
+            "191",
+            "2020",
+            "616",
+            "2018",
+            "36398",
+            "2010",
+            "14398333",
+            "2006",
+            "1201",
+            "1265",
+            "2006",
+            "https://en.wikipedia.org/wiki/Homo_economicus",
+            "https://cyberleninka.ru/article/n/stremlenie",
+            "http://www.intelros.ru/readroom/credo_new/k3-[REDACTED]/[REDACTED]-eticheskoe",
+            "https://cyberleninka.ru/article/n/[REDACTED",
+            "https://cyberleninka.ru/article/n/stremlenie-k-spravedlivomu-sotrudnichestvu-kak",
+            "https://econweb.ucsd.edu/~jandreon/WorkingPapers/Philanthropy.pdf",
+            "https://www.melessa.uni"
+        ]
+    },
+    {
+        "timestamp": 1772536835.3176546,
+        "doc_id": "api_request",
+        "text_snippet": "Dear Corrector , \n\n Thank you for taking the time to look through my text . I hope you can find some value in it . \n\n Regards , \n\n Al \n\n My First Mind - Mapping Session \n\n Challenge \n\n A small group of students and I are in the early stages of founding a new student association from the ground up . We noticed that our campus lacks an association that encourages students to take part in cultural activities and that connects art lovers . However , in order to jump start our organization we need ev...",
+        "proposed": [
+            {
+                "entity": "Al",
+                "conf": 0.979933500289917
+            },
+            {
+                "entity": "Map",
+                "conf": 0.6628056168556213
+            },
+            {
+                "entity": "University of Virginia",
+                "conf": 0.9927847981452942
+            },
+            {
+                "entity": "Al",
+                "conf": 0.5610939264297485
+            },
+            {
+                "entity": "CO",
+                "conf": 0.454443097114563
+            },
+            {
+                "entity": "University of Virginia",
+                "conf": 0.9959619641304016
+            },
+            {
+                "entity": "University of Virginia",
+                "conf": 0.9960308074951172
+            },
+            {
+                "entity": "Mind Mapping Tool",
+                "conf": 0.5821952223777771
+            },
+            {
+                "entity": "Coursera",
+                "conf": 0.9505688548088074
+            }
+        ],
+        "final_redactions": [
+            "COVID",
+            "University of Virginia",
+            "2015",
+            "2015",
+            "https://www.coursera.org/learn/uva-darden-design-thinking-innovation/lecture/lsFRa"
+        ]
+    },
+    {
+        "timestamp": 1772536835.6199336,
+        "doc_id": "api_request",
+        "text_snippet": "Pepa Medrano \n\n Design Thinking for Innovation   April 2 , 2020 \n\n Mind Mapping \n\n Challenge : \n\n I am on the Artist Relations team at a music sync company .   My job includes \n\n organizing and listening to all the new music submissions that are sent to the label and   communicating with the creative department about possible signings . The creative team   pitches music to music supervisors and are aware of current trends and needs for TV ,   Film , and Ads so they are a huge asset to the A&R te...",
+        "proposed": [
+            {
+                "entity": "P",
+                "conf": 0.8720054030418396
+            },
+            {
+                "entity": "Map",
+                "conf": 0.9038983583450317
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9269542694091797
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9155158996582031
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9472885131835938
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9179503917694092
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9207587242126465
+            },
+            {
+                "entity": "Mind Map",
+                "conf": 0.8078247904777527
+            },
+            {
+                "entity": "P",
+                "conf": 0.9706112742424011
+            },
+            {
+                "entity": "Adobe Illustrator",
+                "conf": 0.8601018190383911
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.8720188736915588
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.8550276756286621
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9752449989318848
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9637550711631775
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9751550555229187
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.9825043678283691
+            },
+            {
+                "entity": "A & R",
+                "conf": 0.952170193195343
+            }
+        ],
+        "final_redactions": [
+            "Film",
+            "Mind Mapping",
+            "A & R",
+            "Mapping",
+            "2020"
+        ]
+    },
+    {
+        "timestamp": 1772536835.8800206,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 Visualization    Deiby \n\n Challenge     For some time I frequented a public gym and showered there before my work day .   Although the   showers may have been cleaned daily , they were not cleaned between each use - sometimes   the floor was , well \u201c icky \u201d and traditional flip - flops just did n\u2019t cut it .   I searched and searched , for   an existing product that would provide the protection I needed , without any success .   I then   realized a need for a solution for increased s...",
+        "proposed": [
+            {
+                "entity": "Visualization De",
+                "conf": 0.6469562649726868
+            },
+            {
+                "entity": "Visualization Tool",
+                "conf": 0.9140685200691223
+            },
+            {
+                "entity": "Angela Meyer",
+                "conf": 0.999293863773346
+            },
+            {
+                "entity": "Visualization",
+                "conf": 0.8912907242774963
+            },
+            {
+                "entity": "De",
+                "conf": 0.9654886722564697
+            },
+            {
+                "entity": "Visualization Tool",
+                "conf": 0.9605879783630371
+            },
+            {
+                "entity": "Angela Meyer",
+                "conf": 0.9991786479949951
+            },
+            {
+                "entity": "Visualization",
+                "conf": 0.9601701498031616
+            },
+            {
+                "entity": "Modu",
+                "conf": 0.7001663446426392
+            },
+            {
+                "entity": "D",
+                "conf": 0.6975423097610474
+            },
+            {
+                "entity": "3",
+                "conf": 0.5728292465209961
+            },
+            {
+                "entity": "D",
+                "conf": 0.5163882374763489
+            },
+            {
+                "entity": "Visualization Tool",
+                "conf": 0.9559949636459351
+            },
+            {
+                "entity": "Visualization Tool",
+                "conf": 0.7946666479110718
+            },
+            {
+                "entity": "Visualization Tool",
+                "conf": 0.801586389541626
+            },
+            {
+                "entity": "PowerPoint",
+                "conf": 0.9769467711448669
+            }
+        ],
+        "final_redactions": [
+            "Angela Meyer",
+            "Visualization Tool",
+            "Angela",
+            "Meyer"
+        ]
+    },
+    {
+        "timestamp": 1772536836.101844,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 Visualization \n\n Fareed Ponce \n\n Challenge and Selection   As I enrolled to the online course of Design Thinking for Innovation , I was briefed about four tools   used in the design thinking process that could aid in development of innovative products and   services . And these four tools were : Visualization tool , Story telling tool , Mind mapping tool , and   Learning launch tool . The good thing about these tools are , that they can be used to solve any   problem and are not jus...",
+        "proposed": [
+            {
+                "entity": "Far",
+                "conf": 0.7087098956108093
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.7514561414718628
+            },
+            {
+                "entity": "Visualization",
+                "conf": 0.7771399617195129
+            },
+            {
+                "entity": "EV",
+                "conf": 0.9543777108192444
+            },
+            {
+                "entity": "India",
+                "conf": 0.999395489692688
+            },
+            {
+                "entity": "EV",
+                "conf": 0.9571298360824585
+            },
+            {
+                "entity": "Bengaluru",
+                "conf": 0.9989104270935059
+            },
+            {
+                "entity": "India",
+                "conf": 0.9994978904724121
+            },
+            {
+                "entity": "EV",
+                "conf": 0.9671863913536072
+            },
+            {
+                "entity": "Internal Combustion",
+                "conf": 0.8865880966186523
+            },
+            {
+                "entity": "IC",
+                "conf": 0.8936388492584229
+            },
+            {
+                "entity": "EV",
+                "conf": 0.9684752225875854
+            },
+            {
+                "entity": "EVs",
+                "conf": 0.9227381348609924
+            },
+            {
+                "entity": "Google",
+                "conf": 0.8975054025650024
+            },
+            {
+                "entity": "Far",
+                "conf": 0.9886835217475891
+            },
+            {
+                "entity": "EV",
+                "conf": 0.9544175863265991
+            },
+            {
+                "entity": "Fu",
+                "conf": 0.551484227180481
+            },
+            {
+                "entity": "\u201d",
+                "conf": 0.5358778834342957
+            },
+            {
+                "entity": "EV",
+                "conf": 0.9312193393707275
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.6208919882774353
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.6969504356384277
+            }
+        ],
+        "final_redactions": [
+            "Story",
+            "India",
+            "Bengaluru",
+            "Approach"
+        ]
+    },
+    {
+        "timestamp": 1772536836.3248734,
+        "doc_id": "api_request",
+        "text_snippet": "Mind Mapping ( Module 3 ) \n\n Challenge \n\n In the third part we use a tool called mind map that in principal means that you   have to put all the relevant information about a topic and this would help to   understand better the topic that is in the organizer . Also in this type of organizer   we can found a lot of kind of mind maps for example , in the classification of   them , the most important are Library mind maps for information organizing ,   Presentation mind maps for presenting ideas and...",
+        "proposed": [
+            {
+                "entity": "Claudia Sarria",
+                "conf": 0.995061993598938
+            }
+        ],
+        "final_redactions": [
+            "Mind Mapping",
+            "Library",
+            "Requirements",
+            "Claudia Sarria",
+            "Mapping",
+            "Claudia",
+            "Sarria"
+        ]
+    },
+    {
+        "timestamp": 1772536836.6243145,
+        "doc_id": "api_request",
+        "text_snippet": "Rajinder Santos   Design Thinking for Innovation    Final Assignment     Challenge and Selection \n\n My challenge as a middle school coding and a robotics teacher is my district \u2019s goal to \n\n design and implement curriculum that enables students to cultivate solutions to authentic   problems .   As a district , we try to stray away from \u201c busy work \u201d and develop curriculum that is   meaningful in the real world .   I am passionate about design thinking and do my best to foster a   classroom envir...",
+        "proposed": [
+            {
+                "entity": "Rajinder Santos",
+                "conf": 0.9933066368103027
+            },
+            {
+                "entity": "Thinking",
+                "conf": 0.5942593812942505
+            },
+            {
+                "entity": "Story",
+                "conf": 0.7927489876747131
+            },
+            {
+                "entity": "Too",
+                "conf": 0.7632771730422974
+            },
+            {
+                "entity": "GrovePi",
+                "conf": 0.993255615234375
+            },
+            {
+                "entity": "Raspberry Pi",
+                "conf": 0.936163067817688
+            },
+            {
+                "entity": "Raspberry Pi",
+                "conf": 0.9880639314651489
+            },
+            {
+                "entity": "GrovePi",
+                "conf": 0.9926486611366272
+            },
+            {
+                "entity": "L",
+                "conf": 0.6685899496078491
+            },
+            {
+                "entity": "Rajinder Santos",
+                "conf": 0.9032456874847412
+            },
+            {
+                "entity": "GrovePi",
+                "conf": 0.9139652848243713
+            },
+            {
+                "entity": "Swiffer",
+                "conf": 0.9782131314277649
+            },
+            {
+                "entity": "Pull - Ups",
+                "conf": 0.9044710397720337
+            },
+            {
+                "entity": "Hu",
+                "conf": 0.49471113085746765
+            },
+            {
+                "entity": "S",
+                "conf": 0.9897350072860718
+            },
+            {
+                "entity": "Pull - Ups",
+                "conf": 0.9662054777145386
+            },
+            {
+                "entity": "Huggies",
+                "conf": 0.801323413848877
+            },
+            {
+                "entity": "Let",
+                "conf": 0.5931956768035889
+            },
+            {
+                "entity": "Take",
+                "conf": 0.5297156572341919
+            },
+            {
+                "entity": "Out",
+                "conf": 0.6286532878875732
+            },
+            {
+                "entity": "The Clothing Sc",
+                "conf": 0.8493047952651978
+            }
+        ],
+        "final_redactions": [
+            "Rajinder Santos",
+            "Raspberry Pi",
+            "Pull - Ups",
+            "Rajinder",
+            "Santo"
+        ]
+    },
+    {
+        "timestamp": 1772536837.1196153,
+        "doc_id": "api_request",
+        "text_snippet": "Maud Dias , Talent Acquisition Manager , Financial services \n\n Reflection \u2013 Value Chain Analysis \n\n Challenge & Selection \n\n The first time I heard about Design Thinking was through my professional association , Norwegian Labor and Welfare Administration ( Bachhpan ) . The article stated the numerous benefits of using this new tool or   approach in Recruiting .   As a recruiter , I was first curious to understand how this new method would be   beneficial and took on this course . \n\n I recently a...",
+        "proposed": [
+            {
+                "entity": "Maud Dias",
+                "conf": 0.998858630657196
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.7335919737815857
+            },
+            {
+                "entity": "Norwegian Labor and Welfare Administration",
+                "conf": 0.9986745715141296
+            },
+            {
+                "entity": "Bachhpan",
+                "conf": 0.9935497641563416
+            },
+            {
+                "entity": "Value",
+                "conf": 0.6175925731658936
+            },
+            {
+                "entity": "Maud Dias",
+                "conf": 0.9005446434020996
+            },
+            {
+                "entity": "chain",
+                "conf": 0.49576741456985474
+            },
+            {
+                "entity": "Maud Dias",
+                "conf": 0.9958963394165039
+            },
+            {
+                "entity": "AT",
+                "conf": 0.511749804019928
+            },
+            {
+                "entity": "Maud Dias",
+                "conf": 0.998185396194458
+            },
+            {
+                "entity": "Maud Dias",
+                "conf": 0.998586118221283
+            },
+            {
+                "entity": "Gard",
+                "conf": 0.6231128573417664
+            },
+            {
+                "entity": "G",
+                "conf": 0.9179517030715942
+            }
+        ],
+        "final_redactions": [
+            "Recruiting",
+            "Garda",
+            "Maud Dias",
+            "Norwegian Labor and Welfare Administration",
+            "Bachhpan",
+            "Maud",
+            "Dia"
+        ]
+    },
+    {
+        "timestamp": 1772536837.3650806,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection - Storytelling \n\n Challenge \u00a0 \u00a0  Storytelling is the process of using fact and narrative to communicate something to your \u00a0  audience . Some stories are factual , and some are embellished or improvised in order to better \u00a0  explain the core message . \n\n Storytelling is an art form as old as time and has a place in every culture and society . Why ? \u00a0  Because stories are a universal language that everyone \u2014 regardless of dialect , hometown , or \u00a0  heritage \u2014 can understand . Stories st...",
+        "proposed": [
+            {
+                "entity": "Apple",
+                "conf": 0.9526543021202087
+            },
+            {
+                "entity": "Cinema",
+                "conf": 0.9295930862426758
+            },
+            {
+                "entity": "Section",
+                "conf": 0.8655346035957336
+            },
+            {
+                "entity": "IIT R",
+                "conf": 0.7808866500854492
+            }
+        ],
+        "final_redactions": [
+            "Storytelling",
+            "https://www.jackson.com/list/explorehomepage.htm"
+        ]
+    },
+    {
+        "timestamp": 1772536837.6055493,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking for Innovation \n\n of University of Virginia \n\n Final assignment by Zia \n\n Visualization Tool of Week 1 selected . \n\n What do have pizza and 5 G in common ? \n\n Challenge : I am working at a international telco in the cellular business . We provide connectivity for   our customers via cellular networks since decades . As the application and the requirements of   customers besides plain telephony and SMS has significantly changed to \u201c mobile Broadband \u201d with   Smartphones in the 4th...",
+        "proposed": [
+            {
+                "entity": "University of Virginia",
+                "conf": 0.9695825576782227
+            },
+            {
+                "entity": "Zia",
+                "conf": 0.5073161125183105
+            },
+            {
+                "entity": "Visual",
+                "conf": 0.48108533024787903
+            },
+            {
+                "entity": "Smart",
+                "conf": 0.9142575860023499
+            },
+            {
+                "entity": "Story",
+                "conf": 0.6869646906852722
+            },
+            {
+                "entity": "Z",
+                "conf": 0.9776149392127991
+            },
+            {
+                "entity": "New York",
+                "conf": 0.9991209506988525
+            },
+            {
+                "entity": "NY",
+                "conf": 0.9983313679695129
+            },
+            {
+                "entity": "U",
+                "conf": 0.8840139508247375
+            },
+            {
+                "entity": "NY",
+                "conf": 0.9984342455863953
+            },
+            {
+                "entity": "Thinking",
+                "conf": 0.6922692656517029
+            }
+        ],
+        "final_redactions": [
+            "Broadband",
+            "LTE",
+            "New York",
+            "COVID",
+            "University of Virginia"
+        ]
+    },
+    {
+        "timestamp": 1772536838.0679035,
+        "doc_id": "api_request",
+        "text_snippet": "STORY TELLING AS A TOOL FOR KNOWLEDGE TRANSFER TO COMMUNITY : A \n\n CASE STUDY OF COVID-19 \n\n Davide Carletti \n\n Vice Chancellor , Marias Gamesa , Ludhiana , India \n\n The Subject :   Pandemic of COVID-19 \n\n The novel corona virus and the Covid-19 disease it causes , have become the \n\n gravest public - health threat across the   globe , and on March 11 , 2020    the WHO \n\n declared it as a pandemic . Like in other nations , it has put pan India on the super alert \n\n mode . Almost all organizations...",
+        "proposed": [
+            {
+                "entity": "CO",
+                "conf": 0.9336476922035217
+            },
+            {
+                "entity": "Davide Carletti",
+                "conf": 0.9931899309158325
+            },
+            {
+                "entity": "Marias Gamesa",
+                "conf": 0.9645839333534241
+            },
+            {
+                "entity": "Ludhiana",
+                "conf": 0.9775733947753906
+            },
+            {
+                "entity": "India",
+                "conf": 0.9995966553688049
+            },
+            {
+                "entity": "Pande",
+                "conf": 0.6655557155609131
+            },
+            {
+                "entity": "CO",
+                "conf": 0.980307400226593
+            },
+            {
+                "entity": "Covid - 19",
+                "conf": 0.9174449443817139
+            },
+            {
+                "entity": "WHO",
+                "conf": 0.9980288147926331
+            },
+            {
+                "entity": "India",
+                "conf": 0.9287175536155701
+            },
+            {
+                "entity": "Higher Education Department",
+                "conf": 0.9930612444877625
+            },
+            {
+                "entity": "UGC",
+                "conf": 0.9974267482757568
+            },
+            {
+                "entity": "Marias Gamesa",
+                "conf": 0.9906345009803772
+            },
+            {
+                "entity": "CO",
+                "conf": 0.8941601514816284
+            },
+            {
+                "entity": "CO",
+                "conf": 0.9214439988136292
+            },
+            {
+                "entity": "Marias Gamesa",
+                "conf": 0.983178436756134
+            },
+            {
+                "entity": "WHO",
+                "conf": 0.9990118741989136
+            },
+            {
+                "entity": "Story",
+                "conf": 0.6476777791976929
+            },
+            {
+                "entity": "CO",
+                "conf": 0.9836511015892029
+            },
+            {
+                "entity": "Marias Gamesa",
+                "conf": 0.9912674427032471
+            },
+            {
+                "entity": "Google sheets",
+                "conf": 0.834476113319397
+            },
+            {
+                "entity": "Skype",
+                "conf": 0.6841529607772827
+            },
+            {
+                "entity": "Google Class Room",
+                "conf": 0.8232664465904236
+            },
+            {
+                "entity": "University",
+                "conf": 0.7410890460014343
+            },
+            {
+                "entity": "Skype",
+                "conf": 0.91259765625
+            },
+            {
+                "entity": "Google Class Room",
+                "conf": 0.9384362697601318
+            },
+            {
+                "entity": "ER",
+                "conf": 0.9112503528594971
+            },
+            {
+                "entity": "ERP",
+                "conf": 0.6839404702186584
+            },
+            {
+                "entity": "Marias Gamesa",
+                "conf": 0.8464288711547852
+            }
+        ],
+        "final_redactions": [
+            "Marias Gamesa",
+            "Ludhiana",
+            "India",
+            "COVID-19",
+            "Story Telling",
+            "WiFi",
+            "Davide Carletti",
+            "WHO",
+            "Higher Education Department",
+            "UGC",
+            "Google Class Room",
+            "Story",
+            "Telling",
+            "Davide",
+            "Carletti",
+            "2020"
+        ]
+    },
+    {
+        "timestamp": 1772536838.235188,
+        "doc_id": "api_request",
+        "text_snippet": "DESIGN THINKING ACTIVITY - 4 \n\n Project : Electric bikes \n\n Team Number :   05 \n\n Team members : Karan Patel \n\n TASK 1 - STORY TELLING IN PROBLEM FRAMING \n\n Given below are some of the problems expressed by the \n\n consumers \n\n 1 . E - bikes tend to have low resale value . \n\n 2 . Maintenance and repairs are too costly . \n\n 3 . Riding range remains low . \n\n 4 . Battery charge time is too long \n\n 5 . Battery has a rather short life span \n\n TASK 2 - STORY TELLING IN SOLUTION FRAMING \n\n Technical Det...",
+        "proposed": [
+            {
+                "entity": "Kara",
+                "conf": 0.9967828989028931
+            },
+            {
+                "entity": "E",
+                "conf": 0.9548748731613159
+            },
+            {
+                "entity": "E",
+                "conf": 0.983306348323822
+            },
+            {
+                "entity": "Bike",
+                "conf": 0.86346834897995
+            },
+            {
+                "entity": "Kara",
+                "conf": 0.9754599332809448
+            },
+            {
+                "entity": "E - Bike",
+                "conf": 0.9649777412414551
+            },
+            {
+                "entity": "E - Bike",
+                "conf": 0.9703426957130432
+            },
+            {
+                "entity": "E - Bike",
+                "conf": 0.9644917249679565
+            },
+            {
+                "entity": "E - Bike",
+                "conf": 0.9796093106269836
+            }
+        ],
+        "final_redactions": [
+            "Karan Patel",
+            "Kara",
+            "Karan",
+            "Patel"
+        ]
+    },
+    {
+        "timestamp": 1772536838.2869134,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking for Innovation       Name : Milton Desai \n\n The Design thinking assist us in expressing the person need for settling matter in person that   generates number of fresh suggestions in mental talks , and modifying a brand - new entrance to   original pattern or blueprints using opportunities which is a interconnection receive to the   difficulty keeping process particularly high pointed in business education colleges . Business   education college trainer feel DT in a new or step wi...",
+        "proposed": [
+            {
+                "entity": "Milton Desai",
+                "conf": 0.9863014817237854
+            },
+            {
+                "entity": "D",
+                "conf": 0.5793322920799255
+            },
+            {
+                "entity": "D",
+                "conf": 0.6414274573326111
+            },
+            {
+                "entity": "Milton Des",
+                "conf": 0.9478845596313477
+            }
+        ],
+        "final_redactions": [
+            "Milton Desai",
+            "Milton Des",
+            "Milton",
+            "Desai"
+        ]
+    },
+    {
+        "timestamp": 1772536838.5047946,
+        "doc_id": "api_request",
+        "text_snippet": "Final reflection on Design thinking . Agile method in traditional production . \n\n Challenge & Selection \n\n Learning launch looks like the most useful method for product development . Some approaches within   the method are used to get proper results . The concept of MVP ( minimal viable product ) migrates   from coding and Agile method to traditional concept design . Customer development with faster   hypothesis creation and testing saves a lot of time and energy and helps to get objective concl...",
+        "proposed": [
+            {
+                "entity": "A",
+                "conf": 0.6528878211975098
+            },
+            {
+                "entity": "D",
+                "conf": 0.7516027092933655
+            },
+            {
+                "entity": "The Famous Marketplace",
+                "conf": 0.5343173742294312
+            },
+            {
+                "entity": "Luis Ramadan",
+                "conf": 0.9969878196716309
+            },
+            {
+                "entity": "Luis Ramadan",
+                "conf": 0.9965253472328186
+            },
+            {
+                "entity": "Luis Rama",
+                "conf": 0.7501006126403809
+            }
+        ],
+        "final_redactions": [
+            "Insights",
+            "Luis Ramadan",
+            "Lui",
+            "Ramadan",
+            "2021"
+        ]
+    },
+    {
+        "timestamp": 1772536838.7650847,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 Mind Mapping \u2013 Cesar Rivera \n\n Challenge \n\n I\u00b4m an innovation and design thinking consultant working with a Government State in M\u00e9xico , one   of my objectives was to implement an Innovation Award to recognize all those brilliant ideas from   citizens about how to innovate government processes and services . A great challenge because you   need to make people think and understand what are those social problems , government programs   o services that could be redesign , innovated or ...",
+        "proposed": [
+            {
+                "entity": "Mind Map",
+                "conf": 0.8735195398330688
+            },
+            {
+                "entity": "Cesar Rivera Challenge",
+                "conf": 0.8768694996833801
+            },
+            {
+                "entity": "M\u00e9xico",
+                "conf": 0.9996678829193115
+            },
+            {
+                "entity": "Innovation Award",
+                "conf": 0.7722741961479187
+            },
+            {
+                "entity": "Mexico",
+                "conf": 0.9996345043182373
+            },
+            {
+                "entity": "Innovation Award",
+                "conf": 0.8306485414505005
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.7989804148674011
+            },
+            {
+                "entity": "Mind Mapping",
+                "conf": 0.7624201774597168
+            },
+            {
+                "entity": "Ce",
+                "conf": 0.9767197370529175
+            },
+            {
+                "entity": "Map",
+                "conf": 0.6412773728370667
+            },
+            {
+                "entity": "State Development Plan",
+                "conf": 0.9941474795341492
+            },
+            {
+                "entity": "State Development Plan",
+                "conf": 0.9959371089935303
+            },
+            {
+                "entity": "Map",
+                "conf": 0.7254891991615295
+            },
+            {
+                "entity": "Map",
+                "conf": 0.7157036066055298
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.856967568397522
+            },
+            {
+                "entity": "Thinking",
+                "conf": 0.5976257920265198
+            }
+        ],
+        "final_redactions": [
+            "M\u00e9xico",
+            "Mexico",
+            "State Development Plan"
+        ]
+    },
+    {
+        "timestamp": 1772536838.9968429,
+        "doc_id": "api_request",
+        "text_snippet": "COURSERA \u2013 University of Virginia , Darden School of Business - Design Thinking Assignment     Dharmendra Asiri     Washington , DC / March 8 , 2019     email djones@gmail.com   linkedIn https://www.linkedin.com/in/mmartinez       Challenge     Develop short marketing campaigns towards specific verticals with greater potential in terms of   demand generation by engaging different personas in those companies related to their   cybersecurity challenges .     Selection     After several internal di...",
+        "proposed": [
+            {
+                "entity": "University of Virginia",
+                "conf": 0.9158990979194641
+            },
+            {
+                "entity": "Darden",
+                "conf": 0.644420325756073
+            },
+            {
+                "entity": "School",
+                "conf": 0.5029597282409668
+            },
+            {
+                "entity": "of",
+                "conf": 0.6488108038902283
+            },
+            {
+                "entity": "Business",
+                "conf": 0.8646312355995178
+            },
+            {
+                "entity": "Dharmendra Asiri",
+                "conf": 0.9019882082939148
+            },
+            {
+                "entity": "Washington",
+                "conf": 0.9974486231803894
+            },
+            {
+                "entity": "DC",
+                "conf": 0.9251294136047363
+            },
+            {
+                "entity": "D",
+                "conf": 0.9264822006225586
+            },
+            {
+                "entity": "d",
+                "conf": 0.6450315117835999
+            },
+            {
+                "entity": "g",
+                "conf": 0.6171232461929321
+            },
+            {
+                "entity": "https",
+                "conf": 0.6238122582435608
+            },
+            {
+                "entity": "www",
+                "conf": 0.4777611792087555
+            },
+            {
+                "entity": "linked",
+                "conf": 0.5721225738525391
+            },
+            {
+                "entity": "mm",
+                "conf": 0.48357275128364563
+            },
+            {
+                "entity": "Dharmendra Asiri",
+                "conf": 0.9670819640159607
+            },
+            {
+                "entity": "D",
+                "conf": 0.7905599474906921
+            },
+            {
+                "entity": "As",
+                "conf": 0.6682896018028259
+            }
+        ],
+        "final_redactions": [
+            "Dharmendra Asiri",
+            "Washington",
+            "University of Virginia",
+            "Dharmendra",
+            "Asiri",
+            "2019",
+            "djones@gmail.com",
+            "https://www.linkedin.com/in/mmartinez"
+        ]
+    },
+    {
+        "timestamp": 1772536839.202961,
+        "doc_id": "api_request",
+        "text_snippet": "Daniel \n\n Reflection \u2013 Learning Launch \n\n Challenge \n\n Hello Thinkers ! I \u2019m a member of my organization \u2019s identification operations \n\n department and our challenge is to improve our flow of production processes in \n\n order to have greater use and yield for delivery to the customer . \n\n Our production format has a series of procedures , where we operate with a \n\n division of activities on a rotating basis , with approximately three operators . \n\n The work is limited , we must create a solution ...",
+        "proposed": [
+            {
+                "entity": "Daniel",
+                "conf": 0.7009623050689697
+            },
+            {
+                "entity": "Scrum",
+                "conf": 0.9707842469215393
+            },
+            {
+                "entity": "Scrum",
+                "conf": 0.9704605937004089
+            },
+            {
+                "entity": "Daniel",
+                "conf": 0.9807046055793762
+            }
+        ],
+        "final_redactions": []
+    },
+    {
+        "timestamp": 1772536839.553463,
+        "doc_id": "api_request",
+        "text_snippet": "REFLECTION \u2013 STORYTELLING \n\n Suhag Shah \n\n CHALLENGE     Today 's job market is highly competitive . The method of profiling is an age - old practice . But the prospects   of choosing the right candidate through this existing method is neither fool - proof nor authoritative . The   lacunae in today \u2019s profiling methodology includes issues like \u2013 lots to read ; dull self - descriptions ; no use of   infographics ; not real - time ; unverified data ; no universal rating system and not easily shara...",
+        "proposed": [
+            {
+                "entity": "Suha",
+                "conf": 0.7451126575469971
+            },
+            {
+                "entity": "Shah",
+                "conf": 0.8794742822647095
+            },
+            {
+                "entity": "Suha",
+                "conf": 0.6839966177940369
+            },
+            {
+                "entity": "Video R\u00e9sum\u00e9",
+                "conf": 0.7975286245346069
+            },
+            {
+                "entity": "Video",
+                "conf": 0.729907751083374
+            },
+            {
+                "entity": "Video R\u00e9sum\u00e9",
+                "conf": 0.7445809841156006
+            },
+            {
+                "entity": "Video R\u00e9sum\u00e9s",
+                "conf": 0.8442062139511108
+            },
+            {
+                "entity": "Visual",
+                "conf": 0.721572756767273
+            },
+            {
+                "entity": "Facebook",
+                "conf": 0.6969261169433594
+            },
+            {
+                "entity": "Twitter",
+                "conf": 0.57916659116745
+            },
+            {
+                "entity": "YouTube",
+                "conf": 0.7708611488342285
+            },
+            {
+                "entity": "Facebook",
+                "conf": 0.5511431097984314
+            },
+            {
+                "entity": "Twitter",
+                "conf": 0.6010932326316833
+            },
+            {
+                "entity": "YouTube",
+                "conf": 0.3818041682243347
+            },
+            {
+                "entity": "In",
+                "conf": 0.6025692224502563
+            },
+            {
+                "entity": "Link",
+                "conf": 0.5718639492988586
+            },
+            {
+                "entity": "Tik",
+                "conf": 0.517252504825592
+            },
+            {
+                "entity": "S",
+                "conf": 0.8126437067985535
+            },
+            {
+                "entity": "Score",
+                "conf": 0.49908602237701416
+            },
+            {
+                "entity": "MS Word",
+                "conf": 0.9935930967330933
+            }
+        ],
+        "final_redactions": [
+            "Video R\u00e9sum\u00e9s",
+            "Instagram",
+            "LinkedIn",
+            "Shah",
+            "MS Word",
+            "Video",
+            "https://youtu.be/rFD2lJuvace"
+        ]
+    },
+    {
+        "timestamp": 1772536839.7131305,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking    Eina Nazim \n\n Example Reflection \u2013 Story Telling      Challenge & Selection        I have used some of the tools which is described in Design thinking Modules including Visualization and   Journey Mapping and Customer co creation . In this reflection I would like to share my learnings with   respect to using Story telling as a tool . I am leading applications engineering organization in   semiconductor chip design electronic design automation , due to complex technical problem...",
+        "proposed": [
+            {
+                "entity": "Eina",
+                "conf": 0.8003077507019043
+            },
+            {
+                "entity": "Nazi",
+                "conf": 0.49862614274024963
+            },
+            {
+                "entity": "Ein",
+                "conf": 0.9214376211166382
+            }
+        ],
+        "final_redactions": [
+            "Journey Mapping",
+            "Story",
+            "Ein",
+            "Journey",
+            "Mapping"
+        ]
+    },
+    {
+        "timestamp": 1772536839.8513892,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 Storytelling \n\n Challenge & Selection \n\n Storytelling is today the main tools one haves to promote your brand , product or idea . For the last   10 years , I \u2019ve been involved in educational projects , specially focused on millennials . In order to   understand how to better communicate the information we wanted our audience to learn we asked   ourselves two questions : what millennials are interested in , and how they consume information . The   conclusions showed us that they are ...",
+        "proposed": [
+            {
+                "entity": "Ma",
+                "conf": 0.9992601275444031
+            },
+            {
+                "entity": "Ma",
+                "conf": 0.9640371799468994
+            },
+            {
+                "entity": "Pac",
+                "conf": 0.5329315066337585
+            }
+        ],
+        "final_redactions": [
+            "Mauro Pacheco",
+            "Mauro",
+            "Pacheco"
+        ]
+    },
+    {
+        "timestamp": 1772536840.1133726,
+        "doc_id": "api_request",
+        "text_snippet": "Date:14 - 09 - 2021 \n\n NEWS PAPER \n\n Project : News Paper Designing                                  Interviewer Name :    Gabriel Bravo          Interviewer PinNo :    860632713425   Interviewee Name :    Hlengiwe Swetha    Interviewee PinNo :   530670102508      Team : \u201c CSE AIML group 5 \u201d   530670102508 -   Tino Swetha   875673967537 -   SSRK Kasyap   860632713425 -   Tino Lopez    557349702179 -   Swetha Swetha    784372734211 -   Alex Swetha   054176622314 -   Alex Bravo ( Representative ) ...",
+        "proposed": [
+            {
+                "entity": "News Paper Designing",
+                "conf": 0.7659754157066345
+            },
+            {
+                "entity": "Gabriel Bravo",
+                "conf": 0.9993690848350525
+            },
+            {
+                "entity": "H",
+                "conf": 0.9932003617286682
+            },
+            {
+                "entity": "CSE AI",
+                "conf": 0.694664716720581
+            },
+            {
+                "entity": "Tin",
+                "conf": 0.9923865795135498
+            },
+            {
+                "entity": "SSRK",
+                "conf": 0.9633921384811401
+            },
+            {
+                "entity": "Kasyap",
+                "conf": 0.45356300473213196
+            },
+            {
+                "entity": "Tin",
+                "conf": 0.9948133230209351
+            },
+            {
+                "entity": "S",
+                "conf": 0.9965894222259521
+            },
+            {
+                "entity": "Alex Swetha",
+                "conf": 0.9222202897071838
+            },
+            {
+                "entity": "Alex Bravo",
+                "conf": 0.9993183016777039
+            },
+            {
+                "entity": "Tino Lopez",
+                "conf": 0.9020562171936035
+            },
+            {
+                "entity": "Hlengiwe",
+                "conf": 0.8547921776771545
+            },
+            {
+                "entity": "Jogipet",
+                "conf": 0.9894706606864929
+            },
+            {
+                "entity": "Sanga Reddy",
+                "conf": 0.984978973865509
+            },
+            {
+                "entity": "IIT MADRAS",
+                "conf": 0.9307069778442383
+            },
+            {
+                "entity": "H",
+                "conf": 0.8862789273262024
+            },
+            {
+                "entity": "Grassroots BPO",
+                "conf": 0.8314226865768433
+            },
+            {
+                "entity": "202",
+                "conf": 0.5638647079467773
+            },
+            {
+                "entity": "Gabriel Bravo",
+                "conf": 0.9840949773788452
+            },
+            {
+                "entity": "86",
+                "conf": 0.9172798991203308
+            },
+            {
+                "entity": "H",
+                "conf": 0.9747217297554016
+            },
+            {
+                "entity": "530",
+                "conf": 0.9103845357894897
+            },
+            {
+                "entity": "5",
+                "conf": 0.7775927186012268
+            },
+            {
+                "entity": "\u201d",
+                "conf": 0.5227961540222168
+            },
+            {
+                "entity": "530",
+                "conf": 0.9105212092399597
+            },
+            {
+                "entity": "Tin",
+                "conf": 0.9768825769424438
+            },
+            {
+                "entity": "87",
+                "conf": 0.8797705769538879
+            },
+            {
+                "entity": "86",
+                "conf": 0.8536273837089539
+            },
+            {
+                "entity": "Tin",
+                "conf": 0.9797438383102417
+            },
+            {
+                "entity": "55",
+                "conf": 0.8871703147888184
+            },
+            {
+                "entity": "S",
+                "conf": 0.977640688419342
+            },
+            {
+                "entity": "78",
+                "conf": 0.8716996312141418
+            },
+            {
+                "entity": "Alex Swe",
+                "conf": 0.8307427763938904
+            },
+            {
+                "entity": "05",
+                "conf": 0.898406445980072
+            },
+            {
+                "entity": "Alex Bravo",
+                "conf": 0.9833276867866516
+            },
+            {
+                "entity": ")",
+                "conf": 0.46703124046325684
+            },
+            {
+                "entity": "67",
+                "conf": 0.9037250280380249
+            },
+            {
+                "entity": "Tin",
+                "conf": 0.9759951233863831
+            },
+            {
+                "entity": "H",
+                "conf": 0.9641789793968201
+            }
+        ],
+        "final_redactions": [
+            "Gabriel Bravo",
+            "Interviewee",
+            "Hlengiwe Swetha",
+            "Swetha Swetha",
+            "Alex Swetha",
+            "Alex Bravo",
+            "Hlengiwe",
+            "Ignore",
+            "Tin",
+            "SSRK",
+            "Tino Lopez",
+            "Jogipet",
+            "Sanga Reddy",
+            "IIT MADRAS",
+            "Gabriel",
+            "Bravo",
+            "Swetha",
+            "Alex",
+            "Tino",
+            "Lopez",
+            "2021",
+            "860632713425",
+            "530670102508",
+            "530670102508",
+            "875673967537",
+            "860632713425",
+            "557349702179",
+            "784372734211",
+            "054176622314",
+            "674915248960",
+            "100"
+        ]
+    },
+    {
+        "timestamp": 1772536840.4497044,
+        "doc_id": "api_request",
+        "text_snippet": "Mohd Asim \n\n 1 . Challenge : Describe your challenge , including all relevant information . \n\n In my role as Customer Experience manager , I consult and support new product launches in our organisation . My role is to be \n\n the advocate for the customer and ensure solutions being delivered result in a positive experience for the customer . Recently I \n\n was brought in to assess a seemingly simple project . It involved working with a partner and leveraging their state of the art \n\n billing platfo...",
+        "proposed": [
+            {
+                "entity": "Mo",
+                "conf": 0.9984928369522095
+            },
+            {
+                "entity": "If",
+                "conf": 0.9374699592590332
+            },
+            {
+                "entity": "Is",
+                "conf": 0.9126325249671936
+            },
+            {
+                "entity": "George",
+                "conf": 0.9990886449813843
+            },
+            {
+                "entity": "Geoff",
+                "conf": 0.9987496137619019
+            },
+            {
+                "entity": "Mind Mapping",
+                "conf": 0.6284074187278748
+            },
+            {
+                "entity": "Creative Confidence",
+                "conf": 0.9540011882781982
+            },
+            {
+                "entity": "Tom",
+                "conf": 0.9900081157684326
+            },
+            {
+                "entity": "David Kelley",
+                "conf": 0.9820515513420105
+            },
+            {
+                "entity": "Mo",
+                "conf": 0.986089825630188
+            },
+            {
+                "entity": "Me",
+                "conf": 0.9120467305183411
+            },
+            {
+                "entity": "You",
+                "conf": 0.3994617760181427
+            },
+            {
+                "entity": "Health Story",
+                "conf": 0.8939838409423828
+            },
+            {
+                "entity": "Mind Mapping",
+                "conf": 0.9647578597068787
+            }
+        ],
+        "final_redactions": [
+            "George and Geoff",
+            "Tom & David Kelley",
+            "George",
+            "Geoff",
+            "Tom",
+            "David Kelley",
+            "David",
+            "Kelley"
+        ]
+    },
+    {
+        "timestamp": 1772536840.6667888,
+        "doc_id": "api_request",
+        "text_snippet": "Wilson Syafinaz     Dec 17 , 2020 \n\n -1- \n\n Patent filing workflow improvement ( Learning - Launch ) \n\n Challenge \n\n I am involved with coming up with innovative ideas with a team to streamline certain processes in my   organization . Our methodology utilizes brainstorming these new ideas in order to tackle challenges that   come up in the oil and gas industry . My scope of work takes me to deal with scientists , technicians , and   lawyers alike . The way of sending the message of my idea needs...",
+        "proposed": [
+            {
+                "entity": "Wilson Syafinaz",
+                "conf": 0.9765734672546387
+            },
+            {
+                "entity": "U",
+                "conf": 0.9681674242019653
+            },
+            {
+                "entity": "S. Patent and Trade Office",
+                "conf": 0.989126443862915
+            },
+            {
+                "entity": "USPTO",
+                "conf": 0.9874127507209778
+            },
+            {
+                "entity": "Wilson S",
+                "conf": 0.9738175868988037
+            },
+            {
+                "entity": "U",
+                "conf": 0.9832276105880737
+            },
+            {
+                "entity": "S. Patent and Trade Office",
+                "conf": 0.9872727990150452
+            },
+            {
+                "entity": "USPTO",
+                "conf": 0.9888688921928406
+            },
+            {
+                "entity": "Wilson",
+                "conf": 0.8395043015480042
+            },
+            {
+                "entity": "S",
+                "conf": 0.5150795578956604
+            }
+        ],
+        "final_redactions": [
+            "Wilson Syafinaz",
+            "U.S.",
+            "S. Patent and Trade Office",
+            "USPTO",
+            "Wilson S",
+            "Wilson",
+            "Syafinaz",
+            "2020",
+            "2020"
+        ]
+    },
+    {
+        "timestamp": 1772536840.9083009,
+        "doc_id": "api_request",
+        "text_snippet": "Madina Eno \n\n Course title- design Thinking for Innovation . \n\n Reflection \u2013 Mind Mapping \n\n Challenge \n\n Mind mapping is not a new subject to me as being a Project Management Professional I have used this   tool and has been using regularly in my professional work . During data gathering for new projects I had   applied the techniques of focus groups , brainstorming , mind mapping and intervening . The challenge I   received in my project to resolve the complaints of sub - contractors are not g...",
+        "proposed": [
+            {
+                "entity": "Madina",
+                "conf": 0.8204666376113892
+            },
+            {
+                "entity": "En",
+                "conf": 0.8001421689987183
+            },
+            {
+                "entity": "Map",
+                "conf": 0.7987897396087646
+            },
+            {
+                "entity": "Raaz Gupta",
+                "conf": 0.9574955105781555
+            },
+            {
+                "entity": "Mairan",
+                "conf": 0.9513041377067566
+            },
+            {
+                "entity": "Mad",
+                "conf": 0.8815706968307495
+            },
+            {
+                "entity": "En",
+                "conf": 0.8274073600769043
+            },
+            {
+                "entity": "Raaz Gupta",
+                "conf": 0.9510887265205383
+            },
+            {
+                "entity": "Darden University",
+                "conf": 0.9848716259002686
+            },
+            {
+                "entity": "JLT",
+                "conf": 0.7975891828536987
+            },
+            {
+                "entity": "George",
+                "conf": 0.998698353767395
+            },
+            {
+                "entity": "Jeff",
+                "conf": 0.9984074234962463
+            },
+            {
+                "entity": "Chris",
+                "conf": 0.9987488985061646
+            },
+            {
+                "entity": "SAP",
+                "conf": 0.6928940415382385
+            },
+            {
+                "entity": "Chris",
+                "conf": 0.9986960291862488
+            },
+            {
+                "entity": "SAP",
+                "conf": 0.8633990287780762
+            }
+        ],
+        "final_redactions": [
+            "Madina Eno",
+            "Raaz Gupta",
+            "Mairan",
+            "George",
+            "Jeff",
+            "Chris",
+            "Napkin",
+            "Mad",
+            "Darden University",
+            "Madina",
+            "Eno",
+            "Raaz",
+            "Gupta"
+        ]
+    },
+    {
+        "timestamp": 1772536840.9863296,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking : A Creative Approach to Problem-   Solving \n\n Name : Amparo \n\n Abstr\u00e4ct \n\n Design thinking understanding the human needs related to a problem , reframing the problem in   human - centric ways , creating many ideas in brainstorming sessions , and adopting a hands - on   approach to prototyping and testing - offers a complementary approach to the rational problem   soving metho ds typicaly emphasized in businesss schools . Business schol instructors may \n\n percelive design thinkin...",
+        "proposed": [
+            {
+                "entity": "Amparo A",
+                "conf": 0.7142078876495361
+            },
+            {
+                "entity": "Am",
+                "conf": 0.9754276871681213
+            }
+        ],
+        "final_redactions": []
+    },
+    {
+        "timestamp": 1772536841.1404424,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking \u2013 Edgar Lara \n\n 1.- CHALLENGE AND SELECTION : a local cafeteria located in the center of the city   considered among its development plans to expand its menu in order to increase its   profit margin , since it had remained stagnant during the last 2 years ; The idea of its   owners was to create a special menu for children as the cafeteria is located relatively   close to two study centers and additionally it was very common for parents to come to   the place with their children ...",
+        "proposed": [
+            {
+                "entity": "Edgar Lara",
+                "conf": 0.996368408203125
+            },
+            {
+                "entity": "Edgar Lara",
+                "conf": 0.9715569019317627
+            }
+        ],
+        "final_redactions": [
+            "Edgar Lara",
+            "Likewise",
+            "Edgar",
+            "Lara"
+        ]
+    },
+    {
+        "timestamp": 1772536841.304182,
+        "doc_id": "api_request",
+        "text_snippet": "DESIGN THINKING     Ahmed Saeed \n\n Ahmed Saeed \n\n DESIGN THINKING     Ahmed Saeed \n\n CHALLENGE \n\n When we talk about Argentina , we are talking about a country that is currently not doing well \n\n in economic terms . That is why when looking for solutions we must consider different \n\n scenarios . When a country does not manage its resources well , it is necessary to rethink what \n\n they are doing well and what they are doing wrong . \n\n So , let us go to a small town in Santiago del Estero called ...",
+        "proposed": [
+            {
+                "entity": "Ahmed Saeed",
+                "conf": 0.9653520584106445
+            },
+            {
+                "entity": "Ahmed Saeed",
+                "conf": 0.8560721278190613
+            },
+            {
+                "entity": "Ahmed Saeed",
+                "conf": 0.9738067984580994
+            },
+            {
+                "entity": "Argentina",
+                "conf": 0.9996656179428101
+            },
+            {
+                "entity": "Santiago del Estero",
+                "conf": 0.9986327886581421
+            },
+            {
+                "entity": "Vilmer",
+                "conf": 0.9183875918388367
+            },
+            {
+                "entity": "Ahmed Sa",
+                "conf": 0.9738239645957947
+            },
+            {
+                "entity": "Ahmed Saeed",
+                "conf": 0.8678358197212219
+            },
+            {
+                "entity": "Ahmed Sa",
+                "conf": 0.9785311222076416
+            },
+            {
+                "entity": "Wow Zone",
+                "conf": 0.6375715732574463
+            }
+        ],
+        "final_redactions": [
+            "Ahmed Saeed",
+            "Argentina",
+            "SELECTION",
+            "Santiago del Estero",
+            "Vilmer",
+            "Ahmed Sa",
+            "Ahmed",
+            "Saeed"
+        ]
+    },
+    {
+        "timestamp": 1772536841.4835613,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking for Innovation \n\n Peer - graded Assignment : Reflection \n\n Tool selected : Storytelling \n\n Joao Courtois \n\n Elements : \n\n 1 . Challenge : Describe your challenge , including all relevant information . \n\n The challenge proposed to me was to create a solution that would help customers of a tobacco   company to improve their health habits and inspire communication with the company . I could   propose any idea , but it needed to be structured and proved in some degree . \n\n 2 . Select...",
+        "proposed": [
+            {
+                "entity": "Story",
+                "conf": 0.7630615234375
+            },
+            {
+                "entity": "Joao Courtois",
+                "conf": 0.959331214427948
+            },
+            {
+                "entity": "Story",
+                "conf": 0.872394323348999
+            },
+            {
+                "entity": "Story",
+                "conf": 0.8699520230293274
+            },
+            {
+                "entity": "Story",
+                "conf": 0.844607949256897
+            },
+            {
+                "entity": "Jo",
+                "conf": 0.9552128911018372
+            },
+            {
+                "entity": "Storytel",
+                "conf": 0.745043158531189
+            },
+            {
+                "entity": "Storytelling",
+                "conf": 0.7823885083198547
+            }
+        ],
+        "final_redactions": [
+            "Storytelling",
+            "Joao Courtois",
+            "Joao",
+            "Courtoi"
+        ]
+    },
+    {
+        "timestamp": 1772536841.817847,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 The story of African rivers \n\n Manuel Vazquez \u2013 Director Innovation and Transformation at Wollega \n\n Challenge \n\n With 2500 staff in Africa , Wollega is one of the largest engineering consultants on the continent and the \n\n largest consultant in South Africa .   The company has completed its two year business plan which is \n\n focussed on building a future ready Wollega . This future ready strategy is built on three platforms of \n\n innovation , digital engineering and eminence . The ...",
+        "proposed": [
+            {
+                "entity": "African",
+                "conf": 0.9982176423072815
+            },
+            {
+                "entity": "Manuel Vazquez",
+                "conf": 0.9992619156837463
+            },
+            {
+                "entity": "Transformation",
+                "conf": 0.8162901401519775
+            },
+            {
+                "entity": "Wollega Challenge",
+                "conf": 0.9817562103271484
+            },
+            {
+                "entity": "Africa",
+                "conf": 0.9993866682052612
+            },
+            {
+                "entity": "Wollega",
+                "conf": 0.9939213991165161
+            },
+            {
+                "entity": "South Africa",
+                "conf": 0.9994324445724487
+            },
+            {
+                "entity": "Wollega",
+                "conf": 0.9944442510604858
+            },
+            {
+                "entity": "Wollega",
+                "conf": 0.9731293320655823
+            },
+            {
+                "entity": "Transformation",
+                "conf": 0.6600708365440369
+            },
+            {
+                "entity": "Africa",
+                "conf": 0.9635205268859863
+            },
+            {
+                "entity": "Manuel V",
+                "conf": 0.821601927280426
+            },
+            {
+                "entity": "Nairobi",
+                "conf": 0.9988721013069153
+            },
+            {
+                "entity": "African",
+                "conf": 0.9990756511688232
+            },
+            {
+                "entity": "African",
+                "conf": 0.9990081191062927
+            },
+            {
+                "entity": "African",
+                "conf": 0.998227059841156
+            },
+            {
+                "entity": "African",
+                "conf": 0.9990922212600708
+            },
+            {
+                "entity": "African",
+                "conf": 0.9990330934524536
+            },
+            {
+                "entity": "Africans",
+                "conf": 0.9982571005821228
+            },
+            {
+                "entity": "African",
+                "conf": 0.9984571933746338
+            },
+            {
+                "entity": "African",
+                "conf": 0.9988043308258057
+            },
+            {
+                "entity": "African",
+                "conf": 0.9988226294517517
+            },
+            {
+                "entity": "African",
+                "conf": 0.9981348514556885
+            },
+            {
+                "entity": "Africa",
+                "conf": 0.9993658661842346
+            },
+            {
+                "entity": "Western",
+                "conf": 0.9981697797775269
+            },
+            {
+                "entity": "Africa",
+                "conf": 0.99945467710495
+            },
+            {
+                "entity": "Africa",
+                "conf": 0.9992208480834961
+            },
+            {
+                "entity": "Africans",
+                "conf": 0.9972055554389954
+            }
+        ],
+        "final_redactions": [
+            "Manuel Vazquez",
+            "South Africa",
+            "Nairobi",
+            "Wollega Challenge",
+            "Africa",
+            "Manuel",
+            "Vazquez",
+            "2500"
+        ]
+    },
+    {
+        "timestamp": 1772536842.0447292,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking Innovation \u2013 Reflection on Learning Launch \n\n Mlungisi Msibi , 05.02.2021 \n\n Challenge \n\n As a DIGITAL FACTORY , the training and the development of skills , especially technical , of employees   remains among the main concerns of our company , knowing that the Digital IT domain is undergoing a   very important evolution at this time . \n\n However , the planning and selection of classic training courses is subject to many constraints linked   mainly to circumstances of the Covid-1...",
+        "proposed": [
+            {
+                "entity": "M",
+                "conf": 0.7128435969352722
+            },
+            {
+                "entity": "Ms",
+                "conf": 0.5684816241264343
+            },
+            {
+                "entity": "Digital IT",
+                "conf": 0.9045722484588623
+            },
+            {
+                "entity": "Covid - 19",
+                "conf": 0.9820547103881836
+            },
+            {
+                "entity": "Health",
+                "conf": 0.8266733884811401
+            },
+            {
+                "entity": "e",
+                "conf": 0.6616658568382263
+            },
+            {
+                "entity": "Coursera",
+                "conf": 0.7498592734336853
+            },
+            {
+                "entity": "Pluralsight",
+                "conf": 0.8072704672813416
+            },
+            {
+                "entity": "M",
+                "conf": 0.988351047039032
+            },
+            {
+                "entity": "Coursera",
+                "conf": 0.7405622601509094
+            },
+            {
+                "entity": "Pluralsight",
+                "conf": 0.9691668152809143
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.6624458432197571
+            },
+            {
+                "entity": "Coursera",
+                "conf": 0.701221227645874
+            },
+            {
+                "entity": "Dev",
+                "conf": 0.7104341983795166
+            },
+            {
+                "entity": "Pluralsight",
+                "conf": 0.970512866973877
+            },
+            {
+                "entity": "e",
+                "conf": 0.8299193978309631
+            },
+            {
+                "entity": "Learning",
+                "conf": 0.5341590642929077
+            },
+            {
+                "entity": "Coursera",
+                "conf": 0.654026985168457
+            }
+        ],
+        "final_redactions": [
+            "Insights",
+            "Covid - 19",
+            "05.02.2021"
+        ]
+    },
+    {
+        "timestamp": 1772536842.2616048,
+        "doc_id": "api_request",
+        "text_snippet": "Mind mapping     Challenge     Fatima Molina , an educated lady has been a full time home - maker for the last decade and   a half taking care of the house and studies of her children while her husband was the   sole breadwinner for the family . Before becoming a full time homemaker , Fatima used   to work in the Training department of cab hiring company where she was responsible   for training drivers .     With no support system like parents to take care of her three children , Fatima , beside...",
+        "proposed": [
+            {
+                "entity": "Fatima Molina",
+                "conf": 0.9848426580429077
+            },
+            {
+                "entity": "Fatima",
+                "conf": 0.9076582193374634
+            },
+            {
+                "entity": "Fatima",
+                "conf": 0.9081881642341614
+            },
+            {
+                "entity": "India",
+                "conf": 0.9992409944534302
+            },
+            {
+                "entity": "Fatima",
+                "conf": 0.9062587022781372
+            },
+            {
+                "entity": "Fatima",
+                "conf": 0.8872972726821899
+            },
+            {
+                "entity": "Fatima",
+                "conf": 0.9050028324127197
+            },
+            {
+                "entity": "Mind",
+                "conf": 0.5982593894004822
+            },
+            {
+                "entity": "Fatima",
+                "conf": 0.8832133412361145
+            },
+            {
+                "entity": "Fat",
+                "conf": 0.9144138097763062
+            },
+            {
+                "entity": "India",
+                "conf": 0.9900516867637634
+            },
+            {
+                "entity": "College",
+                "conf": 0.44082972407341003
+            },
+            {
+                "entity": "Fat",
+                "conf": 0.9977501034736633
+            }
+        ],
+        "final_redactions": [
+            "Fatima Molina",
+            "Fatima",
+            "Training",
+            "India",
+            "\u2022 Ads",
+            "Fat",
+            "Molina"
+        ]
+    },
+    {
+        "timestamp": 1772536842.404078,
+        "doc_id": "api_request",
+        "text_snippet": "EXAMPLE REFLECTION \u2013 FIXED MINDSET       Challenge :   I am Narayan Majid , I am going to tell you about fixed mindset . Before   completing the course , I had a completely fixed mindset . Now I have   changed my mindset because there is more unwanted challenge in fixed   mindset which I came to know from this course . There are those types of   challenge in fixed mindset . If you guys have fixed mindset then once think   about it .     Now I am challenging myself to change my mindset from fixed...",
+        "proposed": [
+            {
+                "entity": "Narayan Majid",
+                "conf": 0.9926269054412842
+            },
+            {
+                "entity": "Narayan Majid",
+                "conf": 0.892070472240448
+            }
+        ],
+        "final_redactions": [
+            "Narayan Majid",
+            "Approach",
+            "Narayan",
+            "Majid"
+        ]
+    },
+    {
+        "timestamp": 1772536842.7072604,
+        "doc_id": "api_request",
+        "text_snippet": "Jose Torres \n\n Tool : Learning Launch \n\n Challenge \n\n Business lead on the design and launch of the company \u2019s first mobile app . The company was an   insurance company specializing in Property & Casualty Insurance . The aim was to be first to the local   insurance market with a mobile app that can deliver basic services that would limit the need for the   customer to physically enter the office thus allowing the claim officers to focus on analyzing claim   submissions for faster processing time...",
+        "proposed": [
+            {
+                "entity": "Jose Torres",
+                "conf": 0.9971939325332642
+            },
+            {
+                "entity": "C",
+                "conf": 0.7562793493270874
+            },
+            {
+                "entity": "Jose Torres",
+                "conf": 0.9851986765861511
+            },
+            {
+                "entity": "Google",
+                "conf": 0.997147262096405
+            },
+            {
+                "entity": "Apple Stores",
+                "conf": 0.9920012354850769
+            },
+            {
+                "entity": "Apple",
+                "conf": 0.9950748085975647
+            },
+            {
+                "entity": "iOS",
+                "conf": 0.989988386631012
+            },
+            {
+                "entity": "Google",
+                "conf": 0.9956525564193726
+            },
+            {
+                "entity": "Android",
+                "conf": 0.9933660626411438
+            },
+            {
+                "entity": "IOS",
+                "conf": 0.9371261596679688
+            },
+            {
+                "entity": "Android",
+                "conf": 0.9893826246261597
+            },
+            {
+                "entity": "Google",
+                "conf": 0.7065566778182983
+            },
+            {
+                "entity": "Maps",
+                "conf": 0.6304346323013306
+            }
+        ],
+        "final_redactions": [
+            "Jose Torres",
+            "Google",
+            "Apple Stores",
+            "iOS",
+            "Android",
+            "IOS",
+            "Jose",
+            "Torre"
+        ]
+    },
+    {
+        "timestamp": 1772536843.0261235,
+        "doc_id": "api_request",
+        "text_snippet": "Visualization \u2013 Reflection \n\n Author : Florian Richter \n\n Date : January 2th , 2007 \n\n Challenge & Selection \n\n I first used the visualization tool during a Design Sprint on solving a business problem of a start - up rental   scooter company . The scooter company had operational costs higher than revenues , still small user   basis and were running out of time on funding . They have been looking into some business ideas on how   to decrease their operational costs through optimization of process...",
+        "proposed": [
+            {
+                "entity": "Flor",
+                "conf": 0.9870520830154419
+            },
+            {
+                "entity": "Facebook",
+                "conf": 0.38704949617385864
+            },
+            {
+                "entity": "Youtube",
+                "conf": 0.6625760197639465
+            },
+            {
+                "entity": "F",
+                "conf": 0.9679982662200928
+            },
+            {
+                "entity": "PowerPoint",
+                "conf": 0.9518296718597412
+            },
+            {
+                "entity": "Post",
+                "conf": 0.6395614743232727
+            },
+            {
+                "entity": "Sharp",
+                "conf": 0.9105458855628967
+            },
+            {
+                "entity": "Facebook",
+                "conf": 0.8376250267028809
+            },
+            {
+                "entity": "App Story",
+                "conf": 0.9509739875793457
+            },
+            {
+                "entity": "Google Play",
+                "conf": 0.89493727684021
+            },
+            {
+                "entity": "App Store",
+                "conf": 0.8943688869476318
+            },
+            {
+                "entity": "iPhone",
+                "conf": 0.8810780048370361
+            }
+        ],
+        "final_redactions": [
+            "the App Story",
+            "App Store",
+            "Flor",
+            "App Story",
+            "App",
+            "Story",
+            "2007"
+        ]
+    },
+    {
+        "timestamp": 1772536843.1650586,
+        "doc_id": "api_request",
+        "text_snippet": "NGO funding - Storytelling     Challenge & Selection     My name is David Gonzalez , i work as a business consultant in Rio / Brazil . In my   free time i support , as financial manager , a NGO that uses rugby as a tool to   develop kids in a poor community ( Favela ) in Rio de Janeiro . We teach them   how important is to respect each other , teamwork , and all of those values rugby   bring to us .     Presently , we are providing training and instructions to almost 130 kids , boys   and girls ...",
+        "proposed": [
+            {
+                "entity": "David Gonzalez",
+                "conf": 0.9969555139541626
+            },
+            {
+                "entity": "Rio",
+                "conf": 0.9995703101158142
+            },
+            {
+                "entity": "Brazil",
+                "conf": 0.9994866847991943
+            },
+            {
+                "entity": "Favela",
+                "conf": 0.9938341975212097
+            },
+            {
+                "entity": "Rio de Janeiro",
+                "conf": 0.9993915557861328
+            },
+            {
+                "entity": "Morro do Castro",
+                "conf": 0.9952129125595093
+            },
+            {
+                "entity": "Rio",
+                "conf": 0.9994505047798157
+            },
+            {
+                "entity": "Matheus",
+                "conf": 0.9290584325790405
+            },
+            {
+                "entity": "Morro do Castro",
+                "conf": 0.9970980286598206
+            },
+            {
+                "entity": "Rio de Janeiro",
+                "conf": 0.9990613460540771
+            },
+            {
+                "entity": "Matheus",
+                "conf": 0.9043463468551636
+            },
+            {
+                "entity": "David Gonzalez",
+                "conf": 0.9709227085113525
+            },
+            {
+                "entity": "Math",
+                "conf": 0.6010659337043762
+            },
+            {
+                "entity": "Matheus",
+                "conf": 0.9260128736495972
+            },
+            {
+                "entity": "Matheus",
+                "conf": 0.9669625759124756
+            },
+            {
+                "entity": "Matheus",
+                "conf": 0.9709604978561401
+            },
+            {
+                "entity": "Math",
+                "conf": 0.6591581106185913
+            },
+            {
+                "entity": "Math",
+                "conf": 0.5953758358955383
+            },
+            {
+                "entity": "Math",
+                "conf": 0.6646323204040527
+            }
+        ],
+        "final_redactions": [
+            "David Gonzalez",
+            "Rio",
+            "Brazil",
+            "Favela",
+            "Rio de Janeiro",
+            "Castro",
+            "Matheus",
+            "Morro",
+            "Morro do Castro",
+            "David",
+            "Gonzalez",
+            "130",
+            "2015"
+        ]
+    },
+    {
+        "timestamp": 1772536843.3139718,
+        "doc_id": "api_request",
+        "text_snippet": "Simon Nkabinde : Company General Use \n\n Storytelling \n\n Challenge and Selection : \n\n The first tool that I used was storytelling in order to bring language learning alive and create   participatory and immersive experience that allows the listeners to enjoy and entertain in a way . \n\n Diagnostic imaging procedures are cutting - edge technology , but at the same time they are an   unpleasant experience for patients especially children . I remember when I saw a little girl who was   continuously c...",
+        "proposed": [
+            {
+                "entity": "Simon Nkabinde",
+                "conf": 0.9215103983879089
+            },
+            {
+                "entity": "Simon N",
+                "conf": 0.8235993385314941
+            }
+        ],
+        "final_redactions": [
+            "Simon Nkabinde",
+            "Approach",
+            "Simon",
+            "Nkabinde"
+        ]
+    },
+    {
+        "timestamp": 1772536843.5352378,
+        "doc_id": "api_request",
+        "text_snippet": "Design Thinking for Innovation - coursera \n\n Assignment \n\n Asim Sunar . \n\n 12/5/2017 \n\n Introducing the Reflection Activity \n\n During a study abroad experience , students worked on a collaborative design project with international   peers . The purpose of this design project was to provide students with meaningful international   experiences . At three points in the project , students reflected on their experience working in a cross- cultural team . The purpose of these reflection activities was...",
+        "proposed": [
+            {
+                "entity": "Asim Sunar",
+                "conf": 0.937853217124939
+            },
+            {
+                "entity": "Thomas John",
+                "conf": 0.9990842938423157
+            },
+            {
+                "entity": "Chike Smith",
+                "conf": 0.978796660900116
+            },
+            {
+                "entity": "Re",
+                "conf": 0.5221730470657349
+            },
+            {
+                "entity": "Re",
+                "conf": 0.6117205023765564
+            },
+            {
+                "entity": "As",
+                "conf": 0.9748026728630066
+            },
+            {
+                "entity": "Thomas John",
+                "conf": 0.9987696409225464
+            },
+            {
+                "entity": "Chi",
+                "conf": 0.9989713430404663
+            },
+            {
+                "entity": "Des",
+                "conf": 0.5336138606071472
+            },
+            {
+                "entity": "Des",
+                "conf": 0.6197558641433716
+            },
+            {
+                "entity": "Red",
+                "conf": 0.937564492225647
+            },
+            {
+                "entity": "Red",
+                "conf": 0.9276686310768127
+            },
+            {
+                "entity": "Re",
+                "conf": 0.673231840133667
+            },
+            {
+                "entity": "Swedish",
+                "conf": 0.9976305961608887
+            }
+        ],
+        "final_redactions": [
+            "Thomas John",
+            "Dialogic Reflection",
+            "Asim Sunar",
+            "Chike Smith",
+            "Chi",
+            "Thoma",
+            "John",
+            "Dialogic",
+            "Reflection",
+            "Asim",
+            "Sunar",
+            "Chike",
+            "Smith",
+            "2017"
+        ]
+    },
+    {
+        "timestamp": 1772536843.7540252,
+        "doc_id": "api_request",
+        "text_snippet": "Vicki Mahi \n\n Reflection - Storytelling for IT Solutions \n\n Challenge I work in a division of new IT back office solutions , such as connectivity , data and application integration , quality and master data management platforms . My group works in parallel with a group that works front solutions , where the majority of the customers interlocutors are not technical , they are managers of customer facing applications , such as CRM , eCommerce , Marketing Campaigns Platforms , among others . Likewi...",
+        "proposed": [
+            {
+                "entity": "Vic",
+                "conf": 0.9970954656600952
+            },
+            {
+                "entity": "IT Solutions",
+                "conf": 0.6525790691375732
+            },
+            {
+                "entity": "CR",
+                "conf": 0.7161068320274353
+            },
+            {
+                "entity": "e",
+                "conf": 0.7019791603088379
+            },
+            {
+                "entity": "Vic",
+                "conf": 0.9864852428436279
+            },
+            {
+                "entity": "Vic",
+                "conf": 0.9968716502189636
+            },
+            {
+                "entity": "What Is",
+                "conf": 0.7995072603225708
+            },
+            {
+                "entity": "What Is",
+                "conf": 0.9750797748565674
+            },
+            {
+                "entity": "What If",
+                "conf": 0.9501640796661377
+            },
+            {
+                "entity": "Design Thinking",
+                "conf": 0.9235026240348816
+            }
+        ],
+        "final_redactions": [
+            "Vicki Mahi",
+            "Vic",
+            "Design Thinking",
+            "Vicki",
+            "Mahi"
+        ]
+    },
+    {
+        "timestamp": 1772536843.970942,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 visualization \n\n Challenge       & selection \n\n When I started my new job as a business developer at e - Durable two months ago , I had a basic understanding of the cable industry , but no real customer experience . My first client was the owner of a restaurant who had just sent us the termination letter because our competitors ' offers were 68 % cheaper AND he was upset by the fact that our cable company had decided to no longer support his ISDN telephones , forcing him to replace ...",
+        "proposed": [
+            {
+                "entity": "e - Durable",
+                "conf": 0.887226939201355
+            },
+            {
+                "entity": "IS",
+                "conf": 0.911817193031311
+            },
+            {
+                "entity": "IS",
+                "conf": 0.8543234467506409
+            },
+            {
+                "entity": "IP",
+                "conf": 0.7095534801483154
+            },
+            {
+                "entity": "IP",
+                "conf": 0.9091762900352478
+            },
+            {
+                "entity": "IP",
+                "conf": 0.890311062335968
+            },
+            {
+                "entity": "IP",
+                "conf": 0.5416430234909058
+            },
+            {
+                "entity": "Visualization Thinking",
+                "conf": 0.8199305534362793
+            },
+            {
+                "entity": "Olivier Collet",
+                "conf": 0.9816007018089294
+            },
+            {
+                "entity": "V",
+                "conf": 0.7819157242774963
+            },
+            {
+                "entity": "Thinking",
+                "conf": 0.8251031041145325
+            },
+            {
+                "entity": "Olivier Collet",
+                "conf": 0.9907695651054382
+            },
+            {
+                "entity": "David Bello",
+                "conf": 0.9350412487983704
+            },
+            {
+                "entity": "Mr Bello",
+                "conf": 0.8949229121208191
+            },
+            {
+                "entity": "David Bello",
+                "conf": 0.9167444705963135
+            },
+            {
+                "entity": "Mr Bello",
+                "conf": 0.7986500263214111
+            },
+            {
+                "entity": "Central",
+                "conf": 0.47977375984191895
+            },
+            {
+                "entity": "Mr Bello",
+                "conf": 0.7860917448997498
+            },
+            {
+                "entity": "Olivier",
+                "conf": 0.5038053393363953
+            },
+            {
+                "entity": "David Bello",
+                "conf": 0.937550961971283
+            },
+            {
+                "entity": "Bello",
+                "conf": 0.8746211528778076
+            },
+            {
+                "entity": "Central",
+                "conf": 0.8284957408905029
+            },
+            {
+                "entity": "Bello",
+                "conf": 0.8867719173431396
+            },
+            {
+                "entity": "David Bell",
+                "conf": 0.785152792930603
+            },
+            {
+                "entity": "Bell",
+                "conf": 0.5050121545791626
+            }
+        ],
+        "final_redactions": [
+            "Appendix",
+            "David Bello",
+            "Bello",
+            "Soft",
+            "Backup",
+            "Olivier Collet",
+            "David",
+            "Olivier",
+            "Collet"
+        ]
+    },
+    {
+        "timestamp": 1772536844.241878,
+        "doc_id": "api_request",
+        "text_snippet": "Daycare Electronic Notification Board by Abul Polidori . \n\n Challenge and Selection   WICASA requested the creation of an Electronic Notification Board to   besides broadcast emails to a mail list also provide the same notifications on a web page accessible by   the parents and caretakers . \n\n The team ( One - man Team , in the case I ) saw an opportunity to reframe the request and expand the   scope creating a new form of communication between parents and daycare staff , not only caretakers ,  ...",
+        "proposed": [
+            {
+                "entity": "Electronic Notification",
+                "conf": 0.5598176121711731
+            },
+            {
+                "entity": "Board",
+                "conf": 0.8166893720626831
+            },
+            {
+                "entity": "Abul Polidori",
+                "conf": 0.9886466860771179
+            },
+            {
+                "entity": "WICASA",
+                "conf": 0.9949958324432373
+            },
+            {
+                "entity": "Electronic",
+                "conf": 0.802174985408783
+            },
+            {
+                "entity": "Not",
+                "conf": 0.5137854814529419
+            },
+            {
+                "entity": "Board",
+                "conf": 0.8378509283065796
+            },
+            {
+                "entity": "Abu",
+                "conf": 0.9362660050392151
+            },
+            {
+                "entity": "Electronic Notification Board",
+                "conf": 0.9899182915687561
+            }
+        ],
+        "final_redactions": [
+            "Abul Polidori",
+            "Challenge",
+            "Storytelling",
+            "Approach",
+            "WICASA",
+            "Abu",
+            "Electronic Notification Board",
+            "Abul",
+            "Polidori"
+        ]
+    },
+    {
+        "timestamp": 1772536844.4975462,
+        "doc_id": "api_request",
+        "text_snippet": "Reflection \u2013 Learning Launch \n\n Challenge : \n\n The challenge was to launch and scale a business portfolio in a space which had no clear   adjacency to our current business line . This was to diversify revenue streams from the   current business , which had little scope of innovation and growth and , as per the BCG   growth / share matrix1 , was indeed a cash cow . \n\n Post ideation and evaluation of multiple alternatives , we decided to venture into creating a   platform for Hyperautomation of bu...",
+        "proposed": [],
+        "final_redactions": [
+            "https://www.hall.biz/wp-contenthome.html"
+        ]
+    }
+]

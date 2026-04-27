@@ -1,0 +1,138 @@
+{
+  "image_id": "b6beadfe-0b7e-4858-a425-880c1ec48f28",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_b6beadfe-0b7e-4858-a425-880c1ec48f28.png",
+  "image_width": 886,
+  "image_height": 590,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 152,
+        "norm_xmin": 22,
+        "norm_ymax": 491,
+        "norm_xmax": 203
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "KS23571558",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 733,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 683,
+        "norm_ymax": 194,
+        "norm_xmax": 827
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "05/19/1954",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 230,
+        "norm_xmin": 683,
+        "norm_ymax": 250,
+        "norm_xmax": 790
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Mcgrath, Samantha",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 372,
+        "ymax": 116,
+        "norm_ymin": 171,
+        "norm_xmin": 220,
+        "norm_ymax": 196,
+        "norm_xmax": 419
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "292 MAKAYLA LOCKS APT. 618",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 377,
+        "ymax": 150,
+        "norm_ymin": 238,
+        "norm_xmin": 220,
+        "norm_ymax": 254,
+        "norm_xmax": 425
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NEW DALETOWN, KS 72649",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 362,
+        "ymax": 166,
+        "norm_ymin": 264,
+        "norm_xmin": 220,
+        "norm_ymax": 281,
+        "norm_xmax": 408
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "63956137230817214364",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 850,
+        "norm_xmin": 22,
+        "norm_ymax": 891,
+        "norm_xmax": 158
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Samantha Mcgrath",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 516,
+        "norm_xmin": 22,
+        "norm_ymax": 584,
+        "norm_xmax": 203
+      },
+      "field_type": "signature"
+    }
+  ]
+}

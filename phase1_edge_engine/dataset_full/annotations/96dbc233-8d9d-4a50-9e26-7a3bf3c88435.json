@@ -1,0 +1,138 @@
+{
+  "image_id": "96dbc233-8d9d-4a50-9e26-7a3bf3c88435",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_96dbc233-8d9d-4a50-9e26-7a3bf3c88435.png",
+  "image_width": 896,
+  "image_height": 604,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 149,
+        "norm_xmin": 22,
+        "norm_ymax": 480,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "UT74034471",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 733,
+        "ymax": 115,
+        "norm_ymin": 168,
+        "norm_xmin": 676,
+        "norm_ymax": 190,
+        "norm_xmax": 818
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/09/2004",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 225,
+        "norm_xmin": 676,
+        "norm_ymax": 245,
+        "norm_xmax": 781
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Singh, Chelsea",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 329,
+        "ymax": 116,
+        "norm_ymin": 167,
+        "norm_xmin": 217,
+        "norm_ymax": 192,
+        "norm_xmax": 367
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "341 JOHN PLAZA",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 296,
+        "ymax": 152,
+        "norm_ymin": 233,
+        "norm_xmin": 217,
+        "norm_ymax": 251,
+        "norm_xmax": 330
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "EAST AARONMOUTH, UT 78333",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 384,
+        "ymax": 166,
+        "norm_ymin": 258,
+        "norm_xmin": 217,
+        "norm_ymax": 274,
+        "norm_xmax": 428
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "93618324210249947174",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 831,
+        "norm_xmin": 22,
+        "norm_ymax": 870,
+        "norm_xmax": 156
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Chelsea Singh",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 504,
+        "norm_xmin": 22,
+        "norm_ymax": 571,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "image_id": "8542b04d-0d27-467b-ab5a-7dad162f34df",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_8542b04d-0d27-467b-ab5a-7dad162f34df.png",
+  "image_width": 866,
+  "image_height": 554,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 162,
+        "norm_xmin": 23,
+        "norm_ymax": 523,
+        "norm_xmax": 207
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI40514770",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 184,
+        "norm_xmin": 699,
+        "norm_ymax": 207,
+        "norm_xmax": 839
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "02/06/1973",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 245,
+        "norm_xmin": 699,
+        "norm_ymax": 267,
+        "norm_xmax": 808
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Branch, Christina",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 351,
+        "ymax": 115,
+        "norm_ymin": 182,
+        "norm_xmin": 225,
+        "norm_ymax": 207,
+        "norm_xmax": 405
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "0335 KATHERINE WALK",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 336,
+        "ymax": 150,
+        "norm_ymin": 254,
+        "norm_xmin": 225,
+        "norm_ymax": 270,
+        "norm_xmax": 387
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "NORTH JODIBURY, RI 19857",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 360,
+        "ymax": 167,
+        "norm_ymin": 281,
+        "norm_xmin": 225,
+        "norm_ymax": 301,
+        "norm_xmax": 415
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "33884879206980420439",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 906,
+        "norm_xmin": 23,
+        "norm_ymax": 949,
+        "norm_xmax": 161
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Christina Branch",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 550,
+        "norm_xmin": 23,
+        "norm_ymax": 622,
+        "norm_xmax": 207
+      },
+      "field_type": "signature"
+    }
+  ]
+}

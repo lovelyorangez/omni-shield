@@ -1,0 +1,138 @@
+{
+  "image_id": "ba38977b-9146-4197-b3e7-7908249bc4c8",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_ba38977b-9146-4197-b3e7-7908249bc4c8.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "WHITEHEAD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 289,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 337
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Jordan",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 226,
+        "ymax": 146,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 270,
+        "norm_xmax": 264
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "08.12.1971",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "WHITE9462265JO967",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 358,
+        "ymax": 266,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 492,
+        "norm_xmax": 418
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "Studio 1\nHilary Wall, Port Danielport",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 356,
+        "ymax": 318,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 588,
+        "norm_xmax": 415
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "CM2 8FJ",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 232,
+        "ymax": 327,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 605,
+        "norm_xmax": 271
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Jordan WHITEHEAD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

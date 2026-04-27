@@ -1,0 +1,51 @@
+{
+  "RouterAgent": {
+    "mean_s": 0.037,
+    "min_s": 0.0,
+    "max_s": 0.22,
+    "n": 146
+  },
+  "LayoutAgent": {
+    "mean_s": 4.786,
+    "min_s": 0.7,
+    "max_s": 7.64,
+    "n": 146
+  },
+  "OCRAgent": {
+    "mean_s": 2.73,
+    "min_s": 1.93,
+    "max_s": 3.5,
+    "n": 146
+  },
+  "TextPIIAgent": {
+    "mean_s": 0.935,
+    "min_s": 0.24,
+    "max_s": 14.25,
+    "n": 146
+  },
+  "ContextAgent": {
+    "mean_s": 0.067,
+    "min_s": 0.0,
+    "max_s": 0.53,
+    "n": 146
+  },
+  "BBRefinerAgent": {
+    "mean_s": 0.0,
+    "min_s": 0.0,
+    "max_s": 0.0,
+    "n": 146
+  },
+  "CriticAgent": {
+    "mean_s": 1.847,
+    "min_s": 0.0,
+    "max_s": 14.7,
+    "n": 146
+  },
+  "RedactionAgent": {
+    "mean_s": 0.021,
+    "min_s": 0.01,
+    "max_s": 0.04,
+    "n": 146
+  },
+  "total_mean_s": 10.423
+}

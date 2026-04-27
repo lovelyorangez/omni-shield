@@ -1,0 +1,138 @@
+{
+  "image_id": "50305fb4-8fe2-4ebb-ad6c-5ceedeba7465",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_50305fb4-8fe2-4ebb-ad6c-5ceedeba7465.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "WHITEHEAD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 289,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 337
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Diana",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 221,
+        "ymax": 143,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 264,
+        "norm_xmax": 258
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "29.04.1970",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "WHITE9213865DI989",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 358,
+        "ymax": 263,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 487,
+        "norm_xmax": 418
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "6 George View, Jasonton",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 339,
+        "ymax": 300,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 555,
+        "norm_xmax": 396
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "W96 1LJ",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 233,
+        "ymax": 327,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 605,
+        "norm_xmax": 272
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Diana WHITEHEAD",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

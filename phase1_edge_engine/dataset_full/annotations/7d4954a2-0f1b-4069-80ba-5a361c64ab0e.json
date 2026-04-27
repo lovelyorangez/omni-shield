@@ -1,0 +1,138 @@
+{
+  "image_id": "7d4954a2-0f1b-4069-80ba-5a361c64ab0e",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_7d4954a2-0f1b-4069-80ba-5a361c64ab0e.png",
+  "image_width": 888,
+  "image_height": 592,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 152,
+        "norm_xmin": 22,
+        "norm_ymax": 489,
+        "norm_xmax": 202
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "MI71649328",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 731,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 682,
+        "norm_ymax": 194,
+        "norm_xmax": 823
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "01/17/2000",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 229,
+        "norm_xmin": 682,
+        "norm_ymax": 250,
+        "norm_xmax": 788
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Parks, Shannon",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 336,
+        "ymax": 115,
+        "norm_ymin": 170,
+        "norm_xmin": 219,
+        "norm_ymax": 194,
+        "norm_xmax": 378
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "305 CYNTHIA WELL APT. 573",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 367,
+        "ymax": 150,
+        "norm_ymin": 238,
+        "norm_xmin": 219,
+        "norm_ymax": 253,
+        "norm_xmax": 413
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "ROSSLAND, MI 56588",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 325,
+        "ymax": 166,
+        "norm_ymin": 263,
+        "norm_xmin": 219,
+        "norm_ymax": 280,
+        "norm_xmax": 365
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "80271487271783332116",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 847,
+        "norm_xmin": 22,
+        "norm_ymax": 888,
+        "norm_xmax": 157
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Shannon Parks",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 515,
+        "norm_xmin": 22,
+        "norm_ymax": 582,
+        "norm_xmax": 202
+      },
+      "field_type": "signature"
+    }
+  ]
+}

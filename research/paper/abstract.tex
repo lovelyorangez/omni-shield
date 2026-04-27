@@ -1,0 +1,48 @@
+\begin{abstract}
+
+Redacting personally identifiable information from
+identity documents is a legally mandated but technically
+unsolved problem: existing cloud-based tools transmit
+sensitive documents to third-party servers, text-only
+systems cannot detect visual PII such as signatures
+and face photographs, and no existing tool produces a
+verifiable audit record of what was redacted.
+
+We present \textbf{Omni-Shield}, a local-first
+multi-modal PII redaction system that runs entirely
+on consumer-grade edge hardware (NVIDIA RTX~5060,
+8\,GB VRAM) without transmitting documents off-device.
+The system combines a nine-agent orchestration
+pipeline, a QLoRA fine-tuned vision-language model
+(Qwen2-VL-2B-Instruct), EasyOCR, and YOLOv8 face
+detection to process six document formats --- images,
+PDFs, audio recordings, plain text, Word documents,
+and presentations --- with 10.42\,s mean latency for
+image redaction and under 50\,ms for text and PDF.
+
+Every redaction produces a blockchain-anchored audit
+record with a salted SHA-256 commitment that prevents
+document linkability, accompanied by a Groth16/BN128
+zero-knowledge proof that attests to redaction
+correctness without revealing the redacted values.
+Blockchain verification completes in 1.2\,ms;
+ZK proof generation takes 20.3\,s and executes
+fully asynchronously, imposing no latency penalty
+on the user-facing workflow.
+
+We evaluate against Microsoft Presidio and Llama~3~8B
+on 150 annotated synthetic identity cards and 19 real
+specimen documents.
+Omni-Shield achieves Macro F1\,=\,0.187 on synthetic
+and 0.269 on real documents, and is the only system
+to detect signatures (F1\,=\,0.870) and face
+photographs (F1\,=\,0.905 on real documents) ---
+categories that text-only systems cannot address
+regardless of model scale.
+An ablation study confirms that visual detection
+agents account for 54\% of total F1, validating
+the multi-modal design over text-only alternatives.
+The fine-tuned adapter, evaluation harness, and
+annotated test dataset are released for reproducibility.
+
+\end{abstract}

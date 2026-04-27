@@ -1,0 +1,138 @@
+{
+  "image_id": "dde3b2b6-0753-4ec2-b43b-38ad8077de72",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_dde3b2b6-0753-4ec2-b43b-38ad8077de72.png",
+  "image_width": 872,
+  "image_height": 564,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 159,
+        "norm_xmin": 22,
+        "norm_ymax": 514,
+        "norm_xmax": 206
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "RI61701595",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 180,
+        "norm_xmin": 694,
+        "norm_ymax": 203,
+        "norm_xmax": 833
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "07/30/1991",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 241,
+        "norm_xmin": 694,
+        "norm_ymax": 262,
+        "norm_xmax": 802
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Summers, Ronald",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 354,
+        "ymax": 115,
+        "norm_ymin": 179,
+        "norm_xmin": 223,
+        "norm_ymax": 203,
+        "norm_xmax": 405
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "442 BRYAN PARK",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 297,
+        "ymax": 150,
+        "norm_ymin": 250,
+        "norm_xmin": 223,
+        "norm_ymax": 265,
+        "norm_xmax": 340
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "RAVENTON, RI 99545",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 322,
+        "ymax": 166,
+        "norm_ymin": 276,
+        "norm_xmin": 223,
+        "norm_ymax": 294,
+        "norm_xmax": 369
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "19457575747583392056",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 890,
+        "norm_xmin": 22,
+        "norm_ymax": 932,
+        "norm_xmax": 160
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Ronald Summers",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 540,
+        "norm_xmin": 22,
+        "norm_ymax": 611,
+        "norm_xmax": 206
+      },
+      "field_type": "signature"
+    }
+  ]
+}

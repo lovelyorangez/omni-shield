@@ -1,7 +1,25 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: true,
+    hmr: false,
+    cors: true,
+    allowedHosts: [
+      'omni-shield.org',
+      'www.omni-shield.org',
+      'localhost',
+      '127.0.0.1',
+    ],
+    proxy: {
+      '/api': { target: 'http://localhost:8000', changeOrigin: true },
+      '/redact': { target: 'http://localhost:8000', changeOrigin: true },
+      '/verify': { target: 'http://localhost:8000', changeOrigin: true },
+      '/download': { target: 'http://localhost:8000', changeOrigin: true },
+    },
+  }
 })

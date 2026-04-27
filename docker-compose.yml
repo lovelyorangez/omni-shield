@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  omni-shield:
+    build: .
+    ports:
+      - "8000:8000"
+      - "7545:7545"
+    volumes:
+      - ./phase1_edge_engine/redacted_output:/app/phase1_edge_engine/redacted_output
+      - ./phase1_edge_engine/downloads:/app/phase1_edge_engine/downloads
+      - ./ganache-db:/app/ganache-db
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    restart: unless-stopped

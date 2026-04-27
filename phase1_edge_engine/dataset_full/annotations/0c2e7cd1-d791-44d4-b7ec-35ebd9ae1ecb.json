@@ -1,0 +1,138 @@
+{
+  "image_id": "0c2e7cd1-d791-44d4-b7ec-35ebd9ae1ecb",
+  "country": "UK",
+  "card_type": "Driving Licence",
+  "image_path": "dataset_full/images/uk_dl_0c2e7cd1-d791-44d4-b7ec-35ebd9ae1ecb.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 80,
+        "xmax": 165,
+        "ymax": 265,
+        "norm_ymin": 148,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 192
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Surname",
+      "value": "THOMAS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 102,
+        "xmax": 258,
+        "ymax": 114,
+        "norm_ymin": 188,
+        "norm_xmin": 210,
+        "norm_ymax": 211,
+        "norm_xmax": 301
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "First names",
+      "value": "Josh",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 132,
+        "xmax": 210,
+        "ymax": 146,
+        "norm_ymin": 244,
+        "norm_xmin": 210,
+        "norm_ymax": 270,
+        "norm_xmax": 245
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of birth",
+      "value": "27.10.1997",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 162,
+        "xmax": 260,
+        "ymax": 172,
+        "norm_ymin": 300,
+        "norm_xmin": 210,
+        "norm_ymax": 318,
+        "norm_xmax": 303
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Licence No.",
+      "value": "THOMA9024471JO946",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 252,
+        "xmax": 365,
+        "ymax": 266,
+        "norm_ymin": 466,
+        "norm_xmin": 210,
+        "norm_ymax": 492,
+        "norm_xmax": 426
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "30 Martyn Park, Simpsonville",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 287,
+        "xmax": 369,
+        "ymax": 301,
+        "norm_ymin": 531,
+        "norm_xmin": 210,
+        "norm_ymax": 557,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Postcode",
+      "value": "N9 9SL",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 315,
+        "xmax": 227,
+        "ymax": 324,
+        "norm_ymin": 583,
+        "norm_xmin": 210,
+        "norm_ymax": 600,
+        "norm_xmax": 265
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Signature",
+      "value": "Josh THOMAS",
+      "is_pii": true,
+      "box": {
+        "xmin": 180,
+        "ymin": 330,
+        "xmax": 400,
+        "ymax": 375,
+        "norm_ymin": 611,
+        "norm_xmin": 210,
+        "norm_ymax": 694,
+        "norm_xmax": 467
+      },
+      "field_type": "signature"
+    }
+  ]
+}

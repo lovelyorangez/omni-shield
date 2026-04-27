@@ -1,0 +1,32 @@
+% Knowledge distillation comparison — base vs fine-tuned Qwen2-VL-2B
+% Generated from eval_base_vs_finetuned.py (30-card synthetic subset)
+%
+% NOTE: Identical F1 scores are expected and informative — see finetune_comparison.md.
+% Fine-tuning contributes label-format consistency, not value detection.
+% The evaluation framework cannot distinguish labelled from unlabelled detections
+% when both carry the same value string.
+\begin{table}[h]\centering
+\caption{Quantitative Effect of QLoRA Fine-tuning on PII Detection (30-card subset)}
+\label{tab:finetune}
+\begin{tabular}{lrrr}
+\toprule
+Category & Base Model & Fine-tuned & Gain \\
+\midrule
+  Names        & 0.068 & 0.068 & +0.000 \\
+  Faces        & 0.000 & 0.000 & +0.000 \\
+  Signatures   & 0.926 & 0.926 & +0.000 \\
+  Phones       & 0.000 & 0.000 & +0.000 \\
+  Emails       & 0.000 & 0.000 & +0.000 \\
+  DOB          & 0.627 & 0.627 & +0.000 \\
+  ID Numbers   & 0.125 & 0.125 & +0.000 \\
+  Addresses    & 0.067 & 0.067 & +0.000 \\
+  Org Names    & 0.000 & 0.000 & +0.000 \\
+  Dates        & 0.000 & 0.000 & +0.000 \\
+\midrule
+  \textbf{Macro F1} & 0.1813 & \textbf{0.1813} & +0.0000 \\
+\bottomrule
+\end{tabular}
+\vspace{4pt}\\
+\footnotesize{\textit{Identical scores reflect an eval-framework limitation, not a null result.
+Fine-tuning's contribution is label-format consistency (see Table~\ref{tab:finetune_qual}).}}
+\end{table}

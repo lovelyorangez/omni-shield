@@ -1,0 +1,138 @@
+{
+  "image_id": "1157e936-9cf8-4cb9-8ae9-89f3975c1dd8",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_1157e936-9cf8-4cb9-8ae9-89f3975c1dd8.png",
+  "image_width": 864,
+  "image_height": 554,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 162,
+        "norm_xmin": 23,
+        "norm_ymax": 523,
+        "norm_xmax": 208
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "TN21267969",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 734,
+        "ymax": 115,
+        "norm_ymin": 184,
+        "norm_xmin": 701,
+        "norm_ymax": 207,
+        "norm_xmax": 849
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "12/24/1986",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 245,
+        "norm_xmin": 701,
+        "norm_ymax": 267,
+        "norm_xmax": 810
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Gardner, Patrick",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 341,
+        "ymax": 115,
+        "norm_ymin": 182,
+        "norm_xmin": 225,
+        "norm_ymax": 207,
+        "norm_xmax": 394
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "38656 KEITH WELL APT. 201",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 365,
+        "ymax": 150,
+        "norm_ymin": 254,
+        "norm_xmin": 225,
+        "norm_ymax": 270,
+        "norm_xmax": 422
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "EAST JENNIFERFORT, TN 57744",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 382,
+        "ymax": 167,
+        "norm_ymin": 281,
+        "norm_xmin": 225,
+        "norm_ymax": 301,
+        "norm_xmax": 442
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "87653269097384689500",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 906,
+        "norm_xmin": 23,
+        "norm_ymax": 949,
+        "norm_xmax": 162
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Patrick Gardner",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 550,
+        "norm_xmin": 23,
+        "norm_ymax": 622,
+        "norm_xmax": 208
+      },
+      "field_type": "signature"
+    }
+  ]
+}

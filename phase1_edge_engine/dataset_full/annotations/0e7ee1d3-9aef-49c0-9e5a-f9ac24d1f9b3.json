@@ -1,0 +1,138 @@
+{
+  "image_id": "0e7ee1d3-9aef-49c0-9e5a-f9ac24d1f9b3",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_0e7ee1d3-9aef-49c0-9e5a-f9ac24d1f9b3.png",
+  "image_width": 900,
+  "image_height": 612,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 147,
+        "norm_xmin": 22,
+        "norm_ymax": 473,
+        "norm_xmax": 200
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NC52129328",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 735,
+        "ymax": 115,
+        "norm_ymin": 166,
+        "norm_xmin": 673,
+        "norm_ymax": 187,
+        "norm_xmax": 816
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "03/22/1959",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 222,
+        "norm_xmin": 673,
+        "norm_ymax": 241,
+        "norm_xmax": 777
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Larsen, James",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 321,
+        "ymax": 116,
+        "norm_ymin": 165,
+        "norm_xmin": 216,
+        "norm_ymax": 189,
+        "norm_xmax": 356
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "58929 LAUREN LAKE",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 320,
+        "ymax": 150,
+        "norm_ymin": 230,
+        "norm_xmin": 216,
+        "norm_ymax": 245,
+        "norm_xmax": 355
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "LAKE STACEY, NC 22357",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 342,
+        "ymax": 166,
+        "norm_ymin": 254,
+        "norm_xmin": 216,
+        "norm_ymax": 271,
+        "norm_xmax": 380
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "34064686775240148439",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 820,
+        "norm_xmin": 22,
+        "norm_ymax": 859,
+        "norm_xmax": 155
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "James Larsen",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 498,
+        "norm_xmin": 22,
+        "norm_ymax": 563,
+        "norm_xmax": 200
+      },
+      "field_type": "signature"
+    }
+  ]
+}

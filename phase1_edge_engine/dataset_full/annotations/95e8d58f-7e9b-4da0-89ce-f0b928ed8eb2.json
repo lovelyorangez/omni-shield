@@ -1,0 +1,138 @@
+{
+  "image_id": "95e8d58f-7e9b-4da0-89ce-f0b928ed8eb2",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_95e8d58f-7e9b-4da0-89ce-f0b928ed8eb2.png",
+  "image_width": 866,
+  "image_height": 556,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 161,
+        "norm_xmin": 23,
+        "norm_ymax": 521,
+        "norm_xmax": 207
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "CT40943533",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 732,
+        "ymax": 115,
+        "norm_ymin": 183,
+        "norm_xmin": 699,
+        "norm_ymax": 206,
+        "norm_xmax": 845
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "03/26/1978",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 244,
+        "norm_xmin": 699,
+        "norm_ymax": 266,
+        "norm_xmax": 808
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Oconnor, Sandra",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 344,
+        "ymax": 115,
+        "norm_ymin": 181,
+        "norm_xmin": 225,
+        "norm_ymax": 206,
+        "norm_xmax": 397
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "18230 HUGHES WAY APT. 040",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 374,
+        "ymax": 150,
+        "norm_ymin": 253,
+        "norm_xmin": 225,
+        "norm_ymax": 269,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "WEST STEVENTON, CT 68734",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 372,
+        "ymax": 166,
+        "norm_ymin": 280,
+        "norm_xmin": 225,
+        "norm_ymax": 298,
+        "norm_xmax": 429
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "71422410988138585424",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 902,
+        "norm_xmin": 23,
+        "norm_ymax": 946,
+        "norm_xmax": 161
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Sandra Oconnor",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 548,
+        "norm_xmin": 23,
+        "norm_ymax": 620,
+        "norm_xmax": 207
+      },
+      "field_type": "signature"
+    }
+  ]
+}

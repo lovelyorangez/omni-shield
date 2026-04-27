@@ -1,0 +1,138 @@
+{
+  "image_id": "7bdbe556-83ce-4bd2-88d2-8a5026aa6d59",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_7bdbe556-83ce-4bd2-88d2-8a5026aa6d59.png",
+  "image_width": 890,
+  "image_height": 596,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 151,
+        "norm_xmin": 22,
+        "norm_ymax": 486,
+        "norm_xmax": 202
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "NM80512927",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 739,
+        "ymax": 115,
+        "norm_ymin": 171,
+        "norm_xmin": 680,
+        "norm_ymax": 192,
+        "norm_xmax": 830
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "08/15/1994",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 228,
+        "norm_xmin": 680,
+        "norm_ymax": 248,
+        "norm_xmax": 786
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Jones, David",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 308,
+        "ymax": 116,
+        "norm_ymin": 169,
+        "norm_xmin": 219,
+        "norm_ymax": 194,
+        "norm_xmax": 346
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "94440 CASSANDRA RAMP APT. 752",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 405,
+        "ymax": 150,
+        "norm_ymin": 236,
+        "norm_xmin": 219,
+        "norm_ymax": 251,
+        "norm_xmax": 455
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "KIMBERLYBURY, NM 24200",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 354,
+        "ymax": 166,
+        "norm_ymin": 261,
+        "norm_xmin": 219,
+        "norm_ymax": 278,
+        "norm_xmax": 397
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "63723950410276747836",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 842,
+        "norm_xmin": 22,
+        "norm_ymax": 882,
+        "norm_xmax": 157
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "David Jones",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 511,
+        "norm_xmin": 22,
+        "norm_ymax": 578,
+        "norm_xmax": 202
+      },
+      "field_type": "signature"
+    }
+  ]
+}

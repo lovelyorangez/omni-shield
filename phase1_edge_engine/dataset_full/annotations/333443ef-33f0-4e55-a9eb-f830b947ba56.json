@@ -1,0 +1,138 @@
+{
+  "image_id": "333443ef-33f0-4e55-a9eb-f830b947ba56",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_333443ef-33f0-4e55-a9eb-f830b947ba56.png",
+  "image_width": 888,
+  "image_height": 590,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 152,
+        "norm_xmin": 22,
+        "norm_ymax": 491,
+        "norm_xmax": 202
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "ID94337504",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 728,
+        "ymax": 115,
+        "norm_ymin": 172,
+        "norm_xmin": 682,
+        "norm_ymax": 194,
+        "norm_xmax": 819
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "08/16/1993",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 230,
+        "norm_xmin": 682,
+        "norm_ymax": 250,
+        "norm_xmax": 788
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Thompson, Michael",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 369,
+        "ymax": 116,
+        "norm_ymin": 171,
+        "norm_xmin": 219,
+        "norm_ymax": 196,
+        "norm_xmax": 415
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "75370 JULIA TRACE",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 311,
+        "ymax": 152,
+        "norm_ymin": 238,
+        "norm_xmin": 219,
+        "norm_ymax": 257,
+        "norm_xmax": 350
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "ERINSTAD, ID 12293",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 317,
+        "ymax": 166,
+        "norm_ymin": 264,
+        "norm_xmin": 219,
+        "norm_ymax": 281,
+        "norm_xmax": 356
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "93036149872839992192",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 850,
+        "norm_xmin": 22,
+        "norm_ymax": 891,
+        "norm_xmax": 157
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Michael Thompson",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 516,
+        "norm_xmin": 22,
+        "norm_ymax": 584,
+        "norm_xmax": 202
+      },
+      "field_type": "signature"
+    }
+  ]
+}

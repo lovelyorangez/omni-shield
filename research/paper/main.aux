@@ -1,0 +1,221 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{I}{1}{Introduction}{section.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Omni-Shield system architecture. All AI inference runs on the local GPU inside a single-device boundary (outer box) --- no document leaves the device at any point. The FastAPI backend orchestrates four models within a 3.31\,GB VRAM peak budget. Every redaction is anchored to the local Ganache Ethereum node and written to an \texttt  {.audit.json} sidecar.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:architecture}{{1}{2}{Omni-Shield system architecture. All AI inference runs on the local GPU inside a single-device boundary (outer box) --- no document leaves the device at any point. The FastAPI backend orchestrates four models within a 3.31\,GB VRAM peak budget. Every redaction is anchored to the local Ganache Ethereum node and written to an \texttt {.audit.json} sidecar}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The nine-agent image redaction pipeline with mean latency per agent. The LayoutAgent (orange) invokes the fine-tuned Qwen2-VL-2B VLM and accounts for 46\% of total pipeline time (4.79\,s of 10.42\,s mean). All agents communicate exclusively through the shared \texttt  {AgentState} object (dashed box), enabling ablation of any agent without pipeline redesign.}}{2}{figure.2}\protected@file@percent }
+\newlabel{fig:pipeline}{{2}{2}{The nine-agent image redaction pipeline with mean latency per agent. The LayoutAgent (orange) invokes the fine-tuned Qwen2-VL-2B VLM and accounts for 46\% of total pipeline time (4.79\,s of 10.42\,s mean). All agents communicate exclusively through the shared \texttt {AgentState} object (dashed box), enabling ablation of any agent without pipeline redesign}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Per-agent latency breakdown for image redaction (warm models). LayoutAgent (VLM inference) dominates at 4.79\,s (46\% of total). OCRAgent and CriticAgent together account for a further 44\%.}}{2}{figure.3}\protected@file@percent }
+\newlabel{fig:timings}{{3}{2}{Per-agent latency breakdown for image redaction (warm models). LayoutAgent (VLM inference) dominates at 4.79\,s (46\% of total). OCRAgent and CriticAgent together account for a further 44\%}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces PII category confusion matrix across 150 test documents. False negatives (655) dominate over false positives (175), indicating that recall, not precision, is the primary failure mode. Date of Birth exhibits the highest false positive rate (61 FP against 65 TP).}}{2}{figure.4}\protected@file@percent }
+\newlabel{fig:confusion}{{4}{2}{PII category confusion matrix across 150 test documents. False negatives (655) dominate over false positives (175), indicating that recall, not precision, is the primary failure mode. Date of Birth exhibits the highest false positive rate (61 FP against 65 TP)}{figure.4}{}}
+\citation{presidio2020}
+\citation{aws_comprehend}
+\citation{google_dlp}
+\citation{berg2020}
+\citation{stubbs2015}
+\citation{manor2019}
+\citation{ferrando2022}
+\citation{xu2020layoutlm}
+\citation{xu2021layoutlmv2,huang2022layoutlmv3}
+\citation{kim2022donut}
+\citation{mathew2021docvqa}
+\citation{openai2023gpt4v}
+\citation{team2023gemini}
+\citation{bai2023qwenvl}
+\citation{wang2024qwen2vl}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{3}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{II}{3}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}PII Detection and Document Redaction}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Vision-Language Models for Document Understanding}{3}{subsection.2.2}\protected@file@percent }
+\citation{hinton2015distilling}
+\citation{sanh2019distilbert}
+\citation{li2022explaining}
+\citation{taori2023alpaca,wang2023selfinstruct}
+\citation{hu2022lora}
+\citation{dettmers2023qlora}
+\citation{anthropic2024}
+\citation{ouyang2022instructgpt}
+\citation{xia2017medshare}
+\citation{Casino2019}
+\citation{zhu2019blockchain}
+\citation{buterin2014ethereum}
+\citation{polygon2021}
+\citation{goldwasser1989knowledge}
+\citation{groth2016size}
+\citation{eberhardt2018zokrates}
+\citation{camenisch1997efficient}
+\citation{cortier2019belenios}
+\citation{sasson2014zerocash}
+\citation{wu2023autogen}
+\citation{hong2023metagpt}
+\citation{madaan2023selfrefine}
+\citation{redmon2016yolo}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Knowledge Distillation for Specialised Domains}{4}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-D}}Blockchain Audit Trails for Data Processing}{4}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-E}}Zero-Knowledge Proofs for Privacy}{4}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-F}}Multi-Agent Systems for Document Processing}{4}{subsection.2.6}\protected@file@percent }
+\citation{dettmers2023qlora}
+\@writefile{toc}{\contentsline {section}{\numberline {III}System Architecture}{5}{section.3}\protected@file@percent }
+\newlabel{sec:architecture}{{III}{5}{System Architecture}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}System Overview}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}AgentState: Shared Data Structure}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}The Nine-Agent Image Pipeline}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces AgentState fields written by each agent}}{5}{table.1}\protected@file@percent }
+\newlabel{tab:agentstate}{{I}{5}{AgentState fields written by each agent}{table.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0a}RouterAgent (0.04\,s mean).}{5}{paragraph.3.3.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0b}DeskewAgent.}{5}{paragraph.3.3.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0c}OCRAgent (2.73\,s mean).}{5}{paragraph.3.3.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0d}LayoutAgent (4.79\,s mean).}{5}{paragraph.3.3.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0e}TextPIIAgent (0.94\,s mean).}{5}{paragraph.3.3.0.5}\protected@file@percent }
+\citation{radford2022whisper}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0f}ContextAgent (0.07\,s mean).}{6}{paragraph.3.3.0.6}\protected@file@percent }
+\newlabel{sec:bbrefiner}{{\mbox  {III-C}0g}{6}{BBRefinerAgent (< 1\,ms mean)}{paragraph.3.3.0.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0g}BBRefinerAgent (< 1\,ms mean).}{6}{paragraph.3.3.0.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0h}CriticAgent (1.85\,s mean).}{6}{paragraph.3.3.0.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-C}0i}RedactionAgent (0.02\,s mean).}{6}{paragraph.3.3.0.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Multi-Modal Routing}{6}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:multimodal}{{\mbox  {III-D}}{6}{Multi-Modal Routing}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-D}0a}PDF.}{6}{paragraph.3.4.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-D}0b}Audio.}{6}{paragraph.3.4.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-D}0c}Plain text.}{6}{paragraph.3.4.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-D}0d}Word documents (.docx).}{6}{paragraph.3.4.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-D}0e}Presentations (.pptx).}{6}{paragraph.3.4.0.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Selective Redaction and User Controls}{6}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Knowledge Distillation for Document PII Detection}{6}{section.4}\protected@file@percent }
+\newlabel{sec:knowledge_distillation}{{IV}{6}{Knowledge Distillation for Document PII Detection}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Synthetic Dataset Generation}{6}{subsection.4.1}\protected@file@percent }
+\citation{taori2023alpaca}
+\citation{dettmers2023qlora}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {IV-A}0a}Card layout.}{7}{paragraph.4.1.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {IV-A}0b}Locale-appropriate PII.}{7}{paragraph.4.1.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {IV-A}0c}Held-out test set.}{7}{paragraph.4.1.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Teacher Labelling via the Claude API}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}QLoRA Fine-tuning}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}What Fine-tuning Contributes}{7}{subsection.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Quantitative Effect of QLoRA Fine-tuning on PII Detection (30-card subset)}}{7}{table.2}\protected@file@percent }
+\newlabel{tab:finetune}{{II}{7}{Quantitative Effect of QLoRA Fine-tuning on PII Detection (30-card subset)}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Qualitative Effect of QLoRA Fine-tuning on VLM Output Format}}{8}{table.3}\protected@file@percent }
+\newlabel{tab:finetune_qual}{{III}{8}{Qualitative Effect of QLoRA Fine-tuning on VLM Output Format}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Synthetic-to-Real Transfer}{8}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Evaluation}{8}{section.5}\protected@file@percent }
+\newlabel{sec:evaluation}{{V}{8}{Evaluation}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Evaluation Protocol}{8}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {V-A}0a}Test set.}{8}{paragraph.5.1.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {V-A}0b}Metrics.}{8}{paragraph.5.1.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {V-A}0c}Evaluation framework.}{8}{paragraph.5.1.0.3}\protected@file@percent }
+\citation{presidio2020}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Baseline Systems}{9}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Main Results}{9}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {V-C}0a}The case for multi-modal redaction.}{9}{paragraph.5.3.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Agent Ablation Study}{9}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:ablation}{{\mbox  {V-D}}{9}{Agent Ablation Study}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Error Analysis}{9}{subsection.5.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces PII Detection — Comparison with Baselines}}{10}{table.4}\protected@file@percent }
+\newlabel{tab:comparison}{{IV}{10}{PII Detection — Comparison with Baselines}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Agent Ablation Study — Macro F1}}{10}{table.5}\protected@file@percent }
+\newlabel{tab:ablation}{{V}{10}{Agent Ablation Study — Macro F1}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-F}}Per-Agent Latency}{10}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-G}}Per-Country Analysis}{10}{subsection.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-H}}Real Specimen Evaluation}{10}{subsection.5.8}\protected@file@percent }
+\newlabel{sec:real_eval}{{\mbox  {V-H}}{10}{Real Specimen Evaluation}{subsection.5.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Mean Redaction Latency by Document Format}}{11}{table.6}\protected@file@percent }
+\newlabel{tab:latency}{{VI}{11}{Mean Redaction Latency by Document Format}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Synthetic vs Real Specimen Document Evaluation}}{11}{table.7}\protected@file@percent }
+\newlabel{tab:real_eval}{{VII}{11}{Synthetic vs Real Specimen Document Evaluation}{table.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Cryptographic Audit Trail}{11}{section.6}\protected@file@percent }
+\newlabel{sec:crypto}{{VI}{11}{Cryptographic Audit Trail}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Blockchain Audit Ledger}{11}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-A}0a}Smart contract design.}{11}{paragraph.6.1.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-A}0b}Salted hash commitment.}{11}{paragraph.6.1.0.2}\protected@file@percent }
+\newlabel{eq:salt}{{1}{11}{Salted hash commitment}{equation.6.1}{}}
+\citation{ganache}
+\citation{polygon2021}
+\citation{eberhardt2018zokrates}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-A}0c}Deployment and gas cost.}{12}{paragraph.6.1.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-A}0d}Verification performance.}{12}{paragraph.6.1.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Zero-Knowledge Proof of Redaction}{12}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-B}0a}Motivation.}{12}{paragraph.6.2.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-B}0b}Circuit design.}{12}{paragraph.6.2.0.2}\protected@file@percent }
+\newlabel{eq:commitment}{{2}{12}{Circuit design}{equation.6.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-B}0c}Proof generation and verification.}{12}{paragraph.6.2.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-B}0d}Trusted setup.}{12}{paragraph.6.2.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-B}0e}What the proof guarantees.}{12}{paragraph.6.2.0.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Audit Record Structure}{12}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Threat Model}{13}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VI-D}0a}Out of scope.}{13}{paragraph.6.4.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Energy and Cost Analysis}{13}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Limitations and Future Work}{13}{section.7}\protected@file@percent }
+\newlabel{sec:limitations}{{VII}{13}{Limitations and Future Work}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Detection Limitations}{13}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-A}0a}Low recall on ID numbers (F1=0.096).}{13}{paragraph.7.1.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-A}0b}Face detection not captured in evaluation.}{13}{paragraph.7.1.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-A}0c}Address detection precision (P=0.113).}{13}{paragraph.7.1.0.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Energy Consumption and Carbon Footprint per 1,000 Redactions}}{14}{table.8}\protected@file@percent }
+\newlabel{tab:energy}{{VIII}{14}{Energy Consumption and Carbon Footprint per 1,000 Redactions}{table.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-A}0d}Date of birth over-firing (FP rate 48\%).}{14}{paragraph.7.1.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Dataset and Generalization Limitations}{14}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-B}0a}Synthetic-only training and evaluation data.}{14}{paragraph.7.2.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-B}0b}Six-country English-centric evaluation.}{14}{paragraph.7.2.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-B}0c}Per-country performance variance.}{14}{paragraph.7.2.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Cryptographic Limitations}{14}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-C}0a}Hash linkability without salting.}{14}{paragraph.7.3.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-C}0b}Ethereum mainnet gas cost.}{14}{paragraph.7.3.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-C}0c}ZK-SNARK proof generation latency.}{14}{paragraph.7.3.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-C}0d}Trusted setup requirement.}{14}{paragraph.7.3.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}System and Deployment Limitations}{15}{subsection.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-D}0a}Single-document processing only.}{15}{paragraph.7.4.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-D}0b}Audio redaction replaces speech with silence.}{15}{paragraph.7.4.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {VII-D}0c}Local deployment only.}{15}{paragraph.7.4.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Future Work Summary}{15}{subsection.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{15}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{VIII}{15}{Conclusion}{section.8}{}}
+\bibstyle{IEEEtran}
+\bibdata{references}
+\bibcite{presidio2020}{1}
+\bibcite{aws_comprehend}{2}
+\bibcite{google_dlp}{3}
+\bibcite{berg2020}{4}
+\bibcite{stubbs2015}{5}
+\bibcite{manor2019}{6}
+\bibcite{ferrando2022}{7}
+\bibcite{xu2020layoutlm}{8}
+\bibcite{xu2021layoutlmv2}{9}
+\bibcite{huang2022layoutlmv3}{10}
+\bibcite{kim2022donut}{11}
+\bibcite{mathew2021docvqa}{12}
+\bibcite{openai2023gpt4v}{13}
+\bibcite{team2023gemini}{14}
+\bibcite{bai2023qwenvl}{15}
+\bibcite{wang2024qwen2vl}{16}
+\bibcite{hinton2015distilling}{17}
+\bibcite{sanh2019distilbert}{18}
+\bibcite{li2022explaining}{19}
+\bibcite{taori2023alpaca}{20}
+\bibcite{wang2023selfinstruct}{21}
+\bibcite{hu2022lora}{22}
+\bibcite{dettmers2023qlora}{23}
+\@writefile{toc}{\contentsline {section}{References}{16}{section*.11}\protected@file@percent }
+\bibcite{anthropic2024}{24}
+\bibcite{ouyang2022instructgpt}{25}
+\bibcite{xia2017medshare}{26}
+\bibcite{Casino2019}{27}
+\bibcite{zhu2019blockchain}{28}
+\bibcite{buterin2014ethereum}{29}
+\bibcite{polygon2021}{30}
+\bibcite{goldwasser1989knowledge}{31}
+\bibcite{groth2016size}{32}
+\bibcite{eberhardt2018zokrates}{33}
+\bibcite{camenisch1997efficient}{34}
+\bibcite{cortier2019belenios}{35}
+\bibcite{sasson2014zerocash}{36}
+\bibcite{wu2023autogen}{37}
+\bibcite{hong2023metagpt}{38}
+\bibcite{madaan2023selfrefine}{39}
+\bibcite{redmon2016yolo}{40}
+\bibcite{radford2022whisper}{41}
+\bibcite{ganache}{42}
+\gdef \@abspage@last{17}

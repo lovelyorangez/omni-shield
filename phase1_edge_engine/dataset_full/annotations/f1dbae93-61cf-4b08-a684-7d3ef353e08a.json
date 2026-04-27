@@ -1,0 +1,106 @@
+{
+  "image_id": "f1dbae93-61cf-4b08-a684-7d3ef353e08a",
+  "country": "India",
+  "card_type": "Aadhaar Card",
+  "image_path": "dataset_full/images/india_aadhaar_f1dbae93-61cf-4b08-a684-7d3ef353e08a.png",
+  "image_width": 856,
+  "image_height": 540,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 85,
+        "xmax": 160,
+        "ymax": 265,
+        "norm_ymin": 157,
+        "norm_xmin": 23,
+        "norm_ymax": 490,
+        "norm_xmax": 186
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "Full Name",
+      "value": "Diya Wagle",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 103,
+        "xmax": 289,
+        "ymax": 121,
+        "norm_ymin": 190,
+        "norm_xmin": 204,
+        "norm_ymax": 224,
+        "norm_xmax": 337
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "06/04/1988",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 143,
+        "xmax": 261,
+        "ymax": 155,
+        "norm_ymin": 264,
+        "norm_xmin": 204,
+        "norm_ymax": 287,
+        "norm_xmax": 304
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "39\nVenkatesh Ganj, Bokaro, Karnataka",
+      "is_pii": true,
+      "box": {
+        "xmin": 175,
+        "ymin": 213,
+        "xmax": 369,
+        "ymax": 229,
+        "norm_ymin": 394,
+        "norm_xmin": 204,
+        "norm_ymax": 424,
+        "norm_xmax": 431
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Aadhaar Number",
+      "value": "0185 6945 4414",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 446,
+        "xmax": 273,
+        "ymax": 466,
+        "norm_ymin": 825,
+        "norm_xmin": 23,
+        "norm_ymax": 862,
+        "norm_xmax": 318
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Diya Wagle",
+      "is_pii": true,
+      "box": {
+        "xmin": 656,
+        "ymin": 430,
+        "xmax": 836,
+        "ymax": 480,
+        "norm_ymin": 796,
+        "norm_xmin": 766,
+        "norm_ymax": 888,
+        "norm_xmax": 976
+      },
+      "field_type": "signature"
+    }
+  ]
+}

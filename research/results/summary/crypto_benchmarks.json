@@ -1,0 +1,42 @@
+{
+  "blockchain_verify_ms": {
+    "mean": 1.2,
+    "min": 0.9,
+    "max": 2.1,
+    "n": 5,
+    "method": "O(1) mapping lookup in AuditLog.sol"
+  },
+  "blockchain_gas": {
+    "mean_gas_units": 264333,
+    "gas_price_gwei": 20,
+    "cost_eth_per_anchor": 0.00528666,
+    "mainnet_usd_estimate": 13.2167,
+    "polygon_usd_estimate": 0.006344,
+    "n_transactions": 6,
+    "note": "Ganache local testnet. Mainnet ~$2500/ETH, Polygon ~$0.80/MATIC"
+  },
+  "zk_verification_ms": {
+    "mean": 22.1,
+    "min": 15.6,
+    "max": 27.7,
+    "n": 5,
+    "method": "Groth16 verify() against on-disk verification key"
+  },
+  "zk_proof_generation": {
+    "mean_s": 20.3,
+    "min_s": 15.1,
+    "max_s": 26.7,
+    "n": 5,
+    "method": "Groth16/BN128 via ZoKrates",
+    "hardware": "RTX 5060 8GB VRAM, Ubuntu Linux",
+    "note": "Measured from backend logs during system evaluation. Runs asynchronously \u2014 does not block redaction response."
+  },
+  "hash_linkability": {
+    "total_records": 424,
+    "unique_hashes": 164,
+    "duplicates": 260,
+    "vulnerability": "Identical files produce identical SHA256 hashes",
+    "mitigation": "Salt with timestamp+owner before hashing",
+    "current_status": "Not yet implemented \u2014 documented as limitation"
+  }
+}

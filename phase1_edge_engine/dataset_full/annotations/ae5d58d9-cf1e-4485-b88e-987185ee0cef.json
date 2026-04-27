@@ -1,0 +1,138 @@
+{
+  "image_id": "ae5d58d9-cf1e-4485-b88e-987185ee0cef",
+  "country": "USA",
+  "card_type": "Driver's Licence",
+  "image_path": "dataset_full/images/usa_dl_ae5d58d9-cf1e-4485-b88e-987185ee0cef.png",
+  "image_width": 876,
+  "image_height": 572,
+  "fields": [
+    {
+      "label": "Face",
+      "value": "face",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 90,
+        "xmax": 180,
+        "ymax": 290,
+        "norm_ymin": 157,
+        "norm_xmin": 22,
+        "norm_ymax": 506,
+        "norm_xmax": 205
+      },
+      "field_type": "face"
+    },
+    {
+      "label": "ID Number",
+      "value": "VI97499564",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 102,
+        "xmax": 727,
+        "ymax": 115,
+        "norm_ymin": 178,
+        "norm_xmin": 691,
+        "norm_ymax": 201,
+        "norm_xmax": 829
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Date of Birth",
+      "value": "07/31/1961",
+      "is_pii": true,
+      "box": {
+        "xmin": 606,
+        "ymin": 136,
+        "xmax": 700,
+        "ymax": 148,
+        "norm_ymin": 237,
+        "norm_xmin": 691,
+        "norm_ymax": 258,
+        "norm_xmax": 799
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Full Name",
+      "value": "Hendrix, Christian",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 101,
+        "xmax": 359,
+        "ymax": 115,
+        "norm_ymin": 176,
+        "norm_xmin": 222,
+        "norm_ymax": 201,
+        "norm_xmax": 409
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Address",
+      "value": "8006 ALEXANDER SHOAL",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 141,
+        "xmax": 347,
+        "ymax": 150,
+        "norm_ymin": 246,
+        "norm_xmin": 222,
+        "norm_ymax": 262,
+        "norm_xmax": 396
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "City State Zip",
+      "value": "STEVENSFURT, VI 86709",
+      "is_pii": true,
+      "box": {
+        "xmin": 195,
+        "ymin": 156,
+        "xmax": 342,
+        "ymax": 166,
+        "norm_ymin": 272,
+        "norm_xmin": 222,
+        "norm_ymax": 290,
+        "norm_xmax": 390
+      },
+      "field_type": "text"
+    },
+    {
+      "label": "Document Discriminator",
+      "value": "31030372368314727601",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 502,
+        "xmax": 140,
+        "ymax": 526,
+        "norm_ymin": 877,
+        "norm_xmin": 22,
+        "norm_ymax": 919,
+        "norm_xmax": 159
+      },
+      "field_type": "number"
+    },
+    {
+      "label": "Signature",
+      "value": "Christian Hendrix",
+      "is_pii": true,
+      "box": {
+        "xmin": 20,
+        "ymin": 305,
+        "xmax": 180,
+        "ymax": 345,
+        "norm_ymin": 533,
+        "norm_xmin": 22,
+        "norm_ymax": 603,
+        "norm_xmax": 205
+      },
+      "field_type": "signature"
+    }
+  ]
+}

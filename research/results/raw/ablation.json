@@ -1,0 +1,442 @@
+[
+  {
+    "config": "full_pipeline",
+    "description": "All agents (baseline)",
+    "metrics": {
+      "names": {
+        "precision": 0.5412,
+        "recall": 0.184,
+        "f1": 0.2746,
+        "tp": 46,
+        "fp": 39,
+        "fn": 204
+      },
+      "faces": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "signatures": {
+        "precision": 0.8452,
+        "recall": 0.8733,
+        "f1": 0.859,
+        "tp": 131,
+        "fp": 24,
+        "fn": 19
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 12,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.3203,
+        "recall": 0.328,
+        "f1": 0.3241,
+        "tp": 41,
+        "fp": 87,
+        "fn": 84
+      },
+      "id_numbers": {
+        "precision": 0.2857,
+        "recall": 0.04,
+        "f1": 0.0702,
+        "tp": 6,
+        "fp": 15,
+        "fn": 144
+      },
+      "addresses": {
+        "precision": 0.0968,
+        "recall": 0.04,
+        "f1": 0.0566,
+        "tp": 6,
+        "fp": 56,
+        "fn": 144
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.1584,
+      "micro_f1": 0.3197
+    }
+  },
+  {
+    "config": "no_faces_signatures",
+    "description": "Faces + signatures disabled",
+    "metrics": {
+      "names": {
+        "precision": 0.5412,
+        "recall": 0.184,
+        "f1": 0.2746,
+        "tp": 46,
+        "fp": 39,
+        "fn": 204
+      },
+      "faces": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 54,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.3203,
+        "recall": 0.328,
+        "f1": 0.3241,
+        "tp": 41,
+        "fp": 87,
+        "fn": 84
+      },
+      "id_numbers": {
+        "precision": 0.2857,
+        "recall": 0.04,
+        "f1": 0.0702,
+        "tp": 6,
+        "fp": 15,
+        "fn": 144
+      },
+      "addresses": {
+        "precision": 0.0968,
+        "recall": 0.04,
+        "f1": 0.0566,
+        "tp": 6,
+        "fp": 56,
+        "fn": 144
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.0726,
+      "micro_f1": 0.1493
+    }
+  },
+  {
+    "config": "names_only",
+    "description": "Names only",
+    "metrics": {
+      "names": {
+        "precision": 0.5465,
+        "recall": 0.188,
+        "f1": 0.2798,
+        "tp": 47,
+        "fp": 39,
+        "fn": 203
+      },
+      "faces": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 57,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.48,
+        "recall": 0.192,
+        "f1": 0.2743,
+        "tp": 24,
+        "fp": 26,
+        "fn": 101
+      },
+      "id_numbers": {
+        "precision": 0.5,
+        "recall": 0.0333,
+        "f1": 0.0625,
+        "tp": 5,
+        "fp": 5,
+        "fn": 145
+      },
+      "addresses": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.0617,
+      "micro_f1": 0.1289
+    }
+  },
+  {
+    "config": "no_dob_ids",
+    "description": "DOB + ID numbers disabled",
+    "metrics": {
+      "names": {
+        "precision": 0.5412,
+        "recall": 0.184,
+        "f1": 0.2746,
+        "tp": 46,
+        "fp": 39,
+        "fn": 204
+      },
+      "faces": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "signatures": {
+        "precision": 0.8452,
+        "recall": 0.8733,
+        "f1": 0.859,
+        "tp": 131,
+        "fp": 24,
+        "fn": 19
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 14,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.48,
+        "recall": 0.192,
+        "f1": 0.2743,
+        "tp": 24,
+        "fp": 26,
+        "fn": 101
+      },
+      "id_numbers": {
+        "precision": 0.5,
+        "recall": 0.0333,
+        "f1": 0.0625,
+        "tp": 5,
+        "fp": 5,
+        "fn": 145
+      },
+      "addresses": {
+        "precision": 0.0968,
+        "recall": 0.04,
+        "f1": 0.0566,
+        "tp": 6,
+        "fp": 56,
+        "fn": 144
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.1527,
+      "micro_f1": 0.3136
+    }
+  },
+  {
+    "config": "text_pii_only",
+    "description": "Phones + emails + addresses only",
+    "metrics": {
+      "names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250
+      },
+      "faces": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "signatures": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 150
+      },
+      "phones": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 55,
+        "fn": 0
+      },
+      "emails": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "dob": {
+        "precision": 0.4706,
+        "recall": 0.192,
+        "f1": 0.2727,
+        "tp": 24,
+        "fp": 27,
+        "fn": 101
+      },
+      "id_numbers": {
+        "precision": 0.5556,
+        "recall": 0.0333,
+        "f1": 0.0629,
+        "tp": 5,
+        "fp": 4,
+        "fn": 145
+      },
+      "addresses": {
+        "precision": 0.0968,
+        "recall": 0.04,
+        "f1": 0.0566,
+        "tp": 6,
+        "fp": 56,
+        "fn": 144
+      },
+      "org_names": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "dates": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "macro_f1": 0.0392,
+      "micro_f1": 0.0607
+    }
+  }
+]
